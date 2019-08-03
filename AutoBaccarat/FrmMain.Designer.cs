@@ -284,7 +284,12 @@ namespace AutoBaccarat
             this.tmDisplay = new System.Windows.Forms.Timer(this.components);
             this.Bots_Worker = new System.ComponentModel.BackgroundWorker();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.CustomLoadList = new TFive.TFiveGroupBox();
+            this.Custom_LoadList = new System.Windows.Forms.ListBox();
+            this.CustomValue = new TFive.TFiveLabel();
+            this.CustomName = new TFive.TFiveLabel();
+            this.CustomTxtName = new TFive.TFiveTextBox();
+            this.tFiveSeparator5 = new TFive.TFiveSeparator();
             this.tFiveTheme1.SuspendLayout();
             this.TabMainControl.SuspendLayout();
             this.tabDash.SuspendLayout();
@@ -333,6 +338,7 @@ namespace AutoBaccarat
             this.panel11.SuspendLayout();
             this.panel2.SuspendLayout();
             this.Betting_GroupMode.SuspendLayout();
+            this.CustomLoadList.SuspendLayout();
             this.SuspendLayout();
             // 
             // tFiveTheme1
@@ -350,7 +356,7 @@ namespace AutoBaccarat
             this.tFiveTheme1.RoundCorners = false;
             this.tFiveTheme1.ShowText = false;
             this.tFiveTheme1.Sizable = false;
-            this.tFiveTheme1.Size = new System.Drawing.Size(999, 536);
+            this.tFiveTheme1.Size = new System.Drawing.Size(769, 536);
             this.tFiveTheme1.SmartBounds = true;
             this.tFiveTheme1.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.tFiveTheme1.TabControl = true;
@@ -371,7 +377,7 @@ namespace AutoBaccarat
             this.TabMainControl.Location = new System.Drawing.Point(20, 20);
             this.TabMainControl.Name = "TabMainControl";
             this.TabMainControl.SelectedIndex = 0;
-            this.TabMainControl.Size = new System.Drawing.Size(959, 496);
+            this.TabMainControl.Size = new System.Drawing.Size(729, 496);
             this.TabMainControl.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TabMainControl.TabIndex = 0;
             this.TabMainControl.SelectedIndexChanged += new System.EventHandler(this.TFiveTabControl1_SelectedIndexChanged);
@@ -1551,7 +1557,7 @@ namespace AutoBaccarat
             this.tabSetting.Location = new System.Drawing.Point(4, 34);
             this.tabSetting.Name = "tabSetting";
             this.tabSetting.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSetting.Size = new System.Drawing.Size(951, 458);
+            this.tabSetting.Size = new System.Drawing.Size(721, 458);
             this.tabSetting.TabIndex = 1;
             this.tabSetting.Text = "Settings";
             // 
@@ -1569,7 +1575,7 @@ namespace AutoBaccarat
             this.tabSettings.Location = new System.Drawing.Point(3, 3);
             this.tabSettings.Name = "tabSettings";
             this.tabSettings.SelectedIndex = 0;
-            this.tabSettings.Size = new System.Drawing.Size(945, 452);
+            this.tabSettings.Size = new System.Drawing.Size(715, 452);
             this.tabSettings.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabSettings.TabIndex = 0;
             this.tabSettings.SelectedIndexChanged += new System.EventHandler(this.TabSettings_SelectedIndexChanged);
@@ -2138,7 +2144,7 @@ namespace AutoBaccarat
             this.tabLayout.Location = new System.Drawing.Point(4, 34);
             this.tabLayout.Name = "tabLayout";
             this.tabLayout.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLayout.Size = new System.Drawing.Size(937, 414);
+            this.tabLayout.Size = new System.Drawing.Size(707, 414);
             this.tabLayout.TabIndex = 1;
             this.tabLayout.Text = "Layout Editor";
             // 
@@ -2154,7 +2160,7 @@ namespace AutoBaccarat
             this.Layout_Position.MinimumSize = new System.Drawing.Size(136, 50);
             this.Layout_Position.Name = "Layout_Position";
             this.Layout_Position.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.Layout_Position.Size = new System.Drawing.Size(767, 373);
+            this.Layout_Position.Size = new System.Drawing.Size(537, 373);
             this.Layout_Position.TabIndex = 2;
             this.Layout_Position.Text = "Position Settings";
             // 
@@ -2167,7 +2173,7 @@ namespace AutoBaccarat
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(5, 28);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(757, 340);
+            this.panel5.Size = new System.Drawing.Size(527, 340);
             this.panel5.TabIndex = 1;
             // 
             // Layout_radNormal
@@ -2236,7 +2242,7 @@ namespace AutoBaccarat
             this.dgvSetting.RowsDefaultCellStyle = dataGridViewCellStyle21;
             this.dgvSetting.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgvSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvSetting.Size = new System.Drawing.Size(757, 300);
+            this.dgvSetting.Size = new System.Drawing.Size(527, 300);
             this.dgvSetting.TabIndex = 2;
             this.dgvSetting.TabStop = false;
             this.dgvSetting.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSetting_CellClick);
@@ -2312,7 +2318,7 @@ namespace AutoBaccarat
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(757, 40);
+            this.panel6.Size = new System.Drawing.Size(527, 40);
             this.panel6.TabIndex = 3;
             // 
             // Layout_Name
@@ -2332,13 +2338,13 @@ namespace AutoBaccarat
             this.txtSettingsName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSettingsName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.txtSettingsName.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtSettingsName.Location = new System.Drawing.Point(411, 3);
+            this.txtSettingsName.Location = new System.Drawing.Point(61, 3);
             this.txtSettingsName.MaxLength = 32767;
             this.txtSettingsName.MinimumSize = new System.Drawing.Size(0, 31);
             this.txtSettingsName.Multiline = false;
             this.txtSettingsName.Name = "txtSettingsName";
             this.txtSettingsName.ReadOnly = false;
-            this.txtSettingsName.Size = new System.Drawing.Size(343, 31);
+            this.txtSettingsName.Size = new System.Drawing.Size(463, 31);
             this.txtSettingsName.Style = TFive.TFiveTextBox._Num.TextNum;
             this.txtSettingsName.TabIndex = 1;
             this.txtSettingsName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -2394,7 +2400,7 @@ namespace AutoBaccarat
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(3, 376);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(931, 35);
+            this.panel1.Size = new System.Drawing.Size(701, 35);
             this.panel1.TabIndex = 0;
             // 
             // picBitmap
@@ -2478,7 +2484,7 @@ namespace AutoBaccarat
             // 
             this.panel3.Controls.Add(this.btnSaveLayout);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(683, 0);
+            this.panel3.Location = new System.Drawing.Point(453, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(248, 35);
             this.panel3.TabIndex = 1;
@@ -2503,7 +2509,7 @@ namespace AutoBaccarat
             this.tabFormula.Controls.Add(this.panel10);
             this.tabFormula.Location = new System.Drawing.Point(4, 34);
             this.tabFormula.Name = "tabFormula";
-            this.tabFormula.Size = new System.Drawing.Size(937, 414);
+            this.tabFormula.Size = new System.Drawing.Size(707, 414);
             this.tabFormula.TabIndex = 2;
             this.tabFormula.Text = "Formula Editor";
             // 
@@ -2511,10 +2517,11 @@ namespace AutoBaccarat
             // 
             this.FormulaBox.BackColor = System.Drawing.Color.Transparent;
             this.FormulaBox.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.FormulaBox.Controls.Add(this.CustomLoadList);
+            this.FormulaBox.Controls.Add(this.panel12);
             this.FormulaBox.Controls.Add(this.CustomPanelResultBP);
             this.FormulaBox.Controls.Add(this.CustomPanelResultPB);
             this.FormulaBox.Controls.Add(this.CustomPanelResult);
-            this.FormulaBox.Controls.Add(this.panel12);
             this.FormulaBox.Controls.Add(this.Custom_List);
             this.FormulaBox.Controls.Add(this.panel13);
             this.FormulaBox.Curv1 = 1;
@@ -2524,13 +2531,14 @@ namespace AutoBaccarat
             this.FormulaBox.MinimumSize = new System.Drawing.Size(136, 50);
             this.FormulaBox.Name = "FormulaBox";
             this.FormulaBox.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.FormulaBox.Size = new System.Drawing.Size(657, 414);
+            this.FormulaBox.Size = new System.Drawing.Size(427, 414);
             this.FormulaBox.TabIndex = 2;
             this.FormulaBox.Text = "Custom";
             this.FormulaBox.Visible = false;
             // 
             // CustomPanelResultBP
             // 
+            this.CustomPanelResultBP.Dock = System.Windows.Forms.DockStyle.Left;
             this.CustomPanelResultBP.Location = new System.Drawing.Point(353, 28);
             this.CustomPanelResultBP.Name = "CustomPanelResultBP";
             this.CustomPanelResultBP.Size = new System.Drawing.Size(106, 346);
@@ -2538,6 +2546,7 @@ namespace AutoBaccarat
             // 
             // CustomPanelResultPB
             // 
+            this.CustomPanelResultPB.Dock = System.Windows.Forms.DockStyle.Left;
             this.CustomPanelResultPB.Location = new System.Drawing.Point(247, 28);
             this.CustomPanelResultPB.Name = "CustomPanelResultPB";
             this.CustomPanelResultPB.Size = new System.Drawing.Size(106, 346);
@@ -2545,6 +2554,7 @@ namespace AutoBaccarat
             // 
             // CustomPanelResult
             // 
+            this.CustomPanelResult.Dock = System.Windows.Forms.DockStyle.Left;
             this.CustomPanelResult.Location = new System.Drawing.Point(141, 28);
             this.CustomPanelResult.Name = "CustomPanelResult";
             this.CustomPanelResult.Size = new System.Drawing.Size(106, 346);
@@ -2552,14 +2562,18 @@ namespace AutoBaccarat
             // 
             // panel12
             // 
+            this.panel12.Controls.Add(this.tFiveSeparator5);
+            this.panel12.Controls.Add(this.CustomName);
+            this.panel12.Controls.Add(this.CustomTxtName);
+            this.panel12.Controls.Add(this.CustomValue);
             this.panel12.Controls.Add(this.Custom_Config);
             this.panel12.Controls.Add(this.Custom_txtNum);
             this.panel12.Controls.Add(this.Custom_btAdd);
             this.panel12.Controls.Add(this.Custom_btDefault);
             this.panel12.Controls.Add(this.Custom_btClear);
             this.panel12.Controls.Add(this.Custom_btDel);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel12.Location = new System.Drawing.Point(460, 28);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel12.Location = new System.Drawing.Point(459, 28);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(192, 346);
             this.panel12.TabIndex = 6;
@@ -2611,17 +2625,17 @@ namespace AutoBaccarat
             this.Custom_txtNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Custom_txtNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Custom_txtNum.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.Custom_txtNum.Location = new System.Drawing.Point(3, 11);
+            this.Custom_txtNum.Location = new System.Drawing.Point(60, 87);
             this.Custom_txtNum.MaxLength = 32767;
             this.Custom_txtNum.MinimumSize = new System.Drawing.Size(0, 31);
             this.Custom_txtNum.Multiline = false;
             this.Custom_txtNum.Name = "Custom_txtNum";
             this.Custom_txtNum.ReadOnly = false;
-            this.Custom_txtNum.Size = new System.Drawing.Size(186, 31);
+            this.Custom_txtNum.Size = new System.Drawing.Size(129, 31);
             this.Custom_txtNum.Style = TFive.TFiveTextBox._Num.NumberComma;
             this.Custom_txtNum.TabIndex = 9;
             this.Custom_txtNum.Text = "1";
-            this.Custom_txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Custom_txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Custom_txtNum.UseSystemPasswordChar = false;
             this.Custom_txtNum.TextChanged += new System.EventHandler(this.Custom_txtNum_TextChanged);
             // 
@@ -2630,7 +2644,7 @@ namespace AutoBaccarat
             this.Custom_btAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Custom_btAdd.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Custom_btAdd.Image = null;
-            this.Custom_btAdd.Location = new System.Drawing.Point(3, 48);
+            this.Custom_btAdd.Location = new System.Drawing.Point(3, 124);
             this.Custom_btAdd.Name = "Custom_btAdd";
             this.Custom_btAdd.NoRounding = false;
             this.Custom_btAdd.Size = new System.Drawing.Size(186, 23);
@@ -2643,10 +2657,10 @@ namespace AutoBaccarat
             this.Custom_btDefault.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Custom_btDefault.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Custom_btDefault.Image = null;
-            this.Custom_btDefault.Location = new System.Drawing.Point(3, 161);
+            this.Custom_btDefault.Location = new System.Drawing.Point(3, 209);
             this.Custom_btDefault.Name = "Custom_btDefault";
             this.Custom_btDefault.NoRounding = false;
-            this.Custom_btDefault.Size = new System.Drawing.Size(114, 23);
+            this.Custom_btDefault.Size = new System.Drawing.Size(186, 23);
             this.Custom_btDefault.TabIndex = 6;
             this.Custom_btDefault.Text = "Default";
             this.Custom_btDefault.Click += new System.EventHandler(this.Custom_btDefault_Click);
@@ -2656,10 +2670,10 @@ namespace AutoBaccarat
             this.Custom_btClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Custom_btClear.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Custom_btClear.Image = null;
-            this.Custom_btClear.Location = new System.Drawing.Point(3, 132);
+            this.Custom_btClear.Location = new System.Drawing.Point(3, 180);
             this.Custom_btClear.Name = "Custom_btClear";
             this.Custom_btClear.NoRounding = false;
-            this.Custom_btClear.Size = new System.Drawing.Size(114, 23);
+            this.Custom_btClear.Size = new System.Drawing.Size(186, 23);
             this.Custom_btClear.TabIndex = 5;
             this.Custom_btClear.Text = "Clear";
             this.Custom_btClear.Click += new System.EventHandler(this.Custom_btClear_Click);
@@ -2669,10 +2683,10 @@ namespace AutoBaccarat
             this.Custom_btDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Custom_btDel.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Custom_btDel.Image = null;
-            this.Custom_btDel.Location = new System.Drawing.Point(3, 103);
+            this.Custom_btDel.Location = new System.Drawing.Point(3, 151);
             this.Custom_btDel.Name = "Custom_btDel";
             this.Custom_btDel.NoRounding = false;
-            this.Custom_btDel.Size = new System.Drawing.Size(114, 23);
+            this.Custom_btDel.Size = new System.Drawing.Size(186, 23);
             this.Custom_btDel.TabIndex = 4;
             this.Custom_btDel.Text = "Delete";
             this.Custom_btDel.Click += new System.EventHandler(this.Custom_btDel_Click);
@@ -2729,7 +2743,7 @@ namespace AutoBaccarat
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel13.Location = new System.Drawing.Point(5, 374);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(647, 35);
+            this.panel13.Size = new System.Drawing.Size(417, 35);
             this.panel13.TabIndex = 4;
             // 
             // Custom_btClose
@@ -2737,7 +2751,7 @@ namespace AutoBaccarat
             this.Custom_btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Custom_btClose.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Custom_btClose.Image = null;
-            this.Custom_btClose.Location = new System.Drawing.Point(322, 0);
+            this.Custom_btClose.Location = new System.Drawing.Point(92, 0);
             this.Custom_btClose.Name = "Custom_btClose";
             this.Custom_btClose.NoRounding = false;
             this.Custom_btClose.Size = new System.Drawing.Size(325, 35);
@@ -2750,7 +2764,7 @@ namespace AutoBaccarat
             this.Custom_btSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Custom_btSave.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Custom_btSave.Image = null;
-            this.Custom_btSave.Location = new System.Drawing.Point(0, 0);
+            this.Custom_btSave.Location = new System.Drawing.Point(-230, 0);
             this.Custom_btSave.Name = "Custom_btSave";
             this.Custom_btSave.NoRounding = false;
             this.Custom_btSave.Size = new System.Drawing.Size(325, 35);
@@ -2771,7 +2785,6 @@ namespace AutoBaccarat
             // 
             this.FormulaGroupMode.BackColor = System.Drawing.Color.Transparent;
             this.FormulaGroupMode.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.FormulaGroupMode.Controls.Add(this.panel4);
             this.FormulaGroupMode.Controls.Add(this.Formula_cbFollow);
             this.FormulaGroupMode.Controls.Add(this.Formula_cbLock);
             this.FormulaGroupMode.Controls.Add(this.Formula_cbGoodLineFix);
@@ -3014,7 +3027,7 @@ namespace AutoBaccarat
             this.tabBetting.Controls.Add(this.panel2);
             this.tabBetting.Location = new System.Drawing.Point(4, 34);
             this.tabBetting.Name = "tabBetting";
-            this.tabBetting.Size = new System.Drawing.Size(587, 414);
+            this.tabBetting.Size = new System.Drawing.Size(707, 414);
             this.tabBetting.TabIndex = 3;
             this.tabBetting.Text = "Betting System";
             // 
@@ -3032,7 +3045,7 @@ namespace AutoBaccarat
             this.BettingBox.MinimumSize = new System.Drawing.Size(136, 50);
             this.BettingBox.Name = "BettingBox";
             this.BettingBox.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.BettingBox.Size = new System.Drawing.Size(307, 414);
+            this.BettingBox.Size = new System.Drawing.Size(427, 414);
             this.BettingBox.TabIndex = 1;
             this.BettingBox.Visible = false;
             // 
@@ -3069,7 +3082,7 @@ namespace AutoBaccarat
             this.dgvBetting.RowsDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvBetting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvBetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvBetting.Size = new System.Drawing.Size(55, 346);
+            this.dgvBetting.Size = new System.Drawing.Size(175, 346);
             this.dgvBetting.TabIndex = 3;
             this.dgvBetting.TabStop = false;
             this.dgvBetting.SelectionChanged += new System.EventHandler(this.DgvBetting_SelectionChanged);
@@ -3103,7 +3116,7 @@ namespace AutoBaccarat
             this.panel9.Controls.Add(this.Betting_btClear);
             this.panel9.Controls.Add(this.Betting_btDel);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(60, 28);
+            this.panel9.Location = new System.Drawing.Point(180, 28);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(242, 346);
             this.panel9.TabIndex = 0;
@@ -3196,7 +3209,7 @@ namespace AutoBaccarat
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel11.Location = new System.Drawing.Point(5, 374);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(297, 35);
+            this.panel11.Size = new System.Drawing.Size(417, 35);
             this.panel11.TabIndex = 4;
             // 
             // Betting_btClose
@@ -3204,7 +3217,7 @@ namespace AutoBaccarat
             this.Betting_btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Betting_btClose.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Betting_btClose.Image = null;
-            this.Betting_btClose.Location = new System.Drawing.Point(74, 0);
+            this.Betting_btClose.Location = new System.Drawing.Point(194, 0);
             this.Betting_btClose.Name = "Betting_btClose";
             this.Betting_btClose.NoRounding = false;
             this.Betting_btClose.Size = new System.Drawing.Size(223, 35);
@@ -3217,7 +3230,7 @@ namespace AutoBaccarat
             this.Betting_btSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Betting_btSave.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Betting_btSave.Image = null;
-            this.Betting_btSave.Location = new System.Drawing.Point(-150, 0);
+            this.Betting_btSave.Location = new System.Drawing.Point(-30, 0);
             this.Betting_btSave.Name = "Betting_btSave";
             this.Betting_btSave.NoRounding = false;
             this.Betting_btSave.Size = new System.Drawing.Size(223, 35);
@@ -3452,13 +3465,86 @@ namespace AutoBaccarat
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
-            // panel4
+            // CustomLoadList
             // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(5, 28);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(270, 381);
-            this.panel4.TabIndex = 33;
+            this.CustomLoadList.BackColor = System.Drawing.Color.Transparent;
+            this.CustomLoadList.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.CustomLoadList.Controls.Add(this.Custom_LoadList);
+            this.CustomLoadList.Curv1 = 1;
+            this.CustomLoadList.Curv2 = 1;
+            this.CustomLoadList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CustomLoadList.Location = new System.Drawing.Point(651, 28);
+            this.CustomLoadList.MinimumSize = new System.Drawing.Size(136, 50);
+            this.CustomLoadList.Name = "CustomLoadList";
+            this.CustomLoadList.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
+            this.CustomLoadList.Size = new System.Drawing.Size(136, 346);
+            this.CustomLoadList.TabIndex = 9;
+            this.CustomLoadList.Text = "List";
+            // 
+            // Custom_LoadList
+            // 
+            this.Custom_LoadList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Custom_LoadList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Custom_LoadList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Custom_LoadList.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.Custom_LoadList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.Custom_LoadList.FormattingEnabled = true;
+            this.Custom_LoadList.ItemHeight = 20;
+            this.Custom_LoadList.Location = new System.Drawing.Point(5, 28);
+            this.Custom_LoadList.Name = "Custom_LoadList";
+            this.Custom_LoadList.Size = new System.Drawing.Size(126, 313);
+            this.Custom_LoadList.TabIndex = 0;
+            // 
+            // CustomValue
+            // 
+            this.CustomValue.AutoSize = true;
+            this.CustomValue.BackColor = System.Drawing.Color.Transparent;
+            this.CustomValue.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.CustomValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.CustomValue.Location = new System.Drawing.Point(6, 98);
+            this.CustomValue.Name = "CustomValue";
+            this.CustomValue.Size = new System.Drawing.Size(48, 20);
+            this.CustomValue.TabIndex = 11;
+            this.CustomValue.Text = "Value:";
+            // 
+            // CustomName
+            // 
+            this.CustomName.AutoSize = true;
+            this.CustomName.BackColor = System.Drawing.Color.Transparent;
+            this.CustomName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.CustomName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.CustomName.Location = new System.Drawing.Point(3, 22);
+            this.CustomName.Name = "CustomName";
+            this.CustomName.Size = new System.Drawing.Size(52, 20);
+            this.CustomName.TabIndex = 13;
+            this.CustomName.Text = "Name:";
+            // 
+            // CustomTxtName
+            // 
+            this.CustomTxtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CustomTxtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.CustomTxtName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.CustomTxtName.Location = new System.Drawing.Point(57, 11);
+            this.CustomTxtName.MaxLength = 32767;
+            this.CustomTxtName.MinimumSize = new System.Drawing.Size(0, 31);
+            this.CustomTxtName.Multiline = false;
+            this.CustomTxtName.Name = "CustomTxtName";
+            this.CustomTxtName.ReadOnly = false;
+            this.CustomTxtName.Size = new System.Drawing.Size(129, 31);
+            this.CustomTxtName.Style = TFive.TFiveTextBox._Num.NumberComma;
+            this.CustomTxtName.TabIndex = 12;
+            this.CustomTxtName.Text = "1";
+            this.CustomTxtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CustomTxtName.UseSystemPasswordChar = false;
+            // 
+            // tFiveSeparator5
+            // 
+            this.tFiveSeparator5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.tFiveSeparator5.Location = new System.Drawing.Point(7, 62);
+            this.tFiveSeparator5.Name = "tFiveSeparator5";
+            this.tFiveSeparator5.Size = new System.Drawing.Size(179, 10);
+            this.tFiveSeparator5.TabIndex = 33;
+            this.tFiveSeparator5.Text = "tFiveSeparator5";
             // 
             // FrmMain
             // 
@@ -3466,7 +3552,7 @@ namespace AutoBaccarat
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.ClientSize = new System.Drawing.Size(999, 536);
+            this.ClientSize = new System.Drawing.Size(769, 536);
             this.Controls.Add(this.tFiveTheme1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -3522,6 +3608,7 @@ namespace AutoBaccarat
             this.tabFormula.ResumeLayout(false);
             this.FormulaBox.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
             this.Custom_Config.ResumeLayout(false);
             this.Custom_Config.PerformLayout();
             this.Custom_List.ResumeLayout(false);
@@ -3538,6 +3625,7 @@ namespace AutoBaccarat
             this.panel2.ResumeLayout(false);
             this.Betting_GroupMode.ResumeLayout(false);
             this.Betting_GroupMode.PerformLayout();
+            this.CustomLoadList.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -3770,7 +3858,12 @@ namespace AutoBaccarat
         private DataGridViewTextBoxColumn color;
         private DataGridViewTextBoxColumn Process;
         private DataGridViewTextBoxColumn Rgb;
-        private Panel panel4;
+        private TFive.TFiveGroupBox CustomLoadList;
+        private ListBox Custom_LoadList;
+        private TFive.TFiveLabel CustomValue;
+        private TFive.TFiveSeparator tFiveSeparator5;
+        private TFive.TFiveLabel CustomName;
+        private TFive.TFiveTextBox CustomTxtName;
     }
 }
 

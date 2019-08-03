@@ -157,17 +157,17 @@ namespace AutoBaccarat
 
             if (tabSettings.SelectedTab == tabSettings.TabPages["tabLayout"])
             {
-                Size = new Size(665, 575);
+                Size = new Size(785, 575);
             }
 
             if (tabSettings.SelectedTab == tabSettings.TabPages["tabFormula"])
             {
-                Size = new Size(1015, 575);
+                Size = new Size(785, 575);
             }
 
             if (tabSettings.SelectedTab == tabSettings.TabPages["tabBetting"])
             {
-                Size = new Size(815, 575);
+                Size = new Size(785, 575);
             }
         }
 
@@ -3502,6 +3502,7 @@ namespace AutoBaccarat
         {
             FormulaBox.Visible = true;
             FormulaGroupMode.Enabled = false;
+            Size = new Size(1165, 575);
             _customValueNumber = _customValueNumberSaved;
             _customValueFollowAdverse = _customValueFollowAdverseSaved;
             checked
@@ -3539,6 +3540,7 @@ namespace AutoBaccarat
                 CustomSaveValue();
                 FormulaGroupMode.Enabled = true;
                 FormulaBox.Visible = false;
+                Size = new Size(785, 575);
             }
         }
 
@@ -3791,6 +3793,7 @@ namespace AutoBaccarat
             CustomEdit();
             FormulaGroupMode.Enabled = true;
             FormulaBox.Visible = false;
+            Size = new Size(785, 575);
         }
 
         #endregion Button Control, Save Settings
@@ -3864,6 +3867,7 @@ namespace AutoBaccarat
             }
             BettingTextToDataGridView();
             Betting_GroupMode.Enabled = false;
+            Size = new Size(815, 575);
         }
 
         private void Betting_cbPP_CheckedChanged(object sender)
@@ -4077,6 +4081,7 @@ namespace AutoBaccarat
             BettingLoadValue();
             Betting_GroupMode.Enabled = true;
             BettingBox.Visible = false;
+            Size = new Size(785, 575);
         }
 
         private void Betting_btSave_Click(object sender, EventArgs e)
@@ -4088,6 +4093,7 @@ namespace AutoBaccarat
             }
 
             BettingSaveValue();
+            Size = new Size(785, 575);
             Betting_GroupMode.Enabled = true;
             BettingBox.Visible = false;
         }
