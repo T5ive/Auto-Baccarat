@@ -3,8 +3,10 @@ using AutoBaccarat.Setting.Layout;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Reflection;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -157,7 +159,7 @@ namespace AutoBaccarat
 
             if (tabSettings.SelectedTab == tabSettings.TabPages["tabLayout"])
             {
-                Size = new Size(665, 575);
+                Layout_ChangeMode();
             }
 
             if (tabSettings.SelectedTab == tabSettings.TabPages["tabFormula"])
@@ -1934,6 +1936,7 @@ namespace AutoBaccarat
 
         #endregion
 
+
         #region Bet System
 
         public int ChipUnit(string system, short step_)
@@ -2349,6 +2352,7 @@ namespace AutoBaccarat
 
         #region Variable
 
+        private readonly frmResultImageTester _frmResultImage = new frmResultImageTester();
         private Bitmap _picBit2;
         public int PosX2, PosY2, CatcherX2, CatcherY2, BitWidth, BitHeight;
         private int _player, _banker, _tie, _empty, _all, _allNow, _allMax;
@@ -2504,7 +2508,7 @@ namespace AutoBaccarat
                 if (listLayout.SelectedItem != null)
                 {
                     txtSettingsName.Text = listLayout.SelectedItem.ToString();
-                  
+                    picResult.Image = null;
                     Layout_LoadList2Data();
                     Layout_GetValue4Check();
                 }
@@ -2604,7 +2608,10 @@ namespace AutoBaccarat
                             break;
 
                         case 11:
-                            _layoutMode = (PositionMode)int.Parse(array[0]);
+                            _xCount = array[0];
+                            _yCount = array[1];
+                            _posPic = array[2];
+                            _layoutMode = (PositionMode)int.Parse(array[3]);
                             break;
                     }
                 }
@@ -2651,8 +2658,20 @@ namespace AutoBaccarat
                 dgvSetting[6, 2].Value = _pRGBBanker;
                 dgvSetting[6, 3].Value = _pRGBPlayer;
 
- LayoutLoadMode();
+                txtResultXCount.Text = _xCount;
+                txtResultYCount.Text = _yCount;
+                lblResultXY.Text = _posPic;
 
+                LayoutLoadMode();
+
+                var value = _posPic.Split('(', ',', ')');
+
+                PosX2 = int.Parse(value[1]);
+                PosY2 = int.Parse(value[2]);
+
+                CatcherX2 = int.Parse(value[4]);
+                CatcherY2 = int.Parse(value[5]);
+                Layout_ChangeMode();
             }
             catch (Exception ex)
             {
@@ -2707,7 +2726,7 @@ namespace AutoBaccarat
         private void Layout_SaveLayoutList()
         {
             var name = txtSettingsName.Text;
-            _save = $"{(int)_layoutMode}";
+            _save = $"{txtResultXCount.Text}|{txtResultYCount.Text}|{lblResultXY.Text}|{(int)_layoutMode}";
             if (Layout_ChangeNameList())
             {
                 Layout_SaveList(dgvSetting, txtSettingsName.Text, _save);
@@ -2881,7 +2900,9 @@ namespace AutoBaccarat
         private void Layout_GetValue4Check()
         {
             LayoutValues.NameList = txtSettingsName.Text;
- 
+            LayoutValues.TxtX = txtResultXCount.Text;
+            LayoutValues.TxtY = txtResultYCount.Text;
+            LayoutValues.LblXy = lblResultXY.Text;
             LayoutValues.Mode = (int)_layoutMode;
 
             LayoutValues._pStart = dgvSetting[2, 0].Value.ToString();
@@ -3015,7 +3036,9 @@ namespace AutoBaccarat
             _pRGBBanker = dgvSetting[6, 2].Value.ToString();
             _pRGBTie = dgvSetting[6, 3].Value.ToString();
 
-
+            _xCount = txtResultXCount.Text;
+            _yCount = txtResultYCount.Text;
+            _posPic = lblResultXY.Text;
             PositionChangeMode();
         }
 
@@ -3274,7 +3297,8 @@ namespace AutoBaccarat
         private enum PositionMode
         {
             Normal,
-            Background
+            Background,
+            Picture
         }
 
         private void PositionSelectMode(object sender)
@@ -3288,12 +3312,16 @@ namespace AutoBaccarat
             {
                 _layoutMode = PositionMode.Normal;
             }
-           
+            if (Layout_radPicture.Checked)
+            {
+                _layoutMode = PositionMode.Picture;
+            }
             if (Layout_radBackGround.Checked)
             {
                 _layoutMode = PositionMode.Background;
             }
-            
+
+            Layout_ChangeMode();
         }
 
         private void LayoutLoadMode()
@@ -3304,15 +3332,718 @@ namespace AutoBaccarat
                     Layout_radNormal.Checked = true;
                     break;
 
+                case PositionMode.Picture:
+                    Layout_radPicture.Checked = true;
+                    break;
+
                 case PositionMode.Background:
                     Layout_radBackGround.Checked = true;
                     break;
             }
         }
 
+        private void Layout_ChangeMode()
+        {
+            groupResult.Visible = _layoutMode == PositionMode.Picture;
+
+            Size = _layoutMode == PositionMode.Picture ? new Size(1055, 575) : new Size(665, 575);
+
+            //  panel5.Size = _layoutMode == PositionMode.Background ? new Size(405, 340) : new Size(280, 340);
+            panel5.Size = _layoutMode == PositionMode.Picture ? new Size(280, 340) : new Size(405, 340);
+
+            Layout_radNormal.Location = new Point(1, 320);
+            Layout_radBackGround.Location = new Point(131, 320);
+          //  Layout_radPicture.Location = new Point(3, 322);
+
+            txtSettingsName.Location = new Point(61, 3);
+        }
 
         #endregion ModeSettings
- 
+
+        #region Picture Mode
+
+        #region CatcherControl
+
+        private void Layout_CatcherController(Layout_ControlType modeType)
+        {
+            if (Variable.Catcher() == null) return;
+            var screenCatcher = Variable.Catcher();
+            switch (modeType)
+            {
+                case Layout_ControlType.Up:
+                    checked
+                    {
+                        screenCatcher.Top--;
+                    }
+
+                    break;
+
+                case Layout_ControlType.Down:
+                    checked
+                    {
+                        screenCatcher.Top++;
+                    }
+
+                    break;
+
+                case Layout_ControlType.Right:
+                    checked
+                    {
+                        screenCatcher.Left++;
+                    }
+
+                    break;
+
+                case Layout_ControlType.Left:
+                    checked
+                    {
+                        screenCatcher.Left--;
+                    }
+
+                    break;
+
+                case Layout_ControlType.DecHeight:
+                    checked
+                    {
+                        screenCatcher.Height--;
+                    }
+
+                    break;
+
+                case Layout_ControlType.DecWidth:
+                    checked
+                    {
+                        screenCatcher.Width--;
+                    }
+
+                    break;
+
+                case Layout_ControlType.IncHeight:
+                    checked
+                    {
+                        screenCatcher.Height++;
+                    }
+
+                    break;
+
+                case Layout_ControlType.IncWidth:
+                    checked
+                    {
+                        screenCatcher.Width++;
+                    }
+
+                    break;
+
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(modeType), modeType, null);
+            }
+        }
+
+        private enum Layout_ControlType
+        {
+            Up,
+            Right,
+            Down,
+            Left,
+            DecHeight,
+            DecWidth,
+            IncHeight,
+            IncWidth
+        }
+
+        internal static void Layout_CatcherShow()
+        {
+            if (Variable.Catcher() == null || Variable.Catcher().IsDisposed)
+            {
+                Variable.ScreenCatcher(new ScreenCatcher());
+            }
+            Variable.Catcher().Show();
+        }
+
+        private void Layout_Catcher()
+        {
+            try
+            {
+                Layout_CatcherShow();
+                if (PosX2 > 0 && PosY2 > 0 && CatcherX2 > 0 && CatcherY2 > 0)
+                {
+                    Variable.Catcher().GetPosition(PosX2, PosY2, CatcherX2, CatcherY2);
+                    tmResult.Stop();
+                }
+                tmCatcher.Start();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, @"Error 0x10", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void TmCatcher_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                Variable.Catcher().GetBitMap();
+                _picBit2 = Variable.Catcher().PicShow;
+                PosX2 = Variable.Catcher().RecLeft;
+                PosY2 = Variable.Catcher().RecTop;
+                CatcherX2 = Variable.Catcher().RecWidth;
+                CatcherY2 = Variable.Catcher().RecHeight;
+                picResult.Image = _picBit2;
+                lblResultXY.Text = $@"({PosX2}, {PosY2}) ({CatcherX2}, {CatcherY2})";
+                tmResult.Start();
+            }
+            catch
+            {
+            }
+            if (Variable.Catcher() != null && Variable.Catcher().IsDisposed)
+            {
+                tmCatcher.Stop();
+                tmResult.Stop();
+
+                btnSetResult.Enabled = true;
+                btnSetResult.Text = @"Set Result";
+            }
+        }
+
+        #endregion CatcherControl
+
+        #region Result
+
+        private void TmResult_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                picResult.Image = ScreenCatcher.BuildBitmap(PosX2, PosY2, CatcherX2, CatcherY2);
+            }
+            catch
+            {
+            }
+        }
+
+   
+        private void BtnSetResult_Click(object sender, EventArgs e)
+        {
+            if (btnSetResult.Text == @"Set Result")
+            {
+                Layout_Catcher();
+                btnSetResult.Text = @"Confirm Result";
+            }
+            else
+            {
+                Variable.Catcher().Close();
+                btnSetResult.Text = @"Set Result";
+            }
+        }
+
+        private void LinklbShowTest_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            try
+            {
+                tmCatcher.Stop();
+                _frmResultImage.GetPicture((Bitmap)picResult.Image, int.Parse(txtResultXCount.Text), int.Parse(txtResultYCount.Text));
+                _frmResultImage.ShowDialog();
+            }
+            catch
+            {
+            }
+        }
+
+        private void TmRealtimeResult_Tick(object sender, EventArgs e)
+        {
+            if (tmCatcher.Enabled)
+                return;
+            try
+            {
+                picResult2.Image = ScreenCatcher.BuildBitmap(PosX2, PosY2, CatcherX2, CatcherY2);
+                Layout_GetScore((Bitmap)picResult2.Image, int.Parse(txtResultXCount.Text), int.Parse(txtResultYCount.Text));
+            }
+            catch
+            {
+            }
+        }
+
+        private void BtnResultUp_Click(object sender, EventArgs e)
+        {
+            Layout_CatcherController(Layout_ControlType.Up);
+        }
+
+    
+
+        private void BtnResultYDec_Click(object sender, EventArgs e)
+        {
+            Layout_CatcherController(Layout_ControlType.DecHeight);
+        }
+
+        private void BtnResultRight_Click(object sender, EventArgs e)
+        {
+            Layout_CatcherController(Layout_ControlType.Right);
+        }
+
+        private void BtnResultXInc_Click(object sender, EventArgs e)
+        {
+            Layout_CatcherController(Layout_ControlType.IncWidth);
+        }
+
+        private void BtnResultYInc_Click(object sender, EventArgs e)
+        {
+            Layout_CatcherController(Layout_ControlType.IncHeight);
+        }
+
+
+
+        private void BtnResultDown_Click(object sender, EventArgs e)
+        {
+            Layout_CatcherController(Layout_ControlType.Down);
+        }
+
+        private void BtnResultXDec_Click(object sender, EventArgs e)
+        {
+            Layout_CatcherController(Layout_ControlType.DecWidth);
+        }
+
+        private void BtnResultLeft_Click(object sender, EventArgs e)
+        {
+            Layout_CatcherController(Layout_ControlType.Left);
+        }
+
+        #endregion Result
+
+        #region Function Get PTB
+
+      
+
+        private void TmStart_Tick(object sender, EventArgs e)
+        {
+            //_player = 0;
+            //_banker = 0;
+            //_tie = 0;
+            //_empty = 0;
+            //_lastWin = null;
+            //try
+            //{
+            //    var columnsCount = int.Parse(txtResultXCount.Text);
+            //    var rowCount = int.Parse(txtResultYCount.Text);
+
+            //    //add
+            //    try
+            //    {
+            //        if (dataGridView1.ColumnCount < columnsCount)
+            //        {
+            //            for (var i = 0; i < columnsCount; i++)
+            //            {
+            //                dataGridView1.Columns.Add(i.ToString(), i.ToString());
+
+            //                for (var j = 0; j < rowCount; j++)
+            //                {
+            //                    if (dataGridView1.RowCount < rowCount)
+            //                    {
+            //                        dataGridView1.Rows.Add("");
+            //                    }
+            //                }
+            //            }
+            //        }
+            //    }
+            //    catch
+            //    {
+            //    }
+
+            //    //update value
+            //    try
+            //    {
+            //        if (dataGridView1.ColumnCount == columnsCount && dataGridView1.RowCount == rowCount)
+            //        {
+            //            for (var i = 0; i < columnsCount; i++)
+            //            {
+            //                for (var j = 0; j < rowCount; j++)
+            //                {
+            //                    var str = Layout_Bitmap2Char(j, i);
+            //                    dataGridView1[i, j].Value = str;
+            //                    if (str == "B")
+            //                    {
+            //                        dataGridView1.Rows[j].Cells[i].Style.BackColor = Color.Red;
+            //                        _banker++;
+            //                        _lastWin = "Banker";
+            //                    }
+
+            //                    if (str == "T")
+            //                    {
+            //                        dataGridView1.Rows[j].Cells[i].Style.BackColor = Color.LimeGreen;
+            //                        _tie++;
+            //                        _lastWin = "Tie";
+            //                    }
+
+            //                    if (str == "P")
+            //                    {
+            //                        dataGridView1.Rows[j].Cells[i].Style.BackColor = Color.Blue;
+            //                        _player++;
+            //                        _lastWin = "Player";
+            //                    }
+
+            //                    if (str == " ")
+            //                    {
+            //                        dataGridView1.Rows[j].Cells[i].Style.BackColor = Color.White;
+            //                        _empty++;
+            //                    }
+
+            //                    if (str == "Error")
+            //                    {
+            //                        dataGridView1.Rows[j].Cells[i].Style.BackColor = Color.Black;
+            //                    }
+            //                }
+            //            }
+
+            //            dataGridView1.ClearSelection();
+            //        }
+            //    }
+            //    catch
+            //    {
+            //    }
+
+            //    _all = _player + _banker + _tie;
+            //    lbScrore.Text = $@"Player: {_player}   Banker: {_banker}   Tie: {_tie}   Empty: {_empty}   All: {_all}/{_player + _banker + _tie + _empty}   LastWin: {_lastWin}";
+            //}
+            //catch
+            //{
+            //}
+
+        }
+
+        private string Layout_Bitmap2Char(int row, int cell)
+        {
+            try
+            {
+                picBitmap.Image = (Bitmap)dgvCurrentResultImg.Rows[row].Cells[cell].Value;
+                var img = new Bitmap(picBitmap.Image);
+                var pixel = img.GetPixel(BitWidth / 2, BitHeight / 2);
+
+                if (pixel.R > pixel.G && pixel.R > pixel.B)
+                {
+                    return "B";
+                }
+
+                if (pixel.G > pixel.R && pixel.G > pixel.B)
+                {
+                    return "T";
+                }
+
+                if (pixel.B > pixel.R && pixel.B > pixel.G)
+                {
+                    return "P";
+                }
+                if (pixel.B == pixel.R && pixel.R == pixel.G)
+                {
+                    pixel = img.GetPixel(BitWidth / 2, (BitHeight / 2) - 1);
+                    if (pixel.R > pixel.G && pixel.R > pixel.B)
+                    {
+                        return "B";
+                    }
+                    if (pixel.G > pixel.R && pixel.G > pixel.B)
+                    {
+                        return "T";
+                    }
+
+                    if (pixel.B > pixel.R && pixel.B > pixel.G)
+                    {
+                        return "P";
+                    }
+
+                    if (pixel.B == pixel.R && pixel.R == pixel.G)
+                    {
+                        pixel = img.GetPixel(BitWidth / 2, (BitHeight / 2) - 2);
+                        if (pixel.R > pixel.G && pixel.R > pixel.B)
+                        {
+                            return "B";
+                        }
+                        if (pixel.G > pixel.R && pixel.G > pixel.B)
+                        {
+                            return "T";
+                        }
+
+                        if (pixel.B > pixel.R && pixel.B > pixel.G)
+                        {
+                            return "P";
+                        }
+                        if (pixel.B == pixel.R && pixel.R == pixel.G)
+                        {
+                            pixel = img.GetPixel(BitWidth / 2, (BitHeight / 2) + 1);
+                            if (pixel.R > pixel.G && pixel.R > pixel.B)
+                            {
+                                return "B";
+                            }
+                            if (pixel.G > pixel.R && pixel.G > pixel.B)
+                            {
+                                return "T";
+                            }
+
+                            if (pixel.B > pixel.R && pixel.B > pixel.G)
+                            {
+                                return "P";
+                            }
+                            if (pixel.B == pixel.R && pixel.R == pixel.G)
+                            {
+                                pixel = img.GetPixel(BitWidth / 2, (BitHeight / 2) + 2);
+                                if (pixel.R > pixel.G && pixel.R > pixel.B)
+                                {
+                                    return "B";
+                                }
+                                if (pixel.G > pixel.R && pixel.G > pixel.B)
+                                {
+                                    return "T";
+                                }
+
+                                if (pixel.B > pixel.R && pixel.B > pixel.G)
+                                {
+                                    return "P";
+                                }
+                            }
+                        }
+                    }
+
+                    return " ";
+                }
+                return "Error";
+            }
+            catch
+            {
+                return "Error";
+            }
+        }
+
+        private unsafe void Layout_GetScore(Bitmap picture, int xCount, int yCount)
+        {
+            var frmLayout = new FrmMain();
+            void* ptr = stackalloc byte[44];
+            try
+            {
+                if (xCount > 0 & yCount > 0 && picture != null && picture.Width >= 10 && picture.Height >= 10)
+                {
+                    frmLayout.PosX2 = xCount;
+                    frmLayout.PosY2 = yCount;
+                    *(int*)((byte*)ptr + 8) = 0;
+                    *(int*)((byte*)ptr + 4) = 0;
+                    var list = Layout_GridBuild(frmLayout, picture, ref *(int*)((byte*)ptr + 8), ref *(int*)((byte*)ptr + 4));
+                    *(int*)((byte*)ptr + 8) = checked(*(int*)((byte*)ptr + 8) + 6);
+                    *(int*)((byte*)ptr + 4) = checked(*(int*)((byte*)ptr + 4) + 6);
+                    var list2 = new List<string>();
+                    dgvCurrentResultImg.Columns.Clear();
+                    ref var ptr2 = ref *(int*)((byte*)ptr + 12);
+                    var num = 0;
+                    *(int*)((byte*)ptr + 28) = checked(xCount - 1);
+                    ptr2 = num;
+                    while (*(int*)((byte*)ptr + 12) <= *(int*)((byte*)ptr + 28))
+                    {
+                        var dataGridViewImageColumn = new DataGridViewImageColumn();
+                        dataGridViewImageColumn.Width = *(int*)((byte*)ptr + 8);
+                        BitWidth = dataGridViewImageColumn.Width;
+                        dataGridViewImageColumn.ImageLayout = DataGridViewImageCellLayout.Normal;
+                        dgvCurrentResultImg.Columns.Add(dataGridViewImageColumn);
+                        *(int*)((byte*)ptr + 12) = checked(*(int*)((byte*)ptr + 12) + 1);
+                    }
+                    ref var ptr3 = ref *(int*)((byte*)ptr + 16);
+                    var num2 = 0;
+                    *(int*)((byte*)ptr + 32) = checked(yCount - 1);
+                    ptr3 = num2;
+                    while (*(int*)((byte*)ptr + 16) <= *(int*)((byte*)ptr + 32))
+                    {
+                        dgvCurrentResultImg.Rows.Add(list2.ToArray());
+                        dgvCurrentResultImg.Rows[checked(dgvCurrentResultImg.Rows.Count - 1)].Height = *(int*)((byte*)ptr + 4);
+                        BitHeight = *(int*)((byte*)ptr + 4);
+                        *(int*)((byte*)ptr + 16) = checked(*(int*)((byte*)ptr + 16) + 1);
+                    }
+                    dgvCurrentResultImg.ClearSelection();
+                    *(int*)ptr = 0;
+                    ref var ptr4 = ref *(int*)((byte*)ptr + 20);
+                    var num3 = 0;
+                    *(int*)((byte*)ptr + 36) = checked(xCount - 1);
+                    ptr4 = num3;
+                    while (*(int*)((byte*)ptr + 20) <= *(int*)((byte*)ptr + 36))
+                    {
+                        ref var ptr5 = ref *(int*)((byte*)ptr + 24);
+                        var num4 = 0;
+                        *(int*)((byte*)ptr + 40) = checked(yCount - 1);
+                        ptr5 = num4;
+                        while (*(int*)((byte*)ptr + 24) <= *(int*)((byte*)ptr + 40))
+                        {
+                            var value = new Bitmap(*(int*)((byte*)ptr + 8), *(int*)((byte*)ptr + 4));
+                            if (*(int*)ptr < list.Count)
+                            {
+                                value = list[*(int*)ptr];
+                                dgvCurrentResultImg.Rows[*(int*)((byte*)ptr + 24)].Cells[*(int*)((byte*)ptr + 20)].Value = value;
+                                dgvCurrentResultImg.Rows[*(int*)((byte*)ptr + 24)].Cells[*(int*)((byte*)ptr + 20)].Style.BackColor = Color.DarkGray;
+                            }
+                            *(int*)ptr = checked(*(int*)ptr + 1);
+                            *(int*)((byte*)ptr + 24) = checked(*(int*)((byte*)ptr + 24) + 1);
+                        }
+                        *(int*)((byte*)ptr + 20) = checked(*(int*)((byte*)ptr + 20) + 1);
+                    }
+                }
+            }
+            catch
+            {
+            }
+        }
+
+        internal static unsafe List<Bitmap> Layout_GridBuild(FrmMain frmLayout, Bitmap picture, ref int posX, ref int posY)
+        {
+            void* ptr = stackalloc byte[48];
+            var list = new List<Bitmap>();
+            *(int*)((byte*)ptr + 4) = 0;
+            *(int*)ptr = 0;
+            if (frmLayout != null && picture.Width > 10 && picture.Height > 10)
+            {
+                if (frmLayout.PosX2 > 0 & frmLayout.PosY2 > 0)
+                {
+                    var d = new decimal(picture.Width / (double)frmLayout.PosX2);
+                    var d2 = new decimal(picture.Height / (double)frmLayout.PosY2);
+                    ref var ptr2 = ref *(int*)((byte*)ptr + 16);
+                    var num = 0;
+                    *(int*)((byte*)ptr + 40) = checked(frmLayout.PosX2 - 1);
+                    ptr2 = num;
+                    while (*(int*)((byte*)ptr + 16) <= *(int*)((byte*)ptr + 40))
+                    {
+                        *(int*)((byte*)ptr + 8) = (int)Math.Round((Convert.ToDouble(decimal.Multiply(d, new decimal(*(int*)((byte*)ptr + 16)))) + 0.5));
+                        *(int*)((byte*)ptr + 12) = 0;
+                        if (*(int*)((byte*)ptr + 16) < checked(frmLayout.PosX2 - 1))
+                        {
+                            *(int*)((byte*)ptr + 20) = (int)Math.Round((Convert.ToDouble(decimal.Multiply(d, new decimal(checked(*(int*)((byte*)ptr + 16) + 1)))) + 0.5));
+                            *(int*)((byte*)ptr + 12) = checked(*(int*)((byte*)ptr + 20) - *(int*)((byte*)ptr + 8));
+                        }
+                        else
+                        {
+                            *(int*)((byte*)ptr + 12) = checked(picture.Width - *(int*)((byte*)ptr + 8));
+                        }
+                        ref var ptr3 = ref *(int*)((byte*)ptr + 32);
+                        var num2 = 0;
+                        *(int*)((byte*)ptr + 44) = checked(frmLayout.PosY2 - 1);
+                        ptr3 = num2;
+                        while (*(int*)((byte*)ptr + 32) <= *(int*)((byte*)ptr + 44))
+                        {
+                            *(int*)((byte*)ptr + 28) = (int)Math.Round((Convert.ToDouble(decimal.Multiply(d2, new decimal(*(int*)((byte*)ptr + 32)))) + 0.5));
+                            *(int*)((byte*)ptr + 24) = 0;
+                            if (*(int*)((byte*)ptr + 32) < checked(frmLayout.PosY2 - 1))
+                            {
+                                *(int*)((byte*)ptr + 36) = (int)Math.Round((Convert.ToDouble(decimal.Multiply(d2, new decimal(checked(*(int*)((byte*)ptr + 32) + 1)))) + 0.5));
+                                *(int*)((byte*)ptr + 24) = checked(*(int*)((byte*)ptr + 36) - *(int*)((byte*)ptr + 28));
+                            }
+                            else
+                            {
+                                *(int*)((byte*)ptr + 24) = checked(picture.Height - *(int*)((byte*)ptr + 28));
+                            }
+                            if (*(int*)((byte*)ptr + 24) > 5 & *(int*)((byte*)ptr + 12) > 5)
+                            {
+                                var rect = new Rectangle(*(int*)((byte*)ptr + 8), *(int*)((byte*)ptr + 28), *(int*)((byte*)ptr + 12), *(int*)((byte*)ptr + 24));
+                                var item = picture.Clone(rect, PixelFormat.Format32bppArgb);
+                                list.Add(item);
+                                if (*(int*)((byte*)ptr + 12) > *(int*)((byte*)ptr + 4))
+                                {
+                                    *(int*)((byte*)ptr + 4) = *(int*)((byte*)ptr + 12);
+                                }
+                                if (*(int*)((byte*)ptr + 24) > *(int*)ptr)
+                                {
+                                    *(int*)ptr = *(int*)((byte*)ptr + 24);
+                                }
+                            }
+                            *(int*)((byte*)ptr + 32) = checked(*(int*)((byte*)ptr + 32) + 1);
+                        }
+                        *(int*)((byte*)ptr + 16) = checked(*(int*)((byte*)ptr + 16) + 1);
+                    }
+                }
+            }
+            posX = *(int*)((byte*)ptr + 4);
+            posY = *(int*)ptr;
+            return list;
+        }
+
+        /// <summary>
+        /// 1 = ถ้าค่าเปลี่ยนแปลง,
+        /// 2 = ถ้าค่าเพิ่มขึ้น,
+        /// 3 = ถ้าค่าลดลง
+        /// </summary>
+        /// <param name="mode"></param>
+        /// <returns></returns>
+        private bool Layout_NumberChanging(int mode)
+        {
+            if (_scoreFirstTime)
+            {
+                _scoreFirstTime = false;
+                _allNow = _all;
+                _allMax = _all;
+                return true;
+            }
+
+            switch (mode)
+            {
+                case 1:
+                    if (_allNow != _all) // ถ้า all เปลี่ยนแปลง
+                    {
+                        _allNow = _all;
+                        return true;
+                    }
+                    break;
+
+                case 2:
+                    if (_allMax < _all) // ถ้า all เพิ่มขึ้น
+                    {
+                        _allMax = _all;
+                        return true;
+                    }
+                    break;
+
+                case 3:
+                    if (_allMax > _allNow) // ถ้า all น้อยลง
+                    {
+                        return true;
+                    }
+                    break;
+
+                case 0:
+                    return false;
+            }
+
+            return false;
+        }
+
+        private void TmScore_Tick(object sender, EventArgs e)
+        {
+            //_allChanging1 = Layout_NumberChanging(1);
+            //_allChanging2 = Layout_NumberChanging(2);
+            //_allChanging3 = Layout_NumberChanging(3);
+            //try
+            //{
+            //    var columnsCount = int.Parse(txtResultXCount.Text);
+            //    var rowCount = int.Parse(txtResultYCount.Text);
+
+            //    if (_allChanging1)
+            //    {
+            //        if (dataGridView1.ColumnCount == columnsCount && dataGridView1.RowCount == rowCount)
+            //        {
+            //            for (var i = 0; i < columnsCount; i++)
+            //            {
+            //                for (var j = 0; j < rowCount; j++)
+            //                {
+            //                    var str = Layout_Bitmap2Char(j, i);
+            //                    dataGridView1[i, j].Value = str;
+            //                    if (str == " ")
+            //                    {
+            //                        str = "X";
+            //                    }
+            //                }
+            //            }
+            //        }
+            //        _allChanging1 = Layout_NumberChanging(0);
+            //    }
+            //}
+            //catch
+            //{
+            //}
+        }
+
+        #endregion Function Get PTB
+
+        #endregion
+
+
+
         #endregion Layout
 
         #region Formula
@@ -4191,7 +4922,15 @@ namespace AutoBaccarat
 
                 }
 
-               
+                if (mode == 2)
+                {
+                    tmStart.Start();
+                    tmRealtimeResult.Start();
+                    btnSetResult.Enabled = false;
+                    tmScore.Start();
+                    _scoreFirstTime = true;
+                    //_strFirst = true;
+                }
             }
             else
             {
@@ -4206,7 +4945,15 @@ namespace AutoBaccarat
                 {
 
                 }
-                
+                if (mode == 2)
+                {
+                    tmStart.Stop();
+                    tmRealtimeResult.Stop();
+                    btnSetResult.Enabled = true;
+                    tmScore.Stop();
+                    _scoreFirstTime = false;
+                    // _strFirst = false;
+                }
 
                 _switchColor = false;
             }
@@ -4849,6 +5596,9 @@ namespace AutoBaccarat
         //}
 
         #endregion
-        
+
+
+
+
     }
 }

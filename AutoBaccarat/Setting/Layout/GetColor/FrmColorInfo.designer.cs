@@ -96,14 +96,13 @@
             this.tFive_Theme1.Name = "tFive_Theme1";
             this.tFive_Theme1.Padding = new System.Windows.Forms.Padding(20, 56, 20, 20);
             this.tFive_Theme1.RoundCorners = false;
-            this.tFive_Theme1.ShowText = false;
+            this.tFive_Theme1.ShowText = true;
             this.tFive_Theme1.Sizable = false;
             this.tFive_Theme1.Size = new System.Drawing.Size(349, 387);
             this.tFive_Theme1.SmartBounds = true;
             this.tFive_Theme1.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.tFive_Theme1.TabControl = false;
             this.tFive_Theme1.TabIndex = 0;
-            this.tFive_Theme1.Text = "Get Color";
             // 
             // lb_status
             // 

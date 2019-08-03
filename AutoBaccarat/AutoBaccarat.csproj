@@ -14,6 +14,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,6 +35,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -64,6 +66,9 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="LocalizationManager\IniReader.cs" />
+    <Compile Include="LocalizationManager\langinfo.cs" />
+    <Compile Include="LocalizationManager\LocalizationManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setting\Layout\GetColor\FrmColorInfo.cs">
@@ -78,28 +83,10 @@
     <Compile Include="Setting\Layout\GetColor\FrmMagnify.designer.cs">
       <DependentUpon>FrmMagnify.cs</DependentUpon>
     </Compile>
-    <Compile Include="Setting\Layout\frmResultImageTester.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Setting\Layout\frmResultImageTester.designer.cs">
-      <DependentUpon>frmResultImageTester.cs</DependentUpon>
-    </Compile>
     <Compile Include="Setting\Layout\GetColor\Values.cs" />
     <Compile Include="Setting\Layout\GetColor\Win32.cs" />
-    <Compile Include="Setting\Layout\LayerForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Setting\Layout\LayerForm.Designer.cs">
-      <DependentUpon>LayerForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Setting\Layout\LayoutValues.cs" />
-    <Compile Include="Setting\Layout\ScreenCatcher.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Setting\Layout\ScreenCatcher.designer.cs">
-      <DependentUpon>ScreenCatcher.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Setting\Layout\Variable.cs" />
+    <Compile Include="stringLoader.cs" />
     <Compile Include="ValueForBot.cs" />
     <EmbeddedResource Include="FrmDisplay.resx">
       <DependentUpon>FrmDisplay.cs</DependentUpon>
@@ -123,15 +110,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Setting\Layout\GetColor\FrmMagnify.resx">
       <DependentUpon>FrmMagnify.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Setting\Layout\frmResultImageTester.resx">
-      <DependentUpon>frmResultImageTester.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Setting\Layout\LayerForm.resx">
-      <DependentUpon>LayerForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Setting\Layout\ScreenCatcher.resx">
-      <DependentUpon>ScreenCatcher.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -164,8 +142,18 @@
       <Name>TFive UI</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="LocalizationManager\" />
+    <None Include="Resources\B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 2019.1</PostBuildEvent>
+  </PropertyGroup>
 </Project>

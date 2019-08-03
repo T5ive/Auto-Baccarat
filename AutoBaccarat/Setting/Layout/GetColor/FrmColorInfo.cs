@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using AutoBaccarat.Properties;
@@ -7,8 +8,10 @@ using AutoBaccarat.Properties;
 
 namespace AutoBaccarat
 {
+    [Obfuscation(Feature = "Apply to member * when method or constructor: virtualization", Exclude = false)]
     public partial class FrmColorInfo : Form
     {
+        public int Mode = 0;
         public FrmColorInfo()
         {
             InitializeComponent();
@@ -31,6 +34,14 @@ namespace AutoBaccarat
             bitmapFind = TFive_UI.Properties.Resources.bmpFind;
             bitmapFind2 = TFive_UI.Properties.Resources.bmpFinda;
             newCursor = CurTarget;
+            if (Mode == 0)
+            {
+                tFive_Theme1.Text = "Normal Mode";
+            }
+            else if (Mode == 1)
+            {
+                tFive_Theme1.Text = "Background Mode";
+            }
         }
         private void FrmColorInfo_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -133,32 +144,54 @@ namespace AutoBaccarat
         {
             GetPositionColor();
         }
+
+        private Color _colorRGB;
         private void GetPositionColor()
         {
             try
             {
-                var pt = Cursor.Position;
-                var wnd = WindowFromPoint(pt.X, pt.Y);
-                var mainWnd = GetAncestor(wnd, GaRoot);
-                POINT PT;
+                if (Mode == 0)
+                {
+                    var bitmap = new Bitmap(1, 1);
+                    using (Graphics graphics = Graphics.FromImage(bitmap))
+                    {
+                        graphics.CopyFromScreen(Cursor.Position, new Point(0, 0), new Size(1, 1));
+                    }
+                    var pixel = bitmap.GetPixel(0, 0);
+                    _colorRGB = pixel;
+                    var hexPixel = GetColor.HexConverter(pixel);
+                    txt_color.Text = hexPixel; //bitmap.GetPixel(0, 0).ToString();
 
-                PT.X = pt.X;
-                PT.Y = pt.Y;
-                ScreenToClient(mainWnd, ref PT);
-                txt_title.Text = Win32.GetWindowText(mainWnd);
-                GetAppName.App = txt_title.Text;
-                txt_class.Text = Win32.GetClassName(mainWnd);
-                GetAppName.Class = txt_class.Text;
+                    txt_posiX.Text = Cursor.Position.X.ToString();
+                    txt_posiY.Text = Cursor.Position.Y.ToString();
+                    panel_color.BackColor = pixel;
+                }
+                else if (Mode == 1)
+                {
+                    var pt = Cursor.Position;
+                    var wnd = WindowFromPoint(pt.X, pt.Y);
+                    var mainWnd = GetAncestor(wnd, GaRoot);
+                    POINT PT;
+
+                    PT.X = pt.X;
+                    PT.Y = pt.Y;
+                    ScreenToClient(mainWnd, ref PT);
+                    txt_title.Text = Win32.GetWindowText(mainWnd);
+                    GetAppName.App = txt_title.Text;
+                    txt_class.Text = Win32.GetClassName(mainWnd);
+                    GetAppName.Class = txt_class.Text;
 
 
-                _getApp.AppName();
-                var intPtr = GetAppName.appName;
-                txt_posiX.Text = PT.X.ToString();
-                txt_posiY.Text = PT.Y.ToString();
-                txt_color.Text = GetColor.GetColorString(int.Parse(txt_posiX.Text), int.Parse(txt_posiY.Text));
-                lb_status.Text = @"Status: "+ GetColor.GetColorFast(intPtr, PT.X, PT.Y, GetColor.StringColor(txt_color.Text), 4);
+                    _getApp.AppName();
+                    var intPtr = GetAppName.appName;
+                    txt_posiX.Text = PT.X.ToString();
+                    txt_posiY.Text = PT.Y.ToString();
+                    txt_color.Text = GetColor.GetColorString(int.Parse(txt_posiX.Text), int.Parse(txt_posiY.Text));
+                    lb_status.Text = @"Status: " + GetColor.GetColorFast(intPtr, PT.X, PT.Y, GetColor.StringColor(txt_color.Text), 4);
 
-                panel_color.BackColor = _frmMagnify.magnifyingGlass1.PixelColor;
+                    panel_color.BackColor = _frmMagnify.magnifyingGlass1.PixelColor;
+                }
+               
                 LocationMagnify();
             }
             catch
@@ -196,17 +229,31 @@ namespace AutoBaccarat
         #region Button
         private void bt_ok_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txt_title.Text) || string.IsNullOrWhiteSpace(txt_posiX.Text) ||
-                string.IsNullOrWhiteSpace(txt_posiY.Text) || string.IsNullOrWhiteSpace(txt_color.Text))
+            if (Mode == 0)
             {
-                MessageBox.Show(@"Please Input Position X, Y and Color", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                if (string.IsNullOrWhiteSpace(txt_posiY.Text) || string.IsNullOrWhiteSpace(txt_color.Text))
+                {
+                    MessageBox.Show(@"Please Input Position X, Y and Color", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                Values.RgbColor = _colorRGB;
             }
+
+            if (Mode == 1)
+            {
+                if (string.IsNullOrWhiteSpace(txt_title.Text) || string.IsNullOrWhiteSpace(txt_posiX.Text) ||
+                    string.IsNullOrWhiteSpace(txt_posiY.Text) || string.IsNullOrWhiteSpace(txt_color.Text))
+                {
+                    MessageBox.Show(@"Please Input Position X, Y and Color", @"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            
 
             Values.CheckX = int.Parse(txt_posiX.Text);
             Values.CheckY = int.Parse(txt_posiY.Text);
             Values.Color = txt_color.Text;
-            Values.TitleName = txt_title.Text+" | " + txt_class.Text;
+            Values.TitleName = txt_title.Text + " % " + txt_class.Text;
             Values.CloseFrom = true;
             Close();
             Dispose();

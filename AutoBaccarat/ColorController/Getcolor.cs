@@ -3,7 +3,6 @@ using System;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.Runtime.InteropServices;
-
 namespace AutoBaccarat
 {
     public class GetColor
@@ -162,10 +161,24 @@ namespace AutoBaccarat
             return intValue;
         }
 
+        public static Color Hex2Color(string color)
+        {
+            var ColorCut0x = color.Replace("0x", "#");
+            return ColorTranslator.FromHtml(ColorCut0x);
+        }
         public static Color GetColorToBG(string color)
         {
             var myColor = ColorTranslator.FromHtml(color);
             return myColor;
+        }
+        public static string HexConverter(System.Drawing.Color c)
+        {
+            return "0x" + c.R.ToString("X2") + c.G.ToString("X2") + c.B.ToString("X2");
+        }
+
+        public static string RGBConverter(System.Drawing.Color c)
+        {
+            return "RGB(" + c.R.ToString() + "," + c.G.ToString() + "," + c.B.ToString() + ")";
         }
     }
 }

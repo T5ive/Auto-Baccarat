@@ -1,4 +1,6 @@
 ﻿
+using System.Drawing;
+
 namespace AutoBaccarat
 {
     public class Values
@@ -9,6 +11,7 @@ namespace AutoBaccarat
 
         public static string TitleName;
         public static string Color;
+        public static Color RgbColor;
         public static bool CloseFrom = false;
 
         public static int Mode;

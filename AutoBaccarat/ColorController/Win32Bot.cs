@@ -107,6 +107,15 @@ namespace AutoBaccarat
                 mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, p.x, p.y, 0, 0);
             else if (TypeClick == "RIGHT") mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, p.x, p.y, 0, 0);
         }
+        public static void MouseClick(Point point, string typeClick = "LEFT")
+        {
+            var p = point;
+            SetCursorPos(p.X, p.Y);
+
+            if (typeClick == "LEFT")
+                mouse_event(MOUSEEVENTF_LEFTDOWN | MOUSEEVENTF_LEFTUP, p.X, p.Y, 0, 0);
+            else if (typeClick == "RIGHT") mouse_event(MOUSEEVENTF_RIGHTDOWN | MOUSEEVENTF_RIGHTUP, p.X, p.Y, 0, 0);
+        }
         public static void MouseMove(IntPtr iHandle, int x, int y)
         {
             POINT p = new POINT {x = Convert.ToInt16(x), y = Convert.ToInt16(y)};

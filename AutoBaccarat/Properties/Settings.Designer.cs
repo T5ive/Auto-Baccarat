@@ -238,5 +238,77 @@ namespace AutoBaccarat.Properties {
                 this["_betStopMore"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool topMost {
+            get {
+                return ((bool)(this["topMost"]));
+            }
+            set {
+                this["topMost"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool moveCur {
+            get {
+                return ((bool)(this["moveCur"]));
+            }
+            set {
+                this["moveCur"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool checkSettings {
+            get {
+                return ((bool)(this["checkSettings"]));
+            }
+            set {
+                this["checkSettings"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool betInv {
+            get {
+                return ((bool)(this["betInv"]));
+            }
+            set {
+                this["betInv"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool doubleClick {
+            get {
+                return ((bool)(this["doubleClick"]));
+            }
+            set {
+                this["doubleClick"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Lang {
+            get {
+                return ((int)(this["Lang"]));
+            }
+            set {
+                this["Lang"] = value;
+            }
+        }
     }
 }
