@@ -74,6 +74,7 @@ namespace TFive
 
         protected override void OnPaint(PaintEventArgs e)
         {
+          
             base.OnPaint(e);
             var B = new Bitmap(Width, Height);
             var G = Graphics.FromImage(B);

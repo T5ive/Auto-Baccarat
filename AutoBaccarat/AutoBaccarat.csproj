@@ -71,6 +71,8 @@
     <Compile Include="LocalizationManager\LocalizationManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting\Custom\CustomInfo.cs" />
+    <Compile Include="Setting\Custom\CustomListManager.cs" />
     <Compile Include="Setting\Layout\GetColor\FrmColorInfo.cs">
       <SubType>Form</SubType>
     </Compile>

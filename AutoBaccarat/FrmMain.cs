@@ -2,6 +2,7 @@
 using AutoBaccarat.Setting.Layout;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
@@ -28,10 +29,12 @@ namespace AutoBaccarat
             LoadLocation();
             CheckFile();
             LoadSettings();
+
             InitLocalization();
             LoadSelectedLanguage();
             Settings_cbLangua.SelectedIndex = Settings.Default.Lang;
             LoadLanguage();
+
             StatusLoad();
 
             MainSettingsLoad();
@@ -40,10 +43,12 @@ namespace AutoBaccarat
             FormulaLoadValue();
             Layout_LoadFiles2List();
             BettingLoadValue();
+
             CustomLoad();
             SettingChipSelected();
          
             Size = new Size(740, 575);
+            btStart.Location = new Point(6, 429);
        //  Size = new Size(975, 575);
         }
 
@@ -79,7 +84,7 @@ namespace AutoBaccarat
             Settings_cbMove.CheckedState = Settings.Default.moveCur;
             Settings_cbCheckSettings.CheckedState = Settings.Default.checkSettings;
             Settings_cbInvert.CheckedState = Settings.Default.betInv;
-            Settings_cbDoubleClick.CheckedState = Settings.Default.doubleClick;
+            Settings_cbConfirmClick.CheckedState = Settings.Default.doubleClick;
             Setting_TopMost();
         }
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -94,7 +99,7 @@ namespace AutoBaccarat
             Settings.Default.moveCur = Settings_cbMove.CheckedState;
             Settings.Default.checkSettings = Settings_cbCheckSettings.CheckedState;
             Settings.Default.betInv = Settings_cbInvert.CheckedState;
-            Settings.Default.doubleClick = Settings_cbDoubleClick.CheckedState;
+            Settings.Default.doubleClick = Settings_cbConfirmClick.CheckedState;
             Settings.Default.Lang = Settings_cbLangua.SelectedIndex;
 
             Settings.Default._formulaSelected = (int)_formulaSelected;
@@ -162,7 +167,7 @@ namespace AutoBaccarat
 
             if (tabSettings.SelectedTab == tabSettings.TabPages["tabFormula"])
             {
-                Size = new Size(785, 575);
+                Size = _customEdit ? new Size(1165, 575) : new Size(785, 575);
             }
 
             if (tabSettings.SelectedTab == tabSettings.TabPages["tabBetting"])
@@ -1444,7 +1449,6 @@ namespace AutoBaccarat
 
                 #endregion
 
-
                 _listUnit.Add((short)unitValue);
                 _listStep.Add(_lastStep);
 
@@ -1936,16 +1940,17 @@ namespace AutoBaccarat
 
         #region Bet System
 
+        private int _lastBetValue;
         public int ChipUnit(string system, short step_)
         {
             var result = 0;
             checked
             {
-                var num = CountLast(dgvLog, (short)dgvLog.Columns["colWL"].Index, (short)dgvLog.Columns["colCost"].Index);
-                var left = "";
+                var winLoseCount = CountLast(dgvLog, (short)dgvLog.Columns["colWL"].Index, (short)dgvLog.Columns["colCost"].Index);
+                var resultWinOrLose = "";
                 if (dgvLog.RowCount > 0)
                 {
-                    left = ResultLast(dgvLog, (short)dgvLog.Columns["colWL"].Index, (short)dgvLog.Columns["colCost"].Index);
+                    resultWinOrLose = ResultLast(dgvLog, (short)dgvLog.Columns["colWL"].Index, (short)dgvLog.Columns["colCost"].Index);
                 }
 
                 if (system == "PP")
@@ -1953,23 +1958,23 @@ namespace AutoBaccarat
                     try
                     {
                         //_betSystemValue = ValueForBot.ValuePP;
-                        var array10 = ValueForBot.ValuePP.Split('-');
-                        var num27 = (short)array10.Length;
-                        short num28 = 0;
+                        var splitPp = ValueForBot.ValuePP.Split('-');
+                        var valueByPp = (short)splitPp.Length;
+                        short step = 0;
                         if (_listWinLose.Count > 0)
                         {
-                            if (left == "W")
+                            if (resultWinOrLose == "W")
                             {
-                                var value = num % num27;
-                                num28 = (short)value;
+                                var value = winLoseCount % valueByPp;
+                                step = (short)value;
                             }
                             else
                             {
-                                num28 = 0;
+                                step = 0;
                             }
                         }
-                        _lastStep = 28;
-                        return int.Parse(array10[num28]);
+                        _lastStep = step;
+                        return int.Parse(splitPp[step]);
                     }
                     catch
                     {
@@ -1981,23 +1986,23 @@ namespace AutoBaccarat
                     try
                     {
                         //_betSystemValue = ValueForBot.ValueNP;
-                        var array = ValueForBot.ValueNP.Split('-');
-                        var num3 = (short)array.Length;
-                        short num4 = 0;
+                        var splitNp = ValueForBot.ValueNP.Split('-');
+                        var valueByNp = (short)splitNp.Length;
+                        short step = 0;
                         if (_listWinLose.Count > 0)
                         {
-                            if (left == "L")
+                            if (resultWinOrLose == "L")
                             {
-                                var value = num % num3;
-                                num4 = (short)value;
+                                var value = winLoseCount % valueByNp;
+                                step = (short)value;
                             }
                             else
                             {
-                                num4 = 0;
+                                step = 0;
                             }
                         }
-                        _lastStep = num4;
-                        return int.Parse(array[num4]);
+                        _lastStep = step;
+                        return int.Parse(splitNp[step]);
                     }
                     catch
                     {
@@ -2009,30 +2014,29 @@ namespace AutoBaccarat
                     try
                     {
                         //_betSystemValue = ValueForBot.ValuePP + "," + ValueForBot.ValueNP;
-                        var valuePp = ValueForBot.ValuePP.Split('-');
-                        var valuePpLength = (short)valuePp.Length;
-                        var valueNp = ValueForBot.ValueNP.Split('-');
-                        var valueNpLength = (short)valueNp.Length;
+                        var splitPp = ValueForBot.ValuePP.Split('-');
+                        var valueByPp = (short)splitPp.Length;
+                        var splitNp = ValueForBot.ValueNP.Split('-');
+                        var valueByNp = (short)splitNp.Length;
 
-                        short num11 = 0;
+                        short step = 0;
                         if (_listWinLose.Count > 0)
                         {
-                            if (left == "W")
+                            if (resultWinOrLose == "W")
                             {
-                                var value = num % valuePpLength;
-                                num11 = (short)value;
-                                result = int.Parse(valuePp[num11]);
+                                var value = winLoseCount % valueByPp;
+                                step = (short)value;
+                                result = int.Parse(splitPp[step]);
                             }
                             else
                             {
-                                var value = num % valueNpLength;
-                                num11 = (short)value;
-
-                                result = int.Parse(valueNp[num11]);
+                                var value = winLoseCount % valueByNp;
+                                step = (short)value;
+                                result = int.Parse(splitNp[step]);
                             }
                         }
 
-                        _lastStep = num11;
+                        _lastStep = step;
                         return result;
                     }
                     catch
@@ -2045,26 +2049,26 @@ namespace AutoBaccarat
                     try
                     {
                         //_betSystemValue = "";
-                        var array9 = "1-3-2-4-3-6-4-7-5-8-6-9-7-10".Split('-');
-                        var num21 = (short)array9.Length;
+                        var valueAi = "1-3-2-4-3-6-4-7-5-8-6-9-7-10".Split('-');
+                        var valueByAi = (short)valueAi.Length;
                         var num22 = (short)"1-2-4-8".Split('-').Length;
-                        short num23 = 0;
+                        short step = 0;
                         if (_listWinLose.Count > 0)
                         {
-                            if (left == "W")
+                            if (resultWinOrLose == "W")
                             {
-                                var value = num % num21;
-                                num23 = (short)value;
+                                var value = winLoseCount % valueByAi;
+                                step = (short)value;
                             }
                             else
                             {
-                                var value = num % num22;
-                                num23 = (short)value;
+                                var value = winLoseCount % num22;
+                                step = (short)value;
                             }
                         }
 
-                        _lastStep = num23;
-                        return int.Parse(array9[num23]);
+                        _lastStep = step;
+                        return int.Parse(valueAi[step]);
                     }
                     catch
                     {
@@ -2079,7 +2083,7 @@ namespace AutoBaccarat
                 }
                 if (system == "OneShot")
                 {
-                    int num26;
+                    int sum;
                     if (_listBalance.Count > 0)
                     {
                         //int num24 = (int)Math.Round(unchecked(Convert.ToDouble(Math.Abs(Convert.ToDecimal(this.lblTopProfit.Text))) - _listBalance[checked(_listBalance.Count - 1)]));
@@ -2088,34 +2092,64 @@ namespace AutoBaccarat
                         var num25 = ValueForBot.Chip;
                         if (num24 > num25)
                         {
-                            if (left == "W")
+                            if (resultWinOrLose == "W")
                             {
-                                if (num == 1)
+                                if (winLoseCount == 1)
                                 {
-                                    num26 = (int)Math.Round(Math.Ceiling(num24 / (double)num25) + 1.0);
+                                    sum = (int)Math.Round(Math.Ceiling(num24 / (double)num25) + 1.0);
                                 }
                                 else
                                 {
-                                    num26 = 1;
+                                    sum = 1;
                                 }
                             }
                             else
                             {
-                                num26 = 1;
+                                sum = 1;
                             }
                         }
                         else
                         {
-                            num26 = 1;
+                            sum = 1;
                         }
                     }
                     else
                     {
-                        num26 = 1;
+                        sum = 1;
                     }
 
                     _lastStep = step_;
-                    return num26;
+                    return sum;
+                }
+
+                if (system == "X2")
+                {
+                    try
+                    {
+                        //_betSystemValue = "";
+                        var valueX2 = "1-2-4-8-16-32-64-128-256-512-1024-2048-4096-8192-16384-16384-65536-131072-262144-524288-1048576".Split('-');
+                        var valueByX2 = (short)valueX2.Length;
+                        short step = 0;
+                        if (_listWinLose.Count > 0)
+                        {
+                            if (resultWinOrLose == "W")
+                            {
+                                var value = winLoseCount % valueByX2;
+                                step = (short)value;
+                            }
+                            else
+                            {
+                                var value = winLoseCount % valueByX2;
+                                step = (short)value;
+                            }
+                        }
+
+                        _lastStep = step;
+                        return int.Parse(valueX2[step]);
+                    }
+                    catch
+                    {
+                    }
                 }
 
                 _lastStep = step_;
@@ -2129,38 +2163,48 @@ namespace AutoBaccarat
             short num = 0;
             if (dgv.RowCount != 0)
             {
-                for (var num2 = checked((short)(dgv.RowCount - 1)); num2 >= 0; num2 += -1)
+                for (var lastRow = checked((short)(dgv.RowCount - 1)); lastRow >= 0; lastRow += -1)
                 {
                     checked
                     {
-                        if (num2 == dgv.RowCount - 1)
+                        if (lastRow == dgv.RowCount - 1)
                         {
-                            if (decimal.Compare(Convert.ToDecimal(dgv[colomn_Cost, num2].Value), 0m) != 0)
+                            if (decimal.Compare(Convert.ToDecimal(dgv[colomn_Cost, lastRow].Value), 0m) != 0)
                             {
-                                text = dgv[colomn_WL, num2].Value.ToString();
-                                if (text == dgv[colomn_WL, num2].Value.ToString())
+                                text = dgv[colomn_WL, lastRow].Value.ToString();
+                                if (text == dgv[colomn_WL, lastRow].Value.ToString())
                                 {
                                     num += 1;
                                 }
+                                else
+                                {
+                                    num = 0;
+                                    break;
+                                }
                             }
                         }
-                        else if (decimal.Compare(Convert.ToDecimal(dgv[colomn_Cost, num2].Value), 0m) != 0)
+                        else if (decimal.Compare(Convert.ToDecimal(dgv[colomn_Cost, lastRow].Value), 0m) != 0)
                         {
                             if (text == "")
                             {
-                                text = dgv[colomn_WL, num2].Value.ToString();
-                                if (text == dgv[colomn_WL, num2].Value.ToString())
+                                text = dgv[colomn_WL, lastRow].Value.ToString();
+                                if (text == dgv[colomn_WL, lastRow].Value.ToString())
                                 {
                                     num += 1;
                                 }
                             }
                             else
                             {
-                                if (dgv[colomn_WL, num2].Value.ToString() != text)
+                                if (text == dgv[colomn_WL, lastRow].Value.ToString())
                                 {
+                                    num += 1;
+                                }
+                                else
+                                {
+                                    num = 0;
                                     break;
                                 }
-                                num += 1;
+                               
                             }
                         }
                     }
@@ -3277,6 +3321,8 @@ namespace AutoBaccarat
             Background
         }
 
+ 
+
         private void PositionSelectMode(object sender)
         {
             PositionChangeMode();
@@ -3321,8 +3367,7 @@ namespace AutoBaccarat
 
         private FormulaMode _formulaSelected;
 
-
-
+       
 
 
 
@@ -3345,7 +3390,14 @@ namespace AutoBaccarat
 
         private void Formula_btCustom_Click(object sender, EventArgs e)
         {
+            _customEdit = true;
+            _customName = tabFormula.Text;
+            tabFormula.Text = TitleCustom;
+            FormulaBox.Visible = true;
+            FormulaGroupMode.Enabled = false;
+            Size = new Size(1165, 575);
             CustomEdit();
+            InitCustomList();
         }
 
         private void FormulaAllRadioCheckedChanged(object sender)
@@ -3447,8 +3499,10 @@ namespace AutoBaccarat
         private static List<string> _customValueNumberSaved = new List<string>();
         private static List<string> _customValueFollowAdverseSaved = new List<string>();
         private short _customSelectedListbox;
-        private static string _customLoadValue2Array;
+        public static string _customLoadValue2Array;
 
+        private bool _customEdit;
+        private string _customName;
         #endregion Variable
 
         #region Load/Save
@@ -3470,7 +3524,7 @@ namespace AutoBaccarat
             {
                 try
                 {
-                    var array = _customLoadValue2Array.Split(';');
+                    var array = _customLoadValue2Array.Split('|');
                     _customValueNumberSaved.Clear();
                     _customValueFollowAdverseSaved.Clear();
                     var num = array.Length - 1;
@@ -3484,7 +3538,7 @@ namespace AutoBaccarat
                 catch // if
                 {
                     _customLoadValue2Array = CustomDefaultValue();
-                    var array3 = _customLoadValue2Array.Split(';');
+                    var array3 = _customLoadValue2Array.Split('|');
                     _customValueNumberSaved.Clear();
                     _customValueFollowAdverseSaved.Clear();
                     var num2 = array3.Length - 1;
@@ -3500,9 +3554,6 @@ namespace AutoBaccarat
 
         private void CustomEdit()
         {
-            FormulaBox.Visible = true;
-            FormulaGroupMode.Enabled = false;
-            Size = new Size(1165, 575);
             _customValueNumber = _customValueNumberSaved;
             _customValueFollowAdverse = _customValueFollowAdverseSaved;
             checked
@@ -3538,9 +3589,14 @@ namespace AutoBaccarat
                 _customValueNumberSaved = _customValueNumber;
                 _customValueFollowAdverseSaved = _customValueFollowAdverse;
                 CustomSaveValue();
-                FormulaGroupMode.Enabled = true;
+
+                _customEdit = false;
                 FormulaBox.Visible = false;
+                FormulaGroupMode.Enabled = true;
+                _customEdit = false;
+                tabFormula.Text = TitleCustom;
                 Size = new Size(785, 575);
+                
             }
         }
 
@@ -3576,7 +3632,7 @@ namespace AutoBaccarat
 
         public static string CustomDefaultValue()
         {
-            return "1,1=X;1,2,1,2=X" + ";2,2=X;3,3=X;4,4=X" + ";1,2,3=X;1,3,2,1=X" + ";5=O;6=O;7=O;8=O;9=O;10=O;11=O;12=O;13=O;14=O;15=O;16=O;17=O;18=O;19=O;20=O";
+            return "1,1=X|1,2,1,2=X" + "|2,2=X|3,3=X|4,4=X" + "|1,2,3=X|1,3,2,1=X" + "|5=O|6=O|7=O|8=O|9=O|10=O|11=O|12=O|13=O|14=O|15=O|16=O|17=O|18=O|19=O|20=O";
         }
 
         private void CustomList2Label()
@@ -3791,10 +3847,15 @@ namespace AutoBaccarat
         private void Custom_btClose_Click(object sender, EventArgs e)
         {
             CustomEdit();
-            FormulaGroupMode.Enabled = true;
+            _customEdit = false;
             FormulaBox.Visible = false;
+            FormulaGroupMode.Enabled = true;
+            _customEdit = false;
+            tabFormula.Text = TitleCustom;
             Size = new Size(785, 575);
         }
+
+        public string TitleCustom => _customName + (_customEdit ? "*" : "");
 
         #endregion Button Control, Save Settings
 
@@ -3806,9 +3867,9 @@ namespace AutoBaccarat
 
         #region Variable
 
-      
+        private bool _bettingEdit;
 
-        private string _txtPp, _txtNp, _txtFib;
+        private string _txtPp, _txtNp, _txtFib, _bettingName;
         private BettingMode _bettingEditor, _bettingSelected;
 
         #endregion Variable
@@ -3846,6 +3907,10 @@ namespace AutoBaccarat
         private void BettingEditMode(BettingMode mode)
         {
             BettingBox.Visible = true;
+            _bettingEdit = true;
+            _bettingName = tabBetting.Text;
+            tabBetting.Text = TitleBetting;
+
             _bettingEditor = mode;
             switch (mode)
             {
@@ -3867,7 +3932,7 @@ namespace AutoBaccarat
             }
             BettingTextToDataGridView();
             Betting_GroupMode.Enabled = false;
-            Size = new Size(815, 575);
+           
         }
 
         private void Betting_cbPP_CheckedChanged(object sender)
@@ -3908,6 +3973,8 @@ namespace AutoBaccarat
 
             BettingSaveValue();
         }
+
+        public string TitleBetting => _bettingName + (_bettingEdit ? "*" : "");
 
         #endregion Mode
 
@@ -4079,9 +4146,10 @@ namespace AutoBaccarat
         private void Betting_btClose_Click(object sender, EventArgs e)
         {
             BettingLoadValue();
+            _bettingEdit = false;
+            tabBetting.Text = TitleBetting;
             Betting_GroupMode.Enabled = true;
             BettingBox.Visible = false;
-            Size = new Size(785, 575);
         }
 
         private void Betting_btSave_Click(object sender, EventArgs e)
@@ -4093,7 +4161,10 @@ namespace AutoBaccarat
             }
 
             BettingSaveValue();
+
             Size = new Size(785, 575);
+            _bettingEdit = false;
+            tabBetting.Text = TitleBetting;
             Betting_GroupMode.Enabled = true;
             BettingBox.Visible = false;
         }
@@ -4109,6 +4180,8 @@ namespace AutoBaccarat
         private string _amountBetChip;
         private bool _statusRunBot, _ready;
         private int _timeRunning, _timeStart, _statusRunningBot;
+        public string Title => "Auto Baccarat" + (_statusRunBot ? " - Running" : "");
+
         private void BtStart_Click(object sender, EventArgs e)
         {
             ClickStart();
@@ -4152,6 +4225,8 @@ namespace AutoBaccarat
                     panel2.Enabled = true;
                     RunBot(false, ValueForBot.Mode);
                 }
+
+                Text = Title;
             }
             catch
             {
@@ -4393,7 +4468,7 @@ namespace AutoBaccarat
                         int timesClick = amountChip5;
                         for (int i = 1; i <= timesClick; i++)
                         {
-                            Win32Bot.MouseClick(ValueForBot.Chip5);
+                            ClickBetting(bettingSuggest);
                             Thread.Sleep(700);
 
                         }
@@ -4405,7 +4480,7 @@ namespace AutoBaccarat
                         int timesClick = amountChip4;
                         for (int j = 1; j <= timesClick; j++)
                         {
-                            Win32Bot.MouseClick(ValueForBot.Chip4);
+                            ClickBetting(bettingSuggest);
                             Thread.Sleep(700);
                         }
                     }
@@ -4416,7 +4491,7 @@ namespace AutoBaccarat
                         int timesClick = amountChip3;
                         for (int k = 1; k <= timesClick; k++)
                         {
-                            Win32Bot.MouseClick(ValueForBot.Chip3);
+                            ClickBetting(bettingSuggest);
                             Thread.Sleep(700);
                         }
                     }
@@ -4427,7 +4502,7 @@ namespace AutoBaccarat
                         int timesClick = amountChip2;
                         for (int l = 1; l <= timesClick; l++)
                         {
-                            Win32Bot.MouseClick(ValueForBot.Chip2);
+                            ClickBetting(bettingSuggest);
                             Thread.Sleep(700);
                         }
                     }
@@ -4438,15 +4513,33 @@ namespace AutoBaccarat
                         int timesClick = amountChip1;
                         for (int m = 1; m <= timesClick; m++)
                         {
-                            Win32Bot.MouseClick(ValueForBot.Chip1);
+                            ClickBetting(bettingSuggest);
                             Thread.Sleep(700);
                         }
                     }
 
-                    ClickBetting(bettingSuggest);
+
+                  //  ClickBetting(bettingSuggest);
+                    if (Settings_cbConfirmClick.CheckedState)
+                    {
+                        Thread.Sleep(1000);
+                        if (bettingSuggest == 1)
+                        {
+                            Win32Bot.MouseClick(ValueForBot.ConfirmPlayer);
+                            Thread.Sleep(100);
+                            Win32Bot.MouseClick(ValueForBot.ConfirmPlayer);
+                        }
+                        else if (bettingSuggest == 2)
+                        {
+                            Win32Bot.MouseClick(ValueForBot.ConfirmBanker);
+                            Thread.Sleep(100);
+                            Win32Bot.MouseClick(ValueForBot.ConfirmBanker);
+                        }
+                    }
 
                     if (Settings_cbMove.CheckedState)
                     {
+                        Thread.Sleep(700);
                         Cursor.Position = new Point(0, 0);
                         Thread.Sleep(50);
                         Application.DoEvents();
@@ -4466,19 +4559,6 @@ namespace AutoBaccarat
             else if (bettingSuggest == 2)
             {
                 Win32Bot.MouseClick(ValueForBot.Banker);
-            }
-
-            if (Settings_cbDoubleClick.CheckedState)
-            {
-                Thread.Sleep(700);
-                if (bettingSuggest == 1)
-                {
-                    Win32Bot.MouseClick(ValueForBot.ConfirmPlayer);
-                }
-                else if (bettingSuggest == 2)
-                {
-                    Win32Bot.MouseClick(ValueForBot.ConfirmBanker);
-                }
             }
         }
         private void CheckColorResult()
@@ -4769,6 +4849,32 @@ namespace AutoBaccarat
 
         #endregion
 
+        public CustomListManager CustomListMng = new CustomListManager();
+        private void Custom_LoadList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Custom_LoadList.SelectedItem == null)
+            {
+                return;
+            }
+
+            CustomListMng.LoadLanguageFromFile(((CustomInfo)Custom_LoadList.SelectedItem).File);
+
+            CustomValue2ArrayList();
+            CustomEdit();
+            CustomTxtName.Text = Custom_LoadList.SelectedItem.ToString();
+        }
+
+        private void InitCustomList()
+        {
+            Custom_LoadList.DataSource = CustomListMng.GetCustomList();
+            if (Custom_LoadList.Items.Count == 0)
+            {
+                Custom_LoadList.Enabled = false;
+            }
+        }
+
+        
+
         #region GetValueString
 
         //IniReader ini = new IniReader("string");
@@ -4855,6 +4961,6 @@ namespace AutoBaccarat
         //}
 
         #endregion
-        
+
     }
 }
