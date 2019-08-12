@@ -35,7 +35,8 @@ namespace TFive
         {
 
             var border = new Pen(Color.DodgerBlue);
-            G.Clear(Color.FromArgb(240, 240, 240));
+            //G.Clear(Color.FromArgb(240, 240, 240));
+            G.Clear(BackColor);
             if (CheckedState)
             {
                 DrawGradient(Color.FromArgb(0, 100, 255), Color.FromArgb(0, 100, 255), 3, 3, Size.Height - 7, Size.Height - 7, 90f);
@@ -43,7 +44,15 @@ namespace TFive
             }
             else
             {
-                DrawGradient(Color.FromArgb(240, 240, 240), Color.FromArgb(240, 240, 240), 0, 0, Size.Height-1, Size.Height - 1, 90f);
+                DrawGradient(
+                    //Color.FromArgb(240, 240, 240),
+                    //Color.FromArgb(240, 240, 240),
+                    BackColor,
+                    BackColor,
+                    0, 0, 
+                    Size.Height-1,
+                    Size.Height - 1,
+                    90f);
             }
             G.DrawRectangle(border, 0, 0, Size.Height - 2, Size.Height - 2);
             G.DrawRectangle(border, 1, 1, Size.Height - 4, Size.Height - 4);

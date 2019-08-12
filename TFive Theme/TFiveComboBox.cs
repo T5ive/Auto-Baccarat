@@ -118,7 +118,7 @@ namespace TFive
             DrawMode = DrawMode.OwnerDrawFixed;
             DropDownStyle = ComboBoxStyle.DropDownList;
 
-            BackColor = Color.FromArgb(240, 240, 240);
+            //BackColor = Color.FromArgb(240, 240, 240);
             ForeColor = Color.FromArgb(0, 100, 255);
             Size = new Size(135, 26);
             ItemHeight = 20;
@@ -136,7 +136,13 @@ namespace TFive
             // Create a curvy border
             var GP = RoundRectangle.RoundRect(0, 0, Width - 1, Height - 1, _Value);
             // Fills the body of the rectangle with a gradient
-            var LGB = new LinearGradientBrush(ClientRectangle, Color.FromArgb(240, 240, 240), Color.FromArgb(240, 240, 240), 90f);
+            var LGB = new LinearGradientBrush(
+                ClientRectangle,
+                BackColor,
+                BackColor,
+                //Color.FromArgb(240, 240, 240),
+                //Color.FromArgb(240, 240, 240),
+                90f);
 
             e.Graphics.SetClip(GP);
             e.Graphics.FillRectangle(LGB, ClientRectangle);

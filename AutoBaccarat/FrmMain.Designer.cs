@@ -221,7 +221,7 @@ namespace AutoBaccarat
             this.tabFormula = new System.Windows.Forms.TabPage();
             this.FormulaBox = new TFive.TFiveGroupBox();
             this.CustomLoadList = new TFive.TFiveGroupBox();
-            this.Custom_LoadList = new System.Windows.Forms.ListBox();
+            this.Custom_loadList = new System.Windows.Forms.ListBox();
             this.CustomSetting = new TFive.TFiveGroupBox();
             this.tFiveSeparator5 = new TFive.TFiveSeparator();
             this.CustomName = new TFive.TFiveLabel();
@@ -239,7 +239,7 @@ namespace AutoBaccarat
             this.CustomPanelResultPB = new System.Windows.Forms.Panel();
             this.CustomPanelResult = new System.Windows.Forms.Panel();
             this.Custom_List = new TFive.TFiveGroupBox();
-            this.Custom_listbox = new System.Windows.Forms.ListBox();
+            this.Custom_valueList = new System.Windows.Forms.ListBox();
             this.Custom_lbTotal = new TFive.TFiveLabel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.CustomlistDel = new TFive.TFiveButton();
@@ -456,7 +456,7 @@ namespace AutoBaccarat
             this.numberStatus.Location = new System.Drawing.Point(6, 397);
             this.numberStatus.Maximum = 4;
             this.numberStatus.Name = "numberStatus";
-            this.numberStatus.Size = new System.Drawing.Size(20, 20);
+            this.numberStatus.Size = new System.Drawing.Size(27, 27);
             this.numberStatus.TabIndex = 551;
             this.numberStatus.Value = 1;
             // 
@@ -2576,7 +2576,7 @@ namespace AutoBaccarat
             // 
             this.CustomLoadList.BackColor = System.Drawing.Color.Transparent;
             this.CustomLoadList.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.CustomLoadList.Controls.Add(this.Custom_LoadList);
+            this.CustomLoadList.Controls.Add(this.Custom_loadList);
             this.CustomLoadList.Curv1 = 1;
             this.CustomLoadList.Curv2 = 1;
             this.CustomLoadList.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -2588,20 +2588,20 @@ namespace AutoBaccarat
             this.CustomLoadList.TabIndex = 9;
             this.CustomLoadList.Text = "List";
             // 
-            // Custom_LoadList
+            // Custom_loadList
             // 
-            this.Custom_LoadList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.Custom_LoadList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Custom_LoadList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Custom_LoadList.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.Custom_LoadList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.Custom_LoadList.FormattingEnabled = true;
-            this.Custom_LoadList.ItemHeight = 20;
-            this.Custom_LoadList.Location = new System.Drawing.Point(5, 28);
-            this.Custom_LoadList.Name = "Custom_LoadList";
-            this.Custom_LoadList.Size = new System.Drawing.Size(149, 313);
-            this.Custom_LoadList.TabIndex = 0;
-            this.Custom_LoadList.SelectedIndexChanged += new System.EventHandler(this.Custom_LoadList_SelectedIndexChanged);
+            this.Custom_loadList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Custom_loadList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Custom_loadList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Custom_loadList.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.Custom_loadList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.Custom_loadList.FormattingEnabled = true;
+            this.Custom_loadList.ItemHeight = 20;
+            this.Custom_loadList.Location = new System.Drawing.Point(5, 28);
+            this.Custom_loadList.Name = "Custom_loadList";
+            this.Custom_loadList.Size = new System.Drawing.Size(149, 313);
+            this.Custom_loadList.TabIndex = 0;
+            this.Custom_loadList.SelectedIndexChanged += new System.EventHandler(this.Custom_LoadList_SelectedIndexChanged);
             // 
             // CustomSetting
             // 
@@ -2818,7 +2818,7 @@ namespace AutoBaccarat
             // 
             this.Custom_List.BackColor = System.Drawing.Color.Transparent;
             this.Custom_List.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.Custom_List.Controls.Add(this.Custom_listbox);
+            this.Custom_List.Controls.Add(this.Custom_valueList);
             this.Custom_List.Controls.Add(this.Custom_lbTotal);
             this.Custom_List.Curv1 = 1;
             this.Custom_List.Curv2 = 1;
@@ -2831,20 +2831,20 @@ namespace AutoBaccarat
             this.Custom_List.TabIndex = 5;
             this.Custom_List.Text = "List";
             // 
-            // Custom_listbox
+            // Custom_valueList
             // 
-            this.Custom_listbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.Custom_listbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Custom_listbox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Custom_listbox.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.Custom_listbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.Custom_listbox.FormattingEnabled = true;
-            this.Custom_listbox.ItemHeight = 20;
-            this.Custom_listbox.Location = new System.Drawing.Point(5, 28);
-            this.Custom_listbox.Name = "Custom_listbox";
-            this.Custom_listbox.Size = new System.Drawing.Size(150, 293);
-            this.Custom_listbox.TabIndex = 0;
-            this.Custom_listbox.SelectedIndexChanged += new System.EventHandler(this.Custom_list_SelectedIndexChanged);
+            this.Custom_valueList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Custom_valueList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Custom_valueList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Custom_valueList.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.Custom_valueList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.Custom_valueList.FormattingEnabled = true;
+            this.Custom_valueList.ItemHeight = 20;
+            this.Custom_valueList.Location = new System.Drawing.Point(5, 28);
+            this.Custom_valueList.Name = "Custom_valueList";
+            this.Custom_valueList.Size = new System.Drawing.Size(150, 293);
+            this.Custom_valueList.TabIndex = 0;
+            this.Custom_valueList.SelectedIndexChanged += new System.EventHandler(this.Custom_list_SelectedIndexChanged);
             // 
             // Custom_lbTotal
             // 
@@ -2889,6 +2889,7 @@ namespace AutoBaccarat
             this.CustomlistDel.Size = new System.Drawing.Size(76, 29);
             this.CustomlistDel.TabIndex = 37;
             this.CustomlistDel.Text = "Delete";
+            this.CustomlistDel.Click += new System.EventHandler(this.CustomlistDel_Click);
             // 
             // Custom_btClose
             // 
@@ -2914,6 +2915,7 @@ namespace AutoBaccarat
             this.CustomlistAdd.Size = new System.Drawing.Size(73, 29);
             this.CustomlistAdd.TabIndex = 36;
             this.CustomlistAdd.Text = "Add";
+            this.CustomlistAdd.Click += new System.EventHandler(this.CustomlistAdd_Click);
             // 
             // Custom_btSave
             // 
@@ -3760,7 +3762,7 @@ namespace AutoBaccarat
         private TFive.TFiveComboBox Formula_cbGoodLineFix;
         private TFive.TFiveGroupBox FormulaBox;
         private TFive.TFiveGroupBox Custom_List;
-        private System.Windows.Forms.ListBox Custom_listbox;
+        private System.Windows.Forms.ListBox Custom_valueList;
         private TFive.TFiveButton Custom_btClose;
         private TFive.TFiveButton Custom_btSave;
         private TFive.TFiveGroupBox Custom_Config;
@@ -3903,7 +3905,7 @@ namespace AutoBaccarat
         private DataGridViewTextBoxColumn Process;
         private DataGridViewTextBoxColumn Rgb;
         private TFive.TFiveGroupBox CustomLoadList;
-        private ListBox Custom_LoadList;
+        private ListBox Custom_loadList;
         private TFive.TFiveLabel CustomValue;
         private TFive.TFiveSeparator tFiveSeparator5;
         private TFive.TFiveLabel CustomName;

@@ -8,6 +8,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using TFive_Class;
 
@@ -44,7 +45,7 @@ namespace AutoBaccarat
             Layout_LoadFiles2List();
             BettingLoadValue();
 
-            CustomLoad();
+          //  CustomLoad();
             SettingChipSelected();
          
             Size = new Size(740, 575);
@@ -83,8 +84,8 @@ namespace AutoBaccarat
             Settings_cbTopMost.CheckedState = Settings.Default.topMost;
             Settings_cbMove.CheckedState = Settings.Default.moveCur;
             Settings_cbCheckSettings.CheckedState = Settings.Default.checkSettings;
-            Settings_cbInvert.CheckedState = Settings.Default.betInv;
-            Settings_cbConfirmClick.CheckedState = Settings.Default.doubleClick;
+            Settings_cbInvert.CheckedState = Settings.Default.SettingBetInvert;
+            Settings_cbConfirmClick.CheckedState = Settings.Default.SettingConfirmClick;
             Setting_TopMost();
         }
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
@@ -98,19 +99,19 @@ namespace AutoBaccarat
             Settings.Default.topMost = Settings_cbTopMost.CheckedState;
             Settings.Default.moveCur = Settings_cbMove.CheckedState;
             Settings.Default.checkSettings = Settings_cbCheckSettings.CheckedState;
-            Settings.Default.betInv = Settings_cbInvert.CheckedState;
-            Settings.Default.doubleClick = Settings_cbConfirmClick.CheckedState;
+            Settings.Default.SettingBetInvert = Settings_cbInvert.CheckedState;
+            Settings.Default.SettingConfirmClick = Settings_cbConfirmClick.CheckedState;
             Settings.Default.Lang = Settings_cbLangua.SelectedIndex;
 
-            Settings.Default._formulaSelected = (int)_formulaSelected;
-            Settings.Default._formulaGoodLineFix = Formula_cbGoodLineFix.SelectedIndex;
-            Settings.Default._formulaLock = Formula_cbLock.SelectedIndex;
-            Settings.Default._formulaFollow = Formula_cbFollow.SelectedIndex;
+            Settings.Default.FormulaSelected = (byte)_formulaSelected;
+            Settings.Default.FormulaGoodLineFix = (byte) Formula_cbGoodLineFix.SelectedIndex;
+            Settings.Default.FormulaLock = (byte) Formula_cbLock.SelectedIndex;
+            Settings.Default.FormulaFollow = (byte) Formula_cbFollow.SelectedIndex;
 
-            Settings.Default._forceSelected = (int)_forceSelected;
-            Settings.Default._forcetxt = MainSetting_txtForce.Text;
+            Settings.Default.FormulaSelected = (byte)_forceSelected;
+            Settings.Default.ForceValue =byte.Parse(MainSetting_txtForce.Text);
 
-            Settings.Default._bettingSelected = (int)_bettingSelected;
+            Settings.Default.BettingSelected = (byte) _bettingSelected;
 
 
 
@@ -622,43 +623,43 @@ namespace AutoBaccarat
             ValueForBot.StopLess = Settings_txtStopLess.Text;
             ValueForBot.StopMore = Settings_txtStopMore.Text;
 
-            ValueForBot.ValuePP = Settings.Default.txtPP;
-            ValueForBot.ValueNP = Settings.Default.txtNP;
-            ValueForBot.ValueFib = Settings.Default.txtFib;
+            ValueForBot.ValuePP = Settings.Default.ValuePP;
+            ValueForBot.ValueNP = Settings.Default.ValueNP;
+            ValueForBot.ValueFib = Settings.Default.ValueFib;
 
             ValueForBot.GoodLineFix = int.Parse(Formula_cbGoodLineFix.SelectedItem.ToString()) + 1;
             ValueForBot.Lock = int.Parse(Formula_cbLock.SelectedIndex.ToString()) + 1;
             ValueForBot.Follow = int.Parse(Formula_cbFollow.SelectedIndex.ToString()) + 1;
 
-            ValueForBot.CustomValueNumber = _customValueNumberSaved;
-            ValueForBot.CustomValueFollowAdverse = _customValueFollowAdverseSaved;
+            ValueForBot.CustomValueNumber = _customSplitNumber;
+            ValueForBot.CustomValueFollowAdverse = _customSplitType;
 
-            ValueForBot.Mode = LayoutValues.Mode;
+            ValueForBot.Mode = LayoutValue.Mode;
 
-            var positionStart = LayoutValues._pStart.Split('(', ',', ')');
+            var positionStart = LayoutValue._pStart.Split('(', ',', ')');
             ValueForBot.Start = new Point(int.Parse(positionStart[1]), int.Parse(positionStart[2]));
-            var positionPlayer = LayoutValues._pPlayer.Split('(', ',', ')');
+            var positionPlayer = LayoutValue._pPlayer.Split('(', ',', ')');
             ValueForBot.Player = new Point(int.Parse(positionPlayer[1]), int.Parse(positionPlayer[2]));
-            var positionBanker = LayoutValues._pBanker.Split('(', ',', ')');
+            var positionBanker = LayoutValue._pBanker.Split('(', ',', ')');
             ValueForBot.Banker = new Point(int.Parse(positionBanker[1]), int.Parse(positionBanker[2]));
-            var positionTie = LayoutValues._pTie.Split('(', ',', ')');
+            var positionTie = LayoutValue._pTie.Split('(', ',', ')');
             ValueForBot.Tie = new Point(int.Parse(positionTie[1]), int.Parse(positionTie[2]));
 
-            var positionConP = LayoutValues._pConP.Split('(', ',', ')');
+            var positionConP = LayoutValue._pConP.Split('(', ',', ')');
             ValueForBot.ConfirmPlayer = new Point(int.Parse(positionConP[1]), int.Parse(positionConP[2]));
 
-            var positionConB = LayoutValues._pConB.Split('(', ',', ')');
+            var positionConB = LayoutValue._pConB.Split('(', ',', ')');
             ValueForBot.ConfirmBanker = new Point(int.Parse(positionConB[1]), int.Parse(positionConB[2]));
 
             if (ValueForBot.Mode == 0)
             {
-                var colorStart = GetColor.Hex2Color(LayoutValues._pColorStart);
+                var colorStart = GetColor.Hex2Color(LayoutValue._pColorStart);
                 ValueForBot.ColorStart = colorStart;
-                var colorPlayer = GetColor.Hex2Color(LayoutValues._pColorPlayer);
+                var colorPlayer = GetColor.Hex2Color(LayoutValue._pColorPlayer);
                 ValueForBot.ColorPlayer = colorPlayer;
-                var colorBanker = GetColor.Hex2Color(LayoutValues._pColorBanker);
+                var colorBanker = GetColor.Hex2Color(LayoutValue._pColorBanker);
                 ValueForBot.ColorBanker = colorBanker;
-                var colorTie = GetColor.Hex2Color(LayoutValues._pColorTie);
+                var colorTie = GetColor.Hex2Color(LayoutValue._pColorTie);
                 ValueForBot.ColorTie = colorTie;
             }
             else if (ValueForBot.Mode == 1)
@@ -671,19 +672,19 @@ namespace AutoBaccarat
                 //ValueForBot.ColorStart = colorBanker;
             }
 
-            var positionChip1 = LayoutValues._pChip1.Split('(', ',', ')');
+            var positionChip1 = LayoutValue._pChip1.Split('(', ',', ')');
             ValueForBot.Chip1 = new Point(int.Parse(positionChip1[1]), int.Parse(positionChip1[2]));
 
-            var positionChip2 = LayoutValues._pChip2.Split('(', ',', ')');
+            var positionChip2 = LayoutValue._pChip2.Split('(', ',', ')');
             ValueForBot.Chip2 = new Point(int.Parse(positionChip2[1]), int.Parse(positionChip2[2]));
 
-            var positionChip3 = LayoutValues._pChip3.Split('(', ',', ')');
+            var positionChip3 = LayoutValue._pChip3.Split('(', ',', ')');
             ValueForBot.Chip3 = new Point(int.Parse(positionChip3[1]), int.Parse(positionChip3[2]));
 
-            var positionChip4 = LayoutValues._pChip4.Split('(', ',', ')');
+            var positionChip4 = LayoutValue._pChip4.Split('(', ',', ')');
             ValueForBot.Chip4 = new Point(int.Parse(positionChip4[1]), int.Parse(positionChip4[2]));
 
-            var positionChip5 = LayoutValues._pChip5.Split('(', ',', ')');
+            var positionChip5 = LayoutValue._pChip5.Split('(', ',', ')');
             ValueForBot.Chip5 = new Point(int.Parse(positionChip5[1]), int.Parse(positionChip5[2]));
          
 
@@ -1940,7 +1941,6 @@ namespace AutoBaccarat
 
         #region Bet System
 
-        private int _lastBetValue;
         public int ChipUnit(string system, short step_)
         {
             var result = 0;
@@ -2126,8 +2126,7 @@ namespace AutoBaccarat
                 {
                     try
                     {
-                        //_betSystemValue = "";
-                        var valueX2 = "1-2-4-8-16-32-64-128-256-512-1024-2048-4096-8192-16384-16384-65536-131072-262144-524288-1048576".Split('-');
+                        var valueX2 = "1-2-4-8-16-32-64-128-256-512-1024-2048-4096-8192-16384-32760".Split('-');
                         var valueByX2 = (short)valueX2.Length;
                         short step = 0;
                         if (_listWinLose.Count > 0)
@@ -2137,7 +2136,7 @@ namespace AutoBaccarat
                                 var value = winLoseCount % valueByX2;
                                 step = (short)value;
                             }
-                            else
+                            if (resultWinOrLose == "L")
                             {
                                 var value = winLoseCount % valueByX2;
                                 step = (short)value;
@@ -2289,7 +2288,6 @@ namespace AutoBaccarat
 
         private void MainSettingsLoad()
         {
-
             SettingBetLoad();
             ForceLoad();
         }
@@ -2299,20 +2297,20 @@ namespace AutoBaccarat
 
         private void SettingBetLoad()
         {
-            Settings_txtStopRound.Text = Settings.Default._betStopRound;
-            Settings_txtStopWin.Text = Settings.Default._betStopWin;
-            Settings_txtStopLose.Text = Settings.Default._betStopLose;
-            Settings_txtStopLess.Text = Settings.Default._betStopLess;
-            Settings_txtStopMore.Text = Settings.Default._betStopMore;
+            Settings_txtStopRound.Text = Settings.Default.BetStopRound;
+            Settings_txtStopWin.Text = Settings.Default.BetStopWin;
+            Settings_txtStopLose.Text = Settings.Default.BetStopLose;
+            Settings_txtStopLess.Text = Settings.Default.BetStopLess;
+            Settings_txtStopMore.Text = Settings.Default.BetStopMore;
         }
 
         private void SettingBetSave()
         {
-            Settings.Default._betStopRound = Settings_txtStopRound.Text;
-            Settings.Default._betStopWin = Settings_txtStopWin.Text;
-            Settings.Default._betStopLose = Settings_txtStopLose.Text;
-            Settings.Default._betStopLess = Settings_txtStopLess.Text;
-            Settings.Default._betStopMore = Settings_txtStopMore.Text;
+            Settings.Default.BetStopRound = Settings_txtStopRound.Text;
+            Settings.Default.BetStopWin = Settings_txtStopWin.Text;
+            Settings.Default.BetStopLose = Settings_txtStopLose.Text;
+            Settings.Default.BetStopLess = Settings_txtStopLess.Text;
+            Settings.Default.BetStopMore = Settings_txtStopMore.Text;
         }
 
         private void SettingChipSelected()
@@ -2324,8 +2322,8 @@ namespace AutoBaccarat
             Settings_cbChip.Items.Add(_chip4);
             Settings_cbChip.Items.Add(_chip5);
             Settings_cbChip.SelectedIndex = 0;
-
         }
+
         #endregion
 
         #region Program
@@ -2354,8 +2352,8 @@ namespace AutoBaccarat
 
         private void ForceLoad()
         {
-            _forceSelected = (ForceType)Settings.Default._forceSelected;
-            MainSetting_txtForce.Text = Settings.Default._forcetxt;
+            _forceSelected = (ForceType)Settings.Default.ForceSelected;
+            MainSetting_txtForce.Text = Settings.Default.ForceValue.ToString();
             switch (_forceSelected)
             {
                 case ForceType.Follow:
@@ -2483,7 +2481,8 @@ namespace AutoBaccarat
             dgv.Rows.Add(name, button, position, chipValue, color, processName, colorRGB);
         }
 
-        private bool _checkFileFirstTime;
+        private bool _layoutCheckFileFirstTime;
+      
         private void Layout_LoadFiles2List()
         {
             listLayout.Items.Clear();
@@ -2501,7 +2500,7 @@ namespace AutoBaccarat
 
                 if (listLayout.Items.Count == 0)
                 {
-                    _checkFileFirstTime = true;
+                    _layoutCheckFileFirstTime = true;
                     Layout_AddListbox();
                 }
 
@@ -2529,7 +2528,7 @@ namespace AutoBaccarat
                 }
                 if (Layout_CheckEdit())
                 {
-                    var msgResult = MessageBox.Show($@"[{LayoutValues.NameList}] {stringLoader.Modified}",
+                    var msgResult = MessageBox.Show($@"[{LayoutValue.NameList}] {stringLoader.Modified}",
                         stringLoader.Confirmation, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
                     if (msgResult == DialogResult.Yes)
                     {
@@ -2540,7 +2539,7 @@ namespace AutoBaccarat
                     if (msgResult == DialogResult.Cancel)
                     {
                         _layoutCancel = true;
-                        listLayout.SelectedIndex = LayoutValues.Count;
+                        listLayout.SelectedIndex = LayoutValue.Count;
                         return;
                     }
                 }
@@ -2695,7 +2694,7 @@ namespace AutoBaccarat
                 dgvSetting[6, 2].Value = _pRGBBanker;
                 dgvSetting[6, 3].Value = _pRGBPlayer;
 
- LayoutLoadMode();
+                LayoutLoadMode();
 
             }
             catch (Exception ex)
@@ -2764,13 +2763,13 @@ namespace AutoBaccarat
 
                 Layout_SelectListByName(name);
 
-                LayoutValues.Saved = false;
+                LayoutValue.Saved = false;
             }
         }
 
         private bool Layout_ChangeNameList()
         {
-            if (LayoutValues.ListSelected != txtSettingsName.Text)
+            if (LayoutValue.ListSelected != txtSettingsName.Text)
             //if (listLayout.SelectedItem.ToString() != txtSettingsName.Text)
             {
                 var path = Path.Combine(@"./Layout/", txtSettingsName.Text + ".dat");
@@ -2785,11 +2784,11 @@ namespace AutoBaccarat
                     }
                 }
                 // path = Path.Combine(@"./Layout/", listLayout.SelectedItem + ".dat");
-                path = Path.Combine(@"./Layout/", LayoutValues.ListSelected + ".dat");
+                path = Path.Combine(@"./Layout/", LayoutValue.ListSelected + ".dat");
                 var file = new FileInfo(path);
                 Layout_Rename(file, txtSettingsName.Text + ".dat");
             }
-            LayoutValues.Saved = true;
+            LayoutValue.Saved = true;
             return true;
         }
 
@@ -2865,55 +2864,55 @@ namespace AutoBaccarat
 
         private bool Layout_CheckEdit()
         {
-            if (LayoutValues.NameList != txtSettingsName.Text ||
+            if (LayoutValue.NameList != txtSettingsName.Text ||
                 //LayoutValues.TxtX != txtResultXCount.Text ||
                 //LayoutValues.TxtY != txtResultYCount.Text ||
                 //LayoutValues.LblXy != lblResultXY.Text ||
                 //LayoutValues.Mode != cbBackground.CheckedState ||
 
-                LayoutValues.TxtX != _xCount ||
-                LayoutValues.TxtY != _yCount ||
-                LayoutValues.LblXy != _posPic ||
-                LayoutValues.Mode != (int)_layoutMode ||
+                LayoutValue.TxtX != _xCount ||
+                LayoutValue.TxtY != _yCount ||
+                LayoutValue.LblXy != _posPic ||
+                LayoutValue.Mode != (int)_layoutMode ||
 
-                LayoutValues._pStart != _pStart ||
-                LayoutValues._pPlayer != _pPlayer ||
-                LayoutValues._pBanker != _pBanker ||
-                LayoutValues._pTie != _pTie ||
-                LayoutValues._pConP != _pConP ||
-                LayoutValues._pConB != _pConB ||
-                LayoutValues._pChip1 != _pChip1 ||
-                LayoutValues._pChip2 != _pChip2 ||
-                LayoutValues._pChip3 != _pChip3 ||
-                LayoutValues._pChip4 != _pChip4 ||
-                LayoutValues._pChip5 != _pChip5 ||
-                LayoutValues._chip1 != _chip1 ||
-                LayoutValues._chip2 != _chip2 ||
-                LayoutValues._chip3 != _chip3 ||
-                LayoutValues._chip4 != _chip4 ||
-                LayoutValues._chip5 != _chip5 ||
-                LayoutValues._pColorStart != _pColorStart ||
-                LayoutValues._pColorPlayer != _pColorPlayer ||
-                LayoutValues._pColorBanker != _pColorBanker ||
-                LayoutValues._pColorTie != _pColorTie ||
-                LayoutValues._pProcessStart != _pProcessStart ||
-                LayoutValues._pProcessPlayer != _pProcessPlayer ||
-                LayoutValues._pProcessBanker != _pProcessBanker ||
-                LayoutValues._pProcessTie != _pProcessTie ||
-                LayoutValues._pProcessConP != _pProcessConP ||
-                LayoutValues._pProcessConB != _pProcessConB ||
-                LayoutValues._pProcessChip1 != _pProcessChip1 ||
-                LayoutValues._pProcessChip2 != _pProcessChip2 ||
-                LayoutValues._pProcessChip3 != _pProcessChip3 ||
-                LayoutValues._pProcessChip4 != _pProcessChip4 ||
-                LayoutValues._pProcessChip5 != _pProcessChip5 ||
-                LayoutValues._pRGBStart != _pRGBStart ||
-                LayoutValues._pRGBPlayer != _pRGBPlayer ||
-                LayoutValues._pRGBBanker != _pRGBBanker||
-                LayoutValues._pRGBTie != _pRGBTie)
+                LayoutValue._pStart != _pStart ||
+                LayoutValue._pPlayer != _pPlayer ||
+                LayoutValue._pBanker != _pBanker ||
+                LayoutValue._pTie != _pTie ||
+                LayoutValue._pConP != _pConP ||
+                LayoutValue._pConB != _pConB ||
+                LayoutValue._pChip1 != _pChip1 ||
+                LayoutValue._pChip2 != _pChip2 ||
+                LayoutValue._pChip3 != _pChip3 ||
+                LayoutValue._pChip4 != _pChip4 ||
+                LayoutValue._pChip5 != _pChip5 ||
+                LayoutValue._chip1 != _chip1 ||
+                LayoutValue._chip2 != _chip2 ||
+                LayoutValue._chip3 != _chip3 ||
+                LayoutValue._chip4 != _chip4 ||
+                LayoutValue._chip5 != _chip5 ||
+                LayoutValue._pColorStart != _pColorStart ||
+                LayoutValue._pColorPlayer != _pColorPlayer ||
+                LayoutValue._pColorBanker != _pColorBanker ||
+                LayoutValue._pColorTie != _pColorTie ||
+                LayoutValue._pProcessStart != _pProcessStart ||
+                LayoutValue._pProcessPlayer != _pProcessPlayer ||
+                LayoutValue._pProcessBanker != _pProcessBanker ||
+                LayoutValue._pProcessTie != _pProcessTie ||
+                LayoutValue._pProcessConP != _pProcessConP ||
+                LayoutValue._pProcessConB != _pProcessConB ||
+                LayoutValue._pProcessChip1 != _pProcessChip1 ||
+                LayoutValue._pProcessChip2 != _pProcessChip2 ||
+                LayoutValue._pProcessChip3 != _pProcessChip3 ||
+                LayoutValue._pProcessChip4 != _pProcessChip4 ||
+                LayoutValue._pProcessChip5 != _pProcessChip5 ||
+                LayoutValue._pRGBStart != _pRGBStart ||
+                LayoutValue._pRGBPlayer != _pRGBPlayer ||
+                LayoutValue._pRGBBanker != _pRGBBanker||
+                LayoutValue._pRGBTie != _pRGBTie)
 
             {
-                if (!LayoutValues.Saved)
+                if (!LayoutValue.Saved)
                 {
                     return true;
                 }
@@ -2924,57 +2923,57 @@ namespace AutoBaccarat
 
         private void Layout_GetValue4Check()
         {
-            LayoutValues.NameList = txtSettingsName.Text;
+            LayoutValue.NameList = txtSettingsName.Text;
  
-            LayoutValues.Mode = (int)_layoutMode;
+            LayoutValue.Mode = (int)_layoutMode;
 
-            LayoutValues._pStart = dgvSetting[2, 0].Value.ToString();
-            LayoutValues._pPlayer = dgvSetting[2, 1].Value.ToString();
-            LayoutValues._pBanker = dgvSetting[2, 2].Value.ToString();
-            LayoutValues._pTie = dgvSetting[2, 3].Value.ToString();
+            LayoutValue._pStart = dgvSetting[2, 0].Value.ToString();
+            LayoutValue._pPlayer = dgvSetting[2, 1].Value.ToString();
+            LayoutValue._pBanker = dgvSetting[2, 2].Value.ToString();
+            LayoutValue._pTie = dgvSetting[2, 3].Value.ToString();
 
-            LayoutValues._pConP = dgvSetting[2, 4].Value.ToString();
-            LayoutValues._pConB = dgvSetting[2, 5].Value.ToString();
+            LayoutValue._pConP = dgvSetting[2, 4].Value.ToString();
+            LayoutValue._pConB = dgvSetting[2, 5].Value.ToString();
 
-            LayoutValues._pChip1 = dgvSetting[2, 6].Value.ToString();
-            LayoutValues._pChip2 = dgvSetting[2, 7].Value.ToString();
-            LayoutValues._pChip3 = dgvSetting[2, 8].Value.ToString();
-            LayoutValues._pChip4 = dgvSetting[2, 9].Value.ToString();
-            LayoutValues._pChip5 = dgvSetting[2, 10].Value.ToString();
+            LayoutValue._pChip1 = dgvSetting[2, 6].Value.ToString();
+            LayoutValue._pChip2 = dgvSetting[2, 7].Value.ToString();
+            LayoutValue._pChip3 = dgvSetting[2, 8].Value.ToString();
+            LayoutValue._pChip4 = dgvSetting[2, 9].Value.ToString();
+            LayoutValue._pChip5 = dgvSetting[2, 10].Value.ToString();
 
-            LayoutValues._chip1 = dgvSetting[3, 6].Value.ToString();
-            LayoutValues._chip2 = dgvSetting[3, 7].Value.ToString();
-            LayoutValues._chip3 = dgvSetting[3, 8].Value.ToString();
-            LayoutValues._chip4 = dgvSetting[3, 9].Value.ToString();
-            LayoutValues._chip5 = dgvSetting[3, 10].Value.ToString();
+            LayoutValue._chip1 = dgvSetting[3, 6].Value.ToString();
+            LayoutValue._chip2 = dgvSetting[3, 7].Value.ToString();
+            LayoutValue._chip3 = dgvSetting[3, 8].Value.ToString();
+            LayoutValue._chip4 = dgvSetting[3, 9].Value.ToString();
+            LayoutValue._chip5 = dgvSetting[3, 10].Value.ToString();
 
-            LayoutValues._pColorStart = dgvSetting[4, 0].Value.ToString();
-            LayoutValues._pColorPlayer = dgvSetting[4, 1].Value.ToString();
-            LayoutValues._pColorBanker = dgvSetting[4, 2].Value.ToString();
-            LayoutValues._pColorTie = dgvSetting[4, 3].Value.ToString();
+            LayoutValue._pColorStart = dgvSetting[4, 0].Value.ToString();
+            LayoutValue._pColorPlayer = dgvSetting[4, 1].Value.ToString();
+            LayoutValue._pColorBanker = dgvSetting[4, 2].Value.ToString();
+            LayoutValue._pColorTie = dgvSetting[4, 3].Value.ToString();
 
-            LayoutValues._pProcessStart = dgvSetting[5, 0].Value.ToString();
-            LayoutValues._pProcessPlayer = dgvSetting[5, 1].Value.ToString();
-            LayoutValues._pProcessBanker = dgvSetting[5, 2].Value.ToString();
-            LayoutValues._pProcessTie = dgvSetting[5, 3].Value.ToString();
+            LayoutValue._pProcessStart = dgvSetting[5, 0].Value.ToString();
+            LayoutValue._pProcessPlayer = dgvSetting[5, 1].Value.ToString();
+            LayoutValue._pProcessBanker = dgvSetting[5, 2].Value.ToString();
+            LayoutValue._pProcessTie = dgvSetting[5, 3].Value.ToString();
 
-            LayoutValues._pProcessConP = dgvSetting[5, 4].Value.ToString();
-            LayoutValues._pProcessConB = dgvSetting[5, 5].Value.ToString();
+            LayoutValue._pProcessConP = dgvSetting[5, 4].Value.ToString();
+            LayoutValue._pProcessConB = dgvSetting[5, 5].Value.ToString();
 
-            LayoutValues._pProcessChip1 = dgvSetting[5, 6].Value.ToString();
-            LayoutValues._pProcessChip2 = dgvSetting[5, 7].Value.ToString();
-            LayoutValues._pProcessChip3 = dgvSetting[5, 8].Value.ToString();
-            LayoutValues._pProcessChip4 = dgvSetting[5, 9].Value.ToString();
-            LayoutValues._pProcessChip5 = dgvSetting[5, 10].Value.ToString();
+            LayoutValue._pProcessChip1 = dgvSetting[5, 6].Value.ToString();
+            LayoutValue._pProcessChip2 = dgvSetting[5, 7].Value.ToString();
+            LayoutValue._pProcessChip3 = dgvSetting[5, 8].Value.ToString();
+            LayoutValue._pProcessChip4 = dgvSetting[5, 9].Value.ToString();
+            LayoutValue._pProcessChip5 = dgvSetting[5, 10].Value.ToString();
 
-            LayoutValues._pRGBStart = dgvSetting[6, 0].Value.ToString();
-            LayoutValues._pRGBPlayer = dgvSetting[6, 1].Value.ToString();
-            LayoutValues._pRGBBanker = dgvSetting[6, 2].Value.ToString();
-            LayoutValues._pRGBTie = dgvSetting[6, 3].Value.ToString();
+            LayoutValue._pRGBStart = dgvSetting[6, 0].Value.ToString();
+            LayoutValue._pRGBPlayer = dgvSetting[6, 1].Value.ToString();
+            LayoutValue._pRGBBanker = dgvSetting[6, 2].Value.ToString();
+            LayoutValue._pRGBTie = dgvSetting[6, 3].Value.ToString();
 
 
-            LayoutValues.Count = listLayout.SelectedIndex;
-            LayoutValues.ListSelected = listLayout.SelectedItem.ToString();
+            LayoutValue.Count = listLayout.SelectedIndex;
+            LayoutValue.ListSelected = listLayout.SelectedItem.ToString();
 
             #region Old
 
@@ -3078,11 +3077,11 @@ namespace AutoBaccarat
         {
             try
             {
-                if (!_checkFileFirstTime)
+                if (!_layoutCheckFileFirstTime)
                 {
                     if (Layout_CheckEdit())
                     {
-                        var msgResult = MessageBox.Show($@"[{LayoutValues.NameList}] {stringLoader.Modified}",
+                        var msgResult = MessageBox.Show($@"[{LayoutValue.NameList}] {stringLoader.Modified}",
                             stringLoader.Confirmation, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
                         if (msgResult == DialogResult.Yes)
                         {
@@ -3095,7 +3094,7 @@ namespace AutoBaccarat
                         }
                     }
 
-                    _checkFileFirstTime = false;
+                    _layoutCheckFileFirstTime = false;
                 }
                 
 
@@ -3133,10 +3132,10 @@ namespace AutoBaccarat
                         DialogResult.Yes)
                     {
                         //var path = Path.Combine(@"./Layout/", txtSettingsName.Text + ".dat");
-                        var path = Path.Combine(@"./Layout/", LayoutValues.NameList + ".dat");
+                        var path = Path.Combine(@"./Layout/", LayoutValue.NameList + ".dat");
                         // File.Delete(path);
                         var file = new FileInfo(path);
-                        Layout_Delete(file);
+                        FucntionDelete(file);
 
                         var num = listLayout.SelectedIndex;
                         Layout_LoadFiles2List();
@@ -3162,7 +3161,7 @@ namespace AutoBaccarat
             }
         }
 
-        public static void Layout_Delete(FileInfo fileInfo)
+        public static void FucntionDelete(FileInfo fileInfo)
         {
             try
             {
@@ -3320,9 +3319,6 @@ namespace AutoBaccarat
             Normal,
             Background
         }
-
- 
-
         private void PositionSelectMode(object sender)
         {
             PositionChangeMode();
@@ -3357,8 +3353,11 @@ namespace AutoBaccarat
         }
 
 
+        
+
+
         #endregion ModeSettings
- 
+
         #endregion Layout
 
         #region Formula
@@ -3396,8 +3395,8 @@ namespace AutoBaccarat
             FormulaBox.Visible = true;
             FormulaGroupMode.Enabled = false;
             Size = new Size(1165, 575);
-            CustomEdit();
-            InitCustomList();
+          //  CustomEdit();
+            Custom_LoadFiles2List();
         }
 
         private void FormulaAllRadioCheckedChanged(object sender)
@@ -3445,10 +3444,10 @@ namespace AutoBaccarat
 
         private void FormulaLoadValue()
         {
-            _formulaSelected = (FormulaMode)Settings.Default._formulaSelected;
-            Formula_cbGoodLineFix.SelectedIndex = Settings.Default._formulaGoodLineFix;
-            Formula_cbLock.SelectedIndex = Settings.Default._formulaLock;
-            Formula_cbFollow.SelectedIndex = Settings.Default._formulaFollow;
+            _formulaSelected = (FormulaMode)Settings.Default.FormulaSelected;
+            Formula_cbGoodLineFix.SelectedIndex = Settings.Default.FormulaGoodLineFix;
+            Formula_cbLock.SelectedIndex = Settings.Default.FormulaLock;
+            Formula_cbFollow.SelectedIndex = Settings.Default.FormulaFollow;
 
             switch (_formulaSelected)
             {
@@ -3492,141 +3491,199 @@ namespace AutoBaccarat
 
         #region Custom
 
-        #region Variable
+        public static string CustomLoadFile2String;
+        private static List<string> _customSplitNumber = new List<string>();
+        private static List<string> _customSplitType = new List<string>();
+        //    private static int _customLoadListSaveCount;
+        private static List<string> _customValueNumber;
+        private static List<string> _customValueFollowAdverse;
 
-        private List<string> _customValueNumber;
-        private List<string> _customValueFollowAdverse;
-        private static List<string> _customValueNumberSaved = new List<string>();
-        private static List<string> _customValueFollowAdverseSaved = new List<string>();
         private short _customSelectedListbox;
-        public static string _customLoadValue2Array;
 
+        public static string _customNewValue2Array;
         private bool _customEdit;
         private string _customName;
-        #endregion Variable
+        private int _customLoadListCount;
 
-        #region Load/Save
 
-        private void CustomLoad()
+
+        public CustomListManager CustomListMng = new CustomListManager();
+        private void Custom_LoadFiles2List()
         {
-            _customLoadValue2Array = CustomDefaultValue();
-            if (!string.IsNullOrWhiteSpace(Settings.Default._customValue))
+            try
             {
-                _customLoadValue2Array = Settings.Default._customValue;
+                Custom_loadList.DataSource = CustomListMng.GetCustomList();
+                if (Custom_loadList.Items.Count == 0)
+                {
+                    _customCheckFileFirstTime = true;
+                    CustomListManager.AddNewCustom();
+                    Custom_loadList.DataSource = CustomListMng.GetCustomList();
+                }
+
+                Custom_loadList.SelectedIndex = _customLoadListCount;
             }
-
-            CustomValue2ArrayList();
+            catch
+            {
+            }
         }
+        private void Custom_LoadList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (_customListFirstTime)
+                {
+                    _customListFirstTime = false;
+                    goto skip;
+                }
 
-        public static void CustomValue2ArrayList()
+                if (_customCancel)
+                {
+                    _customCancel = false;
+                    return;
+                }
+
+                if (Custom_CheckEdit())
+                {
+                    var msgResult = MessageBox.Show($@"[{LayoutValue.NameList}] {stringLoader.Modified}",
+                        stringLoader.Confirmation, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    if (msgResult == DialogResult.Yes)
+                    {
+                        _customtYes = true;
+                        //       Layout_SaveLayoutList();
+                        return;
+                    }
+                    if (msgResult == DialogResult.Cancel)
+                    {
+                        _customCancel = true;
+                        Custom_loadList.SelectedIndex = _customLoadListCount;
+                        return;
+                    }
+                }
+            skip:
+                if (Custom_loadList.SelectedItem == null)
+                {
+                    return;
+                }
+
+                CustomListMng.LoadValuesFromFile(((CustomInfo)Custom_loadList.SelectedItem).File); // _customLoadFile2String
+
+                CustomStringSplit2Array();
+                CustomArray2ListBox();
+                CustomGetValue4Check();
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, stringLoader.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public static void CustomStringSplit2Array()
         {
             checked
             {
                 try
                 {
-                    var array = _customLoadValue2Array.Split('|');
-                    _customValueNumberSaved.Clear();
-                    _customValueFollowAdverseSaved.Clear();
+                    _customSplitNumber.Clear();
+                    _customSplitType.Clear();
+
+                    var array = CustomLoadFile2String.Split('|');
                     var num = array.Length - 1;
                     for (var i = 0; i <= num; i++)
                     {
                         var array2 = array[i].Split('=');
-                        _customValueNumberSaved.Add(array2[0]);
-                        _customValueFollowAdverseSaved.Add(array2[1]);
+                        _customSplitNumber.Add(array2[0]);
+                        _customSplitType.Add(array2[1]);
                     }
                 }
-                catch // if
+                catch
                 {
-                    _customLoadValue2Array = CustomDefaultValue();
-                    var array3 = _customLoadValue2Array.Split('|');
-                    _customValueNumberSaved.Clear();
-                    _customValueFollowAdverseSaved.Clear();
+                    _customSplitNumber.Clear();
+                    _customSplitType.Clear();
+                    CustomLoadFile2String = CustomDefaultValue();
+                    var array3 = CustomLoadFile2String.Split('|');
                     var num2 = array3.Length - 1;
                     for (var j = 0; j <= num2; j++)
                     {
                         var array4 = array3[j].Split('=');
-                        _customValueNumberSaved.Add(array4[0]);
-                        _customValueFollowAdverseSaved.Add(array4[1]);
+                        _customSplitNumber.Add(array4[0]);
+                        _customSplitType.Add(array4[1]);
                     }
                 }
             }
         }
-
-        private void CustomEdit()
+        private void CustomArray2ListBox()
         {
-            _customValueNumber = _customValueNumberSaved;
-            _customValueFollowAdverse = _customValueFollowAdverseSaved;
+            _customValueNumber = _customSplitNumber;
+            _customValueFollowAdverse = _customSplitType;
             checked
             {
                 if (_customValueNumber.Count > 0)
                 {
-                    Custom_listbox.Items.Clear();
+                    Custom_valueList.Items.Clear();
                     var num = _customValueNumber.Count - 1;
                     for (var i = 0; i <= num; i++)
                     {
-                        Custom_listbox.Items.Add(_customValueNumber[i]);
+                        Custom_valueList.Items.Add(_customValueNumber[i]);
                     }
                 }
                 CustomList2Label();
             }
         }
-
-        private void Custom_btSave_Click(object sender, EventArgs e)
+        private void CustomList2Label()
         {
-            if (Custom_listbox.Items.Count == 0)
-            {
-                MessageBox.Show(stringLoader.SetBetUnit, stringLoader.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            _customValueNumber.Clear();
-            checked
-            {
-                for (var i = 0; i <= Custom_listbox.Items.Count - 1; i++)
-                {
-                    _customValueNumber.Add(Custom_listbox.Items[i].ToString());
-                }
-
-                _customValueNumberSaved = _customValueNumber;
-                _customValueFollowAdverseSaved = _customValueFollowAdverse;
-                CustomSaveValue();
-
-                _customEdit = false;
-                FormulaBox.Visible = false;
-                FormulaGroupMode.Enabled = true;
-                _customEdit = false;
-                tabFormula.Text = TitleCustom;
-                Size = new Size(785, 575);
-                
-            }
+            Custom_lbTotal.Text = $@"{stringLoader.Total}: {Custom_valueList.Items.Count}";
         }
-
-        private void CustomSaveValue()
+        private void CustomlistAdd_Click(object sender, EventArgs e)
         {
-            CustomSaveValue(_customValueNumber, _customValueFollowAdverse);
-
-            Settings.Default.Save();
+            CustomListManager.AddNewCustom();
+            Custom_LoadFiles2List();
         }
-
-        public static void CustomSaveValue(List<string> ValueNumber, List<string> ValueFollowAdverse)
+        private void CustomlistDel_Click(object sender, EventArgs e)
         {
-            var text = "";
-            checked
+            try
             {
-                var num = ValueNumber.Count - 1;
-                for (var i = 0; i <= num; i++)
+                if (Custom_loadList.SelectedItem != null)
                 {
-                    if (i > 0)
+                    var itemList = Custom_loadList.SelectedItem;
+
+                    if (MessageBox.Show($@"{stringLoader.Delete} {itemList} ?", stringLoader.Confirmation,
+                            MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
+                        DialogResult.Yes)
                     {
-                        text += "|";
-                    }
-                    text = text + ValueNumber[i] + "=" + ValueFollowAdverse[i];
-                }
+                        var iniReader = new IniReader(((CustomInfo)Custom_loadList.SelectedItem).File);
+                        var path = iniReader.Path;
+                        var file = new FileInfo(path);
+                        FucntionDelete(file);
 
-                Settings.Default._customValue = text;
+                        var num = Custom_loadList.SelectedIndex;
+                        if (num == 0)
+                        {
+                            _customLoadListCount = 0;
+                            // Custom_LoadList.SelectedIndex = 0;
+                        }
+                        else if (num >= Custom_loadList.Items.Count)
+                        {
+                            _customLoadListCount = num - 1;
+                            //  Custom_LoadList.SelectedIndex = num - 1;
+                        }
+                        else
+                        {
+                            _customLoadListCount = num;
+                            // Custom_LoadList.SelectedIndex = num;
+                        }
+                        Custom_LoadFiles2List();
+
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, stringLoader.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        #endregion Load/Save
 
         #region Value
 
@@ -3634,15 +3691,9 @@ namespace AutoBaccarat
         {
             return "1,1=X|1,2,1,2=X" + "|2,2=X|3,3=X|4,4=X" + "|1,2,3=X|1,3,2,1=X" + "|5=O|6=O|7=O|8=O|9=O|10=O|11=O|12=O|13=O|14=O|15=O|16=O|17=O|18=O|19=O|20=O";
         }
-
-        private void CustomList2Label()
-        {
-            Custom_lbTotal.Text = $@"{stringLoader.Total}: {Custom_listbox.Items.Count}";
-        }
-
         private void Custom_list_SelectedIndexChanged(object sender, EventArgs e)
         {
-            _customSelectedListbox = checked((short)Custom_listbox.SelectedIndex);
+            _customSelectedListbox = checked((short)Custom_valueList.SelectedIndex);
             if (_customSelectedListbox < 0)
             {
                 Custom_txtNum.Text = null;
@@ -3651,7 +3702,7 @@ namespace AutoBaccarat
                 return;
             }
 
-            Custom_txtNum.Text = Custom_listbox.SelectedItem.ToString();
+            Custom_txtNum.Text = Custom_valueList.SelectedItem.ToString();
 
             if (_customValueFollowAdverse[_customSelectedListbox] == "O")
             {
@@ -3660,9 +3711,35 @@ namespace AutoBaccarat
             }
             Custom_radAdverse.Checked = true;
         }
+        private void CustomConfigCheckedChanged(object sender)
+        {
+            try
+            {
+                if (_customSelectedListbox <= -1) return;
 
+                if (Custom_radFollow.Checked)
+                {
+                    _customValueFollowAdverse[_customSelectedListbox] = "O";
+                    return;
+                }
+                if (Custom_radAdverse.Checked)
+                {
+                    _customValueFollowAdverse[_customSelectedListbox] = "X";
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message + $"\n {stringLoader.TryAgain}", stringLoader.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void Custom_txtNum_TextChanged(object sender, EventArgs e)
         {
+            AddCustomResultAsync().Wait();
+        }
+        private async Task AddCustomResultAsync()
+        {
+
+
             var array = Custom_txtNum.Text.Trim().Split(',');
             CustomPanelResult.Controls.Clear();
 
@@ -3754,63 +3831,39 @@ namespace AutoBaccarat
             }
         }
 
-        #endregion Value
-
-        #region Button Control, Save Settings
-
-        private void CustomConfigCheckedChanged(object sender)
-        {
-            try
-            {
-                if (_customSelectedListbox <= -1) return;
-
-                if (Custom_radFollow.Checked)
-                {
-                    _customValueFollowAdverse[_customSelectedListbox] = "O";
-                    return;
-                }
-                if (Custom_radAdverse.Checked)
-                {
-                    _customValueFollowAdverse[_customSelectedListbox] = "X";
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show(e.Message + $"\n {stringLoader.TryAgain}", stringLoader.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
+        #region Button Control
         private void Custom_btAdd_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(Custom_txtNum.Text)) return;
-            Custom_listbox.Items.Add(Custom_txtNum.Text.Trim());
+            Custom_valueList.Items.Add(Custom_txtNum.Text.Trim());
             var item = Custom_radFollow.Checked ? "X" : "O";
             _customValueNumber.Add(Custom_txtNum.Text.Trim());
             _customValueFollowAdverse.Add(item);
             CustomList2Label();
+            Custom_txtNum.Text = "";
         }
 
         private void Custom_btDel_Click(object sender, EventArgs e)
         {
             checked
             {
-                var num = Custom_listbox.SelectedIndex;
+                var num = Custom_valueList.SelectedIndex;
 
-                _customSelectedListbox = (short)Custom_listbox.SelectedIndex;
+                _customSelectedListbox = (short)Custom_valueList.SelectedIndex;
                 if (_customSelectedListbox == -1) return;
                 _customValueFollowAdverse.RemoveAt(_customSelectedListbox);
-                Custom_listbox.Items.RemoveAt(_customSelectedListbox);
+                Custom_valueList.Items.RemoveAt(_customSelectedListbox);
                 if (num == 0)
                 {
-                    Custom_listbox.SelectedIndex = Custom_listbox.Items.Count == 0 ? -1 : 0;
+                    Custom_valueList.SelectedIndex = Custom_valueList.Items.Count == 0 ? -1 : 0;
                 }
-                else if (num >= Custom_listbox.Items.Count)
+                else if (num >= Custom_valueList.Items.Count)
                 {
-                    Custom_listbox.SelectedIndex = num - 1;
+                    Custom_valueList.SelectedIndex = num - 1;
                 }
                 else
                 {
-                    Custom_listbox.SelectedIndex = num;
+                    Custom_valueList.SelectedIndex = num;
                 }
                 CustomList2Label();
             }
@@ -3818,7 +3871,7 @@ namespace AutoBaccarat
 
         private void Custom_btClear_Click(object sender, EventArgs e)
         {
-            Custom_listbox.Items.Clear();
+            Custom_valueList.Items.Clear();
             _customValueFollowAdverse.Clear();
             CustomList2Label();
         }
@@ -3826,17 +3879,17 @@ namespace AutoBaccarat
         private void Custom_btDefault_Click(object sender, EventArgs e)
         {
             var array = CustomDefaultValue().Split(';');
-            Custom_listbox.Items.Clear();
+            Custom_valueList.Items.Clear();
             _customValueFollowAdverse.Clear();
             checked
             {
                 for (var i = 0; i <= array.Length - 1; i++)
                 {
                     var array2 = array[i].Split('=');
-                    Custom_listbox.Items.Add(array2[0]);
+                    Custom_valueList.Items.Add(array2[0]);
                     _customValueFollowAdverse.Add(array2[1]);
                 }
-                Custom_listbox.ClearSelected();
+                Custom_valueList.ClearSelected();
                 Custom_txtNum.Text = null;
                 Custom_radFollow.Checked = false;
                 Custom_radAdverse.Checked = false;
@@ -3844,9 +3897,15 @@ namespace AutoBaccarat
             }
         }
 
+        #endregion Button Control
+
+        #endregion Value
+
+
+
         private void Custom_btClose_Click(object sender, EventArgs e)
         {
-            CustomEdit();
+            CustomArray2ListBox();
             _customEdit = false;
             FormulaBox.Visible = false;
             FormulaGroupMode.Enabled = true;
@@ -3857,7 +3916,103 @@ namespace AutoBaccarat
 
         public string TitleCustom => _customName + (_customEdit ? "*" : "");
 
-        #endregion Button Control, Save Settings
+        bool _customCancel, _customtYes;
+
+        private string _customNameList;
+        private bool _customListFirstTime = true;
+
+
+        private bool _customCheckFileFirstTime;
+
+
+        private bool Custom_CheckEdit()
+        {
+            CustomCheckEditValue(_customValueNumber, _customValueFollowAdverse);
+            return CustomLoadFile2String != _customNewValue2Array;
+        }
+        public static void CustomCheckEditValue(List<string> ValueNumber, List<string> ValueFollowAdverse)
+        {
+            var text = "";
+            checked
+            {
+                var num = ValueNumber.Count - 1;
+                for (var i = 0; i <= num; i++)
+                {
+                    if (i > 0)
+                    {
+                        text += "|";
+                    }
+                    text = text + ValueNumber[i] + "=" + ValueFollowAdverse[i];
+                }
+
+                _customNewValue2Array = text;
+            }
+        }
+
+        private void CustomGetValue4Check()
+        {
+            _customLoadListCount = Custom_loadList.SelectedIndex;
+            _customNameList = Custom_loadList.SelectedItem.ToString();
+            CustomTxtName.Text = Custom_loadList.SelectedItem.ToString();
+        }
+
+        private void Custom_btSave_Click(object sender, EventArgs e)
+        {
+            CustomSave();
+        }
+
+        private void CustomSaveValue()
+        {
+            CustomSaveValue(_customValueNumber, _customValueFollowAdverse);
+
+            Settings.Default.Save();
+        }
+
+        public static void CustomSaveValue(List<string> ValueNumber, List<string> ValueFollowAdverse)
+        {
+            var text = "";
+            checked
+            {
+                var num = ValueNumber.Count - 1;
+                for (var i = 0; i <= num; i++)
+                {
+                    if (i > 0)
+                    {
+                        text += "|";
+                    }
+                    text = text + ValueNumber[i] + "=" + ValueFollowAdverse[i];
+                }
+
+                //Settings.Default._customValue = text;
+            }
+        }
+        private void CustomSave()
+        {
+            if (Custom_valueList.Items.Count == 0)
+            {
+                MessageBox.Show(stringLoader.SetBetUnit, stringLoader.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            _customValueNumber.Clear();
+            checked
+            {
+                for (var i = 0; i <= Custom_valueList.Items.Count - 1; i++)
+                {
+                    _customValueNumber.Add(Custom_valueList.Items[i].ToString());
+                }
+
+                _customSplitNumber = _customValueNumber;
+                _customSplitType = _customValueFollowAdverse;
+                CustomSaveValue();
+
+                _customEdit = false;
+                FormulaBox.Visible = false;
+                FormulaGroupMode.Enabled = true;
+                _customEdit = false;
+                tabFormula.Text = TitleCustom;
+                Size = new Size(785, 575);
+            }
+        }
 
         #endregion Custom
 
@@ -3982,10 +4137,10 @@ namespace AutoBaccarat
 
         private void BettingLoadValue()
         {
-            _txtPp = Settings.Default.txtPP;
-            _txtNp = Settings.Default.txtNP;
-            _txtFib = Settings.Default.txtFib;
-            _bettingSelected = (BettingMode)Settings.Default._bettingSelected;
+            _txtPp = Settings.Default.ValuePP;
+            _txtNp = Settings.Default.ValueNP;
+            _txtFib = Settings.Default.ValueFib;
+            _bettingSelected = (BettingMode)Settings.Default.BettingSelected;
             switch (_bettingSelected)
             {
                 case BettingMode.PP:
@@ -4020,10 +4175,10 @@ namespace AutoBaccarat
 
         private void BettingSaveValue()
         {
-            Settings.Default.txtPP = _txtPp;
-            Settings.Default.txtNP = _txtNp;
-            Settings.Default.txtFib = _txtFib;
-            Settings.Default._bettingSelected = (int)_bettingSelected;
+            Settings.Default.ValuePP = _txtPp;
+            Settings.Default.ValueNP = _txtNp;
+            Settings.Default.ValueFib = _txtFib;
+            Settings.Default.BettingSelected = (byte) _bettingSelected;
             Settings.Default.Save();
         }
 
@@ -4258,37 +4413,34 @@ namespace AutoBaccarat
         private void RunBot(bool status, int mode)
         {
             _statusRunBot = status;
+
             if (_statusRunBot)
             {
                 tmTimeRunning.Start();
-
                 if (mode == 0)
                 {
                     Bots_Worker.RunWorkerAsync();
+
                 }
 
                 if (mode == 1)
                 {
 
                 }
-
-               
             }
             else
             {
                 tmTimeRunning.Stop();
-
                 if (mode == 0)
                 {
                     Bots_Worker.CancelAsync();
+                    _statusRunningBot = 0;
                 }
 
                 if (mode == 1)
                 {
 
                 }
-                
-
                 _switchColor = false;
             }
         }
@@ -4297,6 +4449,7 @@ namespace AutoBaccarat
 
         private void Bots_Worker_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
+            if(Bots_Worker.CancellationPending) return;
             while (!Bots_Worker.CancellationPending)
             {
                 CheckColorStartTime();
@@ -4307,6 +4460,7 @@ namespace AutoBaccarat
         }
         private void CheckColorStartTime()
         {
+            if (!_statusRunBot) return;
             checked
             {
                 try
@@ -4361,6 +4515,7 @@ namespace AutoBaccarat
         }
         private void AutoClick()
         {
+            if (!_statusRunBot) return;
             if (_statusRunningBot != 1) return;
             _statusRunningBot = 100;
             checked
@@ -4375,6 +4530,7 @@ namespace AutoBaccarat
         }
         private void AutoClick(short bettingSuggest, int lastUnit)
         {
+            if (!_statusRunBot) return;
             checked
             {
                 if (_statusRunBot)
@@ -4382,11 +4538,11 @@ namespace AutoBaccarat
 
                     lastUnit = lastUnit * ValueForBot.Chip;
 
-                    var chip1 = int.Parse(LayoutValues._chip1);
-                    var chip2 = int.Parse(LayoutValues._chip2);
-                    var chip3 = int.Parse(LayoutValues._chip3);
-                    var chip4 = int.Parse(LayoutValues._chip4);
-                    var chip5 = int.Parse(LayoutValues._chip5);
+                    var chip1 = int.Parse(LayoutValue._chip1);
+                    var chip2 = int.Parse(LayoutValue._chip2);
+                    var chip3 = int.Parse(LayoutValue._chip3);
+                    var chip4 = int.Parse(LayoutValue._chip4);
+                    var chip5 = int.Parse(LayoutValue._chip5);
 
                     short amountChip1 = 0;
                     short amountChip2 = 0;
@@ -4563,6 +4719,7 @@ namespace AutoBaccarat
         }
         private void CheckColorResult()
         {
+            if (!_statusRunBot) return;
             checked
             {
                 try
@@ -4666,6 +4823,7 @@ namespace AutoBaccarat
         }
         private void AddClickToRoadBig()
         {
+            if (!_statusRunBot) return;
             if (_statusRunningBot != 3 & (TypeOfPBT != 1 | TypeOfPBT != 2 | TypeOfPBT != 0)) return;
             _statusRunningBot = 200;
 
@@ -4849,31 +5007,10 @@ namespace AutoBaccarat
 
         #endregion
 
-        public CustomListManager CustomListMng = new CustomListManager();
-        private void Custom_LoadList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (Custom_LoadList.SelectedItem == null)
-            {
-                return;
-            }
 
-            CustomListMng.LoadLanguageFromFile(((CustomInfo)Custom_LoadList.SelectedItem).File);
 
-            CustomValue2ArrayList();
-            CustomEdit();
-            CustomTxtName.Text = Custom_LoadList.SelectedItem.ToString();
-        }
 
-        private void InitCustomList()
-        {
-            Custom_LoadList.DataSource = CustomListMng.GetCustomList();
-            if (Custom_LoadList.Items.Count == 0)
-            {
-                Custom_LoadList.Enabled = false;
-            }
-        }
-
-        
+       
 
         #region GetValueString
 
@@ -4961,6 +5098,5 @@ namespace AutoBaccarat
         //}
 
         #endregion
-
     }
 }

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace AutoBaccarat.Setting.Layout
 {
-  public static class LayoutValues
+  public static class LayoutValue
   {
       public static string NameList, TxtX, TxtY, LblXy, ListSelected, 
           _pStart, _pPlayer, _pBanker,_pTie, _pConP, _pConB,

@@ -21,6 +21,11 @@ namespace AutoBaccarat
             WritePrivateProfileString(section, key, value, Path);
         }
 
+        public static void WriteString(string section, string key, string value, string path)
+        {
+            WritePrivateProfileString(section, key, value, path);
+        }
+
         public static string ReadStringFromIni(string section, string key, string filePath)
         {
             var text = new string(' ', 1024);

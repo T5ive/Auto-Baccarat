@@ -140,7 +140,9 @@ namespace TFive
         protected override void OnBackColorChanged(EventArgs e)
         {
             base.OnBackColorChanged(e);
-            BackColor = Color.FromArgb(240, 240, 240);
+            _BaseColor = BackColor;
+            Invalidate();
+            
         }
 
         protected override void OnCreateControl()
@@ -157,6 +159,8 @@ namespace TFive
         {
             Text = TB.Text;
         }
+
+     
 
         protected override void OnResize(EventArgs e)
         {
@@ -245,7 +249,8 @@ namespace TFive
 
             _TextAlign = HorizontalAlignment.Left;
             _MaxLength = 32767;
-            _BaseColor = Color.FromArgb(240, 240, 240);
+            //_BaseColor = Color.FromArgb(240, 240, 240);
+        //    _BaseColor = BackColor;
             _TextColor = Color.FromArgb(0, 100, 255);
 
             SetStyle(
@@ -303,7 +308,7 @@ namespace TFive
                 TB.BackColor = _BaseColor;
                 TB.ForeColor = _TextColor;
                 g.FillRectangle(new SolidBrush(Color.DodgerBlue), 0, 0, Width, Height);
-                g.FillRectangle(new SolidBrush(Color.FromArgb(240, 240, 240)), 1, 1, W - 1, H - 1);
+                g.FillRectangle(new SolidBrush(_BaseColor), 1, 1, W - 1, H - 1);
                 base.OnPaint(e);
                 G.Dispose();
                 e.Graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
@@ -331,7 +336,7 @@ namespace TFive
 
         private bool _Multiline;
 
-        private readonly Color _BaseColor;
+        private  Color _BaseColor;
 
         private Color _TextColor;
 

@@ -50,192 +50,156 @@ namespace AutoBaccarat.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1-3-2-4")]
-        public string txtPP {
+        public string ValuePP {
             get {
-                return ((string)(this["txtPP"]));
+                return ((string)(this["ValuePP"]));
             }
             set {
-                this["txtPP"] = value;
+                this["ValuePP"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1-2")]
-        public string txtNP {
+        public string ValueNP {
             get {
-                return ((string)(this["txtNP"]));
+                return ((string)(this["ValueNP"]));
             }
             set {
-                this["txtNP"] = value;
+                this["ValueNP"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("1-1-2-3-5-8-13-21-34-55-89-144-233-377-610-987-1597-2584")]
-        public string txtFib {
+        public string ValueFib {
             get {
-                return ((string)(this["txtFib"]));
+                return ((string)(this["ValueFib"]));
             }
             set {
-                this["txtFib"] = value;
+                this["ValueFib"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int _bettingSelected {
+        public byte BettingSelected {
             get {
-                return ((int)(this["_bettingSelected"]));
+                return ((byte)(this["BettingSelected"]));
             }
             set {
-                this["_bettingSelected"] = value;
+                this["BettingSelected"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int _formulaSelected {
+        public byte FormulaSelected {
             get {
-                return ((int)(this["_formulaSelected"]));
+                return ((byte)(this["FormulaSelected"]));
             }
             set {
-                this["_formulaSelected"] = value;
+                this["FormulaSelected"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int _formulaLock {
+        public byte FormulaLock {
             get {
-                return ((int)(this["_formulaLock"]));
+                return ((byte)(this["FormulaLock"]));
             }
             set {
-                this["_formulaLock"] = value;
+                this["FormulaLock"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int _formulaFollow {
+        public byte FormulaFollow {
             get {
-                return ((int)(this["_formulaFollow"]));
+                return ((byte)(this["FormulaFollow"]));
             }
             set {
-                this["_formulaFollow"] = value;
+                this["FormulaFollow"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int _formulaGoodLineFix {
+        public byte FormulaGoodLineFix {
             get {
-                return ((int)(this["_formulaGoodLineFix"]));
+                return ((byte)(this["FormulaGoodLineFix"]));
             }
             set {
-                this["_formulaGoodLineFix"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public int _forceSelected {
-            get {
-                return ((int)(this["_forceSelected"]));
-            }
-            set {
-                this["_forceSelected"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("4")]
-        public string _forcetxt {
-            get {
-                return ((string)(this["_forcetxt"]));
-            }
-            set {
-                this["_forcetxt"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string _customValue {
-            get {
-                return ((string)(this["_customValue"]));
-            }
-            set {
-                this["_customValue"] = value;
+                this["FormulaGoodLineFix"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("50")]
-        public string _betStopRound {
+        public string BetStopRound {
             get {
-                return ((string)(this["_betStopRound"]));
+                return ((string)(this["BetStopRound"]));
             }
             set {
-                this["_betStopRound"] = value;
+                this["BetStopRound"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public string _betStopWin {
+        public string BetStopWin {
             get {
-                return ((string)(this["_betStopWin"]));
+                return ((string)(this["BetStopWin"]));
             }
             set {
-                this["_betStopWin"] = value;
+                this["BetStopWin"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("100")]
-        public string _betStopLose {
+        public string BetStopLose {
             get {
-                return ((string)(this["_betStopLose"]));
+                return ((string)(this["BetStopLose"]));
             }
             set {
-                this["_betStopLose"] = value;
+                this["BetStopLose"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5000")]
-        public string _betStopLess {
+        public string BetStopLess {
             get {
-                return ((string)(this["_betStopLess"]));
+                return ((string)(this["BetStopLess"]));
             }
             set {
-                this["_betStopLess"] = value;
+                this["BetStopLess"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("5000")]
-        public string _betStopMore {
+        public string BetStopMore {
             get {
-                return ((string)(this["_betStopMore"]));
+                return ((string)(this["BetStopMore"]));
             }
             set {
-                this["_betStopMore"] = value;
+                this["BetStopMore"] = value;
             }
         }
         
@@ -278,24 +242,24 @@ namespace AutoBaccarat.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool betInv {
+        public bool SettingBetInvert {
             get {
-                return ((bool)(this["betInv"]));
+                return ((bool)(this["SettingBetInvert"]));
             }
             set {
-                this["betInv"] = value;
+                this["SettingBetInvert"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool doubleClick {
+        public bool SettingConfirmClick {
             get {
-                return ((bool)(this["doubleClick"]));
+                return ((bool)(this["SettingConfirmClick"]));
             }
             set {
-                this["doubleClick"] = value;
+                this["SettingConfirmClick"] = value;
             }
         }
         
@@ -308,6 +272,126 @@ namespace AutoBaccarat.Properties {
             }
             set {
                 this["Lang"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("4")]
+        public byte ForceValue {
+            get {
+                return ((byte)(this["ForceValue"]));
+            }
+            set {
+                this["ForceValue"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public byte LoadCustomListCount {
+            get {
+                return ((byte)(this["LoadCustomListCount"]));
+            }
+            set {
+                this["LoadCustomListCount"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int ForceSelected {
+            get {
+                return ((int)(this["ForceSelected"]));
+            }
+            set {
+                this["ForceSelected"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point LocationFormula {
+            get {
+                return ((global::System.Drawing.Point)(this["LocationFormula"]));
+            }
+            set {
+                this["LocationFormula"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point LocationFormulaEdit {
+            get {
+                return ((global::System.Drawing.Point)(this["LocationFormulaEdit"]));
+            }
+            set {
+                this["LocationFormulaEdit"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point LocationBetSystem {
+            get {
+                return ((global::System.Drawing.Point)(this["LocationBetSystem"]));
+            }
+            set {
+                this["LocationBetSystem"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point LocationBetSystemEdit {
+            get {
+                return ((global::System.Drawing.Point)(this["LocationBetSystemEdit"]));
+            }
+            set {
+                this["LocationBetSystemEdit"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("415, 535")]
+        public global::System.Drawing.Size SizeMain {
+            get {
+                return ((global::System.Drawing.Size)(this["SizeMain"]));
+            }
+            set {
+                this["SizeMain"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point LocationLayout {
+            get {
+                return ((global::System.Drawing.Point)(this["LocationLayout"]));
+            }
+            set {
+                this["LocationLayout"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public byte LoadLayoutListCount {
+            get {
+                return ((byte)(this["LoadLayoutListCount"]));
+            }
+            set {
+                this["LoadLayoutListCount"] = value;
             }
         }
     }

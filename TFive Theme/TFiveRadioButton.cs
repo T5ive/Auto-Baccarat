@@ -62,6 +62,12 @@ namespace TFive
             Focus();
         }
 
+        protected override void OnBackColorChanged(EventArgs e)
+        {
+            base.OnBackColorChanged(e);
+            Invalidate();
+        }
+
         #endregion
 
         public TFiveRadioButton()
@@ -69,7 +75,7 @@ namespace TFive
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | 
                      //ControlStyles.ResizeRedraw |
                      ControlStyles.SupportsTransparentBackColor | ControlStyles.UserPaint, true);
-            BackColor = Color.Transparent;
+           // BackColor = Color.Transparent;
             ForeColor = Color.FromArgb(0, 100, 255);
             Font = new Font("Segoe UI", 11);
            // Width = 193;
@@ -95,11 +101,18 @@ namespace TFive
             base.OnPaint(e);
             var MyDrawer = e.Graphics;
 
-            MyDrawer.Clear(Color.FromArgb(240, 240, 240));
+            //MyDrawer.Clear(Color.FromArgb(240, 240, 240));
+            MyDrawer.Clear(Color.White);
             MyDrawer.SmoothingMode = SmoothingMode.AntiAlias;
 
             // Fill the body of the ellipse with a gradient
-            var LGB = new LinearGradientBrush(new Rectangle(new Point(0, 0), new Size(Size.Height-1, Size.Height - 1)), Color.FromArgb(240, 240, 240), Color.FromArgb(240, 240, 240), 90);
+            var LGB = new LinearGradientBrush(new Rectangle(new Point(0, 0),
+                new Size(Size.Height-1, Size.Height - 1)),
+                Color.White,
+                Color.White, 90);
+            //Color.FromArgb(240, 240, 240),
+            //Color.FromArgb(240, 240, 240), 90);
+
             MyDrawer.FillEllipse(LGB, new Rectangle(new Point(0, 0), new Size(Size.Height - 1, Size.Height - 1)));
 
             var GP = new GraphicsPath();

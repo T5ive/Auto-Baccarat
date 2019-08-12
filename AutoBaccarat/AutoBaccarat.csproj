@@ -37,9 +37,25 @@
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>king99.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu.Core, Version=1.10.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL" />
+    <Reference Include="BunifuDataViz">
+      <HintPath>..\..\BuniFu\Bunifu Dataviz Advanced\BunifuDataViz.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\..\BuniFu\Bunifu UI Winform\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,16 +65,60 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColorController\GetAppName.cs" />
     <Compile Include="ColorController\Getcolor.cs" />
     <Compile Include="ColorController\Win32Bot.cs" />
+    <Compile Include="FrmBetSystem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBetSystem.Designer.cs">
+      <DependentUpon>FrmBetSystem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBetSystemEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBetSystemEdit.Designer.cs">
+      <DependentUpon>FrmBetSystemEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBot.Designer.cs">
+      <DependentUpon>FrmBot.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDisplay.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDisplay.Designer.cs">
       <DependentUpon>FrmDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFormula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFormula.Designer.cs">
+      <DependentUpon>FrmFormula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFormulaEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFormulaEdit.Designer.cs">
+      <DependentUpon>FrmFormulaEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLayout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLayout.Designer.cs">
+      <DependentUpon>FrmLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmLogs.Designer.cs">
+      <DependentUpon>FrmLogs.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
@@ -66,13 +126,22 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMainSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FrmMainSettings.Designer.cs">
+      <DependentUpon>FrmMainSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="LocalizationManager\IniReader.cs" />
     <Compile Include="LocalizationManager\langinfo.cs" />
     <Compile Include="LocalizationManager\LocalizationManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting\BetSystemValues.cs" />
     <Compile Include="Setting\Custom\CustomInfo.cs" />
     <Compile Include="Setting\Custom\CustomListManager.cs" />
+    <Compile Include="Setting\FormulaValues.cs" />
+    <Compile Include="Setting\LayoutValues.cs" />
     <Compile Include="Setting\Layout\GetColor\FrmColorInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,16 +156,43 @@
     </Compile>
     <Compile Include="Setting\Layout\GetColor\Values.cs" />
     <Compile Include="Setting\Layout\GetColor\Win32.cs" />
-    <Compile Include="Setting\Layout\LayoutValues.cs" />
+    <Compile Include="Setting\Layout\LayoutInfo.cs" />
+    <Compile Include="Setting\Layout\LayoutListManager.cs" />
+    <Compile Include="Setting\Layout\LayoutValue.cs" />
     <Compile Include="stringLoader.cs" />
     <Compile Include="ValueForBot.cs" />
+    <EmbeddedResource Include="FrmBetSystem.resx">
+      <DependentUpon>FrmBetSystem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBetSystemEdit.resx">
+      <DependentUpon>FrmBetSystemEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBot.resx">
+      <DependentUpon>FrmBot.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDisplay.resx">
       <DependentUpon>FrmDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFormula.resx">
+      <DependentUpon>FrmFormula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFormulaEdit.resx">
+      <DependentUpon>FrmFormulaEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLayout.resx">
+      <DependentUpon>FrmLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogs.resx">
+      <DependentUpon>FrmLogs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMainSettings.resx">
+      <DependentUpon>FrmMainSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -144,7 +240,9 @@
       <Name>TFive UI</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\edit-2-16.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\B.png" />
   </ItemGroup>
@@ -153,6 +251,44 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\T.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-2-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-list-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-9-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-mark-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash-9-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\return-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-window-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-4-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="king99.ico" />
+    <None Include="Resources\line-icon-png-transparent-3-1-.png" />
+    <None Include="Resources\settings-24-64.png" />
+    <None Include="Resources\settings-17-64.png" />
+    <None Include="Resources\note-2-64.png" />
+    <None Include="Resources\start-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

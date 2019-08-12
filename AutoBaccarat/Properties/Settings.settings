@@ -8,52 +8,43 @@
     <Setting Name="Location" Type="System.Drawing.Point" Scope="User">
       <Value Profile="(Default)">0, 0</Value>
     </Setting>
-    <Setting Name="txtPP" Type="System.String" Scope="User">
+    <Setting Name="ValuePP" Type="System.String" Scope="User">
       <Value Profile="(Default)">1-3-2-4</Value>
     </Setting>
-    <Setting Name="txtNP" Type="System.String" Scope="User">
+    <Setting Name="ValueNP" Type="System.String" Scope="User">
       <Value Profile="(Default)">1-2</Value>
     </Setting>
-    <Setting Name="txtFib" Type="System.String" Scope="User">
+    <Setting Name="ValueFib" Type="System.String" Scope="User">
       <Value Profile="(Default)">1-1-2-3-5-8-13-21-34-55-89-144-233-377-610-987-1597-2584</Value>
     </Setting>
-    <Setting Name="_bettingSelected" Type="System.Int32" Scope="User">
+    <Setting Name="BettingSelected" Type="System.Byte" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="_formulaSelected" Type="System.Int32" Scope="User">
+    <Setting Name="FormulaSelected" Type="System.Byte" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="_formulaLock" Type="System.Int32" Scope="User">
+    <Setting Name="FormulaLock" Type="System.Byte" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="_formulaFollow" Type="System.Int32" Scope="User">
+    <Setting Name="FormulaFollow" Type="System.Byte" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="_formulaGoodLineFix" Type="System.Int32" Scope="User">
+    <Setting Name="FormulaGoodLineFix" Type="System.Byte" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
-    <Setting Name="_forceSelected" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
-    </Setting>
-    <Setting Name="_forcetxt" Type="System.String" Scope="User">
-      <Value Profile="(Default)">4</Value>
-    </Setting>
-    <Setting Name="_customValue" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="_betStopRound" Type="System.String" Scope="User">
+    <Setting Name="BetStopRound" Type="System.String" Scope="User">
       <Value Profile="(Default)">50</Value>
     </Setting>
-    <Setting Name="_betStopWin" Type="System.String" Scope="User">
+    <Setting Name="BetStopWin" Type="System.String" Scope="User">
       <Value Profile="(Default)">100</Value>
     </Setting>
-    <Setting Name="_betStopLose" Type="System.String" Scope="User">
+    <Setting Name="BetStopLose" Type="System.String" Scope="User">
       <Value Profile="(Default)">100</Value>
     </Setting>
-    <Setting Name="_betStopLess" Type="System.String" Scope="User">
+    <Setting Name="BetStopLess" Type="System.String" Scope="User">
       <Value Profile="(Default)">5000</Value>
     </Setting>
-    <Setting Name="_betStopMore" Type="System.String" Scope="User">
+    <Setting Name="BetStopMore" Type="System.String" Scope="User">
       <Value Profile="(Default)">5000</Value>
     </Setting>
     <Setting Name="topMost" Type="System.Boolean" Scope="User">
@@ -65,13 +56,43 @@
     <Setting Name="checkSettings" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="betInv" Type="System.Boolean" Scope="User">
+    <Setting Name="SettingBetInvert" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
-    <Setting Name="doubleClick" Type="System.Boolean" Scope="User">
+    <Setting Name="SettingConfirmClick" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="Lang" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ForceValue" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="LoadCustomListCount" Type="System.Byte" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ForceSelected" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="LocationFormula" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="LocationFormulaEdit" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="LocationBetSystem" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="LocationBetSystemEdit" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="SizeMain" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">415, 535</Value>
+    </Setting>
+    <Setting Name="LocationLayout" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">0, 0</Value>
+    </Setting>
+    <Setting Name="LoadLayoutListCount" Type="System.Byte" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
   </Settings>
