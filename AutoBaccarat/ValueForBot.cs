@@ -9,10 +9,12 @@ namespace AutoBaccarat
 {
      public class ValueForBot
     {
-        public static string Formula, Betting, StopRound, StopWin, StopLose, StopLess, StopMore, LayoutList, ValuePP, ValueNP, ValueFib;
-        public static int Chip, GoodLineFix, Lock, Follow, Mode;
+        public static string Formula, Betting, StopRound, StopWin, StopLose, StopLess, StopMore, LayoutList, ValuePP, ValueNP, ValueFib, Fixed;
+        public static byte GoodLineFix, Lock, Follow, Mode;
+        public static int Chip;
+        public static short ForceValue, ForceType;
 
-        public static List<string> CustomValueFollowAdverse = new List<string>();
+        public static List<string> CustomValueType = new List<string>();
         public static List<string> CustomValueNumber = new List<string>();
 
         public static Point Start, Player, Banker,Tie, Chip1, Chip2, Chip3, Chip4, Chip5, ConfirmPlayer, ConfirmBanker;

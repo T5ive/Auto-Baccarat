@@ -1,18 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Reflection;
 using AutoBaccarat.Properties;
 
 namespace AutoBaccarat
 {
-   public static class FormulaValues
+    [Obfuscation(Feature = "Apply to member * when method or constructor: virtualization", Exclude = false)]
+    public static class FormulaValues
     {
         public static FormulaMode FormulaSelected;
-        public static byte GoodLineFix, Lock, Follow, Force, LoadListCount;
+        public static byte GoodLineFix, Lock, Follow, ForceValue, LoadListCount;
         public static ForceType ForceSelected;
-        public static string ReadCustomValue, ListName;
+        public static string ReadCustomValue, ListName, Fixed;
         public static List<string> ValueNumber = new List<string>();
         public static List<string> ValueType = new List<string>();
 
@@ -23,13 +21,17 @@ namespace AutoBaccarat
             Lock = Settings.Default.FormulaLock;
             Follow = Settings.Default.FormulaFollow;
             LoadListCount = Settings.Default.LoadCustomListCount;
-
+            LoadFixed();
             LoadCustom();
         }
 
         public static CustomListManager ListMng = new CustomListManager();
         public static List<CustomInfo> ListLoad = new List<CustomInfo>();
-        
+
+        public static void LoadFixed()
+        {
+            Fixed = Settings.Default.Fixed;
+        }
         public static void LoadCustom()
         {
             checked
@@ -38,7 +40,7 @@ namespace AutoBaccarat
                 {
                     ListLoad = ListMng.GetCustomList();
                     ListMng.LoadValuesFromFile(ListLoad[LoadListCount].File); // Add value to ReadCustomValue
-                    ListName = ListLoad[LoadListCount].File;
+                    ListName = ListLoad[LoadListCount].Name;
                     StringSplit2Array();
                 }
                 catch
@@ -92,7 +94,8 @@ namespace AutoBaccarat
             Lock,
             Follow,
             AI,
-            Random
+            Random,
+            Fixed
         }
         public enum ForceType
         {

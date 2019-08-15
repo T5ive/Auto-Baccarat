@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace AutoBaccarat
 {
+    [Obfuscation(Feature = "Apply to member * when method or constructor: virtualization", Exclude = false)]
     public class LocalizationManager
     {
-        public LocalizationManager(FrmMain mainForm)
+        public LocalizationManager()
         {
-            _mainForm = mainForm;
             var startupPath = Application.StartupPath;
             _langDir = startupPath + "\\lng\\";
         }
@@ -20,7 +21,6 @@ namespace AutoBaccarat
         {
             if (!Directory.Exists(_langDir))
             {
-               // _mainForm.WriteOutput("Language directory (/lng) doesn't exists",Color.Red);
                 return null;
             }
             var files = Directory.GetFiles(_langDir, "*.lng");
@@ -51,11 +51,11 @@ namespace AutoBaccarat
             foreach (var obj in form.Controls)
             {
                 var control = (Control)obj;
-                if (control.GetType().Name == "TFiveTheme")
-                {
-                    TranslateControlText(control, name);
+                //if (control.GetType().Name == "TFiveTheme")
+                //{
+                //    TranslateControlText(control, name);
                     LocalizeChildControls(control, name);
-                }
+                //}
             }
             if (adjustRightToLeft)
             {
@@ -80,8 +80,10 @@ namespace AutoBaccarat
                     case "TFiveButton":
                     case "TFiveCheckbox":
                     case "TFiveHeaderLabel":
+                    case "BunifuFlatButton":
                         TranslateControlText(control2, section);
                         break;
+                    case "BunifuCards":
                     case "TableLayoutPanel":
                     case "Panel":
                     case "Tabcontrol":
@@ -203,7 +205,6 @@ namespace AutoBaccarat
             if (_currentLangDict.ContainsKey(section) && _currentLangDict[section].ContainsKey(control.Name))
             {
                 control.Text = _currentLangDict[section][control.Name];
-               
             }
         }
 
@@ -235,13 +236,11 @@ namespace AutoBaccarat
             {
                 return string.Format(_currentLangDict[key][messageId].Replace("\\r\\n", "\r\n"), Params);
             }
-            //_mainForm.WriteOutput(messageId + "=" + def,Color.Red);
             return string.Format(def, Params);
         }
 
         private readonly Dictionary<string, Dictionary<string, string>> _currentLangDict = new Dictionary<string, Dictionary<string, string>>();
 
-        private readonly FrmMain _mainForm;
 
         private readonly string _langDir;
 

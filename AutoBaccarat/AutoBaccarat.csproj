@@ -90,23 +90,23 @@
     <Compile Include="FrmBot.Designer.cs">
       <DependentUpon>FrmBot.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDisplay.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmDisplay.Designer.cs">
-      <DependentUpon>FrmDisplay.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmFormula.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmFormula.Designer.cs">
       <DependentUpon>FrmFormula.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmFormulaEdit.cs">
+    <Compile Include="FrmFormulaCustom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmFormulaEdit.Designer.cs">
-      <DependentUpon>FrmFormulaEdit.cs</DependentUpon>
+    <Compile Include="FrmFormulaCustom.Designer.cs">
+      <DependentUpon>FrmFormulaCustom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFormulaFixed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFormulaFixed.Designer.cs">
+      <DependentUpon>FrmFormulaFixed.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLayout.cs">
       <SubType>Form</SubType>
@@ -114,23 +114,11 @@
     <Compile Include="FrmLayout.Designer.cs">
       <DependentUpon>FrmLayout.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLogs.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FrmLogs.Designer.cs">
-      <DependentUpon>FrmLogs.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmMainSettings.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FrmMainSettings.Designer.cs">
-      <DependentUpon>FrmMainSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="LocalizationManager\IniReader.cs" />
     <Compile Include="LocalizationManager\langinfo.cs" />
@@ -138,6 +126,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setting\BetSystemValues.cs" />
+    <Compile Include="Setting\BotValues.cs" />
     <Compile Include="Setting\Custom\CustomInfo.cs" />
     <Compile Include="Setting\Custom\CustomListManager.cs" />
     <Compile Include="Setting\FormulaValues.cs" />
@@ -158,7 +147,6 @@
     <Compile Include="Setting\Layout\GetColor\Win32.cs" />
     <Compile Include="Setting\Layout\LayoutInfo.cs" />
     <Compile Include="Setting\Layout\LayoutListManager.cs" />
-    <Compile Include="Setting\Layout\LayoutValue.cs" />
     <Compile Include="stringLoader.cs" />
     <Compile Include="ValueForBot.cs" />
     <EmbeddedResource Include="FrmBetSystem.resx">
@@ -170,27 +158,21 @@
     <EmbeddedResource Include="FrmBot.resx">
       <DependentUpon>FrmBot.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDisplay.resx">
-      <DependentUpon>FrmDisplay.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmFormula.resx">
       <DependentUpon>FrmFormula.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmFormulaEdit.resx">
-      <DependentUpon>FrmFormulaEdit.cs</DependentUpon>
+    <EmbeddedResource Include="FrmFormulaCustom.resx">
+      <DependentUpon>FrmFormulaCustom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFormulaFixed.resx">
+      <DependentUpon>FrmFormulaFixed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLayout.resx">
       <DependentUpon>FrmLayout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogs.resx">
-      <DependentUpon>FrmLogs.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMainSettings.resx">
-      <DependentUpon>FrmMainSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

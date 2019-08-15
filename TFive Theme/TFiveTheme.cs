@@ -103,15 +103,7 @@ namespace TFive
             set
             {
                 _TabControl = value;
-                if (_TabControl)
-                {
-                    Padding = new Padding(20, 20, 20, 20);
-                  
-                }
-                else
-                {
-                    Padding = new Padding(20, 56, 20, 20);
-                }
+                Padding = _TabControl ? new Padding(20, 20, 20, 20) : new Padding(20, 56, 20, 20);
                 Invalidate();
             }
         }
@@ -445,7 +437,7 @@ namespace TFive
         public TFiveTheme()
         {
             SetStyle((ControlStyles)139270, true);
-            BackColor = Color.FromArgb(240, 240, 240);
+          //  BackColor = Color.FromArgb(240, 240, 240);
             Padding = new Padding(20, 56, 20, 16);
             DoubleBuffered = true;
             Dock = DockStyle.Fill;
@@ -457,7 +449,8 @@ namespace TFive
         {
             base.OnPaint(e);
             var G = e.Graphics;
-            G.Clear(Color.FromArgb(240, 240, 255));
+            //G.Clear(Color.FromArgb(240, 240, 255));
+            G.Clear(BackColor);
 
             G.DrawRectangle(new Pen(Color.DodgerBlue),
                 _border ? new Rectangle(0, 0, Width - 1, Height - 1) : new Rectangle(0, 0, -1, -1));
@@ -474,7 +467,8 @@ namespace TFive
                         : new Rectangle(20, 56, Width - 41, Height - 77));
             }
 
-            G.FillRectangle(new SolidBrush(Color.FromArgb(240, 240, 240)),
+            //G.FillRectangle(new SolidBrush(Color.FromArgb(240, 240, 240)),
+            G.FillRectangle(new SolidBrush(BackColor),
                 _TabControl
                     ? new Rectangle(21, 21, Width - 42, Height - 42)
                     : new Rectangle(21, 57, Width - 42, Height - 78));
@@ -554,6 +548,7 @@ namespace TFive
                     new SolidBrush(Color.FromArgb(0, 100, 255)), new Rectangle(0, 14, Width - 1, Height),
                     new StringFormat() {Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Near});
             }
+           
         }
     }
 }

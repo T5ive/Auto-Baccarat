@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
+using System.Reflection;
 using System.Windows.Forms;
 using AutoBaccarat.Properties;
 
 namespace AutoBaccarat
 {
-    public partial class FrmFormulaEdit : Form
+    [Obfuscation(Feature = "Apply to member * when method or constructor: virtualization", Exclude = false)]
+    public partial class FrmFormulaCustom : Form
     {
-        public FrmFormulaEdit()
+        public FrmFormulaCustom()
         {
             InitializeComponent();
         }
@@ -22,13 +24,13 @@ namespace AutoBaccarat
         }
         private void LoadLocation()
         {
-            if (Settings.Default.LocationFormulaEdit == new Point(0, 0))
+            if (Settings.Default.LocationFormulaCustom == new Point(0, 0))
             {
                 CenterToScreen();
             }
             else
             {
-                Location = Settings.Default.LocationFormulaEdit;
+                Location = Settings.Default.LocationFormulaCustom;
             }
         }
         private void FrmFormulaEdit_FormClosing(object sender, FormClosingEventArgs e)
@@ -38,7 +40,7 @@ namespace AutoBaccarat
 
         private void SaveSettings()
         {
-            Settings.Default.LocationFormulaEdit = Location;
+            Settings.Default.LocationFormulaCustom = Location;
             Settings.Default.LoadCustomListCount = FormulaValues.LoadListCount;
             Settings.Default.Save();
         }
@@ -119,7 +121,7 @@ namespace AutoBaccarat
         private bool _customListFirstTime = true;
         private static List<string> _valueNumber;
         private static List<string> _valueType;
-
+        private bool _cancel;
         private void LoadFiles2List()
         {
             try
@@ -146,7 +148,11 @@ namespace AutoBaccarat
                     _customListFirstTime = false;
                     goto skip;
                 }
-
+                if (_cancel)
+                {
+                    _cancel = false;
+                    return;
+                }
                 if (CheckEdit())
                 {
                     var msgResult = MessageBox.Show($@"[{FormulaValues.ListName}] {stringLoader.Modified}",
@@ -158,6 +164,7 @@ namespace AutoBaccarat
                     }
                     if (msgResult == DialogResult.Cancel)
                     {
+                        _cancel = true;
                         ListBoxLoad.SelectedIndex = FormulaValues.LoadListCount;
                         return;
                     }
@@ -177,7 +184,7 @@ namespace AutoBaccarat
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, stringLoader.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, stringLoader.Error + @"03x1", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void Array2ListBox()
@@ -246,7 +253,7 @@ namespace AutoBaccarat
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, stringLoader.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, stringLoader.Error + @"03x2", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -255,7 +262,7 @@ namespace AutoBaccarat
         #region Custom Control
 
         private short _listBoxValueCount;
-
+        
         #region Value Control
         private void ListBoxValue_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -390,7 +397,7 @@ namespace AutoBaccarat
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message + $"\n {stringLoader.TryAgain}", stringLoader.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.Message + $"\n {stringLoader.TryAgain}", stringLoader.Error + @"03x3", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -406,8 +413,16 @@ namespace AutoBaccarat
                 return true;
             }
 
-            var lastValue = CheckEditValue(_valueNumber, _valueType);
-            return FormulaValues.ReadCustomValue != lastValue;
+            try
+            {
+                var lastValue = CheckEditValue(_valueNumber, _valueType);
+                return FormulaValues.ReadCustomValue != lastValue;
+            }
+            catch
+            {
+                return true;
+            }
+            
 
             
         }

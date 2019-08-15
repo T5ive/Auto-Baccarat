@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Reflection;
 using System.Runtime.InteropServices;
 
 namespace AutoBaccarat
 {
+    [Obfuscation(Feature = "Apply to member * when method or constructor: virtualization", Exclude = false)]
     internal class IniReader
     {
         [DllImport("KERNEL32.DLL", CallingConvention = CallingConvention.StdCall, CharSet = CharSet.Unicode, EntryPoint = "GetPrivateProfileStringW", ExactSpelling = true, SetLastError = true)]

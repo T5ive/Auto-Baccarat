@@ -49,7 +49,7 @@ namespace AutoBaccarat.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1-3-2-4")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1-2-2-3-3-3-4-4-4-4-5-5-5-5-5")]
         public string ValuePP {
             get {
                 return ((string)(this["ValuePP"]));
@@ -61,7 +61,7 @@ namespace AutoBaccarat.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("1-2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1-1-3-7-15-31-63-127-255-511-1023-2047")]
         public string ValueNP {
             get {
                 return ((string)(this["ValueNP"]));
@@ -206,60 +206,48 @@ namespace AutoBaccarat.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool topMost {
+        public bool SetTopMost {
             get {
-                return ((bool)(this["topMost"]));
+                return ((bool)(this["SetTopMost"]));
             }
             set {
-                this["topMost"] = value;
+                this["SetTopMost"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool moveCur {
+        public bool MoveCur {
             get {
-                return ((bool)(this["moveCur"]));
+                return ((bool)(this["MoveCur"]));
             }
             set {
-                this["moveCur"] = value;
+                this["MoveCur"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool checkSettings {
+        public bool BetInvert {
             get {
-                return ((bool)(this["checkSettings"]));
+                return ((bool)(this["BetInvert"]));
             }
             set {
-                this["checkSettings"] = value;
+                this["BetInvert"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool SettingBetInvert {
+        public bool ConfirmClick {
             get {
-                return ((bool)(this["SettingBetInvert"]));
+                return ((bool)(this["ConfirmClick"]));
             }
             set {
-                this["SettingBetInvert"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool SettingConfirmClick {
-            get {
-                return ((bool)(this["SettingConfirmClick"]));
-            }
-            set {
-                this["SettingConfirmClick"] = value;
+                this["ConfirmClick"] = value;
             }
         }
         
@@ -326,12 +314,12 @@ namespace AutoBaccarat.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
-        public global::System.Drawing.Point LocationFormulaEdit {
+        public global::System.Drawing.Point LocationFormulaCustom {
             get {
-                return ((global::System.Drawing.Point)(this["LocationFormulaEdit"]));
+                return ((global::System.Drawing.Point)(this["LocationFormulaCustom"]));
             }
             set {
-                this["LocationFormulaEdit"] = value;
+                this["LocationFormulaCustom"] = value;
             }
         }
         
@@ -392,6 +380,42 @@ namespace AutoBaccarat.Properties {
             }
             set {
                 this["LoadLayoutListCount"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public byte ChipSelected {
+            get {
+                return ((byte)(this["ChipSelected"]));
+            }
+            set {
+                this["ChipSelected"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1-2")]
+        public string Fixed {
+            get {
+                return ((string)(this["Fixed"]));
+            }
+            set {
+                this["Fixed"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0, 0")]
+        public global::System.Drawing.Point LocationFormulaFixed {
+            get {
+                return ((global::System.Drawing.Point)(this["LocationFormulaFixed"]));
+            }
+            set {
+                this["LocationFormulaFixed"] = value;
             }
         }
     }

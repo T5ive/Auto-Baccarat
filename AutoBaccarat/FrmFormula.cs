@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 using AutoBaccarat.Properties;
-using AutoBaccarat.Setting;
 
 namespace AutoBaccarat
 {
+    [Obfuscation(Feature = "Apply to member * when method or constructor: virtualization", Exclude = false)]
     public partial class FrmFormula : Form
     {
         public FrmFormula()
@@ -72,6 +73,10 @@ namespace AutoBaccarat
                 case FormulaValues.FormulaMode.Random:
                     radRandom.Checked = true;
                     break;
+
+                case FormulaValues.FormulaMode.Fixed:
+                    radFixed.Checked = true;
+                    break;
             }
         }
         private void BtnSave_Click(object sender, EventArgs e)
@@ -89,7 +94,7 @@ namespace AutoBaccarat
             FormulaValues.GoodLineFix = (byte) cbGoodLineFix.SelectedIndex;
             FormulaValues.Lock = (byte) cbLock.SelectedIndex;
             FormulaValues.Follow = (byte) cbFollow.SelectedIndex;
-            FormulaValues.Force = byte.Parse(txtForce.Text);
+            FormulaValues.ForceValue = byte.Parse(txtForce.Text);
             Settings.Default.Save();
             Close();
         }
@@ -100,10 +105,22 @@ namespace AutoBaccarat
 
         private void BtnCustom_Click(object sender, EventArgs e)
         {
-            var custom = new FrmFormulaEdit();
+            var custom = new FrmFormulaCustom();
+            BotValues.LclzManager.LocalizeForm(custom);
             Hide();
             custom.ShowDialog();
             custom.Dispose();
+            Show();
+        }
+
+        private void BtnFixed_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var fix = new FrmFormulaFixed();
+            BotValues.LclzManager.LocalizeForm(fix);
+            fix.lbExplain.Text = stringLoader.DetailFixed;
+            fix.ShowDialog();
+            fix.Dispose();
             Show();
         }
         private void RadioCheckAll(object sender)
@@ -144,6 +161,10 @@ namespace AutoBaccarat
             {
                 FormulaValues.FormulaSelected = FormulaValues.FormulaMode.Random;
             }
+            if (radFixed.Checked)
+            {
+                FormulaValues.FormulaSelected = FormulaValues.FormulaMode.Fixed;
+            }
         }
 
 
@@ -182,8 +203,9 @@ namespace AutoBaccarat
             }
         }
 
+
         #endregion
 
-
+        
     }
 }

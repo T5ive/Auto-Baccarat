@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Drawing;
+using System.Reflection;
 using System.Windows.Forms;
 using AutoBaccarat.Properties;
 using AutoBaccarat.Setting;
 
 namespace AutoBaccarat
 {
+    [Obfuscation(Feature = "Apply to member * when method or constructor: virtualization", Exclude = false)]
     public partial class FrmBetSystem : Form
     {
         public FrmBetSystem()
@@ -71,10 +73,20 @@ namespace AutoBaccarat
         private void BtnSave_Click(object sender, EventArgs e)
         {
             BetSave();
+            SaveSettings();
+            Close();
+        }
+        private void SaveSettings()
+        {
+            Settings.Default.BetStopRound = txtStopRound.Text;
+            Settings.Default.BetStopWin = txtStopWin.Text;
+            Settings.Default.BetStopLose = txtStopLose.Text;
+            Settings.Default.BetStopLess = txtStopLess.Text;
+            Settings.Default.BetStopMore = txtStopMore.Text;
+            Settings.Default.ChipSelected = (byte)cbChip.SelectedIndex;
             Settings.Default.BettingSelected = (byte)BetSystemValues.BettingSelected;
             Settings.Default.LocationBetSystem = Location;
             Settings.Default.Save();
-            Close();
         }
 
         #endregion
@@ -99,6 +111,8 @@ namespace AutoBaccarat
         private void BettingEditMode(BetSystemValues.BettingMode mode)
         {
             var frmBetSystemEdit = new FrmBetSystemEdit();
+            var frmBot = new FrmBot();
+            BotValues.LclzManager.LocalizeForm(frmBetSystemEdit);
             BetSystemValues.EditMode = mode;
             switch (mode)
             {
@@ -175,17 +189,13 @@ namespace AutoBaccarat
         }
         private void BetSave()
         {
-            Settings.Default.BetStopRound = txtStopRound.Text;
-            Settings.Default.BetStopWin = txtStopWin.Text;
-            Settings.Default.BetStopLose = txtStopLose.Text;
-            Settings.Default.BetStopLess = txtStopLess.Text;
-            Settings.Default.BetStopMore = txtStopMore.Text;
-
             BetSystemValues.BetStopRound = txtStopRound.Text;
             BetSystemValues.BetStopWin = txtStopWin.Text;
             BetSystemValues.BetStopLose = txtStopLose.Text;
             BetSystemValues.BetStopLess = txtStopLess.Text;
             BetSystemValues.BetStopMore = txtStopMore.Text;
+            BetSystemValues.ChipSelected = (byte) cbChip.SelectedIndex;
+            BetSystemValues.ChipValue = int.Parse(cbChip.SelectedItem.ToString());
         }
         private void ChipSelected()
         {
@@ -195,7 +205,7 @@ namespace AutoBaccarat
             cbChip.Items.Add(LayoutValues.Chip3);
             cbChip.Items.Add(LayoutValues.Chip4);
             cbChip.Items.Add(LayoutValues.Chip5);
-            cbChip.SelectedIndex = 0;
+            cbChip.SelectedIndex = BetSystemValues.ChipSelected;
         }
 
         #endregion

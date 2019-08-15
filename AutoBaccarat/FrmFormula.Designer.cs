@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.EditTitle = new TFive.TFiveGroupBox();
+            this.radFixed = new TFive.TFiveRadioButton();
+            this.btnFixed = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tFiveSeparator1 = new TFive.TFiveSeparator();
             this.Force = new TFive.TFiveGroupBox();
             this.radForceFollow = new TFive.TFiveRadioButton();
@@ -75,13 +77,15 @@
             this.bunifuCards1.Padding = new System.Windows.Forms.Padding(1);
             this.bunifuCards1.RightSahddow = false;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(300, 486);
+            this.bunifuCards1.Size = new System.Drawing.Size(300, 515);
             this.bunifuCards1.TabIndex = 1;
             // 
             // EditTitle
             // 
             this.EditTitle.BackColor = System.Drawing.Color.Transparent;
             this.EditTitle.BGColor = System.Drawing.Color.White;
+            this.EditTitle.Controls.Add(this.radFixed);
+            this.EditTitle.Controls.Add(this.btnFixed);
             this.EditTitle.Controls.Add(this.tFiveSeparator1);
             this.EditTitle.Controls.Add(this.Force);
             this.EditTitle.Controls.Add(this.btnSave);
@@ -106,14 +110,63 @@
             this.EditTitle.MinimumSize = new System.Drawing.Size(136, 50);
             this.EditTitle.Name = "EditTitle";
             this.EditTitle.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.EditTitle.Size = new System.Drawing.Size(298, 484);
+            this.EditTitle.Size = new System.Drawing.Size(298, 513);
             this.EditTitle.TabIndex = 1;
             this.EditTitle.Text = "Formula Selection";
+            // 
+            // radFixed
+            // 
+            this.radFixed.BackColor = System.Drawing.Color.Transparent;
+            this.radFixed.Checked = false;
+            this.radFixed.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.radFixed.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.radFixed.Location = new System.Drawing.Point(89, 78);
+            this.radFixed.Name = "radFixed";
+            this.radFixed.Size = new System.Drawing.Size(106, 19);
+            this.radFixed.TabIndex = 44;
+            this.radFixed.Text = "Fixed";
+            // 
+            // btnFixed
+            // 
+            this.btnFixed.Active = false;
+            this.btnFixed.Activecolor = System.Drawing.Color.DeepSkyBlue;
+            this.btnFixed.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnFixed.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFixed.BorderRadius = 0;
+            this.btnFixed.ButtonText = "Edit";
+            this.btnFixed.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFixed.DisabledColor = System.Drawing.Color.Gray;
+            this.btnFixed.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnFixed.Iconimage = global::AutoBaccarat.Properties.Resources.edit_2_64;
+            this.btnFixed.Iconimage_right = null;
+            this.btnFixed.Iconimage_right_Selected = null;
+            this.btnFixed.Iconimage_Selected = null;
+            this.btnFixed.IconMarginLeft = 0;
+            this.btnFixed.IconMarginRight = 0;
+            this.btnFixed.IconRightVisible = true;
+            this.btnFixed.IconRightZoom = 0D;
+            this.btnFixed.IconVisible = true;
+            this.btnFixed.IconZoom = 50D;
+            this.btnFixed.IsTab = false;
+            this.btnFixed.Location = new System.Drawing.Point(12, 73);
+            this.btnFixed.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnFixed.Name = "btnFixed";
+            this.btnFixed.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btnFixed.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnFixed.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnFixed.selected = false;
+            this.btnFixed.Size = new System.Drawing.Size(65, 30);
+            this.btnFixed.TabIndex = 43;
+            this.btnFixed.Text = "Edit";
+            this.btnFixed.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFixed.Textcolor = System.Drawing.Color.White;
+            this.btnFixed.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFixed.Click += new System.EventHandler(this.BtnFixed_Click);
             // 
             // tFiveSeparator1
             // 
             this.tFiveSeparator1.BackColor = System.Drawing.Color.White;
-            this.tFiveSeparator1.Location = new System.Drawing.Point(3, 306);
+            this.tFiveSeparator1.Location = new System.Drawing.Point(3, 339);
             this.tFiveSeparator1.Name = "tFiveSeparator1";
             this.tFiveSeparator1.Size = new System.Drawing.Size(288, 10);
             this.tFiveSeparator1.TabIndex = 42;
@@ -129,7 +182,7 @@
             this.Force.Controls.Add(this.lbForce);
             this.Force.Curv1 = 1;
             this.Force.Curv2 = 1;
-            this.Force.Location = new System.Drawing.Point(5, 322);
+            this.Force.Location = new System.Drawing.Point(5, 350);
             this.Force.MinimumSize = new System.Drawing.Size(136, 50);
             this.Force.Name = "Force";
             this.Force.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
@@ -216,7 +269,7 @@
             this.btnSave.IconVisible = false;
             this.btnSave.IconZoom = 50D;
             this.btnSave.IsTab = false;
-            this.btnSave.Location = new System.Drawing.Point(5, 449);
+            this.btnSave.Location = new System.Drawing.Point(5, 478);
             this.btnSave.Margin = new System.Windows.Forms.Padding(21, 28, 21, 28);
             this.btnSave.Name = "btnSave";
             this.btnSave.Normalcolor = System.Drawing.Color.DodgerBlue;
@@ -286,7 +339,7 @@
             "Player",
             "Banker",
             "Both"});
-            this.cbFollow.Location = new System.Drawing.Point(171, 210);
+            this.cbFollow.Location = new System.Drawing.Point(171, 247);
             this.cbFollow.Name = "cbFollow";
             this.cbFollow.Size = new System.Drawing.Size(118, 26);
             this.cbFollow.StartIndex = 0;
@@ -309,7 +362,7 @@
             this.cbLock.Items.AddRange(new object[] {
             "Player",
             "Banker"});
-            this.cbLock.Location = new System.Drawing.Point(171, 178);
+            this.cbLock.Location = new System.Drawing.Point(171, 215);
             this.cbLock.Name = "cbLock";
             this.cbLock.Size = new System.Drawing.Size(119, 26);
             this.cbLock.StartIndex = 0;
@@ -337,7 +390,7 @@
             "5",
             "6",
             "7"});
-            this.cbGoodLineFix.Location = new System.Drawing.Point(240, 109);
+            this.cbGoodLineFix.Location = new System.Drawing.Point(240, 142);
             this.cbGoodLineFix.Name = "cbGoodLineFix";
             this.cbGoodLineFix.Size = new System.Drawing.Size(50, 26);
             this.cbGoodLineFix.StartIndex = 0;
@@ -346,7 +399,7 @@
             // tFiveSeparator4
             // 
             this.tFiveSeparator4.BackColor = System.Drawing.Color.White;
-            this.tFiveSeparator4.Location = new System.Drawing.Point(5, 169);
+            this.tFiveSeparator4.Location = new System.Drawing.Point(5, 202);
             this.tFiveSeparator4.Name = "tFiveSeparator4";
             this.tFiveSeparator4.Size = new System.Drawing.Size(288, 10);
             this.tFiveSeparator4.TabIndex = 29;
@@ -355,7 +408,7 @@
             // tFiveSeparator2
             // 
             this.tFiveSeparator2.BackColor = System.Drawing.Color.White;
-            this.tFiveSeparator2.Location = new System.Drawing.Point(5, 71);
+            this.tFiveSeparator2.Location = new System.Drawing.Point(5, 104);
             this.tFiveSeparator2.Name = "tFiveSeparator2";
             this.tFiveSeparator2.Size = new System.Drawing.Size(288, 10);
             this.tFiveSeparator2.TabIndex = 28;
@@ -367,7 +420,7 @@
             this.radFollow.Checked = false;
             this.radFollow.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radFollow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.radFollow.Location = new System.Drawing.Point(89, 217);
+            this.radFollow.Location = new System.Drawing.Point(89, 251);
             this.radFollow.Name = "radFollow";
             this.radFollow.Size = new System.Drawing.Size(106, 19);
             this.radFollow.TabIndex = 21;
@@ -380,7 +433,7 @@
             this.radAI.Checked = false;
             this.radAI.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radAI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.radAI.Location = new System.Drawing.Point(89, 249);
+            this.radAI.Location = new System.Drawing.Point(89, 283);
             this.radAI.Name = "radAI";
             this.radAI.Size = new System.Drawing.Size(106, 19);
             this.radAI.TabIndex = 14;
@@ -393,7 +446,7 @@
             this.radLock.Checked = false;
             this.radLock.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radLock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.radLock.Location = new System.Drawing.Point(89, 185);
+            this.radLock.Location = new System.Drawing.Point(89, 219);
             this.radLock.Name = "radLock";
             this.radLock.Size = new System.Drawing.Size(106, 19);
             this.radLock.TabIndex = 13;
@@ -406,7 +459,7 @@
             this.radGoodLineFix.Checked = false;
             this.radGoodLineFix.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radGoodLineFix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.radGoodLineFix.Location = new System.Drawing.Point(89, 116);
+            this.radGoodLineFix.Location = new System.Drawing.Point(89, 149);
             this.radGoodLineFix.Name = "radGoodLineFix";
             this.radGoodLineFix.Size = new System.Drawing.Size(200, 19);
             this.radGoodLineFix.TabIndex = 12;
@@ -419,7 +472,7 @@
             this.radGoodLineRandom.Checked = false;
             this.radGoodLineRandom.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radGoodLineRandom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.radGoodLineRandom.Location = new System.Drawing.Point(89, 145);
+            this.radGoodLineRandom.Location = new System.Drawing.Point(89, 178);
             this.radGoodLineRandom.Name = "radGoodLineRandom";
             this.radGoodLineRandom.Size = new System.Drawing.Size(200, 19);
             this.radGoodLineRandom.TabIndex = 8;
@@ -432,7 +485,7 @@
             this.radGoodLine.Checked = false;
             this.radGoodLine.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radGoodLine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.radGoodLine.Location = new System.Drawing.Point(89, 87);
+            this.radGoodLine.Location = new System.Drawing.Point(89, 120);
             this.radGoodLine.Name = "radGoodLine";
             this.radGoodLine.Size = new System.Drawing.Size(156, 19);
             this.radGoodLine.TabIndex = 2;
@@ -445,7 +498,7 @@
             this.radCustom.Checked = false;
             this.radCustom.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radCustom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.radCustom.Location = new System.Drawing.Point(89, 40);
+            this.radCustom.Location = new System.Drawing.Point(89, 38);
             this.radCustom.Name = "radCustom";
             this.radCustom.Size = new System.Drawing.Size(106, 19);
             this.radCustom.TabIndex = 1;
@@ -458,7 +511,7 @@
             this.radRandom.Checked = false;
             this.radRandom.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radRandom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.radRandom.Location = new System.Drawing.Point(89, 281);
+            this.radRandom.Location = new System.Drawing.Point(89, 315);
             this.radRandom.Name = "radRandom";
             this.radRandom.Size = new System.Drawing.Size(106, 19);
             this.radRandom.TabIndex = 0;
@@ -497,7 +550,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 486);
+            this.ClientSize = new System.Drawing.Size(300, 515);
             this.Controls.Add(this.bunifuCards1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmFormula";
@@ -543,5 +596,7 @@
         private TFive.TFiveRadioButton radForceAdverse;
         private TFive.TFiveTextBox txtForce;
         private TFive.TFiveLabel lbForce;
+        private TFive.TFiveRadioButton radFixed;
+        private Bunifu.Framework.UI.BunifuFlatButton btnFixed;
     }
 }

@@ -355,6 +355,10 @@ namespace AutoBaccarat
             // 
             this.tmRealtimeResult.Interval = 10;
             // 
+            // tmStart
+            // 
+            this.tmStart.Tick += new System.EventHandler(this.TmStart_Tick);
+            // 
             // tmTimeRunning
             // 
             this.tmTimeRunning.Interval = 1000;
@@ -865,6 +869,7 @@ namespace AutoBaccarat
             this.lbShowLine1.Name = "lbShowLine1";
             this.lbShowLine1.Size = new System.Drawing.Size(25, 24);
             this.lbShowLine1.TabIndex = 537;
+            this.lbShowLine1.Text = "A";
             this.lbShowLine1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbShowLine2
@@ -877,6 +882,7 @@ namespace AutoBaccarat
             this.lbShowLine2.Name = "lbShowLine2";
             this.lbShowLine2.Size = new System.Drawing.Size(25, 24);
             this.lbShowLine2.TabIndex = 538;
+            this.lbShowLine2.Text = "A";
             this.lbShowLine2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbShowLine3
@@ -889,6 +895,7 @@ namespace AutoBaccarat
             this.lbShowLine3.Name = "lbShowLine3";
             this.lbShowLine3.Size = new System.Drawing.Size(25, 24);
             this.lbShowLine3.TabIndex = 539;
+            this.lbShowLine3.Text = "A";
             this.lbShowLine3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbShowLine4
@@ -901,6 +908,7 @@ namespace AutoBaccarat
             this.lbShowLine4.Name = "lbShowLine4";
             this.lbShowLine4.Size = new System.Drawing.Size(25, 24);
             this.lbShowLine4.TabIndex = 540;
+            this.lbShowLine4.Text = "A";
             this.lbShowLine4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbShowLine5
@@ -913,6 +921,7 @@ namespace AutoBaccarat
             this.lbShowLine5.Name = "lbShowLine5";
             this.lbShowLine5.Size = new System.Drawing.Size(25, 24);
             this.lbShowLine5.TabIndex = 541;
+            this.lbShowLine5.Text = "A";
             this.lbShowLine5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbShowLine6
@@ -925,6 +934,7 @@ namespace AutoBaccarat
             this.lbShowLine6.Name = "lbShowLine6";
             this.lbShowLine6.Size = new System.Drawing.Size(25, 24);
             this.lbShowLine6.TabIndex = 542;
+            this.lbShowLine6.Text = "A";
             this.lbShowLine6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbShowLine7
@@ -937,6 +947,7 @@ namespace AutoBaccarat
             this.lbShowLine7.Name = "lbShowLine7";
             this.lbShowLine7.Size = new System.Drawing.Size(25, 30);
             this.lbShowLine7.TabIndex = 543;
+            this.lbShowLine7.Text = "A";
             this.lbShowLine7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dgvGoodLine
@@ -1683,6 +1694,7 @@ namespace AutoBaccarat
             // tFiveCheckbox4
             // 
             this.tFiveCheckbox4.CheckedState = false;
+            this.tFiveCheckbox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tFiveCheckbox4.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.tFiveCheckbox4.Image = null;
             this.tFiveCheckbox4.Location = new System.Drawing.Point(12, 184);
@@ -1697,6 +1709,7 @@ namespace AutoBaccarat
             // tFiveCheckbox5
             // 
             this.tFiveCheckbox5.CheckedState = false;
+            this.tFiveCheckbox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tFiveCheckbox5.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.tFiveCheckbox5.Image = null;
             this.tFiveCheckbox5.Location = new System.Drawing.Point(12, 147);
@@ -1723,6 +1736,7 @@ namespace AutoBaccarat
             // tFiveCheckbox6
             // 
             this.tFiveCheckbox6.CheckedState = false;
+            this.tFiveCheckbox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tFiveCheckbox6.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.tFiveCheckbox6.Image = null;
             this.tFiveCheckbox6.Location = new System.Drawing.Point(12, 73);
@@ -1737,6 +1751,7 @@ namespace AutoBaccarat
             // tFiveCheckbox7
             // 
             this.tFiveCheckbox7.CheckedState = false;
+            this.tFiveCheckbox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tFiveCheckbox7.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.tFiveCheckbox7.Image = null;
             this.tFiveCheckbox7.Location = new System.Drawing.Point(12, 110);
@@ -1772,6 +1787,7 @@ namespace AutoBaccarat
             // Settings_cbConfirmClick
             // 
             this.Settings_cbConfirmClick.CheckedState = false;
+            this.Settings_cbConfirmClick.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Settings_cbConfirmClick.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Settings_cbConfirmClick.Image = null;
             this.Settings_cbConfirmClick.Location = new System.Drawing.Point(12, 218);
@@ -1785,6 +1801,7 @@ namespace AutoBaccarat
             // Settings_cbInvert
             // 
             this.Settings_cbInvert.CheckedState = false;
+            this.Settings_cbInvert.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Settings_cbInvert.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Settings_cbInvert.Image = null;
             this.Settings_cbInvert.Location = new System.Drawing.Point(12, 181);
@@ -1798,6 +1815,7 @@ namespace AutoBaccarat
             // Settings_cbCheckSettings
             // 
             this.Settings_cbCheckSettings.CheckedState = false;
+            this.Settings_cbCheckSettings.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Settings_cbCheckSettings.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Settings_cbCheckSettings.Image = null;
             this.Settings_cbCheckSettings.Location = new System.Drawing.Point(12, 144);
@@ -1812,6 +1830,7 @@ namespace AutoBaccarat
             // 
             this.Settings_cbLangua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Settings_cbLangua.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Settings_cbLangua.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Settings_cbLangua.Curv = 1;
             this.Settings_cbLangua.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Settings_cbLangua.DropDownHeight = 100;
@@ -1844,6 +1863,7 @@ namespace AutoBaccarat
             // Settings_cbTopMost
             // 
             this.Settings_cbTopMost.CheckedState = false;
+            this.Settings_cbTopMost.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Settings_cbTopMost.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Settings_cbTopMost.Image = null;
             this.Settings_cbTopMost.Location = new System.Drawing.Point(12, 73);
@@ -1858,6 +1878,7 @@ namespace AutoBaccarat
             // Settings_cbMove
             // 
             this.Settings_cbMove.CheckedState = false;
+            this.Settings_cbMove.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Settings_cbMove.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Settings_cbMove.Image = null;
             this.Settings_cbMove.Location = new System.Drawing.Point(12, 107);
@@ -2069,6 +2090,7 @@ namespace AutoBaccarat
             // 
             this.Settings_cbChip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Settings_cbChip.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Settings_cbChip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Settings_cbChip.Curv = 1;
             this.Settings_cbChip.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Settings_cbChip.DropDownHeight = 100;
@@ -2119,6 +2141,7 @@ namespace AutoBaccarat
             // 
             this.MainSetting_radForceFollow.BackColor = System.Drawing.Color.Transparent;
             this.MainSetting_radForceFollow.Checked = false;
+            this.MainSetting_radForceFollow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MainSetting_radForceFollow.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.MainSetting_radForceFollow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.MainSetting_radForceFollow.Location = new System.Drawing.Point(12, 69);
@@ -2132,6 +2155,7 @@ namespace AutoBaccarat
             // 
             this.MainSetting_radForceAdverse.BackColor = System.Drawing.Color.Transparent;
             this.MainSetting_radForceAdverse.Checked = false;
+            this.MainSetting_radForceAdverse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MainSetting_radForceAdverse.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.MainSetting_radForceAdverse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.MainSetting_radForceAdverse.Location = new System.Drawing.Point(175, 69);
@@ -2216,6 +2240,7 @@ namespace AutoBaccarat
             // 
             this.Layout_radNormal.BackColor = System.Drawing.Color.Transparent;
             this.Layout_radNormal.Checked = false;
+            this.Layout_radNormal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Layout_radNormal.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Layout_radNormal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Layout_radNormal.Location = new System.Drawing.Point(1, 320);
@@ -2229,6 +2254,7 @@ namespace AutoBaccarat
             // 
             this.Layout_radBackGround.BackColor = System.Drawing.Color.Transparent;
             this.Layout_radBackGround.Checked = false;
+            this.Layout_radBackGround.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Layout_radBackGround.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Layout_radBackGround.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Layout_radBackGround.Location = new System.Drawing.Point(131, 320);
@@ -2737,6 +2763,7 @@ namespace AutoBaccarat
             // 
             this.Custom_radFollow.BackColor = System.Drawing.Color.Transparent;
             this.Custom_radFollow.Checked = false;
+            this.Custom_radFollow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Custom_radFollow.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Custom_radFollow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Custom_radFollow.Location = new System.Drawing.Point(8, 40);
@@ -2750,6 +2777,7 @@ namespace AutoBaccarat
             // 
             this.Custom_radAdverse.BackColor = System.Drawing.Color.Transparent;
             this.Custom_radAdverse.Checked = false;
+            this.Custom_radAdverse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Custom_radAdverse.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Custom_radAdverse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Custom_radAdverse.Location = new System.Drawing.Point(8, 73);
@@ -2972,6 +3000,7 @@ namespace AutoBaccarat
             // 
             this.Formula_cbFollow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Formula_cbFollow.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Formula_cbFollow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Formula_cbFollow.Curv = 1;
             this.Formula_cbFollow.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Formula_cbFollow.DropDownHeight = 100;
@@ -2996,6 +3025,7 @@ namespace AutoBaccarat
             // 
             this.Formula_cbLock.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Formula_cbLock.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Formula_cbLock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Formula_cbLock.Curv = 1;
             this.Formula_cbLock.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Formula_cbLock.DropDownHeight = 100;
@@ -3019,6 +3049,7 @@ namespace AutoBaccarat
             // 
             this.Formula_cbGoodLineFix.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.Formula_cbGoodLineFix.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.Formula_cbGoodLineFix.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Formula_cbGoodLineFix.Curv = 1;
             this.Formula_cbGoodLineFix.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.Formula_cbGoodLineFix.DropDownHeight = 100;
@@ -3078,6 +3109,7 @@ namespace AutoBaccarat
             // 
             this.Formula_radFollow.BackColor = System.Drawing.Color.Transparent;
             this.Formula_radFollow.Checked = false;
+            this.Formula_radFollow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Formula_radFollow.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Formula_radFollow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Formula_radFollow.Location = new System.Drawing.Point(64, 217);
@@ -3091,6 +3123,7 @@ namespace AutoBaccarat
             // 
             this.Formula_radAI.BackColor = System.Drawing.Color.Transparent;
             this.Formula_radAI.Checked = false;
+            this.Formula_radAI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Formula_radAI.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Formula_radAI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Formula_radAI.Location = new System.Drawing.Point(64, 249);
@@ -3104,6 +3137,7 @@ namespace AutoBaccarat
             // 
             this.Formula_radLock.BackColor = System.Drawing.Color.Transparent;
             this.Formula_radLock.Checked = false;
+            this.Formula_radLock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Formula_radLock.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Formula_radLock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Formula_radLock.Location = new System.Drawing.Point(64, 185);
@@ -3117,6 +3151,7 @@ namespace AutoBaccarat
             // 
             this.Formula_radGoodLineFix.BackColor = System.Drawing.Color.Transparent;
             this.Formula_radGoodLineFix.Checked = false;
+            this.Formula_radGoodLineFix.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Formula_radGoodLineFix.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Formula_radGoodLineFix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Formula_radGoodLineFix.Location = new System.Drawing.Point(64, 110);
@@ -3130,6 +3165,7 @@ namespace AutoBaccarat
             // 
             this.Formula_radGoodLineRandom.BackColor = System.Drawing.Color.Transparent;
             this.Formula_radGoodLineRandom.Checked = false;
+            this.Formula_radGoodLineRandom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Formula_radGoodLineRandom.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Formula_radGoodLineRandom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Formula_radGoodLineRandom.Location = new System.Drawing.Point(64, 139);
@@ -3143,6 +3179,7 @@ namespace AutoBaccarat
             // 
             this.Formula_radGoodLine.BackColor = System.Drawing.Color.Transparent;
             this.Formula_radGoodLine.Checked = false;
+            this.Formula_radGoodLine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Formula_radGoodLine.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Formula_radGoodLine.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Formula_radGoodLine.Location = new System.Drawing.Point(64, 81);
@@ -3156,6 +3193,7 @@ namespace AutoBaccarat
             // 
             this.Formula_radCustom.BackColor = System.Drawing.Color.Transparent;
             this.Formula_radCustom.Checked = false;
+            this.Formula_radCustom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Formula_radCustom.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Formula_radCustom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Formula_radCustom.Location = new System.Drawing.Point(64, 36);
@@ -3169,6 +3207,7 @@ namespace AutoBaccarat
             // 
             this.Formula_radRandom.BackColor = System.Drawing.Color.Transparent;
             this.Formula_radRandom.Checked = false;
+            this.Formula_radRandom.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Formula_radRandom.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Formula_radRandom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Formula_radRandom.Location = new System.Drawing.Point(64, 281);
@@ -3499,6 +3538,7 @@ namespace AutoBaccarat
             // 
             this.Betting_radX2.BackColor = System.Drawing.Color.Transparent;
             this.Betting_radX2.Checked = false;
+            this.Betting_radX2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Betting_radX2.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Betting_radX2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Betting_radX2.Location = new System.Drawing.Point(64, 226);
@@ -3512,6 +3552,7 @@ namespace AutoBaccarat
             // 
             this.Betting_radONE.BackColor = System.Drawing.Color.Transparent;
             this.Betting_radONE.Checked = false;
+            this.Betting_radONE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Betting_radONE.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Betting_radONE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Betting_radONE.Location = new System.Drawing.Point(64, 201);
@@ -3525,6 +3566,7 @@ namespace AutoBaccarat
             // 
             this.Betting_radFib.BackColor = System.Drawing.Color.Transparent;
             this.Betting_radFib.Checked = false;
+            this.Betting_radFib.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Betting_radFib.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Betting_radFib.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Betting_radFib.Location = new System.Drawing.Point(64, 136);
@@ -3538,6 +3580,7 @@ namespace AutoBaccarat
             // 
             this.Betting_radAI.BackColor = System.Drawing.Color.Transparent;
             this.Betting_radAI.Checked = false;
+            this.Betting_radAI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Betting_radAI.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Betting_radAI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Betting_radAI.Location = new System.Drawing.Point(64, 176);
@@ -3551,6 +3594,7 @@ namespace AutoBaccarat
             // 
             this.Betting_radPPNP.BackColor = System.Drawing.Color.Transparent;
             this.Betting_radPPNP.Checked = false;
+            this.Betting_radPPNP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Betting_radPPNP.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Betting_radPPNP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Betting_radPPNP.Location = new System.Drawing.Point(64, 90);
@@ -3564,6 +3608,7 @@ namespace AutoBaccarat
             // 
             this.Betting_radNP.BackColor = System.Drawing.Color.Transparent;
             this.Betting_radNP.Checked = false;
+            this.Betting_radNP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Betting_radNP.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Betting_radNP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Betting_radNP.Location = new System.Drawing.Point(64, 63);
@@ -3577,6 +3622,7 @@ namespace AutoBaccarat
             // 
             this.Betting_radPP.BackColor = System.Drawing.Color.Transparent;
             this.Betting_radPP.Checked = false;
+            this.Betting_radPP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Betting_radPP.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Betting_radPP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.Betting_radPP.Location = new System.Drawing.Point(64, 36);

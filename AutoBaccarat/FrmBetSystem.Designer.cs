@@ -32,13 +32,13 @@
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.BetSysTitle = new TFive.TFiveGroupBox();
             this.Main_BetSettings = new TFive.TFiveGroupBox();
-            this.Main_Set0 = new TFive.TFiveLabel();
+            this.SetZero = new TFive.TFiveLabel();
             this.txtStopMore = new TFive.TFiveTextBox();
             this.txtStopLess = new TFive.TFiveTextBox();
             this.txtStopLose = new TFive.TFiveTextBox();
             this.txtStopWin = new TFive.TFiveTextBox();
             this.txtStopRound = new TFive.TFiveTextBox();
-            this.lbStoeMore = new TFive.TFiveLabel();
+            this.lbStopMore = new TFive.TFiveLabel();
             this.lbStopLess = new TFive.TFiveLabel();
             this.lbStopLose = new TFive.TFiveLabel();
             this.lbStopWin = new TFive.TFiveLabel();
@@ -117,13 +117,13 @@
             // 
             this.Main_BetSettings.BackColor = System.Drawing.Color.Transparent;
             this.Main_BetSettings.BGColor = System.Drawing.Color.White;
-            this.Main_BetSettings.Controls.Add(this.Main_Set0);
+            this.Main_BetSettings.Controls.Add(this.SetZero);
             this.Main_BetSettings.Controls.Add(this.txtStopMore);
             this.Main_BetSettings.Controls.Add(this.txtStopLess);
             this.Main_BetSettings.Controls.Add(this.txtStopLose);
             this.Main_BetSettings.Controls.Add(this.txtStopWin);
             this.Main_BetSettings.Controls.Add(this.txtStopRound);
-            this.Main_BetSettings.Controls.Add(this.lbStoeMore);
+            this.Main_BetSettings.Controls.Add(this.lbStopMore);
             this.Main_BetSettings.Controls.Add(this.lbStopLess);
             this.Main_BetSettings.Controls.Add(this.lbStopLose);
             this.Main_BetSettings.Controls.Add(this.lbStopWin);
@@ -140,24 +140,24 @@
             this.Main_BetSettings.TabIndex = 41;
             this.Main_BetSettings.Text = "Bet Settings";
             // 
-            // Main_Set0
+            // SetZero
             // 
-            this.Main_Set0.AutoSize = true;
-            this.Main_Set0.BackColor = System.Drawing.Color.Transparent;
-            this.Main_Set0.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.Main_Set0.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.Main_Set0.Location = new System.Drawing.Point(164, 246);
-            this.Main_Set0.Name = "Main_Set0";
-            this.Main_Set0.Size = new System.Drawing.Size(105, 13);
-            this.Main_Set0.TabIndex = 41;
-            this.Main_Set0.Text = "Set 0 For Unlimited";
+            this.SetZero.AutoSize = true;
+            this.SetZero.BackColor = System.Drawing.Color.Transparent;
+            this.SetZero.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.SetZero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.SetZero.Location = new System.Drawing.Point(164, 246);
+            this.SetZero.Name = "SetZero";
+            this.SetZero.Size = new System.Drawing.Size(105, 13);
+            this.SetZero.TabIndex = 41;
+            this.SetZero.Text = "Set 0 For Unlimited";
             // 
             // txtStopMore
             // 
             this.txtStopMore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStopMore.BackColor = System.Drawing.Color.White;
             this.txtStopMore.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtStopMore.Location = new System.Drawing.Point(170, 211);
+            this.txtStopMore.Location = new System.Drawing.Point(170, 174);
             this.txtStopMore.MaxLength = 32767;
             this.txtStopMore.MinimumSize = new System.Drawing.Size(0, 31);
             this.txtStopMore.Multiline = false;
@@ -174,7 +174,7 @@
             this.txtStopLess.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtStopLess.BackColor = System.Drawing.Color.White;
             this.txtStopLess.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtStopLess.Location = new System.Drawing.Point(170, 174);
+            this.txtStopLess.Location = new System.Drawing.Point(170, 211);
             this.txtStopLess.MaxLength = 32767;
             this.txtStopLess.MinimumSize = new System.Drawing.Size(0, 31);
             this.txtStopLess.Multiline = false;
@@ -237,17 +237,17 @@
             this.txtStopRound.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtStopRound.UseSystemPasswordChar = false;
             // 
-            // lbStoeMore
+            // lbStopMore
             // 
-            this.lbStoeMore.AutoSize = true;
-            this.lbStoeMore.BackColor = System.Drawing.Color.Transparent;
-            this.lbStoeMore.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lbStoeMore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.lbStoeMore.Location = new System.Drawing.Point(11, 217);
-            this.lbStoeMore.Name = "lbStoeMore";
-            this.lbStoeMore.Size = new System.Drawing.Size(141, 20);
-            this.lbStoeMore.TabIndex = 6;
-            this.lbStoeMore.Text = "Stop If Money More";
+            this.lbStopMore.AutoSize = true;
+            this.lbStopMore.BackColor = System.Drawing.Color.Transparent;
+            this.lbStopMore.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lbStopMore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.lbStopMore.Location = new System.Drawing.Point(11, 180);
+            this.lbStopMore.Name = "lbStopMore";
+            this.lbStopMore.Size = new System.Drawing.Size(141, 20);
+            this.lbStopMore.TabIndex = 6;
+            this.lbStopMore.Text = "Stop If Money More";
             // 
             // lbStopLess
             // 
@@ -255,7 +255,7 @@
             this.lbStopLess.BackColor = System.Drawing.Color.Transparent;
             this.lbStopLess.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.lbStopLess.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
-            this.lbStopLess.Location = new System.Drawing.Point(11, 180);
+            this.lbStopLess.Location = new System.Drawing.Point(11, 217);
             this.lbStopLess.Name = "lbStopLess";
             this.lbStopLess.Size = new System.Drawing.Size(133, 20);
             this.lbStopLess.TabIndex = 5;
@@ -301,11 +301,12 @@
             // 
             this.cbChip.BackColor = System.Drawing.Color.White;
             this.cbChip.BGColor = System.Drawing.Color.White;
+            this.cbChip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbChip.Curv = 1;
             this.cbChip.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbChip.DropDownHeight = 100;
             this.cbChip.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbChip.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbChip.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.cbChip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.cbChip.FormattingEnabled = true;
             this.cbChip.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(250)))));
@@ -509,6 +510,7 @@
             // 
             this.radX2.BackColor = System.Drawing.Color.White;
             this.radX2.Checked = false;
+            this.radX2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radX2.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radX2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.radX2.Location = new System.Drawing.Point(89, 250);
@@ -522,6 +524,7 @@
             // 
             this.radONE.BackColor = System.Drawing.Color.White;
             this.radONE.Checked = false;
+            this.radONE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radONE.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radONE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.radONE.Location = new System.Drawing.Point(89, 225);
@@ -535,6 +538,7 @@
             // 
             this.radFib.BackColor = System.Drawing.Color.White;
             this.radFib.Checked = false;
+            this.radFib.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radFib.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radFib.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.radFib.Location = new System.Drawing.Point(89, 149);
@@ -548,6 +552,7 @@
             // 
             this.radAI.BackColor = System.Drawing.Color.White;
             this.radAI.Checked = false;
+            this.radAI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radAI.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radAI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.radAI.Location = new System.Drawing.Point(89, 200);
@@ -561,6 +566,7 @@
             // 
             this.radPPNP.BackColor = System.Drawing.Color.White;
             this.radPPNP.Checked = false;
+            this.radPPNP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radPPNP.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radPPNP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.radPPNP.Location = new System.Drawing.Point(89, 103);
@@ -574,6 +580,7 @@
             // 
             this.radNP.BackColor = System.Drawing.Color.White;
             this.radNP.Checked = false;
+            this.radNP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radNP.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radNP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.radNP.Location = new System.Drawing.Point(89, 71);
@@ -587,6 +594,7 @@
             // 
             this.radPP.BackColor = System.Drawing.Color.White;
             this.radPP.Checked = false;
+            this.radPP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radPP.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.radPP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
             this.radPP.Location = new System.Drawing.Point(89, 40);
@@ -645,13 +653,13 @@
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
         private TFive.TFiveSeparator tFiveSeparator2;
         private TFive.TFiveGroupBox Main_BetSettings;
-        private TFive.TFiveLabel Main_Set0;
+        private TFive.TFiveLabel SetZero;
         private TFive.TFiveTextBox txtStopMore;
         private TFive.TFiveTextBox txtStopLess;
         private TFive.TFiveTextBox txtStopLose;
         private TFive.TFiveTextBox txtStopWin;
         private TFive.TFiveTextBox txtStopRound;
-        private TFive.TFiveLabel lbStoeMore;
+        private TFive.TFiveLabel lbStopMore;
         private TFive.TFiveLabel lbStopLess;
         private TFive.TFiveLabel lbStopLose;
         private TFive.TFiveLabel lbStopWin;

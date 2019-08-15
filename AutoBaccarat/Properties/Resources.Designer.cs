@@ -73,16 +73,6 @@ namespace AutoBaccarat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap B {
-            get {
-                object obj = ResourceManager.GetObject("B", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap close_window_64 {
             get {
                 object obj = ResourceManager.GetObject("close-window-64", resourceCulture);
@@ -153,16 +143,6 @@ namespace AutoBaccarat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap P {
-            get {
-                object obj = ResourceManager.GetObject("P", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap return_64 {
             get {
                 object obj = ResourceManager.GetObject("return-64", resourceCulture);
@@ -206,16 +186,6 @@ namespace AutoBaccarat.Properties {
         internal static System.Drawing.Bitmap start_64 {
             get {
                 object obj = ResourceManager.GetObject("start-64", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap T {
-            get {
-                object obj = ResourceManager.GetObject("T", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -53,5 +53,8 @@ namespace AutoBaccarat
 
         public static string Start = "Start";
         public static string Stop = "Stop";
-  }
+
+        public static string Fixed = "Setting Fixed Type!!";
+        public static string DetailFixed = "- Fixed bets and loops";
+    }
 }

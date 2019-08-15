@@ -29,6 +29,7 @@ namespace TFive
             Anchor = AnchorStyles.Top | AnchorStyles.Left;
             Font = new Font("Segoe UI", 11);
             CheckedState = false;
+            Cursor = Cursors.Hand;
         }
 
         public override void PaintHook()

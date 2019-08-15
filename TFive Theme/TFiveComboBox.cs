@@ -78,6 +78,8 @@ namespace TFive
         #endregion
         #region EventArgs
 
+        
+
         protected override void OnDrawItem(DrawItemEventArgs e)
         {
             if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
@@ -117,13 +119,13 @@ namespace TFive
 
             DrawMode = DrawMode.OwnerDrawFixed;
             DropDownStyle = ComboBoxStyle.DropDownList;
-
+            Cursor = Cursors.Hand; 
             //BackColor = Color.FromArgb(240, 240, 240);
             ForeColor = Color.FromArgb(0, 100, 255);
-            Size = new Size(135, 26);
+            Size = new Size(135, 31);
             ItemHeight = 20;
             DropDownHeight = 100;
-            Font = new Font("Segoe UI", 10, FontStyle.Regular);
+            Font = new Font("Segoe UI", 11, FontStyle.Regular);
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -151,10 +153,12 @@ namespace TFive
             // Draw rectangle border
             e.Graphics.DrawPath(new Pen(Color.DodgerBlue), GP);
             // Draw string
-            e.Graphics.DrawString(Text, Font, new SolidBrush(Color.FromArgb(0, 100, 255)), new Rectangle(3, 0, Width - 20, Height), new StringFormat
+            //e.Graphics.DrawString(Text, Font, new SolidBrush(Color.FromArgb(0, 100, 255)), new Rectangle(3, 0, Width - 20, Height), new StringFormat
+            e.Graphics.DrawString(Text, Font, new SolidBrush(Color.FromArgb(0, 100, 255)), new Rectangle(10, 0, Width - 20, Height), new StringFormat
+
             {
                 LineAlignment = StringAlignment.Center,
-                Alignment = StringAlignment.Near
+                Alignment = StringAlignment.Center
             });
 
             // Draw the dropdown arrow

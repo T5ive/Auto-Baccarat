@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace AutoBaccarat
 {
-   public class CustomListManager
+    [Obfuscation(Feature = "Apply to member * when method or constructor: virtualization", Exclude = false)]
+    public class CustomListManager
     {
         private readonly string _custom;
         private readonly Dictionary<string, Dictionary<string, string>> _currentCustomDict = new Dictionary<string, Dictionary<string, string>>();

@@ -78,8 +78,9 @@ namespace TFive
            // BackColor = Color.Transparent;
             ForeColor = Color.FromArgb(0, 100, 255);
             Font = new Font("Segoe UI", 11);
-           // Width = 193;
-           AutoSize = true;
+            // Width = 193;
+            Cursor = Cursors.Hand;
+            AutoSize = true;
         }
 
         private void InvalidateControls()

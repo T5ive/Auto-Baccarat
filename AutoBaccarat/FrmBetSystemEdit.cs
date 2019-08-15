@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,6 +12,7 @@ using AutoBaccarat.Properties;
 
 namespace AutoBaccarat
 {
+    [Obfuscation(Feature = "Apply to member * when method or constructor: virtualization", Exclude = false)]
     public partial class FrmBetSystemEdit : Form
     {
         public FrmBetSystemEdit()
@@ -24,7 +26,7 @@ namespace AutoBaccarat
         {
             LoadLocation();
             BetSystemValues.BetSystemEditLoadValue();
-            BettingTextToDataGridView();
+            TextToDataGridView();
         }
         private void LoadLocation()
         {
@@ -46,7 +48,7 @@ namespace AutoBaccarat
         {
             if (dgvBetting.RowCount == 0)
             {
-                MessageBox.Show(stringLoader.SetBetUnit, stringLoader.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(stringLoader.SetBetUnit, stringLoader.Error+ @"02x1", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             Settings.Default.ValuePP = BetSystemValues.ValuePP;
@@ -65,7 +67,7 @@ namespace AutoBaccarat
         #endregion
 
         #region Value Control
-        private void BettingTextToDataGridView()
+        private void TextToDataGridView()
         {
             var text = "";
             switch (BetSystemValues.EditMode)
@@ -90,11 +92,11 @@ namespace AutoBaccarat
                 for (var i = 0; i <= num; i++)
                 {
                     dgvBetting.Rows.Add(dgvBetting.RowCount + 1, array[i]);
-                    Betting_DataGridToTxt();
+                    DataGridToTxt();
                 }
             }
         }
-        private void Betting_DataGridToTxt()
+        private void DataGridToTxt()
         {
             var text = "";
             checked
@@ -134,7 +136,7 @@ namespace AutoBaccarat
         private void BtnAdd_Click(object sender, EventArgs e)
         {
             dgvBetting.Rows.Add(checked(dgvBetting.RowCount + 1), int.Parse(Betting_txtNumber.Text));
-            Betting_DataGridToTxt();
+            DataGridToTxt();
         }
         private void BtnDel_Click(object sender, EventArgs e)
         {
@@ -143,14 +145,14 @@ namespace AutoBaccarat
                 if (dgvBetting.CurrentRow != null) dgvBetting.Rows.RemoveAt(dgvBetting.CurrentRow.Index);
             }
 
-            Betting_DataGridToTxt();
+            DataGridToTxt();
         }
         private void BtnClear_Click(object sender, EventArgs e)
         {
             if (dgvBetting.RowCount > 0)
             {
                 dgvBetting.Rows.Clear();
-                Betting_DataGridToTxt();
+                DataGridToTxt();
             }
         }
         private void BtnDefault_Click(object sender, EventArgs e)
@@ -172,7 +174,7 @@ namespace AutoBaccarat
                     break;
             }
 
-            BettingTextToDataGridView();
+            TextToDataGridView();
         }
         private void DgvBetting_SelectionChanged(object sender, EventArgs e)
         {

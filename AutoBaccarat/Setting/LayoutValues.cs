@@ -2,10 +2,12 @@
 
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace AutoBaccarat.Setting
 {
-   public static class LayoutValues
+    [Obfuscation(Feature = "Apply to member * when method or constructor: virtualization", Exclude = false)]
+    public static class LayoutValues
    {
 
        public static byte LoadListCount;
@@ -13,11 +15,12 @@ namespace AutoBaccarat.Setting
        public static LayoutListManager ListMng = new LayoutListManager();
        public static List<LayoutInfo> ListLoad = new List<LayoutInfo>();
        public static List<string> ListValues = new List<string>();
-       public static string PositionStart, PositionPlayer, PositionBanker, PositionTie,
+       public static List<string> ListValuesSave = new List<string>();
+        public static string PositionStart, PositionPlayer, PositionBanker, PositionTie,
            PositionConP, PositionConB,
            PositionChip1, PositionChip2, PositionChip3, PositionChip4, PositionChip5,
           
-           ColorStart, ColorPlayer, ColorBanker, ColorTie,
+           HexColorStart, HexColorPlayer, HexColorBanker, HexColorTie,
            ProcessStart, ProcessPlayer, ProcessBanker, ProcessTie,
            ProcessConP, ProcessConB,
            ProcessChip1, ProcessChip2, ProcessChip3, ProcessChip4, ProcessChip5,
@@ -34,7 +37,7 @@ namespace AutoBaccarat.Setting
                {
                    ListLoad = ListMng.GetLayoutList();
                    ListMng.LoadValuesFromFile(ListLoad[LoadListCount].File); // Add value to ReadCustomValue
-                   ListName = ListLoad[LoadListCount].File;
+                   ListName = ListLoad[LoadListCount].Name;
                    LoadListValue();
                }
                catch
@@ -65,28 +68,28 @@ namespace AutoBaccarat.Setting
                     {
                         case 0:
                             PositionStart = position;
-                            ColorStart = hexColor;
+                            HexColorStart = hexColor;
                             ProcessStart = processName;
                             RgbStart = rgbColor;
                             break;
 
                         case 1:
                             PositionPlayer = position;
-                            ColorPlayer = hexColor;
+                            HexColorPlayer = hexColor;
                             ProcessPlayer = processName;
                             RgbPlayer = rgbColor;
                             break;
 
                         case 2:
                             PositionBanker = position;
-                            ColorBanker = hexColor;
+                            HexColorBanker = hexColor;
                             ProcessBanker = processName;
                             RgbBanker = rgbColor;
                             break;
 
                         case 3:
                             PositionTie = position;
-                            ColorTie = hexColor;
+                            HexColorTie = hexColor;
                             ProcessTie = processName;
                             RgbTie = rgbColor;
                             break;

@@ -227,7 +227,7 @@ namespace AutoBaccarat
         #endregion
 
         #region Button
-        private void bt_ok_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
             if (Mode == 0)
             {
@@ -248,7 +248,7 @@ namespace AutoBaccarat
                     return;
                 }
             }
-            
+
 
             Values.CheckX = int.Parse(txt_posiX.Text);
             Values.CheckY = int.Parse(txt_posiY.Text);
@@ -256,16 +256,16 @@ namespace AutoBaccarat
             Values.TitleName = txt_title.Text + " % " + txt_class.Text;
             Values.CloseFrom = true;
             Close();
-            Dispose();
         }
-        private void bt_cancel_Click(object sender, EventArgs e)
+
+        private void BtnClose_Click(object sender, EventArgs e)
         {
             Values.CloseFrom = false;
             Close();
-            Dispose();
         }
+
         #endregion
 
-       
+
     }
 }

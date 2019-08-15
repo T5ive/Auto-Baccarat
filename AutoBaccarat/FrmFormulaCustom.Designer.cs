@@ -1,6 +1,6 @@
 ﻿namespace AutoBaccarat
 {
-    partial class FrmFormulaEdit
+    partial class FrmFormulaCustom
     {
         /// <summary>
         /// Required designer variable.
@@ -760,14 +760,14 @@
             this.dc10.TargetControl = this.PanelResultPB;
             this.dc10.Vertical = true;
             // 
-            // FrmFormulaEdit
+            // FrmFormulaCustom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 450);
             this.Controls.Add(this.bunifuCards1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmFormulaEdit";
+            this.Name = "FrmFormulaCustom";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FrmFormulaEdit";

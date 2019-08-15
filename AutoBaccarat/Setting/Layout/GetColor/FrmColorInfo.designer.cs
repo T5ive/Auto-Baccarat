@@ -42,8 +42,6 @@
             this.txt_posiY = new TFive.TFiveTextBox();
             this.txt_posiX = new TFive.TFiveTextBox();
             this.txt_title = new TFive.TFiveTextBox();
-            this.bt_cancel = new TFive.TFiveButton();
-            this.bt_ok = new TFive.TFiveButton();
             this.tFive_Label2 = new TFive.TFiveLabel();
             this.tFive_Separator1 = new TFive.TFiveSeparator();
             this.picTarget = new System.Windows.Forms.PictureBox();
@@ -51,6 +49,8 @@
             this.tFive_Label4 = new TFive.TFiveLabel();
             this.tFive_Label5 = new TFive.TFiveLabel();
             this.tFive_HeaderLabel1 = new TFive.TFiveHeaderLabel();
+            this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tFive_Theme1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTarget)).BeginInit();
             this.SuspendLayout();
@@ -70,10 +70,12 @@
             // 
             // tFive_Theme1
             // 
-            this.tFive_Theme1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.tFive_Theme1.BackColor = System.Drawing.Color.White;
             this.tFive_Theme1.Border = true;
             this.tFive_Theme1.Border2 = true;
             this.tFive_Theme1.ChangeText = false;
+            this.tFive_Theme1.Controls.Add(this.btnSave);
+            this.tFive_Theme1.Controls.Add(this.btnClose);
             this.tFive_Theme1.Controls.Add(this.lb_status);
             this.tFive_Theme1.Controls.Add(this.panel_color);
             this.tFive_Theme1.Controls.Add(this.txt_class);
@@ -82,8 +84,6 @@
             this.tFive_Theme1.Controls.Add(this.txt_posiY);
             this.tFive_Theme1.Controls.Add(this.txt_posiX);
             this.tFive_Theme1.Controls.Add(this.txt_title);
-            this.tFive_Theme1.Controls.Add(this.bt_cancel);
-            this.tFive_Theme1.Controls.Add(this.bt_ok);
             this.tFive_Theme1.Controls.Add(this.tFive_Label2);
             this.tFive_Theme1.Controls.Add(this.tFive_Separator1);
             this.tFive_Theme1.Controls.Add(this.picTarget);
@@ -127,7 +127,7 @@
             // txt_class
             // 
             this.txt_class.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_class.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txt_class.BackColor = System.Drawing.Color.White;
             this.txt_class.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txt_class.Location = new System.Drawing.Point(137, 96);
             this.txt_class.MaxLength = 32767;
@@ -156,7 +156,7 @@
             // txt_color
             // 
             this.txt_color.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_color.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txt_color.BackColor = System.Drawing.Color.White;
             this.txt_color.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txt_color.Location = new System.Drawing.Point(137, 170);
             this.txt_color.MaxLength = 32767;
@@ -173,7 +173,7 @@
             // txt_posiY
             // 
             this.txt_posiY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_posiY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txt_posiY.BackColor = System.Drawing.Color.White;
             this.txt_posiY.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txt_posiY.Location = new System.Drawing.Point(266, 133);
             this.txt_posiY.MaxLength = 32767;
@@ -190,7 +190,7 @@
             // txt_posiX
             // 
             this.txt_posiX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_posiX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txt_posiX.BackColor = System.Drawing.Color.White;
             this.txt_posiX.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txt_posiX.Location = new System.Drawing.Point(137, 133);
             this.txt_posiX.MaxLength = 32767;
@@ -207,7 +207,7 @@
             // txt_title
             // 
             this.txt_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txt_title.BackColor = System.Drawing.Color.White;
             this.txt_title.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txt_title.Location = new System.Drawing.Point(137, 59);
             this.txt_title.MaxLength = 32767;
@@ -220,32 +220,6 @@
             this.txt_title.TabIndex = 1;
             this.txt_title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_title.UseSystemPasswordChar = false;
-            // 
-            // bt_cancel
-            // 
-            this.bt_cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_cancel.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.bt_cancel.Image = null;
-            this.bt_cancel.Location = new System.Drawing.Point(250, 320);
-            this.bt_cancel.Name = "bt_cancel";
-            this.bt_cancel.NoRounding = false;
-            this.bt_cancel.Size = new System.Drawing.Size(75, 31);
-            this.bt_cancel.TabIndex = 39;
-            this.bt_cancel.Text = "CANCEL";
-            this.bt_cancel.Click += new System.EventHandler(this.bt_cancel_Click);
-            // 
-            // bt_ok
-            // 
-            this.bt_ok.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_ok.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.bt_ok.Image = null;
-            this.bt_ok.Location = new System.Drawing.Point(169, 320);
-            this.bt_ok.Name = "bt_ok";
-            this.bt_ok.NoRounding = false;
-            this.bt_ok.Size = new System.Drawing.Size(75, 31);
-            this.bt_ok.TabIndex = 38;
-            this.bt_ok.Text = "OK";
-            this.bt_ok.Click += new System.EventHandler(this.bt_ok_Click);
             // 
             // tFive_Label2
             // 
@@ -261,7 +235,7 @@
             // 
             // tFive_Separator1
             // 
-            this.tFive_Separator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.tFive_Separator1.BackColor = System.Drawing.Color.White;
             this.tFive_Separator1.Location = new System.Drawing.Point(22, 304);
             this.tFive_Separator1.Name = "tFive_Separator1";
             this.tFive_Separator1.Size = new System.Drawing.Size(303, 10);
@@ -328,6 +302,80 @@
             this.tFive_HeaderLabel1.TabIndex = 31;
             this.tFive_HeaderLabel1.Text = "Settings";
             // 
+            // btnClose
+            // 
+            this.btnClose.Active = false;
+            this.btnClose.Activecolor = System.Drawing.Color.DeepSkyBlue;
+            this.btnClose.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnClose.BorderRadius = 0;
+            this.btnClose.ButtonText = "Close";
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.DisabledColor = System.Drawing.Color.Gray;
+            this.btnClose.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnClose.Iconimage = global::AutoBaccarat.Properties.Resources.close_window_64;
+            this.btnClose.Iconimage_right = null;
+            this.btnClose.Iconimage_right_Selected = null;
+            this.btnClose.Iconimage_Selected = null;
+            this.btnClose.IconMarginLeft = 0;
+            this.btnClose.IconMarginRight = 0;
+            this.btnClose.IconRightVisible = true;
+            this.btnClose.IconRightZoom = 0D;
+            this.btnClose.IconVisible = true;
+            this.btnClose.IconZoom = 50D;
+            this.btnClose.IsTab = false;
+            this.btnClose.Location = new System.Drawing.Point(245, 331);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(24, 32, 24, 32);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btnClose.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnClose.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnClose.selected = false;
+            this.btnClose.Size = new System.Drawing.Size(80, 32);
+            this.btnClose.TabIndex = 48;
+            this.btnClose.Text = "Close";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Textcolor = System.Drawing.Color.White;
+            this.btnClose.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Active = false;
+            this.btnSave.Activecolor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSave.BorderRadius = 0;
+            this.btnSave.ButtonText = "Save";
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSave.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSave.Iconimage = global::AutoBaccarat.Properties.Resources.save_64;
+            this.btnSave.Iconimage_right = null;
+            this.btnSave.Iconimage_right_Selected = null;
+            this.btnSave.Iconimage_Selected = null;
+            this.btnSave.IconMarginLeft = 0;
+            this.btnSave.IconMarginRight = 0;
+            this.btnSave.IconRightVisible = true;
+            this.btnSave.IconRightZoom = 0D;
+            this.btnSave.IconVisible = true;
+            this.btnSave.IconZoom = 50D;
+            this.btnSave.IsTab = false;
+            this.btnSave.Location = new System.Drawing.Point(149, 331);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(16, 21, 16, 21);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btnSave.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnSave.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSave.selected = false;
+            this.btnSave.Size = new System.Drawing.Size(80, 32);
+            this.btnSave.TabIndex = 47;
+            this.btnSave.Text = "Save";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Textcolor = System.Drawing.Color.White;
+            this.btnSave.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
             // FrmColorInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,8 +415,6 @@
         private TFive.TFiveLabel tFive_Label3;
         private TFive.TFiveLabel tFive_Label5;
         private TFive.TFiveHeaderLabel tFive_HeaderLabel1;
-        private TFive.TFiveButton bt_cancel;
-        private TFive.TFiveButton bt_ok;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer tm_mouse;
@@ -376,5 +422,7 @@
         private TFive.TFiveLabel tFive_Label9;
         private System.Windows.Forms.Panel panel_color;
         private TFive.TFiveLabel lb_status;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSave;
+        private Bunifu.Framework.UI.BunifuFlatButton btnClose;
     }
 }

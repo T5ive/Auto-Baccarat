@@ -57,7 +57,7 @@ namespace TFive_Class
             };
             txtInput.KeyDown += txtInput_KeyDown;
             txtInput.KeyPress += txtInput_KeyPress;
-            txtInput.BackColor = Color.FromArgb(240, 240, 240);
+            txtInput.BackColor = Color.FromArgb(255, 255, 255);
             txtInput.Multiline = true;
             txtPl.Controls.Add(txtInput);
 
@@ -107,7 +107,7 @@ namespace TFive_Class
             Controls.Add(pl);
             Controls.Add(flpButtons);
             FormBorderStyle = FormBorderStyle.None;
-            BackColor = Color.FromArgb(240, 240, 240);
+            BackColor = Color.FromArgb(255, 255, 255);
             StartPosition = FormStartPosition.CenterScreen;
             Padding = new Padding(20);
             Width = 400;
@@ -207,7 +207,7 @@ namespace TFive_Class
             var g = e.Graphics;
             var rect = new Rectangle(new Point(0, 0), new Size(pl.Width - 1, pl.Height - 1));
             var pen = new Pen(Color.FromArgb(30, 144, 255)) { Width = 3 };
-            g.FillRectangle(new SolidBrush(Color.FromArgb(240, 240, 240)), rect);
+            g.FillRectangle(new SolidBrush(Color.FromArgb(255, 255, 255)), rect);
             g.DrawRectangle(pen, rect);
         }
 
