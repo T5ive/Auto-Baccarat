@@ -71,6 +71,11 @@ namespace AutoBaccarat
 
             stringLoader.Fixed = LclzManager.TranslateMessage("Fixed", "Setting Fixed Type!!");
             stringLoader.DetailFixed = LclzManager.TranslateMessage("DetailFixed", "- Fixed bets and loops");
+
+            stringLoader.NormalMode = LclzManager.TranslateMessage("NormalMode", "Normal");
+            stringLoader.BackgroundMode = LclzManager.TranslateMessage("BackgroundMode", "Background");
+
+            stringLoader.Custom = LclzManager.TranslateMessage("Custom", "Custom");
         }
 
         

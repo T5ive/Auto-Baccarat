@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.EditTitle = new TFive.TFiveGroupBox();
             this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -61,10 +60,10 @@
             // 
             // bunifuCards1
             // 
-            this.bunifuCards1.BackColor = System.Drawing.Color.White;
+            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.bunifuCards1.BorderRadius = 0;
             this.bunifuCards1.BottomSahddow = false;
-            this.bunifuCards1.color = System.Drawing.Color.DodgerBlue;
+            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.bunifuCards1.Controls.Add(this.EditTitle);
             this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuCards1.LeftSahddow = false;
@@ -78,8 +77,8 @@
             // 
             // EditTitle
             // 
-            this.EditTitle.BackColor = System.Drawing.Color.White;
-            this.EditTitle.BGColor = System.Drawing.Color.White;
+            this.EditTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.EditTitle.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.EditTitle.Controls.Add(this.btnClose);
             this.EditTitle.Controls.Add(this.btnSave);
             this.EditTitle.Controls.Add(this.Explain);
@@ -105,8 +104,8 @@
             // btnClose
             // 
             this.btnClose.Active = false;
-            this.btnClose.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnClose.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnClose.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.BorderRadius = 0;
             this.btnClose.ButtonText = "Close";
@@ -127,8 +126,8 @@
             this.btnClose.Location = new System.Drawing.Point(430, 472);
             this.btnClose.Margin = new System.Windows.Forms.Padding(21, 28, 21, 28);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnClose.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnClose.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnClose.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnClose.OnHoverTextColor = System.Drawing.Color.White;
             this.btnClose.selected = false;
             this.btnClose.Size = new System.Drawing.Size(120, 40);
@@ -142,8 +141,8 @@
             // btnSave
             // 
             this.btnSave.Active = false;
-            this.btnSave.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSave.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSave.BorderRadius = 0;
             this.btnSave.ButtonText = "Save";
@@ -164,8 +163,8 @@
             this.btnSave.Location = new System.Drawing.Point(299, 472);
             this.btnSave.Margin = new System.Windows.Forms.Padding(14, 18, 14, 18);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnSave.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnSave.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnSave.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnSave.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSave.selected = false;
             this.btnSave.Size = new System.Drawing.Size(120, 40);
@@ -178,8 +177,8 @@
             // 
             // Explain
             // 
-            this.Explain.BackColor = System.Drawing.Color.Transparent;
-            this.Explain.BGColor = System.Drawing.Color.White;
+            this.Explain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.Explain.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.Explain.Controls.Add(this.lbExplain);
             this.Explain.Curv1 = 1;
             this.Explain.Curv2 = 1;
@@ -193,10 +192,10 @@
             // 
             // lbExplain
             // 
-            this.lbExplain.BackColor = System.Drawing.Color.Transparent;
+            this.lbExplain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.lbExplain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbExplain.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lbExplain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.lbExplain.ForeColor = System.Drawing.Color.White;
             this.lbExplain.Location = new System.Drawing.Point(5, 28);
             this.lbExplain.Name = "lbExplain";
             this.lbExplain.Size = new System.Drawing.Size(241, 190);
@@ -206,8 +205,8 @@
             // btnDefault
             // 
             this.btnDefault.Active = false;
-            this.btnDefault.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnDefault.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDefault.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnDefault.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnDefault.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDefault.BorderRadius = 0;
             this.btnDefault.ButtonText = "Default";
@@ -228,8 +227,8 @@
             this.btnDefault.Location = new System.Drawing.Point(203, 74);
             this.btnDefault.Margin = new System.Windows.Forms.Padding(21, 28, 21, 28);
             this.btnDefault.Name = "btnDefault";
-            this.btnDefault.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnDefault.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnDefault.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnDefault.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnDefault.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDefault.selected = false;
             this.btnDefault.Size = new System.Drawing.Size(90, 30);
@@ -243,8 +242,8 @@
             // btnClear
             // 
             this.btnClear.Active = false;
-            this.btnClear.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnClear.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnClear.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClear.BorderRadius = 0;
             this.btnClear.ButtonText = "Clear";
@@ -265,8 +264,8 @@
             this.btnClear.Location = new System.Drawing.Point(105, 74);
             this.btnClear.Margin = new System.Windows.Forms.Padding(14, 18, 14, 18);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnClear.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnClear.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnClear.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnClear.OnHoverTextColor = System.Drawing.Color.White;
             this.btnClear.selected = false;
             this.btnClear.Size = new System.Drawing.Size(90, 30);
@@ -280,8 +279,8 @@
             // btnDel
             // 
             this.btnDel.Active = false;
-            this.btnDel.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnDel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDel.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDel.BorderRadius = 0;
             this.btnDel.ButtonText = "Delete";
@@ -302,8 +301,8 @@
             this.btnDel.Location = new System.Drawing.Point(8, 74);
             this.btnDel.Margin = new System.Windows.Forms.Padding(9, 12, 9, 12);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnDel.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnDel.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnDel.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnDel.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDel.selected = false;
             this.btnDel.Size = new System.Drawing.Size(90, 30);
@@ -317,8 +316,8 @@
             // btnAdd
             // 
             this.btnAdd.Active = false;
-            this.btnAdd.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnAdd.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAdd.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdd.BorderRadius = 0;
             this.btnAdd.ButtonText = "Add";
@@ -339,8 +338,8 @@
             this.btnAdd.Location = new System.Drawing.Point(203, 34);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnAdd.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnAdd.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnAdd.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnAdd.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAdd.selected = false;
             this.btnAdd.Size = new System.Drawing.Size(90, 31);
@@ -356,7 +355,7 @@
             this.lbUnit.AutoSize = true;
             this.lbUnit.BackColor = System.Drawing.Color.Transparent;
             this.lbUnit.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.lbUnit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.lbUnit.ForeColor = System.Drawing.Color.White;
             this.lbUnit.Location = new System.Drawing.Point(11, 34);
             this.lbUnit.Name = "lbUnit";
             this.lbUnit.Size = new System.Drawing.Size(53, 28);
@@ -366,7 +365,7 @@
             // Betting_txtNumber
             // 
             this.Betting_txtNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.Betting_txtNumber.BackColor = System.Drawing.Color.White;
+            this.Betting_txtNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.Betting_txtNumber.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.Betting_txtNumber.Location = new System.Drawing.Point(69, 34);
             this.Betting_txtNumber.MaxLength = 32767;
@@ -387,17 +386,18 @@
             this.dgvBetting.AllowUserToDeleteRows = false;
             this.dgvBetting.AllowUserToResizeColumns = false;
             this.dgvBetting.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.dgvBetting.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvBetting.BackgroundColor = System.Drawing.Color.White;
+            this.dgvBetting.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.dgvBetting.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBetting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvBetting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvBetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -405,29 +405,21 @@
             this.dgvBetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Step,
             this.Unit});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvBetting.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBetting.DoubleBuffered = true;
             this.dgvBetting.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvBetting.EnableHeadersVisualStyles = false;
-            this.dgvBetting.HeaderBgColor = System.Drawing.Color.DodgerBlue;
+            this.dgvBetting.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.dgvBetting.HeaderForeColor = System.Drawing.Color.White;
             this.dgvBetting.Location = new System.Drawing.Point(8, 112);
             this.dgvBetting.MultiSelect = false;
             this.dgvBetting.Name = "dgvBetting";
             this.dgvBetting.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvBetting.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvBetting.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvBetting.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvBetting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvBetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBetting.ShowCellErrors = false;

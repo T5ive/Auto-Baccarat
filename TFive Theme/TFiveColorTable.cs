@@ -23,7 +23,7 @@ namespace TFive
 
         public override Color DroppedDownItemBackground => Color.FromArgb(220, 230, 250);
 
-        public override Color Separator => Color.FromArgb(0, 100, 255);
+        public override Color Separator => Color.FromArgb(255, 60, 75);
 
         public override Color ImageMargin => Color.FromArgb(220, 230, 250);
     }

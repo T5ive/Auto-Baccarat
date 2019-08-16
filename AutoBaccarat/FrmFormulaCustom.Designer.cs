@@ -81,10 +81,10 @@
             // 
             // bunifuCards1
             // 
-            this.bunifuCards1.BackColor = System.Drawing.Color.White;
+            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.bunifuCards1.BorderRadius = 0;
             this.bunifuCards1.BottomSahddow = false;
-            this.bunifuCards1.color = System.Drawing.Color.DodgerBlue;
+            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.bunifuCards1.Controls.Add(this.EditTitle);
             this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuCards1.LeftSahddow = false;
@@ -98,8 +98,8 @@
             // 
             // EditTitle
             // 
-            this.EditTitle.BackColor = System.Drawing.Color.White;
-            this.EditTitle.BGColor = System.Drawing.Color.White;
+            this.EditTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.EditTitle.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.EditTitle.Controls.Add(this.CustomBox);
             this.EditTitle.Controls.Add(this.FileList);
             this.EditTitle.Controls.Add(this.tableLayoutPanel3);
@@ -117,8 +117,8 @@
             // 
             // CustomBox
             // 
-            this.CustomBox.BackColor = System.Drawing.Color.Transparent;
-            this.CustomBox.BGColor = System.Drawing.Color.White;
+            this.CustomBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.CustomBox.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.CustomBox.Controls.Add(this.CustomSetting);
             this.CustomBox.Controls.Add(this.PanelResultBP);
             this.CustomBox.Controls.Add(this.PanelResultPB);
@@ -138,8 +138,8 @@
             // 
             // CustomSetting
             // 
-            this.CustomSetting.BackColor = System.Drawing.Color.Transparent;
-            this.CustomSetting.BGColor = System.Drawing.Color.White;
+            this.CustomSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.CustomSetting.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.CustomSetting.Controls.Add(this.btnDefault);
             this.CustomSetting.Controls.Add(this.lbValue);
             this.CustomSetting.Controls.Add(this.btnClear);
@@ -161,8 +161,8 @@
             // btnDefault
             // 
             this.btnDefault.Active = false;
-            this.btnDefault.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnDefault.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDefault.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnDefault.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnDefault.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDefault.BorderRadius = 0;
             this.btnDefault.ButtonText = "Default";
@@ -183,8 +183,8 @@
             this.btnDefault.Location = new System.Drawing.Point(9, 175);
             this.btnDefault.Margin = new System.Windows.Forms.Padding(21, 28, 21, 28);
             this.btnDefault.Name = "btnDefault";
-            this.btnDefault.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnDefault.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnDefault.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnDefault.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnDefault.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDefault.selected = false;
             this.btnDefault.Size = new System.Drawing.Size(162, 31);
@@ -200,7 +200,7 @@
             this.lbValue.AutoSize = true;
             this.lbValue.BackColor = System.Drawing.Color.Transparent;
             this.lbValue.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lbValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.lbValue.ForeColor = System.Drawing.Color.White;
             this.lbValue.Location = new System.Drawing.Point(10, 42);
             this.lbValue.Name = "lbValue";
             this.lbValue.Size = new System.Drawing.Size(48, 20);
@@ -210,8 +210,8 @@
             // btnClear
             // 
             this.btnClear.Active = false;
-            this.btnClear.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnClear.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnClear.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClear.BorderRadius = 0;
             this.btnClear.ButtonText = "Clear";
@@ -232,8 +232,8 @@
             this.btnClear.Location = new System.Drawing.Point(9, 140);
             this.btnClear.Margin = new System.Windows.Forms.Padding(14, 18, 14, 18);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnClear.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnClear.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnClear.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnClear.OnHoverTextColor = System.Drawing.Color.White;
             this.btnClear.selected = false;
             this.btnClear.Size = new System.Drawing.Size(162, 31);
@@ -246,8 +246,8 @@
             // 
             // CustomConfig
             // 
-            this.CustomConfig.BackColor = System.Drawing.Color.White;
-            this.CustomConfig.BGColor = System.Drawing.Color.White;
+            this.CustomConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.CustomConfig.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.CustomConfig.Controls.Add(this.radFollow);
             this.CustomConfig.Controls.Add(this.radAdverse);
             this.CustomConfig.Curv1 = 1;
@@ -262,11 +262,11 @@
             // 
             // radFollow
             // 
-            this.radFollow.BackColor = System.Drawing.Color.Transparent;
+            this.radFollow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.radFollow.Checked = false;
             this.radFollow.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radFollow.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.radFollow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.radFollow.ForeColor = System.Drawing.Color.White;
             this.radFollow.Location = new System.Drawing.Point(8, 40);
             this.radFollow.Name = "radFollow";
             this.radFollow.Size = new System.Drawing.Size(128, 15);
@@ -276,11 +276,11 @@
             // 
             // radAdverse
             // 
-            this.radAdverse.BackColor = System.Drawing.Color.Transparent;
+            this.radAdverse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.radAdverse.Checked = false;
             this.radAdverse.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radAdverse.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.radAdverse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.radAdverse.ForeColor = System.Drawing.Color.White;
             this.radAdverse.Location = new System.Drawing.Point(8, 73);
             this.radAdverse.Name = "radAdverse";
             this.radAdverse.Size = new System.Drawing.Size(128, 15);
@@ -291,8 +291,8 @@
             // btnDel
             // 
             this.btnDel.Active = false;
-            this.btnDel.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnDel.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDel.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnDel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDel.BorderRadius = 0;
             this.btnDel.ButtonText = "Delete";
@@ -313,8 +313,8 @@
             this.btnDel.Location = new System.Drawing.Point(9, 105);
             this.btnDel.Margin = new System.Windows.Forms.Padding(9, 12, 9, 12);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnDel.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnDel.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnDel.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnDel.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDel.selected = false;
             this.btnDel.Size = new System.Drawing.Size(162, 31);
@@ -328,7 +328,7 @@
             // txtNum
             // 
             this.txtNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNum.BackColor = System.Drawing.Color.White;
+            this.txtNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txtNum.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtNum.Location = new System.Drawing.Point(64, 31);
             this.txtNum.MaxLength = 32767;
@@ -346,8 +346,8 @@
             // btnAdd
             // 
             this.btnAdd.Active = false;
-            this.btnAdd.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnAdd.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAdd.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAdd.BorderRadius = 0;
             this.btnAdd.ButtonText = "Add";
@@ -368,8 +368,8 @@
             this.btnAdd.Location = new System.Drawing.Point(8, 70);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnAdd.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnAdd.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnAdd.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnAdd.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAdd.selected = false;
             this.btnAdd.Size = new System.Drawing.Size(162, 31);
@@ -382,7 +382,7 @@
             // 
             // PanelResultBP
             // 
-            this.PanelResultBP.BackColor = System.Drawing.Color.Lavender;
+            this.PanelResultBP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.PanelResultBP.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelResultBP.Location = new System.Drawing.Point(435, 68);
             this.PanelResultBP.Name = "PanelResultBP";
@@ -391,7 +391,7 @@
             // 
             // PanelResultPB
             // 
-            this.PanelResultPB.BackColor = System.Drawing.Color.AliceBlue;
+            this.PanelResultPB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(62)))), ((int)(((byte)(62)))));
             this.PanelResultPB.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelResultPB.Location = new System.Drawing.Point(300, 68);
             this.PanelResultPB.Name = "PanelResultPB";
@@ -400,7 +400,7 @@
             // 
             // PanelResult
             // 
-            this.PanelResult.BackColor = System.Drawing.Color.GhostWhite;
+            this.PanelResult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(72)))), ((int)(((byte)(72)))));
             this.PanelResult.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelResult.Location = new System.Drawing.Point(165, 68);
             this.PanelResult.Name = "PanelResult";
@@ -409,8 +409,8 @@
             // 
             // customList
             // 
-            this.customList.BackColor = System.Drawing.Color.Transparent;
-            this.customList.BGColor = System.Drawing.Color.White;
+            this.customList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.customList.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.customList.Controls.Add(this.ListBoxValue);
             this.customList.Controls.Add(this.lbTotal);
             this.customList.Curv1 = 1;
@@ -426,11 +426,11 @@
             // 
             // ListBoxValue
             // 
-            this.ListBoxValue.BackColor = System.Drawing.Color.White;
+            this.ListBoxValue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.ListBoxValue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListBoxValue.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListBoxValue.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.ListBoxValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.ListBoxValue.ForeColor = System.Drawing.Color.White;
             this.ListBoxValue.FormattingEnabled = true;
             this.ListBoxValue.ItemHeight = 20;
             this.ListBoxValue.Location = new System.Drawing.Point(5, 28);
@@ -445,7 +445,7 @@
             this.lbTotal.BackColor = System.Drawing.Color.Transparent;
             this.lbTotal.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbTotal.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lbTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.lbTotal.ForeColor = System.Drawing.Color.White;
             this.lbTotal.Location = new System.Drawing.Point(5, 282);
             this.lbTotal.Name = "lbTotal";
             this.lbTotal.Size = new System.Drawing.Size(57, 20);
@@ -465,7 +465,7 @@
             // txtName
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtName.BackColor = System.Drawing.Color.White;
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtName.Location = new System.Drawing.Point(58, 6);
             this.txtName.MaxLength = 32767;
@@ -484,7 +484,7 @@
             this.lbName.BackColor = System.Drawing.Color.Transparent;
             this.lbName.Dock = System.Windows.Forms.DockStyle.Left;
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.lbName.ForeColor = System.Drawing.Color.White;
             this.lbName.Location = new System.Drawing.Point(0, 0);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(52, 40);
@@ -494,8 +494,8 @@
             // 
             // FileList
             // 
-            this.FileList.BackColor = System.Drawing.Color.Transparent;
-            this.FileList.BGColor = System.Drawing.Color.White;
+            this.FileList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.FileList.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.FileList.Controls.Add(this.ListBoxLoad);
             this.FileList.Curv1 = 1;
             this.FileList.Curv2 = 1;
@@ -510,11 +510,11 @@
             // 
             // ListBoxLoad
             // 
-            this.ListBoxLoad.BackColor = System.Drawing.Color.White;
+            this.ListBoxLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.ListBoxLoad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListBoxLoad.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ListBoxLoad.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.ListBoxLoad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.ListBoxLoad.ForeColor = System.Drawing.Color.White;
             this.ListBoxLoad.FormattingEnabled = true;
             this.ListBoxLoad.ItemHeight = 20;
             this.ListBoxLoad.Location = new System.Drawing.Point(5, 28);
@@ -545,8 +545,8 @@
             // btnSave
             // 
             this.btnSave.Active = false;
-            this.btnSave.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSave.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSave.BorderRadius = 0;
             this.btnSave.ButtonText = "Save Custom";
@@ -567,8 +567,8 @@
             this.btnSave.IsTab = false;
             this.btnSave.Location = new System.Drawing.Point(207, 3);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnSave.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnSave.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnSave.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnSave.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSave.selected = false;
             this.btnSave.Size = new System.Drawing.Size(367, 29);
@@ -582,8 +582,8 @@
             // btnClose
             // 
             this.btnClose.Active = false;
-            this.btnClose.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnClose.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnClose.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.BorderRadius = 0;
             this.btnClose.ButtonText = "Close";
@@ -604,8 +604,8 @@
             this.btnClose.IsTab = false;
             this.btnClose.Location = new System.Drawing.Point(580, 3);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnClose.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnClose.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnClose.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnClose.OnHoverTextColor = System.Drawing.Color.White;
             this.btnClose.selected = false;
             this.btnClose.Size = new System.Drawing.Size(370, 29);
@@ -619,8 +619,8 @@
             // btnAddList
             // 
             this.btnAddList.Active = false;
-            this.btnAddList.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnAddList.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddList.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnAddList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnAddList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddList.BorderRadius = 0;
             this.btnAddList.ButtonText = "Add";
@@ -641,8 +641,8 @@
             this.btnAddList.IsTab = false;
             this.btnAddList.Location = new System.Drawing.Point(3, 3);
             this.btnAddList.Name = "btnAddList";
-            this.btnAddList.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnAddList.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnAddList.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnAddList.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnAddList.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAddList.selected = false;
             this.btnAddList.Size = new System.Drawing.Size(96, 29);
@@ -656,8 +656,8 @@
             // btnDelList
             // 
             this.btnDelList.Active = false;
-            this.btnDelList.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnDelList.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDelList.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnDelList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnDelList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDelList.BorderRadius = 0;
             this.btnDelList.ButtonText = "Delete";
@@ -678,8 +678,8 @@
             this.btnDelList.IsTab = false;
             this.btnDelList.Location = new System.Drawing.Point(105, 3);
             this.btnDelList.Name = "btnDelList";
-            this.btnDelList.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnDelList.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnDelList.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnDelList.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnDelList.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDelList.selected = false;
             this.btnDelList.Size = new System.Drawing.Size(96, 29);

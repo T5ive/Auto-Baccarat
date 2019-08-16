@@ -87,14 +87,14 @@ namespace TFive
             // Draw the body of the GroupBox
             G.FillPath(new SolidBrush(_BGColor), RoundRectangle.RoundRect(new Rectangle(1, 12, Width - 3, box.Height - 1), _Value));
             // Draw the border of the GroupBox
-            G.DrawPath(new Pen(Color.DodgerBlue), RoundRectangle.RoundRect(new Rectangle(1, 12, Width - 3, Height - 13), _Value));
+            G.DrawPath(new Pen(Color.FromArgb(202, 62, 71)), RoundRectangle.RoundRect(new Rectangle(1, 12, Width - 3, Height - 13), _Value));
 
             // Draw the background of the title box
             G.FillPath(new SolidBrush(_BGColor), RoundRectangle.RoundRect(titleBox, 1));
             // Draw the border of the title box
-            G.DrawPath(new Pen(Color.DodgerBlue), RoundRectangle.RoundRect(titleBox, _Value2));
+            G.DrawPath(new Pen(Color.FromArgb(202, 62, 71)), RoundRectangle.RoundRect(titleBox, _Value2));
             // Draw the specified string from 'Text' property inside the title box
-            G.DrawString(Text, new Font("Segoe UI", 11, FontStyle.Regular), new SolidBrush(Color.FromArgb(0, 100, 255)), titleBox, new StringFormat
+            G.DrawString(Text, new Font("Segoe UI", 11, FontStyle.Regular), new SolidBrush(Color.FromArgb(255,255,255)), titleBox, new StringFormat
             {
                 Alignment = StringAlignment.Center,
                 LineAlignment = StringAlignment.Center

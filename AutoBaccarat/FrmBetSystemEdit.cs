@@ -160,12 +160,12 @@ namespace AutoBaccarat
             switch (BetSystemValues.EditMode)
             {
                 case BetSystemValues.BettingMode.PP:
-                    BetSystemValues.ValuePP = "1-3-2-4";
+                    BetSystemValues.ValuePP = "1-2-2-3-3-3-4-4-4-4-5-5-5-5-5";
 
                     break;
 
                 case BetSystemValues.BettingMode.NP:
-                    BetSystemValues.ValueNP = "1-2";
+                    BetSystemValues.ValueNP = "1-1-3-7-15-31-63-127-255-511-1023-2047";
 
                     break;
 

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.EditTitle = new TFive.TFiveGroupBox();
             this.PositionBox = new TFive.TFiveGroupBox();
@@ -76,10 +76,10 @@
             // 
             // bunifuCards1
             // 
-            this.bunifuCards1.BackColor = System.Drawing.Color.White;
+            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.bunifuCards1.BorderRadius = 0;
             this.bunifuCards1.BottomSahddow = false;
-            this.bunifuCards1.color = System.Drawing.Color.DodgerBlue;
+            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.bunifuCards1.Controls.Add(this.EditTitle);
             this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuCards1.LeftSahddow = false;
@@ -93,8 +93,8 @@
             // 
             // EditTitle
             // 
-            this.EditTitle.BackColor = System.Drawing.Color.Transparent;
-            this.EditTitle.BGColor = System.Drawing.Color.White;
+            this.EditTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.EditTitle.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.EditTitle.Controls.Add(this.PositionBox);
             this.EditTitle.Controls.Add(this.ListFile);
             this.EditTitle.Controls.Add(this.tableLayoutPanel3);
@@ -111,8 +111,8 @@
             // 
             // PositionBox
             // 
-            this.PositionBox.BackColor = System.Drawing.Color.Transparent;
-            this.PositionBox.BGColor = System.Drawing.Color.White;
+            this.PositionBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.PositionBox.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.PositionBox.Controls.Add(this.radBackGround);
             this.PositionBox.Controls.Add(this.radNormal);
             this.PositionBox.Controls.Add(this.dgvSetting);
@@ -130,10 +130,11 @@
             // 
             // radBackGround
             // 
-            this.radBackGround.BackColor = System.Drawing.Color.Transparent;
+            this.radBackGround.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.radBackGround.Checked = false;
+            this.radBackGround.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radBackGround.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.radBackGround.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.radBackGround.ForeColor = System.Drawing.Color.White;
             this.radBackGround.Location = new System.Drawing.Point(172, 348);
             this.radBackGround.Name = "radBackGround";
             this.radBackGround.Size = new System.Drawing.Size(146, 19);
@@ -143,10 +144,11 @@
             // 
             // radNormal
             // 
-            this.radNormal.BackColor = System.Drawing.Color.Transparent;
+            this.radNormal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.radNormal.Checked = false;
+            this.radNormal.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radNormal.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.radNormal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.radNormal.ForeColor = System.Drawing.Color.White;
             this.radNormal.Location = new System.Drawing.Point(12, 348);
             this.radNormal.Name = "radNormal";
             this.radNormal.Size = new System.Drawing.Size(120, 19);
@@ -160,20 +162,23 @@
             this.dgvSetting.AllowUserToDeleteRows = false;
             this.dgvSetting.AllowUserToResizeColumns = false;
             this.dgvSetting.AllowUserToResizeRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            this.dgvSetting.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvSetting.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvSetting.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvSetting.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.dgvSetting.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSetting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvSetting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colSetting,
@@ -183,30 +188,30 @@
             this.color,
             this.Process,
             this.Rgb});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSetting.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSetting.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSetting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSetting.DoubleBuffered = true;
             this.dgvSetting.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvSetting.EnableHeadersVisualStyles = false;
-            this.dgvSetting.GridColor = System.Drawing.Color.DodgerBlue;
-            this.dgvSetting.HeaderBgColor = System.Drawing.Color.DodgerBlue;
+            this.dgvSetting.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
+            this.dgvSetting.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.dgvSetting.HeaderForeColor = System.Drawing.Color.White;
             this.dgvSetting.Location = new System.Drawing.Point(5, 68);
             this.dgvSetting.Name = "dgvSetting";
             this.dgvSetting.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvSetting.RowHeadersVisible = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.DodgerBlue;
-            this.dgvSetting.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvSetting.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSetting.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgvSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvSetting.Size = new System.Drawing.Size(348, 308);
@@ -232,8 +237,8 @@
             // 
             // colXY
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colXY.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colXY.DefaultCellStyle = dataGridViewCellStyle3;
             this.colXY.HeaderText = "XY";
             this.colXY.Name = "colXY";
             this.colXY.ReadOnly = true;
@@ -293,7 +298,7 @@
             this.lbName.AutoSize = true;
             this.lbName.BackColor = System.Drawing.Color.Transparent;
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.lbName.ForeColor = System.Drawing.Color.White;
             this.lbName.Location = new System.Drawing.Point(3, 9);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(52, 20);
@@ -303,7 +308,7 @@
             // txtName
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtName.BackColor = System.Drawing.Color.White;
+            this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtName.Location = new System.Drawing.Point(66, 3);
             this.txtName.MaxLength = 32767;
@@ -319,8 +324,8 @@
             // 
             // ListFile
             // 
-            this.ListFile.BackColor = System.Drawing.Color.Transparent;
-            this.ListFile.BGColor = System.Drawing.Color.White;
+            this.ListFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.ListFile.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.ListFile.Controls.Add(this.listLayout);
             this.ListFile.Curv1 = 1;
             this.ListFile.Curv2 = 1;
@@ -335,11 +340,11 @@
             // 
             // listLayout
             // 
-            this.listLayout.BackColor = System.Drawing.Color.White;
+            this.listLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.listLayout.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listLayout.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.listLayout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.listLayout.ForeColor = System.Drawing.Color.White;
             this.listLayout.FormattingEnabled = true;
             this.listLayout.ItemHeight = 20;
             this.listLayout.Location = new System.Drawing.Point(5, 28);
@@ -370,8 +375,8 @@
             // btnSave
             // 
             this.btnSave.Active = false;
-            this.btnSave.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSave.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSave.BorderRadius = 0;
             this.btnSave.ButtonText = "Save Layout";
@@ -392,8 +397,8 @@
             this.btnSave.IsTab = false;
             this.btnSave.Location = new System.Drawing.Point(193, 3);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnSave.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnSave.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnSave.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnSave.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSave.selected = false;
             this.btnSave.Size = new System.Drawing.Size(171, 29);
@@ -407,8 +412,8 @@
             // btnClose
             // 
             this.btnClose.Active = false;
-            this.btnClose.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnClose.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnClose.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.BorderRadius = 0;
             this.btnClose.ButtonText = "Close";
@@ -429,8 +434,8 @@
             this.btnClose.IsTab = false;
             this.btnClose.Location = new System.Drawing.Point(370, 3);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnClose.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnClose.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnClose.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnClose.OnHoverTextColor = System.Drawing.Color.White;
             this.btnClose.selected = false;
             this.btnClose.Size = new System.Drawing.Size(172, 29);
@@ -444,8 +449,8 @@
             // btnAddList
             // 
             this.btnAddList.Active = false;
-            this.btnAddList.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnAddList.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAddList.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnAddList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnAddList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAddList.BorderRadius = 0;
             this.btnAddList.ButtonText = "Add";
@@ -466,8 +471,8 @@
             this.btnAddList.IsTab = false;
             this.btnAddList.Location = new System.Drawing.Point(3, 3);
             this.btnAddList.Name = "btnAddList";
-            this.btnAddList.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnAddList.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnAddList.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnAddList.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnAddList.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAddList.selected = false;
             this.btnAddList.Size = new System.Drawing.Size(89, 29);
@@ -481,8 +486,8 @@
             // btnDelList
             // 
             this.btnDelList.Active = false;
-            this.btnDelList.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnDelList.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDelList.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnDelList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnDelList.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDelList.BorderRadius = 0;
             this.btnDelList.ButtonText = "Delete";
@@ -503,8 +508,8 @@
             this.btnDelList.IsTab = false;
             this.btnDelList.Location = new System.Drawing.Point(98, 3);
             this.btnDelList.Name = "btnDelList";
-            this.btnDelList.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnDelList.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnDelList.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnDelList.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnDelList.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDelList.selected = false;
             this.btnDelList.Size = new System.Drawing.Size(89, 29);

@@ -76,7 +76,7 @@ namespace TFive
                      //ControlStyles.ResizeRedraw |
                      ControlStyles.SupportsTransparentBackColor | ControlStyles.UserPaint, true);
            // BackColor = Color.Transparent;
-            ForeColor = Color.FromArgb(0, 100, 255);
+            ForeColor = Color.White;
             Font = new Font("Segoe UI", 11);
             // Width = 193;
             Cursor = Cursors.Hand;
@@ -103,14 +103,14 @@ namespace TFive
             var MyDrawer = e.Graphics;
 
             //MyDrawer.Clear(Color.FromArgb(240, 240, 240));
-            MyDrawer.Clear(Color.White);
+            MyDrawer.Clear(BackColor);
             MyDrawer.SmoothingMode = SmoothingMode.AntiAlias;
 
             // Fill the body of the ellipse with a gradient
             var LGB = new LinearGradientBrush(new Rectangle(new Point(0, 0),
                 new Size(Size.Height-1, Size.Height - 1)),
-                Color.White,
-                Color.White, 90);
+                BackColor,
+                BackColor, 90);
             //Color.FromArgb(240, 240, 240),
             //Color.FromArgb(240, 240, 240), 90);
 
@@ -122,15 +122,15 @@ namespace TFive
             MyDrawer.ResetClip();
 
             // Draw ellipse border
-            MyDrawer.DrawEllipse(new Pen(Color.FromArgb(0, 100, 255)), new Rectangle(new Point(0, 0), new Size(Size.Height - 1, Size.Height - 1)));
+            MyDrawer.DrawEllipse(new Pen(Color.FromArgb(255, 60, 75)), new Rectangle(new Point(0, 0), new Size(Size.Height - 1, Size.Height - 1)));
 
             // Draw an ellipse inside the body
             if (_Checked)
             {
-                var EllipseColor = new SolidBrush(Color.FromArgb(0, 100, 255));
+                var EllipseColor = new SolidBrush(Color.FromArgb(202, 62, 71));
                 MyDrawer.FillEllipse(EllipseColor, new Rectangle(new Point(2, 2), new Size(Size.Height-5, Size.Height-5)));
             }
-            MyDrawer.DrawString(Text, Font, new SolidBrush(Color.FromArgb(0, 100, 255)), Size.Height +1, Size.Height/2, new StringFormat { LineAlignment = StringAlignment.Center });
+            MyDrawer.DrawString(Text, Font, new SolidBrush(ForeColor), Size.Height +1, Size.Height/2, new StringFormat { LineAlignment = StringAlignment.Center });
             e.Dispose();
         }
     }

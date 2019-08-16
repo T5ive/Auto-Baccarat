@@ -1,5 +1,6 @@
 ﻿
 
+using AutoBaccarat.Properties;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -35,6 +36,7 @@ namespace AutoBaccarat.Setting
            {
                try
                {
+                   LoadListCount = Settings.Default.LoadLayoutListCount;
                    ListLoad = ListMng.GetLayoutList();
                    ListMng.LoadValuesFromFile(ListLoad[LoadListCount].File); // Add value to ReadCustomValue
                    ListName = ListLoad[LoadListCount].Name;
@@ -135,6 +137,7 @@ namespace AutoBaccarat.Setting
                             break;
                     }
                 }
+                ModeSelected = (Mode)int.Parse(ListValues[11]);
 
 
 

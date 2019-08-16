@@ -612,10 +612,10 @@ namespace AutoBaccarat
 
 
 
-        #endregion
 
         #endregion
 
+        #endregion
 
     }
 }

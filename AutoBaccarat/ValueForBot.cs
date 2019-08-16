@@ -17,7 +17,7 @@ namespace AutoBaccarat
         public static List<string> CustomValueType = new List<string>();
         public static List<string> CustomValueNumber = new List<string>();
 
-        public static Point Start, Player, Banker,Tie, Chip1, Chip2, Chip3, Chip4, Chip5, ConfirmPlayer, ConfirmBanker;
-        public static Color ColorStart, ColorPlayer, ColorBanker, ColorTie,NewColorStart, NewColorPlayer, NewColorBanker,NewColorTie;
+        public static Point PositionStart, PositionPlayer, PositionBanker,PositionTie, PositionChip1, PositionChip2, PositionChip3, PositionChip4, PositionChip5, PositionConfirmPlayer, PositionConfirmBanker;
+        public static Color ColorStart, ColorPlayer, ColorBanker, ColorTie, NewColorStart, NewColorPlayer, NewColorBanker,NewColorTie;
     }
 }

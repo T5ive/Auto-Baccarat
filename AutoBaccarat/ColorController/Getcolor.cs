@@ -117,6 +117,10 @@ namespace AutoBaccarat
         {
             return HexConverter(PixelColor, Shade_Variation, iHandle);
         }
+        public static string GetColorString(IntPtr iHandle,int x, int y)
+        {
+            return HexConverterOLD(GetColorAt(iHandle.ToInt32(), x, y));
+        }
         public static string GetColorString( int x, int y)
         {
             IntPtr appHandle = GetAppName.appName;
@@ -179,6 +183,103 @@ namespace AutoBaccarat
         public static string RGBConverter(System.Drawing.Color c)
         {
             return "RGB(" + c.R.ToString() + "," + c.G.ToString() + "," + c.B.ToString() + ")";
+        }
+
+        public static bool HexColorCompare(string newHexColor, string oldHexColor, int all)
+        {
+            var newColor = Hex2Color(newHexColor);
+            var oldColor = Hex2Color(oldHexColor);
+            if (ColorCompare(newColor, oldColor, all))
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool HexColorCompare(string newHexColor, string oldHexColor, int colorR, int colorG, int colorB)
+        {
+            var newColor = Hex2Color(newHexColor);
+            var oldColor = Hex2Color(oldHexColor);
+            if (ColorCompare(newColor, oldColor, colorR, colorG, colorB))
+            {
+                return true;
+            }
+            return false;
+        }
+        public static bool ColorCompare(Color newColor, Color oldColor, int all)
+        {
+            if (newColor.R >= oldColor.R - all & newColor.R <= oldColor.R + all &
+                newColor.G >= oldColor.G - all & newColor.G <= oldColor.G + all &
+                newColor.B >= oldColor.B - all & newColor.B <= oldColor.B + all)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        public static bool ColorCompare(Color newColor, Color oldColor, int colorR, int colorG, int colorB)
+        {
+            if (newColor.R >= oldColor.R - colorR & newColor.R <= oldColor.R + colorR &
+                newColor.G >= oldColor.G - colorG & newColor.G <= oldColor.G + colorG &
+                newColor.B >= oldColor.B - colorB & newColor.B <= oldColor.B + colorB)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool ColorCompare(Color newColor, Color oldColor, int colorRMore, int colorRLess, int colorGMore, int colorGLess, int colorBMore,   int colorBLess)
+        {
+            if (newColor.R >= oldColor.R - colorRMore & newColor.R <= oldColor.R + colorRLess &
+                newColor.G >= oldColor.G - colorGMore & newColor.G <= oldColor.G + colorGLess &
+                newColor.B >= oldColor.B - colorBMore & newColor.B <= oldColor.B + colorBLess)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public enum CompareMode
+        {
+            Increase,
+            Delete
+        }
+        public static bool ColorCompare(Color newColor, Color oldColor, 
+            int colorRMore, int colorRLess, 
+            int colorGMore, int colorGLess, 
+            int colorBMore, int colorBLess,
+            CompareMode typeColorRMore, CompareMode typeColorRLess,
+            CompareMode typeColorGMore, CompareMode typeColorGLess,
+            CompareMode typeColorBMore, CompareMode typeColorBLess)
+        {
+            var colorR1 = oldColor.R;
+            var colorG1 = oldColor.G;
+            var colorB1 = oldColor.B;
+
+            var colorR2 = oldColor.R;
+            var colorG2 = oldColor.G;
+            var colorB2 = oldColor.B;
+
+
+            colorR1 = typeColorRMore == CompareMode.Delete ? (byte)(colorR1 - colorRMore) : (byte)(colorR1 + colorRMore);
+            colorR2 = typeColorRLess == CompareMode.Delete ? (byte)(colorR2 - colorRLess) : (byte)(colorR2 + colorRLess);
+
+            colorG1 = typeColorGMore == CompareMode.Delete ? (byte)(colorG1 - colorGMore) : (byte)(colorG1 + colorGMore);
+            colorG2 = typeColorGLess == CompareMode.Delete ? (byte)(colorG2 - colorGLess) : (byte)(colorG2 + colorGLess);
+
+            colorB1 = typeColorBMore == CompareMode.Delete ? (byte)(colorB1 - colorBMore) : (byte)(colorB1 + colorBMore);
+            colorB2 = typeColorBLess == CompareMode.Delete ? (byte)(colorB2 - colorBLess) : (byte)(colorB2 + colorBLess);
+
+
+            if (newColor.R >= colorR1 & newColor.R <= colorR2 &
+                newColor.G >= colorG1 & newColor.G <= colorG2 &
+                newColor.B >= colorB1 & newColor.B <= colorB2)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

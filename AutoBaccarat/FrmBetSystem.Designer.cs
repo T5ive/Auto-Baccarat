@@ -67,10 +67,10 @@
             // 
             // bunifuCards1
             // 
-            this.bunifuCards1.BackColor = System.Drawing.Color.White;
+            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.bunifuCards1.BorderRadius = 0;
             this.bunifuCards1.BottomSahddow = false;
-            this.bunifuCards1.color = System.Drawing.Color.DodgerBlue;
+            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.bunifuCards1.Controls.Add(this.BetSysTitle);
             this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuCards1.LeftSahddow = false;
@@ -85,7 +85,7 @@
             // BetSysTitle
             // 
             this.BetSysTitle.BackColor = System.Drawing.Color.Transparent;
-            this.BetSysTitle.BGColor = System.Drawing.Color.White;
+            this.BetSysTitle.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.BetSysTitle.Controls.Add(this.Main_BetSettings);
             this.BetSysTitle.Controls.Add(this.tFiveSeparator2);
             this.BetSysTitle.Controls.Add(this.btnSave);
@@ -116,7 +116,7 @@
             // Main_BetSettings
             // 
             this.Main_BetSettings.BackColor = System.Drawing.Color.Transparent;
-            this.Main_BetSettings.BGColor = System.Drawing.Color.White;
+            this.Main_BetSettings.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.Main_BetSettings.Controls.Add(this.SetZero);
             this.Main_BetSettings.Controls.Add(this.txtStopMore);
             this.Main_BetSettings.Controls.Add(this.txtStopLess);
@@ -145,7 +145,7 @@
             this.SetZero.AutoSize = true;
             this.SetZero.BackColor = System.Drawing.Color.Transparent;
             this.SetZero.Font = new System.Drawing.Font("Segoe UI", 8F);
-            this.SetZero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.SetZero.ForeColor = System.Drawing.Color.White;
             this.SetZero.Location = new System.Drawing.Point(164, 246);
             this.SetZero.Name = "SetZero";
             this.SetZero.Size = new System.Drawing.Size(105, 13);
@@ -155,7 +155,7 @@
             // txtStopMore
             // 
             this.txtStopMore.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStopMore.BackColor = System.Drawing.Color.White;
+            this.txtStopMore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txtStopMore.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtStopMore.Location = new System.Drawing.Point(170, 174);
             this.txtStopMore.MaxLength = 32767;
@@ -172,7 +172,7 @@
             // txtStopLess
             // 
             this.txtStopLess.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStopLess.BackColor = System.Drawing.Color.White;
+            this.txtStopLess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txtStopLess.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtStopLess.Location = new System.Drawing.Point(170, 211);
             this.txtStopLess.MaxLength = 32767;
@@ -189,7 +189,7 @@
             // txtStopLose
             // 
             this.txtStopLose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStopLose.BackColor = System.Drawing.Color.White;
+            this.txtStopLose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txtStopLose.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtStopLose.Location = new System.Drawing.Point(170, 137);
             this.txtStopLose.MaxLength = 32767;
@@ -206,7 +206,7 @@
             // txtStopWin
             // 
             this.txtStopWin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStopWin.BackColor = System.Drawing.Color.White;
+            this.txtStopWin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txtStopWin.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtStopWin.Location = new System.Drawing.Point(170, 100);
             this.txtStopWin.MaxLength = 32767;
@@ -223,7 +223,7 @@
             // txtStopRound
             // 
             this.txtStopRound.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStopRound.BackColor = System.Drawing.Color.White;
+            this.txtStopRound.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txtStopRound.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtStopRound.Location = new System.Drawing.Point(170, 63);
             this.txtStopRound.MaxLength = 32767;
@@ -242,7 +242,7 @@
             this.lbStopMore.AutoSize = true;
             this.lbStopMore.BackColor = System.Drawing.Color.Transparent;
             this.lbStopMore.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lbStopMore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.lbStopMore.ForeColor = System.Drawing.Color.White;
             this.lbStopMore.Location = new System.Drawing.Point(11, 180);
             this.lbStopMore.Name = "lbStopMore";
             this.lbStopMore.Size = new System.Drawing.Size(141, 20);
@@ -254,7 +254,7 @@
             this.lbStopLess.AutoSize = true;
             this.lbStopLess.BackColor = System.Drawing.Color.Transparent;
             this.lbStopLess.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lbStopLess.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.lbStopLess.ForeColor = System.Drawing.Color.White;
             this.lbStopLess.Location = new System.Drawing.Point(11, 217);
             this.lbStopLess.Name = "lbStopLess";
             this.lbStopLess.Size = new System.Drawing.Size(133, 20);
@@ -266,7 +266,7 @@
             this.lbStopLose.AutoSize = true;
             this.lbStopLose.BackColor = System.Drawing.Color.Transparent;
             this.lbStopLose.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lbStopLose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.lbStopLose.ForeColor = System.Drawing.Color.White;
             this.lbStopLose.Location = new System.Drawing.Point(11, 143);
             this.lbStopLose.Name = "lbStopLose";
             this.lbStopLose.Size = new System.Drawing.Size(106, 20);
@@ -278,7 +278,7 @@
             this.lbStopWin.AutoSize = true;
             this.lbStopWin.BackColor = System.Drawing.Color.Transparent;
             this.lbStopWin.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lbStopWin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.lbStopWin.ForeColor = System.Drawing.Color.White;
             this.lbStopWin.Location = new System.Drawing.Point(11, 106);
             this.lbStopWin.Name = "lbStopWin";
             this.lbStopWin.Size = new System.Drawing.Size(104, 20);
@@ -290,7 +290,7 @@
             this.lbStopRound.AutoSize = true;
             this.lbStopRound.BackColor = System.Drawing.Color.Transparent;
             this.lbStopRound.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lbStopRound.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.lbStopRound.ForeColor = System.Drawing.Color.White;
             this.lbStopRound.Location = new System.Drawing.Point(11, 69);
             this.lbStopRound.Name = "lbStopRound";
             this.lbStopRound.Size = new System.Drawing.Size(104, 20);
@@ -299,17 +299,17 @@
             // 
             // cbChip
             // 
-            this.cbChip.BackColor = System.Drawing.Color.White;
-            this.cbChip.BGColor = System.Drawing.Color.White;
+            this.cbChip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.cbChip.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.cbChip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbChip.Curv = 1;
             this.cbChip.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbChip.DropDownHeight = 100;
             this.cbChip.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChip.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.cbChip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.cbChip.ForeColor = System.Drawing.Color.White;
             this.cbChip.FormattingEnabled = true;
-            this.cbChip.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(230)))), ((int)(((byte)(250)))));
+            this.cbChip.HoverSelectionColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.cbChip.IntegralHeight = false;
             this.cbChip.ItemHeight = 20;
             this.cbChip.Location = new System.Drawing.Point(170, 31);
@@ -323,7 +323,7 @@
             this.lbBetAmount.AutoSize = true;
             this.lbBetAmount.BackColor = System.Drawing.Color.Transparent;
             this.lbBetAmount.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lbBetAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.lbBetAmount.ForeColor = System.Drawing.Color.White;
             this.lbBetAmount.Location = new System.Drawing.Point(11, 32);
             this.lbBetAmount.Name = "lbBetAmount";
             this.lbBetAmount.Size = new System.Drawing.Size(88, 20);
@@ -332,7 +332,7 @@
             // 
             // tFiveSeparator2
             // 
-            this.tFiveSeparator2.BackColor = System.Drawing.Color.White;
+            this.tFiveSeparator2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.tFiveSeparator2.Location = new System.Drawing.Point(8, 275);
             this.tFiveSeparator2.Name = "tFiveSeparator2";
             this.tFiveSeparator2.Size = new System.Drawing.Size(280, 10);
@@ -342,8 +342,8 @@
             // btnSave
             // 
             this.btnSave.Active = false;
-            this.btnSave.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSave.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnSave.BorderRadius = 0;
             this.btnSave.ButtonText = "Save";
@@ -365,8 +365,8 @@
             this.btnSave.Location = new System.Drawing.Point(5, 562);
             this.btnSave.Margin = new System.Windows.Forms.Padding(21, 28, 21, 28);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnSave.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnSave.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnSave.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnSave.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSave.selected = false;
             this.btnSave.Size = new System.Drawing.Size(288, 30);
@@ -380,8 +380,8 @@
             // btnEditFib
             // 
             this.btnEditFib.Active = false;
-            this.btnEditFib.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnEditFib.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditFib.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnEditFib.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnEditFib.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditFib.BorderRadius = 0;
             this.btnEditFib.ButtonText = "Edit";
@@ -402,8 +402,8 @@
             this.btnEditFib.Location = new System.Drawing.Point(12, 144);
             this.btnEditFib.Margin = new System.Windows.Forms.Padding(14, 18, 14, 18);
             this.btnEditFib.Name = "btnEditFib";
-            this.btnEditFib.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnEditFib.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnEditFib.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnEditFib.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnEditFib.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEditFib.selected = false;
             this.btnEditFib.Size = new System.Drawing.Size(65, 30);
@@ -417,8 +417,8 @@
             // btnEditNP
             // 
             this.btnEditNP.Active = false;
-            this.btnEditNP.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnEditNP.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditNP.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnEditNP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnEditNP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditNP.BorderRadius = 0;
             this.btnEditNP.ButtonText = "Edit";
@@ -439,8 +439,8 @@
             this.btnEditNP.Location = new System.Drawing.Point(12, 68);
             this.btnEditNP.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnEditNP.Name = "btnEditNP";
-            this.btnEditNP.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnEditNP.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnEditNP.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnEditNP.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnEditNP.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEditNP.selected = false;
             this.btnEditNP.Size = new System.Drawing.Size(65, 30);
@@ -454,8 +454,8 @@
             // btnEditPP
             // 
             this.btnEditPP.Active = false;
-            this.btnEditPP.Activecolor = System.Drawing.Color.DeepSkyBlue;
-            this.btnEditPP.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEditPP.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnEditPP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnEditPP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEditPP.BorderRadius = 0;
             this.btnEditPP.ButtonText = "Edit";
@@ -476,8 +476,8 @@
             this.btnEditPP.Location = new System.Drawing.Point(12, 33);
             this.btnEditPP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEditPP.Name = "btnEditPP";
-            this.btnEditPP.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnEditPP.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnEditPP.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.btnEditPP.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnEditPP.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEditPP.selected = false;
             this.btnEditPP.Size = new System.Drawing.Size(65, 30);
@@ -490,7 +490,7 @@
             // 
             // tFiveSeparator3
             // 
-            this.tFiveSeparator3.BackColor = System.Drawing.Color.White;
+            this.tFiveSeparator3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.tFiveSeparator3.Location = new System.Drawing.Point(8, 178);
             this.tFiveSeparator3.Name = "tFiveSeparator3";
             this.tFiveSeparator3.Size = new System.Drawing.Size(280, 10);
@@ -499,7 +499,7 @@
             // 
             // tFiveSeparator1
             // 
-            this.tFiveSeparator1.BackColor = System.Drawing.Color.White;
+            this.tFiveSeparator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.tFiveSeparator1.Location = new System.Drawing.Point(8, 131);
             this.tFiveSeparator1.Name = "tFiveSeparator1";
             this.tFiveSeparator1.Size = new System.Drawing.Size(280, 10);
@@ -508,11 +508,11 @@
             // 
             // radX2
             // 
-            this.radX2.BackColor = System.Drawing.Color.White;
+            this.radX2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.radX2.Checked = false;
             this.radX2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radX2.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.radX2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.radX2.ForeColor = System.Drawing.Color.White;
             this.radX2.Location = new System.Drawing.Point(89, 250);
             this.radX2.Name = "radX2";
             this.radX2.Size = new System.Drawing.Size(92, 19);
@@ -522,11 +522,11 @@
             // 
             // radONE
             // 
-            this.radONE.BackColor = System.Drawing.Color.White;
+            this.radONE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.radONE.Checked = false;
             this.radONE.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radONE.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.radONE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.radONE.ForeColor = System.Drawing.Color.White;
             this.radONE.Location = new System.Drawing.Point(89, 225);
             this.radONE.Name = "radONE";
             this.radONE.Size = new System.Drawing.Size(92, 19);
@@ -536,11 +536,11 @@
             // 
             // radFib
             // 
-            this.radFib.BackColor = System.Drawing.Color.White;
+            this.radFib.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.radFib.Checked = false;
             this.radFib.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radFib.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.radFib.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.radFib.ForeColor = System.Drawing.Color.White;
             this.radFib.Location = new System.Drawing.Point(89, 149);
             this.radFib.Name = "radFib";
             this.radFib.Size = new System.Drawing.Size(142, 19);
@@ -550,11 +550,11 @@
             // 
             // radAI
             // 
-            this.radAI.BackColor = System.Drawing.Color.White;
+            this.radAI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.radAI.Checked = false;
             this.radAI.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radAI.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.radAI.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.radAI.ForeColor = System.Drawing.Color.White;
             this.radAI.Location = new System.Drawing.Point(89, 200);
             this.radAI.Name = "radAI";
             this.radAI.Size = new System.Drawing.Size(92, 19);
@@ -564,11 +564,11 @@
             // 
             // radPPNP
             // 
-            this.radPPNP.BackColor = System.Drawing.Color.White;
+            this.radPPNP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.radPPNP.Checked = false;
             this.radPPNP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radPPNP.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.radPPNP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.radPPNP.ForeColor = System.Drawing.Color.White;
             this.radPPNP.Location = new System.Drawing.Point(89, 103);
             this.radPPNP.Name = "radPPNP";
             this.radPPNP.Size = new System.Drawing.Size(142, 19);
@@ -578,11 +578,11 @@
             // 
             // radNP
             // 
-            this.radNP.BackColor = System.Drawing.Color.White;
+            this.radNP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.radNP.Checked = false;
             this.radNP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radNP.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.radNP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.radNP.ForeColor = System.Drawing.Color.White;
             this.radNP.Location = new System.Drawing.Point(89, 71);
             this.radNP.Name = "radNP";
             this.radNP.Size = new System.Drawing.Size(200, 19);
@@ -592,11 +592,11 @@
             // 
             // radPP
             // 
-            this.radPP.BackColor = System.Drawing.Color.White;
+            this.radPP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.radPP.Checked = false;
             this.radPP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radPP.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.radPP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(100)))), ((int)(((byte)(255)))));
+            this.radPP.ForeColor = System.Drawing.Color.White;
             this.radPP.Location = new System.Drawing.Point(89, 40);
             this.radPP.Name = "radPP";
             this.radPP.Size = new System.Drawing.Size(200, 19);

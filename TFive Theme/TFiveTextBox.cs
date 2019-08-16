@@ -251,13 +251,13 @@ namespace TFive
             _MaxLength = 32767;
             //_BaseColor = Color.FromArgb(240, 240, 240);
         //    _BaseColor = BackColor;
-            _TextColor = Color.FromArgb(0, 100, 255);
+            _TextColor = Color.White;
 
             SetStyle(
                 ControlStyles.UserPaint | ControlStyles.SupportsTransparentBackColor |
                 ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true);
             DoubleBuffered = true;
-            BackColor = Color.FromArgb(0, 100, 255);
+            BackColor = Color.FromArgb(202, 62, 71);
             Anchor = AnchorStyles.Top | AnchorStyles.Right;
             TB = new TextBox
             {
@@ -307,7 +307,7 @@ namespace TFive
                 g.Clear(BackColor);
                 TB.BackColor = _BaseColor;
                 TB.ForeColor = _TextColor;
-                g.FillRectangle(new SolidBrush(Color.DodgerBlue), 0, 0, Width, Height);
+                g.FillRectangle(new SolidBrush(Color.FromArgb(255, 60, 75)), 0, 0, Width, Height);
                 g.FillRectangle(new SolidBrush(_BaseColor), 1, 1, W - 1, H - 1);
                 base.OnPaint(e);
                 G.Dispose();

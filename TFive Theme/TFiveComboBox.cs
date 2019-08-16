@@ -11,11 +11,10 @@ namespace TFive
         #region Variables
 
         private int _StartIndex;
-        private Color _HoverSelectionColor = Color.FromArgb(220, 230, 250);
-        private Color _BGColor = Color.FromArgb(240, 240, 240);
+        private Color _HoverSelectionColor = Color.FromArgb(202, 62, 71);
+        private Color _BGColor = Color.FromArgb(82, 82, 82);
         #endregion
         #region Custom Properties
-
         public int StartIndex
         {
             get => _StartIndex;
@@ -32,7 +31,6 @@ namespace TFive
                 Invalidate();
             }
         }
-
         public Color HoverSelectionColor
         {
             get => _HoverSelectionColor;
@@ -77,9 +75,6 @@ namespace TFive
         }
         #endregion
         #region EventArgs
-
-        
-
         protected override void OnDrawItem(DrawItemEventArgs e)
         {
             if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
@@ -93,7 +88,7 @@ namespace TFive
 
             if (e.Index != -1)
             {
-                e.Graphics.DrawString(GetItemText(Items[e.Index]), e.Font, Brushes.DodgerBlue, e.Bounds);
+                e.Graphics.DrawString(GetItemText(Items[e.Index]), e.Font, Brushes.White, e.Bounds);
             }
         }
 
@@ -121,7 +116,7 @@ namespace TFive
             DropDownStyle = ComboBoxStyle.DropDownList;
             Cursor = Cursors.Hand; 
             //BackColor = Color.FromArgb(240, 240, 240);
-            ForeColor = Color.FromArgb(0, 100, 255);
+            ForeColor = Color.White;
             Size = new Size(135, 31);
             ItemHeight = 20;
             DropDownHeight = 100;
@@ -151,10 +146,10 @@ namespace TFive
             e.Graphics.ResetClip();
 
             // Draw rectangle border
-            e.Graphics.DrawPath(new Pen(Color.DodgerBlue), GP);
+            e.Graphics.DrawPath(new Pen(Color.FromArgb(255, 60, 75)), GP);
             // Draw string
-            //e.Graphics.DrawString(Text, Font, new SolidBrush(Color.FromArgb(0, 100, 255)), new Rectangle(3, 0, Width - 20, Height), new StringFormat
-            e.Graphics.DrawString(Text, Font, new SolidBrush(Color.FromArgb(0, 100, 255)), new Rectangle(10, 0, Width - 20, Height), new StringFormat
+            //e.Graphics.DrawString(Text, Font, new SolidBrush(Color.FromArgb(202, 62, 71)), new Rectangle(3, 0, Width - 20, Height), new StringFormat
+            e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), new Rectangle(10, 0, Width - 20, Height), new StringFormat
 
             {
                 LineAlignment = StringAlignment.Center,
@@ -162,9 +157,9 @@ namespace TFive
             });
 
             // Draw the dropdown arrow
-            e.Graphics.DrawLine(new Pen(Color.FromArgb(0, 100, 255), 2), new Point(Width - 18, 10), new Point(Width - 14, 14));
-            e.Graphics.DrawLine(new Pen(Color.FromArgb(0, 100, 255), 2), new Point(Width - 14, 14), new Point(Width - 10, 10));
-            e.Graphics.DrawLine(new Pen(Color.FromArgb(0, 100, 255)), new Point(Width - 14, 15), new Point(Width - 14, 14));
+            e.Graphics.DrawLine(new Pen(Color.FromArgb(202, 62, 71), 2), new Point(Width - 18, 10), new Point(Width - 14, 14));
+            e.Graphics.DrawLine(new Pen(Color.FromArgb(202, 62, 71), 2), new Point(Width - 14, 14), new Point(Width - 10, 10));
+            e.Graphics.DrawLine(new Pen(Color.FromArgb(202, 62, 71)), new Point(Width - 14, 15), new Point(Width - 14, 14));
 
             GP.Dispose();
             LGB.Dispose();

@@ -34,14 +34,8 @@ namespace AutoBaccarat
             bitmapFind = TFive_UI.Properties.Resources.bmpFind;
             bitmapFind2 = TFive_UI.Properties.Resources.bmpFinda;
             newCursor = CurTarget;
-            if (Mode == 0)
-            {
-                tFive_Theme1.Text = "Normal Mode";
-            }
-            else if (Mode == 1)
-            {
-                tFive_Theme1.Text = "Background Mode";
-            }
+
+            tFiveGroupBox1.Text = Mode == 0 ? stringLoader.NormalMode : stringLoader.BackgroundMode;
         }
         private void FrmColorInfo_FormClosing(object sender, FormClosingEventArgs e)
         {

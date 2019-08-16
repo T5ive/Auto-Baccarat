@@ -56,5 +56,9 @@ namespace AutoBaccarat
 
         public static string Fixed = "Setting Fixed Type!!";
         public static string DetailFixed = "- Fixed bets and loops";
+
+        public static string NormalMode = "Normal";
+        public static string BackgroundMode = "Background";
+        public static string Custom = "Custom";
     }
 }

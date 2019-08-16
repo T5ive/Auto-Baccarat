@@ -78,12 +78,12 @@ namespace TFive
             //_G.Clear(Color.FromArgb(240, 240, 240));
             _G.Clear(BackColor);
             _G.SmoothingMode = SmoothingMode.AntiAlias;
-            var LGB = new LinearGradientBrush(new Rectangle(new Point(0, 0), new Size(24, 26)), Color.DodgerBlue, Color.DodgerBlue, 90f);
+            var LGB = new LinearGradientBrush(new Rectangle(new Point(0, 0), new Size(24, 26)), Color.FromArgb(255, 60, 75), Color.FromArgb(255, 60, 75), 90f);
 
             // Fills the body with LGB gradient
             _G.FillEllipse(LGB, new Rectangle(new Point(0, 0), new Size(24, 24)));
             // Draw border
-            _G.DrawEllipse(new Pen(Color.FromArgb(0, 100, 255)), new Rectangle(new Point(0, 0), new Size(24, 24)));
+            _G.DrawEllipse(new Pen(Color.FromArgb(202, 62, 71)), new Rectangle(new Point(0, 0), new Size(24, 24)));
             _G.DrawString(myString,
                 new Font("Segoe UI", 15, FontStyle.Bold),
                 new SolidBrush(Color.FromArgb(255, 255, 253)),

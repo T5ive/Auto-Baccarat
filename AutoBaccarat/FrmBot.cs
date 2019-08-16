@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Reflection;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using AutoBaccarat.Properties;
 using AutoBaccarat.Setting;
@@ -15,6 +16,11 @@ namespace AutoBaccarat
     {
         public FrmBot()
         {
+            _cancel = new CancellationTokenSource();
+            _run = new CancellationTokenSource();
+            _resultType = 3;
+            _bigRoadNewLine = -1;
+            GetApp = new GetAppName();
             InitializeComponent();
         }
 
@@ -94,9 +100,9 @@ namespace AutoBaccarat
             //    return;
             //}
 
-            btnMain.Normalcolor = Color.CornflowerBlue;
+            btnMain.Normalcolor = Color.FromArgb(65, 65, 65);
            // btnLogs.Normalcolor = Color.CornflowerBlue;
-            btnSettings.Normalcolor = Color.CornflowerBlue;
+            btnSettings.Normalcolor = Color.FromArgb(65, 65, 65);
             button.Normalcolor = button.Activecolor;
 
 
@@ -187,7 +193,7 @@ namespace AutoBaccarat
 
             lbValueLayout.Text = LayoutValues.ListName;
 
-            lbValueFormula.Text = ValueForBot.Formula == "Custom"
+            lbValueFormula.Text = ValueForBot.Formula == stringLoader.Custom
                 ? ValueForBot.Formula + $@" ({FormulaValues.ListName})"
                 : ValueForBot.Formula;
 
@@ -198,9 +204,10 @@ namespace AutoBaccarat
             lbValueStopLose.Text = ValueForBot.StopLose;
             lbValueStopMore.Text = ValueForBot.StopMore;
             lbValueStopLess.Text = ValueForBot.StopLess;
+
             lbValueMode.Text = ValueForBot.Mode == 0
-                ? LayoutValues.Mode.Normal.ToString()
-                : LayoutValues.Mode.Background.ToString();
+                ? stringLoader.NormalMode
+                : stringLoader.BackgroundMode;
 
         }
         #endregion
@@ -211,8 +218,8 @@ namespace AutoBaccarat
         {
             return status
                 ? type == "P" ? Color.RoyalBlue :
-                type == "B" ? Color.Red : Color.White
-                : Color.White;
+                type == "B" ? Color.Red : Color.FromArgb(82, 82, 82)
+                : Color.FromArgb(82, 82, 82);
         }
         private static Color EasyChangeForeColor(bool status, string type) =>
             status ? Color.White :
@@ -294,7 +301,7 @@ namespace AutoBaccarat
         #endregion
 
         #region Values For Bot
-
+        private readonly GetAppName GetApp;
         private void LoadValues()
         {
             ValueForBot.Formula = FormulaValues.FormulaSelected.ToString();
@@ -342,22 +349,21 @@ namespace AutoBaccarat
             ValueForBot.Mode = (byte) LayoutValues.ModeSelected;
 
             var positionStart = LayoutValues.PositionStart.Split('(', ',', ')');
-            ValueForBot.Start = new Point(int.Parse(positionStart[1]), int.Parse(positionStart[2]));
+            ValueForBot.PositionStart = new Point(int.Parse(positionStart[1]), int.Parse(positionStart[2]));
             var positionPlayer = LayoutValues.PositionPlayer.Split('(', ',', ')');
-            ValueForBot.Player = new Point(int.Parse(positionPlayer[1]), int.Parse(positionPlayer[2]));
+            ValueForBot.PositionPlayer = new Point(int.Parse(positionPlayer[1]), int.Parse(positionPlayer[2]));
             var positionBanker = LayoutValues.PositionBanker.Split('(', ',', ')');
-            ValueForBot.Banker = new Point(int.Parse(positionBanker[1]), int.Parse(positionBanker[2]));
+            ValueForBot.PositionBanker = new Point(int.Parse(positionBanker[1]), int.Parse(positionBanker[2]));
             var positionTie = LayoutValues.PositionTie.Split('(', ',', ')');
-            ValueForBot.Tie = new Point(int.Parse(positionTie[1]), int.Parse(positionTie[2]));
+            ValueForBot.PositionTie = new Point(int.Parse(positionTie[1]), int.Parse(positionTie[2]));
 
             var positionConP = LayoutValues.PositionConP.Split('(', ',', ')');
-            ValueForBot.ConfirmPlayer = new Point(int.Parse(positionConP[1]), int.Parse(positionConP[2]));
+            ValueForBot.PositionConfirmPlayer = new Point(int.Parse(positionConP[1]), int.Parse(positionConP[2]));
 
             var positionConB = LayoutValues.PositionConB.Split('(', ',', ')');
-            ValueForBot.ConfirmBanker = new Point(int.Parse(positionConB[1]), int.Parse(positionConB[2]));
+            ValueForBot.PositionConfirmBanker = new Point(int.Parse(positionConB[1]), int.Parse(positionConB[2]));
 
-            if (ValueForBot.Mode == 0)
-            {
+            
                 var colorStart = GetColor.Hex2Color(LayoutValues.HexColorStart);
                 ValueForBot.ColorStart = colorStart;
                 var colorPlayer = GetColor.Hex2Color(LayoutValues.HexColorPlayer);
@@ -366,33 +372,37 @@ namespace AutoBaccarat
                 ValueForBot.ColorBanker = colorBanker;
                 var colorTie = GetColor.Hex2Color(LayoutValues.HexColorTie);
                 ValueForBot.ColorTie = colorTie;
-            }
-            else if (ValueForBot.Mode == 1)
+            
+            if (ValueForBot.Mode == 1)
             {
-                //var colorStart = GetColor.Hex2Color(LayoutValues._pColorStart);
-                //ValueForBot.ColorStart = colorStart;
-                //var colorPlayer = GetColor.Hex2Color(LayoutValues._pColorPlayer);
-                //ValueForBot.ColorStart = colorPlayer;
-                //var colorBanker = GetColor.Hex2Color(LayoutValues._pColorBanker);
-                //ValueForBot.ColorStart = colorBanker;
+                var addIHandle = LayoutValues.ProcessStart;
+                var split = addIHandle.Split(new[] { " % " }, StringSplitOptions.None);
+                GetAppName.App = split[0];
+                GetAppName.Class = split[1];
+                GetIHandle();
             }
 
             var positionChip1 = LayoutValues.PositionChip1.Split('(', ',', ')');
-            ValueForBot.Chip1 = new Point(int.Parse(positionChip1[1]), int.Parse(positionChip1[2]));
+            ValueForBot.PositionChip1 = new Point(int.Parse(positionChip1[1]), int.Parse(positionChip1[2]));
 
             var positionChip2 = LayoutValues.PositionChip2.Split('(', ',', ')');
-            ValueForBot.Chip2 = new Point(int.Parse(positionChip2[1]), int.Parse(positionChip2[2]));
+            ValueForBot.PositionChip2 = new Point(int.Parse(positionChip2[1]), int.Parse(positionChip2[2]));
 
             var positionChip3 = LayoutValues.PositionChip3.Split('(', ',', ')');
-            ValueForBot.Chip3 = new Point(int.Parse(positionChip3[1]), int.Parse(positionChip3[2]));
+            ValueForBot.PositionChip3 = new Point(int.Parse(positionChip3[1]), int.Parse(positionChip3[2]));
 
             var positionChip4 = LayoutValues.PositionChip4.Split('(', ',', ')');
-            ValueForBot.Chip4 = new Point(int.Parse(positionChip4[1]), int.Parse(positionChip4[2]));
+            ValueForBot.PositionChip4 = new Point(int.Parse(positionChip4[1]), int.Parse(positionChip4[2]));
 
             var positionChip5 = LayoutValues.PositionChip5.Split('(', ',', ')');
-            ValueForBot.Chip5 = new Point(int.Parse(positionChip5[1]), int.Parse(positionChip5[2]));
+            ValueForBot.PositionChip5 = new Point(int.Parse(positionChip5[1]), int.Parse(positionChip5[2]));
 
             UpdateBotSettings();
+        }
+        private void GetIHandle()
+        {
+            GetApp.AppName();
+            IHandle = GetAppName.appName;
         }
 
         #endregion
@@ -400,7 +410,7 @@ namespace AutoBaccarat
         #region Big Road Control
 
         private bool _backUpBigRoad;
-        private int _bigRoadLastValue, _bigRoadNewColumn, _bigRoadNewLine = -1;
+        private int _bigRoadLastValue, _bigRoadNewColumn, _bigRoadNewLine;
         private void ButtonAddValue2BigRoad(object sender, EventArgs e)
         {
             var value = ((Button)sender).Text;
@@ -569,20 +579,20 @@ namespace AutoBaccarat
             lbline5.Text = @"0";
             lbline6.Text = @"0";
             lblineSum.Text = @"0";
-            lbShowLine1.BackColor = Color.FromArgb(240, 240, 240);
-            lbShowLine2.BackColor = Color.FromArgb(240, 240, 240);
-            lbShowLine3.BackColor = Color.FromArgb(240, 240, 240);
-            lbShowLine4.BackColor = Color.FromArgb(240, 240, 240);
-            lbShowLine5.BackColor = Color.FromArgb(240, 240, 240);
-            lbShowLine6.BackColor = Color.FromArgb(240, 240, 240);
-            lbShowLine7.BackColor = Color.FromArgb(240, 240, 240);
-            dgvStatus[3, 6].Style.BackColor = Color.FromArgb(240, 240, 240);
+            lbShowLine1.BackColor = Color.White;
+            lbShowLine2.BackColor = Color.White;
+            lbShowLine3.BackColor = Color.White;
+            lbShowLine4.BackColor = Color.White;
+            lbShowLine5.BackColor = Color.White;
+            lbShowLine6.BackColor = Color.White;
+            lbShowLine7.BackColor = Color.White;
+            dgvStatus[3, 6].Style.BackColor = Color.White;
         }
         #endregion
 
         #region Display Update
 
-        private short _resultType = 3;
+        private short _resultType;
         private short _goodLineResult;
         private int _valueP, _valueB, _valueT, _fibonacci;
         private void AddScore(short resultType, string timeValue)
@@ -1142,9 +1152,19 @@ namespace AutoBaccarat
             {
                 if (!_backUpBigRoad)
                 {
-                    lbT.Text = _valueT.ToString();
-                    lbP.Text = _valueP.ToString();
-                    lbB.Text = _valueB.ToString();
+                    try
+                    {
+                        lbT.Text = _valueT.ToString();
+                        lbP.Text = _valueP.ToString();
+                        lbB.Text = _valueB.ToString();
+                    }
+                    catch
+                    {
+                        lbT.Text = "0";
+                        lbP.Text = "0";
+                        lbB.Text = "0";
+                    }
+                   
 
 
                     BotValues.Summary = "";
@@ -1911,7 +1931,7 @@ namespace AutoBaccarat
         }
         private static Color DataGridForeColor(int value)
         {
-            return value == 0 ? Color.DodgerBlue : value > 0 ? Color.LimeGreen : Color.Red;
+            return value == 0 ? Color.White : value > 0 ? Color.LimeGreen : Color.Red;
         }
         private static short DoubleArray2ShortArray(double[] result)
         {
@@ -2037,25 +2057,50 @@ namespace AutoBaccarat
         private int _timeRunning, _timeStart, _statusRunningBot;
 
         public string Title => "Auto Baccarat" + (_statusRunBot ? " - Running" : "");
+
+        readonly CancellationTokenSource _run;
+        private readonly CancellationTokenSource _cancel;
+        private CancellationToken _cToken;
         private void BtnStart_Click(object sender, EventArgs e)
         {
             ClickStart();
         }
-        private void ClickStart()
+        private async void ClickStart()
         {
             btnStart.Text = btnStart.Text.EndsWith(stringLoader.Stop) ? stringLoader.Start : stringLoader.Stop;
             try
             {
+                _cancel.Cancel();
+
                 if (btnStart.Text == stringLoader.Stop)
                 {
-                    btnSettings.Enabled = false;
+                    _cToken = _run.Token;
+                    panelLeft.Enabled = false;
                     LoadValues();
-                    RunBot(true, ValueForBot.Mode);
+
+                    _statusRunBot = true;
+
+                    tmTimeRunning.Start();
+
+                    if (ValueForBot.Mode == 0)
+                    {
+                        await Task.Factory.StartNew(BotsNormal, _cToken);
+                    }
+                    if (ValueForBot.Mode == 1)
+                    {
+                        await Task.Factory.StartNew(BotsBackground, _cToken);
+                    }
+
                 }
                 else if (btnStart.Text == stringLoader.Start)
                 {
-                    btnSettings.Enabled = true;
-                    RunBot(false, ValueForBot.Mode);
+                    _cToken = _cancel.Token;
+                    panelLeft.Enabled = true;
+
+                    _statusRunBot = false;
+                    tmTimeRunning.Stop();
+                    _statusRunningBot = 0;
+                    _switchColor = false;
                 }
 
                 Text = Title;
@@ -2065,53 +2110,32 @@ namespace AutoBaccarat
             }
         }
 
-        private void RunBot(bool status, int mode)
-        {
-            _statusRunBot = status;
-
-            if (_statusRunBot)
-            {
-                tmTimeRunning.Start();
-                if (mode == 0)
-                {
-                    Bots_Normal.RunWorkerAsync();
-                }
-
-                if (mode == 1)
-                {
-                    Bots_BackGround.RunWorkerAsync();
-                }
-            }
-            else
-            {
-                tmTimeRunning.Stop();
-                if (mode == 0)
-                {
-                    Bots_Normal.CancelAsync();
-                    _statusRunningBot = 0;
-                }
-
-                if (mode == 1)
-                {
-                    Bots_BackGround.CancelAsync();
-                }
-                _switchColor = false;
-            }
-        }
 
         #region Normal Mode
+
+       private async Task BotsNormal()
+       {
+           if (!_statusRunBot)return;
+           while (_statusRunBot)
+           {
+               await Task.Run(CheckColorStartTimeNormal, _cToken);
+               await Task.Run(AutoClickNormal, _cToken);
+               await Task.Run(CheckColorResultNormal, _cToken);
+               await Task.Run(AddClickToBigRoad, _cToken);
+           }
+        }
         private void Bots_Normal_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
         {
             if (Bots_Normal.CancellationPending) return;
             while (!Bots_Normal.CancellationPending)
             {
-                CheckColorStartTime();
-                AutoClick();
-                CheckColorResult();
-                AddClickToRoadBig();
+                CheckColorStartTimeNormal();
+                AutoClickNormal();
+                CheckColorResultNormal();
+                AddClickToBigRoad();
             }
         }
-        private void CheckColorStartTime()
+        private void CheckColorStartTimeNormal()
         {
             if (!_statusRunBot) return;
             checked
@@ -2121,7 +2145,7 @@ namespace AutoBaccarat
                     var bitmap = new Bitmap(1, 1);
                     using (var graphics = Graphics.FromImage(bitmap))
                     {
-                        graphics.CopyFromScreen(ValueForBot.Start, new Point(0, 0), new Size(1, 1));
+                        graphics.CopyFromScreen(ValueForBot.PositionStart, new Point(0, 0), new Size(1, 1));
                     }
                     var pixel = bitmap.GetPixel(0, 0);
                     Invalidate();
@@ -2162,10 +2186,7 @@ namespace AutoBaccarat
                 }
             }
         }
-
-
-
-        private void AutoClick()
+        private void AutoClickNormal()
         {
             if (!_statusRunBot) return;
             if (_statusRunningBot != 1) return;
@@ -2174,13 +2195,13 @@ namespace AutoBaccarat
             {
                 if (BotValues.BettingSuggest.Count > 0)
                 {
-                    AutoClick(BotValues.BettingSuggest[BotValues.BettingSuggest.Count - 1], BotValues.Unit[BotValues.Unit.Count - 1]);
+                    AutoClickNormal(BotValues.BettingSuggest[BotValues.BettingSuggest.Count - 1], BotValues.Unit[BotValues.Unit.Count - 1]);
                 }
 
                 _statusRunningBot = 2;
             }
         }
-        private void AutoClick(short bettingSuggest, int lastUnit)
+        private void AutoClickNormal(short bettingSuggest, int lastUnit)
         {
             if (!_statusRunBot) return;
             checked
@@ -2201,6 +2222,8 @@ namespace AutoBaccarat
                     short amountChip3 = 0;
                     short amountChip4 = 0;
                     short amountChip5 = 0;
+
+                    _amountBetChip = "";
                     if (lastUnit >= chip5)
                     {
                         amountChip5 = (short)Math.Floor((double)lastUnit / chip5);
@@ -2271,57 +2294,57 @@ namespace AutoBaccarat
 
                     if (amountChip5 > 0)
                     {
-                        Win32Bot.MouseClick(ValueForBot.Chip5);
+                        Win32Bot.MouseClick(ValueForBot.PositionChip5);
                         Thread.Sleep(200);
                         int timesClick = amountChip5;
                         for (var i = 1; i <= timesClick; i++)
                         {
-                            ClickBetting(bettingSuggest);
+                            ClickBettingNormal(bettingSuggest);
                             Thread.Sleep(700);
 
                         }
                     }
                     if (amountChip4 > 0)
                     {
-                        Win32Bot.MouseClick(ValueForBot.Chip4);
+                        Win32Bot.MouseClick(ValueForBot.PositionChip4);
                         Thread.Sleep(200);
                         int timesClick = amountChip4;
                         for (var j = 1; j <= timesClick; j++)
                         {
-                            ClickBetting(bettingSuggest);
+                            ClickBettingNormal(bettingSuggest);
                             Thread.Sleep(700);
                         }
                     }
                     if (amountChip3 > 0)
                     {
-                        Win32Bot.MouseClick(ValueForBot.Chip3);
+                        Win32Bot.MouseClick(ValueForBot.PositionChip3);
                         Thread.Sleep(200);
                         int timesClick = amountChip3;
                         for (var k = 1; k <= timesClick; k++)
                         {
-                            ClickBetting(bettingSuggest);
+                            ClickBettingNormal(bettingSuggest);
                             Thread.Sleep(700);
                         }
                     }
                     if (amountChip2 > 0)
                     {
-                        Win32Bot.MouseClick(ValueForBot.Chip2);
+                        Win32Bot.MouseClick(ValueForBot.PositionChip2);
                         Thread.Sleep(200);
                         int timesClick = amountChip2;
                         for (var l = 1; l <= timesClick; l++)
                         {
-                            ClickBetting(bettingSuggest);
+                            ClickBettingNormal(bettingSuggest);
                             Thread.Sleep(700);
                         }
                     }
                     if (amountChip1 > 0)
                     {
-                        Win32Bot.MouseClick(ValueForBot.Chip1);
+                        Win32Bot.MouseClick(ValueForBot.PositionChip1);
                         Thread.Sleep(200);
                         int timesClick = amountChip1;
                         for (var m = 1; m <= timesClick; m++)
                         {
-                            ClickBetting(bettingSuggest);
+                            ClickBettingNormal(bettingSuggest);
                             Thread.Sleep(700);
                         }
                     }
@@ -2333,22 +2356,22 @@ namespace AutoBaccarat
                         Thread.Sleep(1000);
                         if (bettingSuggest == 1)
                         {
-                            Win32Bot.MouseClick(ValueForBot.ConfirmPlayer);
+                            Win32Bot.MouseClick(ValueForBot.PositionConfirmPlayer);
                             Thread.Sleep(100);
-                            Win32Bot.MouseClick(ValueForBot.ConfirmPlayer);
+                            Win32Bot.MouseClick(ValueForBot.PositionConfirmPlayer);
                         }
                         else if (bettingSuggest == 2)
                         {
-                            Win32Bot.MouseClick(ValueForBot.ConfirmBanker);
+                            Win32Bot.MouseClick(ValueForBot.PositionConfirmBanker);
                             Thread.Sleep(100);
-                            Win32Bot.MouseClick(ValueForBot.ConfirmBanker);
+                            Win32Bot.MouseClick(ValueForBot.PositionConfirmBanker);
                         }
                     }
 
                     if (cbMove.CheckedState)
                     {
                         Thread.Sleep(700);
-                        Cursor.Position = new Point(0, 0);
+                        Cursor.Position = new Point(ValueForBot.PositionStart.X+10, ValueForBot.PositionStart.Y+10);
                         Thread.Sleep(50);
                         Application.DoEvents();
                     }
@@ -2358,18 +2381,18 @@ namespace AutoBaccarat
                 }
             }
         }
-        private void ClickBetting(short bettingSuggest)
+        private void ClickBettingNormal(short bettingSuggest)
         {
             if (bettingSuggest == 1)
             {
-                Win32Bot.MouseClick(ValueForBot.Player);
+                Win32Bot.MouseClick(ValueForBot.PositionPlayer);
             }
             else if (bettingSuggest == 2)
             {
-                Win32Bot.MouseClick(ValueForBot.Banker);
+                Win32Bot.MouseClick(ValueForBot.PositionBanker);
             }
         }
-        private void CheckColorResult()
+        private void CheckColorResultNormal()
         {
             if (!_statusRunBot) return;
             checked
@@ -2383,7 +2406,7 @@ namespace AutoBaccarat
                         var bitmap = new Bitmap(1, 1);
                         using (var graphics = Graphics.FromImage(bitmap))
                         {
-                            graphics.CopyFromScreen(ValueForBot.Player, new Point(0, 0), new Size(1, 1));
+                            graphics.CopyFromScreen(ValueForBot.PositionPlayer, new Point(0, 0), new Size(1, 1));
                         }
                         var pixel = bitmap.GetPixel(0, 0);
                         Invalidate();
@@ -2399,7 +2422,7 @@ namespace AutoBaccarat
                         var bitmap2 = new Bitmap(1, 1);
                         using (var graphics2 = Graphics.FromImage(bitmap2))
                         {
-                            graphics2.CopyFromScreen(ValueForBot.Banker, new Point(0, 0), new Size(1, 1));
+                            graphics2.CopyFromScreen(ValueForBot.PositionBanker, new Point(0, 0), new Size(1, 1));
                         }
                         var pixel2 = bitmap2.GetPixel(0, 0);
                         Invalidate();
@@ -2415,7 +2438,7 @@ namespace AutoBaccarat
                         var bitmap2 = new Bitmap(1, 1);
                         using (var graphics2 = Graphics.FromImage(bitmap2))
                         {
-                            graphics2.CopyFromScreen(ValueForBot.Tie, new Point(0, 0), new Size(1, 1));
+                            graphics2.CopyFromScreen(ValueForBot.PositionTie, new Point(0, 0), new Size(1, 1));
                         }
                         var pixel = bitmap2.GetPixel(0, 0);
                         Invalidate();
@@ -2473,7 +2496,394 @@ namespace AutoBaccarat
                 }
             }
         }
-        private void AddClickToRoadBig()
+
+        #endregion
+
+        #region BackGround Mode
+
+        public static IntPtr IHandle;
+        private async Task BotsBackground()
+        {
+           // if (!_statusRunBot) return;
+            if (!_statusRunBot) return;
+            while (_statusRunBot)
+            {
+                await Task.Run(CheckColorStartTimeBackGround, _cToken);
+                await Task.Run(AutoClickBackGround, _cToken);
+                await Task.Run(CheckColorResultBackGround, _cToken);
+                await Task.Run(AddClickToBigRoad, _cToken);
+            }
+        }
+        private  void Bots_BackGround_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
+        {
+            if (Bots_BackGround.CancellationPending) return;
+            while (!Bots_BackGround.CancellationPending)
+            {
+                CheckColorStartTimeBackGround();
+                AutoClickBackGround();
+                CheckColorResultBackGround();
+                AddClickToBigRoad();
+            }
+        }
+        private void CheckColorStartTimeBackGround()
+        {
+            if (!_statusRunBot) return;
+            checked
+            {
+                try
+                {
+                    var bitmap = GetColor.GetColorString(IHandle, ValueForBot.PositionStart.X, ValueForBot.PositionStart.Y);
+                    var newColorStart = GetColor.Hex2Color(bitmap);
+                 
+                    ValueForBot.NewColorStart = newColorStart;
+
+
+                    //if (_statusRunBot && _statusRunningBot == 0 && ValueForBot.NewColorStart.R >= ValueForBot.ColorStart.R - 10 & ValueForBot.NewColorStart.R <= ValueForBot.ColorStart.R + 10 &  ValueForBot.NewColorStart.G >= ValueForBot.ColorStart.G - 10 & ValueForBot.NewColorStart.G <= ValueForBot.ColorStart.G + 10 & ValueForBot.NewColorStart.B >= ValueForBot.ColorStart.B - 10 & ValueForBot.NewColorStart.B <= ValueForBot.ColorStart.B + 10)
+                    if (_statusRunBot && _statusRunningBot == 0 && GetColor.ColorCompare(ValueForBot.NewColorStart, ValueForBot.ColorStart,10))
+                    {
+                        _statusRunningBot = 1;
+                        Thread.Sleep(200);
+                        Application.DoEvents();
+                    }
+
+                    //if (ValueForBot.NewColorStart.R >= ValueForBot.ColorStart.R - 10 & ValueForBot.NewColorStart.R <= ValueForBot.ColorStart.R + 10 & 
+                    //    ValueForBot.NewColorStart.G >= ValueForBot.ColorStart.G - 10 & ValueForBot.NewColorStart.G <= ValueForBot.ColorStart.G + 10 & 
+                    //    ValueForBot.NewColorStart.B >= ValueForBot.ColorStart.B - 10 & ValueForBot.NewColorStart.B <= ValueForBot.ColorStart.B + 10)
+
+                    _ready = GetColor.ColorCompare(ValueForBot.NewColorStart, ValueForBot.ColorStart, 10);
+                   
+                }
+                catch
+                {
+
+                }
+            }
+        }
+        private void AutoClickBackGround()
+        {
+            if (!_statusRunBot) return;
+            if (_statusRunningBot != 1) return;
+            _statusRunningBot = 100;
+            checked
+            {
+                if (BotValues.BettingSuggest.Count > 0)
+                {
+                    AutoClickBackGround(BotValues.BettingSuggest[BotValues.BettingSuggest.Count - 1], BotValues.Unit[BotValues.Unit.Count - 1]);
+                }
+
+                _statusRunningBot = 2;
+            }
+        }
+        private void AutoClickBackGround(short bettingSuggest, int lastUnit)
+        {
+            if (!_statusRunBot) return;
+            checked
+            {
+                if (_statusRunBot)
+                {
+
+                    lastUnit = lastUnit * ValueForBot.Chip;
+
+                    var chip1 = int.Parse(LayoutValues.Chip1);
+                    var chip2 = int.Parse(LayoutValues.Chip2);
+                    var chip3 = int.Parse(LayoutValues.Chip3);
+                    var chip4 = int.Parse(LayoutValues.Chip4);
+                    var chip5 = int.Parse(LayoutValues.Chip5);
+
+                    short amountChip1 = 0;
+                    short amountChip2 = 0;
+                    short amountChip3 = 0;
+                    short amountChip4 = 0;
+                    short amountChip5 = 0;
+                    _amountBetChip = "";
+                    if (lastUnit >= chip5)
+                    {
+                        amountChip5 = (short)Math.Floor((double)lastUnit / chip5);
+                        lastUnit -= amountChip5 * chip5;
+                        if (_amountBetChip == "")
+                        {
+                            _amountBetChip = chip5 + "x" + amountChip5;
+                        }
+                        else
+                        {
+                            _amountBetChip = "," + chip5 + "x" + amountChip5;
+                        }
+                    }
+                    if (lastUnit >= chip4)
+                    {
+                        amountChip4 = (short)Math.Floor((double)lastUnit / chip4);
+                        lastUnit -= amountChip4 * chip4;
+                        if (_amountBetChip == "")
+                        {
+                            _amountBetChip = chip4 + "x" + amountChip4;
+                        }
+                        else
+                        {
+                            _amountBetChip = "," + chip4 + "x" + amountChip4;
+                        }
+                    }
+                    if (lastUnit >= chip3)
+                    {
+                        amountChip3 = (short)Math.Floor((double)lastUnit / chip3);
+                        lastUnit -= amountChip3 * chip3;
+                        if (_amountBetChip == "")
+                        {
+                            _amountBetChip = chip3 + "x" + amountChip3;
+                        }
+                        else
+                        {
+                            ref var ptr = ref _amountBetChip;
+                            _amountBetChip = string.Concat(ptr, ",", chip3.ToString(), "x", amountChip3.ToString());
+                        }
+                    }
+                    if (lastUnit >= chip2)
+                    {
+                        amountChip2 = (short)Math.Floor((double)lastUnit / chip2);
+                        lastUnit -= amountChip2 * chip2;
+                        if (_amountBetChip == "")
+                        {
+                            _amountBetChip = chip2 + "x" + amountChip2;
+                        }
+                        else
+                        {
+                            ref var ptr = ref _amountBetChip;
+                            _amountBetChip = string.Concat(ptr, ",", chip2.ToString(), "x", amountChip2.ToString());
+                        }
+                    }
+                    if (lastUnit >= chip1)
+                    {
+                        amountChip1 = (short)Math.Floor((double)lastUnit / chip1);
+                        if (_amountBetChip == "")
+                        {
+                            _amountBetChip = chip1 + "x" + amountChip1;
+                        }
+                        else
+                        {
+                            ref var ptr = ref _amountBetChip;
+                            _amountBetChip = string.Concat(ptr, ",", chip1.ToString(), "x", amountChip1.ToString());
+                        }
+                    }
+
+                    if (amountChip5 > 0)
+                    {
+                        Win32Bot.ClickToBG(IHandle, ValueForBot.PositionChip5.X, ValueForBot.PositionChip5.Y);
+                        Thread.Sleep(200);
+                        int timesClick = amountChip5;
+                        for (var i = 1; i <= timesClick; i++)
+                        {
+                            ClickBettingBackGround(bettingSuggest);
+                            Thread.Sleep(700);
+
+                        }
+                    }
+                    if (amountChip4 > 0)
+                    {
+                        Win32Bot.ClickToBG(IHandle, ValueForBot.PositionChip4.X, ValueForBot.PositionChip4.Y);
+                        Thread.Sleep(200);
+                        int timesClick = amountChip4;
+                        for (var j = 1; j <= timesClick; j++)
+                        {
+                            ClickBettingBackGround(bettingSuggest);
+                            Thread.Sleep(700);
+                        }
+                    }
+                    if (amountChip3 > 0)
+                    {
+                        Win32Bot.ClickToBG(IHandle, ValueForBot.PositionChip3.X, ValueForBot.PositionChip3.Y);
+                        Thread.Sleep(200);
+                        int timesClick = amountChip3;
+                        for (var k = 1; k <= timesClick; k++)
+                        {
+                            ClickBettingBackGround(bettingSuggest);
+                            Thread.Sleep(700);
+                        }
+                    }
+                    if (amountChip2 > 0)
+                    {
+                        Win32Bot.ClickToBG(IHandle, ValueForBot.PositionChip2.X, ValueForBot.PositionChip2.Y);
+                        Thread.Sleep(200);
+                        int timesClick = amountChip2;
+                        for (var l = 1; l <= timesClick; l++)
+                        {
+                            ClickBettingBackGround(bettingSuggest);
+                            Thread.Sleep(700);
+                        }
+                    }
+                    if (amountChip1 > 0)
+                    {
+                        Win32Bot.ClickToBG(IHandle, ValueForBot.PositionChip1.X, ValueForBot.PositionChip1.Y);
+                        Thread.Sleep(200);
+                        int timesClick = amountChip1;
+                        for (var m = 1; m <= timesClick; m++)
+                        {
+                            ClickBettingBackGround(bettingSuggest);
+                            Thread.Sleep(700);
+                        }
+                    }
+
+
+                    //  ClickBetting(bettingSuggest);
+                    if (cbConfirmClick.CheckedState)
+                    {
+                        Thread.Sleep(1000);
+                        if (bettingSuggest == 1)
+                        {
+                            Win32Bot.ClickToBG(IHandle, ValueForBot.PositionConfirmPlayer.X, ValueForBot.PositionConfirmPlayer.Y);
+                            Thread.Sleep(100);
+                            Win32Bot.ClickToBG(IHandle, ValueForBot.PositionConfirmPlayer.X, ValueForBot.PositionConfirmPlayer.Y);
+                        }
+                        else if (bettingSuggest == 2)
+                        {
+                            Win32Bot.ClickToBG(IHandle, ValueForBot.PositionConfirmBanker.X, ValueForBot.PositionConfirmBanker.Y);
+                            Thread.Sleep(100);
+                            Win32Bot.ClickToBG(IHandle, ValueForBot.PositionConfirmBanker.X, ValueForBot.PositionConfirmBanker.Y);
+                        }
+                    }
+
+
+                    Thread.Sleep(100);
+                    dgvStatus[3, 5].Value = _amountBetChip;
+                }
+            }
+        }
+        private void ClickBettingBackGround(short bettingSuggest)
+        {
+            if (bettingSuggest == 1)
+            {
+                Win32Bot.ClickToBG(IHandle, ValueForBot.PositionPlayer.X, ValueForBot.PositionPlayer.Y);
+            }
+            else if (bettingSuggest == 2)
+            {
+                Win32Bot.ClickToBG(IHandle, ValueForBot.PositionBanker.X, ValueForBot.PositionBanker.Y);
+            }
+        }
+        private void CheckColorResultBackGround()
+        {
+            if (!_statusRunBot) return;
+            checked
+            {
+                try
+                {
+                    if (_statusRunningBot != 2) return;
+
+                    try
+                    {
+                        var bitmap = GetColor.GetColorString(IHandle, ValueForBot.PositionPlayer.X, ValueForBot.PositionPlayer.Y);
+                        var newColorPlayer = GetColor.Hex2Color(bitmap);
+                        ValueForBot.NewColorPlayer = newColorPlayer;
+                    }
+                    catch
+                    {
+                    }
+
+                    try
+                    {
+                        var bitmap = GetColor.GetColorString(IHandle, ValueForBot.PositionBanker.X, ValueForBot.PositionBanker.Y);
+                        var newColorBanker = GetColor.Hex2Color(bitmap);
+                        ValueForBot.NewColorBanker = newColorBanker;
+                    }
+                    catch
+                    {
+                    }
+
+                    try
+                    {
+                        var bitmap = GetColor.GetColorString(IHandle, ValueForBot.PositionTie.X, ValueForBot.PositionTie.Y);
+                        var newColorTie = GetColor.Hex2Color(bitmap);
+                        ValueForBot.NewColorTie = newColorTie;
+                    }
+                    catch
+                    {
+                    }
+
+                    if (_statusRunBot)
+                    {
+                        //if ((ValueForBot.NewColorPlayer.R >= ValueForBot.ColorPlayer.R + 15 - 10 & 
+                        //     ValueForBot.NewColorPlayer.R <= ValueForBot.ColorPlayer.R + 15 + 10) &
+                        //    (ValueForBot.NewColorPlayer.G >= ValueForBot.ColorPlayer.G + 45 - 10 & 
+                        //     ValueForBot.NewColorPlayer.G <= ValueForBot.ColorPlayer.G + 45 + 10) &
+                        //    (ValueForBot.NewColorPlayer.B >= ValueForBot.ColorPlayer.B - 10 & 
+                        //     ValueForBot.NewColorPlayer.B <= ValueForBot.ColorPlayer.B + 10) &
+                        //    !_ready)
+
+                        //if (newColor.R >= oldColor.R - colorRMore & newColor.R <= oldColor.R + colorRLess &
+                        //    newColor.G >= oldColor.G - colorGMore & newColor.G <= oldColor.G + colorGLess &
+                        //    newColor.B >= oldColor.B - colorBMore & newColor.B <= oldColor.B + colorBLess)
+                        
+                            if (GetColor.ColorCompare(ValueForBot.NewColorPlayer, ValueForBot.ColorPlayer, 
+                                5,25, 
+                                35,55,
+                                10,10,
+                                GetColor.CompareMode.Increase, GetColor.CompareMode.Increase,
+                                GetColor.CompareMode.Increase, GetColor.CompareMode.Increase,
+                                GetColor.CompareMode.Delete, GetColor.CompareMode.Increase) &
+                            !_ready)
+                        {
+                            _resultType = 1;
+                            goto skip;
+                        }
+
+                        //if ((ValueForBot.NewColorBanker.R >= ValueForBot.ColorBanker.R + 15 - 10 &
+                        //     ValueForBot.NewColorBanker.R <= ValueForBot.ColorBanker.R + 15 + 10) &
+                        //    (ValueForBot.NewColorBanker.G >= ValueForBot.ColorBanker.G + 45 - 10 & 
+                        //     ValueForBot.NewColorBanker.G <= ValueForBot.ColorBanker.G + 45 + 10) &
+                        //    (ValueForBot.NewColorBanker.B >= ValueForBot.ColorBanker.B - 10 & 
+                        //     ValueForBot.NewColorBanker.B <= ValueForBot.ColorBanker.B + 10) &
+                        //    !_ready)
+                        if (GetColor.ColorCompare(ValueForBot.NewColorBanker, ValueForBot.ColorBanker,
+                                5, 25,
+                                35, 55,
+                                10, 10,
+                                GetColor.CompareMode.Increase, GetColor.CompareMode.Increase,
+                                GetColor.CompareMode.Increase, GetColor.CompareMode.Increase,
+                                GetColor.CompareMode.Delete, GetColor.CompareMode.Increase) &
+                            !_ready)
+                        {
+                            _resultType = 2;
+                            goto skip;
+                        }
+
+                        //if (ValueForBot.NewColorTie.R >= ValueForBot.ColorTie.R + 15 - 10 &
+                        //    ValueForBot.NewColorTie.R <= ValueForBot.ColorTie.R + 15 + 10 &
+                        //    ValueForBot.NewColorTie.G >= ValueForBot.ColorTie.G + 45 - 10 &
+                        //    ValueForBot.NewColorTie.G <= ValueForBot.ColorTie.G + 45 + 10 &
+                        //    ValueForBot.NewColorTie.B >= ValueForBot.ColorTie.B - 10 & 
+                        //    ValueForBot.NewColorTie.B <= ValueForBot.ColorTie.B + 10 &
+                        //    !_ready)
+                        if (GetColor.ColorCompare(ValueForBot.NewColorTie, ValueForBot.ColorTie,
+                                5, 25,
+                                35, 55,
+                                10, 10,
+                                GetColor.CompareMode.Increase, GetColor.CompareMode.Increase,
+                                GetColor.CompareMode.Increase, GetColor.CompareMode.Increase,
+                                GetColor.CompareMode.Delete, GetColor.CompareMode.Increase) &
+                            !_ready)
+                        {
+                            _resultType = 0;
+                        }
+
+                        skip:
+
+                        if (_resultType == 1 | _resultType == 2 | _resultType == 0)
+                        {
+                            _statusRunningBot = 3;
+                            Thread.Sleep(100);
+                            Application.DoEvents();
+                        }
+                        //Thread.Sleep(50);
+                        //Application.DoEvents();
+                    }
+
+
+                }
+                catch
+                {
+
+                }
+            }
+        }
+        #endregion
+        private void AddClickToBigRoad()
         {
             if (!_statusRunBot) return;
             if (_statusRunningBot != 3 & (_resultType != 1 | _resultType != 2 | _resultType != 0)) return;
@@ -2502,27 +2912,25 @@ namespace AutoBaccarat
             checked
             {
                 _timeStart = 0;
-
-
                 if (_statusRunBot)
                 {
-                    if (stopRound != 0 && stopRound >= BotValues.Result.Count)
+                    if (stopRound != 0 && stopRound <= BotValues.Result.Count)
                     {
-                        ClickStart();
+                       ClickStart();
                         return;
                     }
 
-                    if (stopWin != 0 && stopWin >= BotValues.TotalWin)
+                    if (stopWin != 0 && stopWin <= BotValues.TotalWin)
                     {
                         ClickStart();
                         return;
                     }
-                    if (stopLose != 0 && stopLose >= BotValues.TotalLose)
+                    if (stopLose != 0 && stopLose <= BotValues.TotalLose)
                     {
                         ClickStart();
                         return;
                     }
-                    if (stopMore != 0 && stopMore >= BotValues.LastMoneyBalance)
+                    if (stopMore != 0 && stopMore <= BotValues.LastMoneyBalance)
                     {
                         ClickStart();
                         return;
@@ -2532,30 +2940,14 @@ namespace AutoBaccarat
                         ClickStart();
                         return;
                     }
-
                 }
 
                 _statusRunningBot = 0;
             }
         }
-
-        #endregion
-
-        #region BackGround Mode
-
-        private void Bots_BackGround_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e)
-        {
-            if (Bots_BackGround.CancellationPending) return;
-            while (!Bots_BackGround.CancellationPending)
-            {
-              
-            }
-        }
-
-        #endregion
         private void TmTimeRunning_Tick(object sender, EventArgs e)
         {
-            dgvStatus[2, 0].Value = CalculateInt2Time(_timeRunning);
+            dgvStatus[2, 0].Value =  CalculateInt2Time(_timeRunning);
             ref var ptr = ref _timeStart;
             checked
             {
@@ -2563,10 +2955,9 @@ namespace AutoBaccarat
 
                 ptr = ref _timeRunning;
                 _timeRunning = ptr + 1;
-
             }
         }
-        public static string CalculateInt2Time(int value)
+        private string CalculateInt2Time(int value)
         {
             var sec = value % 60;
             checked
@@ -2576,8 +2967,7 @@ namespace AutoBaccarat
                 return string.Concat(hr.ToString("00"), ":", min.ToString("00"), ":", sec.ToString("00"));
             }
         }
-
-
+        
         #endregion
 
         #region Languages
