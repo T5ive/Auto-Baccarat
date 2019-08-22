@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using AutoBaccarat.Properties;
 using AutoBaccarat.Setting;
-using TFive_Class;
+using King99_Class;
 
 namespace AutoBaccarat
 {
@@ -549,7 +549,7 @@ namespace AutoBaccarat
                     var column = e.ColumnIndex;
                     var row = e.RowIndex;
                     var oldValue = dgvSetting[column, row].Value.ToString();
-                    var input = TFiveInputBox.Show(stringLoader.InputChip, oldValue, true);
+                    var input = King99InputBox.Show(stringLoader.InputChip, oldValue, true);
 
                     if (!string.IsNullOrEmpty(input) && !string.IsNullOrWhiteSpace(input))
                     {

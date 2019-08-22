@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace TFive_Class
+namespace King99_Class
 {
-    public sealed class TFiveInputBox : Form
+    public sealed class King99InputBox : Form
     {
         
 
@@ -18,7 +18,7 @@ namespace TFive_Class
         private bool txtPaintInvalidated;
         private string btnOK = @"OK";
         private string btnCancel = @"Cancel";
-        private TFiveInputBox()
+        private King99InputBox()
         {
             
             var pl = new Panel { Dock = DockStyle.Fill };
@@ -30,7 +30,7 @@ namespace TFive_Class
 
 
 
-            lblMessage = new Label { Font = new Font("Segoe UI", 10), ForeColor = Color.FromArgb(30, 144, 255), AutoSize = true };
+            lblMessage = new Label { Font = new Font("Kanit", 10), ForeColor = Color.White, AutoSize = true };
             lblMessage.MouseDown += _MouseDown;
             lblMessage.MouseMove += _MouseMove;
             lblMessage.MouseUp += _MouseUp;
@@ -42,7 +42,7 @@ namespace TFive_Class
                 Width = 360,
                 Height = 28,
                 Padding = new Padding(5),
-                BackColor = Color.FromArgb(240, 240, 240),
+                BackColor = Color.FromArgb(82, 82, 82),
                 Margin = new Padding(0, 15, 0, 0)
             };
             txtPl.Paint += txtPl_Paint;
@@ -51,13 +51,13 @@ namespace TFive_Class
             {
                 Dock = DockStyle.Fill,
                 BorderStyle = BorderStyle.None,
-                Font = new Font("Segoe UI", 9),
-                ForeColor = Color.FromArgb(0, 100, 255)
+                Font = new Font("Kanit", 9),
+                ForeColor = Color.White
                 
             };
             txtInput.KeyDown += txtInput_KeyDown;
             txtInput.KeyPress += txtInput_KeyPress;
-            txtInput.BackColor = Color.FromArgb(255, 255, 255);
+            txtInput.BackColor = Color.FromArgb(82, 82, 82);
             txtInput.Multiline = true;
             txtPl.Controls.Add(txtInput);
 
@@ -75,10 +75,17 @@ namespace TFive_Class
             var btnCancel = new Button
             {
                 Text = this.btnCancel,
-                ForeColor = Color.FromArgb(30, 144, 255),
-                Font = new Font("Segoe UI", 8),
+                ForeColor = Color.White,
+                Font = new Font("Kanit", 8),
                 Padding = new Padding(3),
                 FlatStyle = FlatStyle.Flat,
+                BackColor = Color.FromArgb(202, 62, 71),
+                FlatAppearance =
+                {
+                    BorderSize = 0,
+                    MouseDownBackColor = Color.FromArgb(202, 62, 71),
+                    MouseOverBackColor = Color.FromArgb(255, 60, 75)
+                },
                 Height = 30
             };
             btnCancel.Click += btnCancel_Click;
@@ -86,9 +93,16 @@ namespace TFive_Class
             var btnOK = new Button
             {
                 Text = this.btnOK,
-                ForeColor = Color.FromArgb(30, 144, 255),
-                Font = new Font("Segoe UI", 8),
+                ForeColor = Color.White,
+                Font = new Font("Kanit", 8),
                 Padding = new Padding(3),
+                BackColor = Color.FromArgb(202, 62, 71),
+                FlatAppearance =
+                {
+                    BorderSize = 0,
+                    MouseDownBackColor = Color.FromArgb(202, 62, 71),
+                    MouseOverBackColor = Color.FromArgb(255, 60, 75)
+                },
                 FlatStyle = FlatStyle.Flat,
                 Height = 30
             };
@@ -107,7 +121,7 @@ namespace TFive_Class
             Controls.Add(pl);
             Controls.Add(flpButtons);
             FormBorderStyle = FormBorderStyle.None;
-            BackColor = Color.FromArgb(255, 255, 255);
+            BackColor = Color.FromArgb(82, 82, 82);
             StartPosition = FormStartPosition.CenterScreen;
             Padding = new Padding(20);
             Width = 400;
@@ -206,8 +220,8 @@ namespace TFive_Class
 
             var g = e.Graphics;
             var rect = new Rectangle(new Point(0, 0), new Size(pl.Width - 1, pl.Height - 1));
-            var pen = new Pen(Color.FromArgb(30, 144, 255)) { Width = 3 };
-            g.FillRectangle(new SolidBrush(Color.FromArgb(255, 255, 255)), rect);
+            var pen = new Pen(Color.FromArgb(255, 60, 75)) { Width = 3 };
+            g.FillRectangle(new SolidBrush(Color.FromArgb(82, 82, 82)), rect);
             g.DrawRectangle(pen, rect);
         }
 
@@ -233,20 +247,20 @@ namespace TFive_Class
             }
         }
 
-        /// <summary>
-        /// Example: string input = TFiveInputBox.Show("Please enter your name");
-        /// </summary>
-        /// <param name="message"> Title</param>
-        /// <returns></returns>
-        public static string Show(string message)
-        {
-            using (var box = new TFiveInputBox { lblMessage = { Text = message } })
-            {
-                box.ShowDialog();
+        ///// <summary>
+        ///// Example: string input = TFiveInputBox.Show("Please enter your name");
+        ///// </summary>
+        ///// <param name="message"> Title</param>
+        ///// <returns></returns>
+        //public static string Show(string message)
+        //{
+        //    using (var box = new King99InputBox { lblMessage = { Text = message } })
+        //    {
+        //        box.ShowDialog();
 
-                return box._txtInput;
-            }
-        }
+        //        return box._txtInput;
+        //    }
+        //}
 
         private static string _oldValue;
         private static bool _numOnly;
@@ -254,43 +268,43 @@ namespace TFive_Class
         {
             _numOnly = show;
             _oldValue = oldValue;
-            using (var box = new TFiveInputBox { lblMessage = { Text = message },txtInput = { Text = oldValue}})
+            using (var box = new King99InputBox { lblMessage = { Text = message },txtInput = { Text = oldValue}})
             {
                 box.ShowDialog();
 
                 return box._txtInput;
             }
         }
-        public static string Show(string message, int maxLength)
-        {
-            using (var box = new TFiveInputBox { lblMessage = { Text = message }, txtInput = { MaxLength = maxLength } })
-            {
-                box.ShowDialog();
+        //public static string Show(string message, int maxLength)
+        //{
+        //    using (var box = new King99InputBox { lblMessage = { Text = message }, txtInput = { MaxLength = maxLength } })
+        //    {
+        //        box.ShowDialog();
 
-                return box._txtInput;
-            }
-        }
-        public string Show(string message, string OK)
-        {
-            btnOK = OK;
-            using (var box = new TFiveInputBox { lblMessage = { Text = message } })
-            {
-                box.ShowDialog();
+        //        return box._txtInput;
+        //    }
+        //}
+        //public string Show(string message, string OK)
+        //{
+        //    btnOK = OK;
+        //    using (var box = new King99InputBox { lblMessage = { Text = message } })
+        //    {
+        //        box.ShowDialog();
 
-                return box._txtInput;
-            }
-        }
-        public string Show(string message, string OK, string Cancel)
-        {
-            btnOK = OK;
-            btnCancel = Cancel;
-            using (var box = new TFiveInputBox { lblMessage = { Text = message } })
-            {
-                box.ShowDialog();
+        //        return box._txtInput;
+        //    }
+        //}
+        //public string Show(string message, string OK, string Cancel)
+        //{
+        //    btnOK = OK;
+        //    btnCancel = Cancel;
+        //    using (var box = new King99InputBox { lblMessage = { Text = message } })
+        //    {
+        //        box.ShowDialog();
 
-                return box._txtInput;
-            }
-        }
+        //        return box._txtInput;
+        //    }
+        //}
 
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -298,7 +312,7 @@ namespace TFive_Class
 
             var g = e.Graphics;
             var rect = new Rectangle(new Point(0, 0), new Size(Width - 1, Height - 1));
-            var pen = new Pen(Color.FromArgb(0, 151, 251));
+            var pen = new Pen(Color.FromArgb(255, 60, 75));
 
             g.DrawRectangle(pen, rect);
         }
@@ -309,7 +323,7 @@ namespace TFive_Class
 
          //   ClientSize = new Size(284, 261);
             ControlBox = false;
-            Name = "TFiveInputBox";
+            Name = "King99InputBox";
             ShowIcon = false;
             ShowInTaskbar = false;
             TopMost = true;

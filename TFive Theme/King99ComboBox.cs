@@ -2,28 +2,29 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using King99_Theme;
 
-namespace TFive
+namespace King99
 {
-    public sealed class TFiveComboBox : ComboBox
+    public sealed class King99ComboBox : ComboBox
     {
 
         #region Variables
 
-        private int _StartIndex;
-        private Color _HoverSelectionColor = Color.FromArgb(202, 62, 71);
-        private Color _BGColor = Color.FromArgb(82, 82, 82);
+        private int _startIndex;
+        private Color _hoverSelectionColor = Color.FromArgb(202, 62, 71);
+        private Color _bgColor = Color.FromArgb(82, 82, 82);
         #endregion
         #region Custom Properties
         public int StartIndex
         {
-            get => _StartIndex;
+            get => _startIndex;
             set
             {
-                _StartIndex = value;
+                _startIndex = value;
                 try
                 {
-                    base.SelectedIndex = value;
+                    SelectedIndex = value;
                 }
                 catch
                 {
@@ -33,43 +34,37 @@ namespace TFive
         }
         public Color HoverSelectionColor
         {
-            get => _HoverSelectionColor;
+            get => _hoverSelectionColor;
             set
             {
-                _HoverSelectionColor = value;
+                _hoverSelectionColor = value;
                 Invalidate();
             }
         }
-        public Color BGColor
+        public Color BgColor
         {
-            get => _BGColor;
+            get => _bgColor;
             set
             {
-                _BGColor = value;
+                _bgColor = value;
                 Invalidate();
             }
         }
-        int _Value = 5;
+        int _value = 5;
         public int Curv
         {
             get
             {
-                var value = _Value;
-                int Value;
-                if (value != 0)
-                {
-                    Value = _Value;
-                }
-                else
-                {
-                    Value = 0;
-                }
-                return Value;
+                var value = _value;
+                return value != 0 ? _value : 0;
             }
             set
             {
-                var num = value;
-                _Value = value;
+                if (value == 0)
+                {
+                    value = 1;
+                }
+                _value = value;
                 Invalidate();
             }
         }
@@ -77,14 +72,10 @@ namespace TFive
         #region EventArgs
         protected override void OnDrawItem(DrawItemEventArgs e)
         {
-            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
-            {
-                e.Graphics.FillRectangle(new SolidBrush(_HoverSelectionColor), e.Bounds);
-            }
-            else
-            {
-                e.Graphics.FillRectangle(new SolidBrush(_BGColor), e.Bounds);
-            }
+            e.Graphics.FillRectangle(
+                (e.State & DrawItemState.Selected) == DrawItemState.Selected
+                    ? new SolidBrush(_hoverSelectionColor)
+                    : new SolidBrush(_bgColor), e.Bounds);
 
             if (e.Index != -1)
             {
@@ -107,7 +98,7 @@ namespace TFive
 
         #endregion
 
-        public TFiveComboBox()
+        public King99ComboBox()
         {
             SetStyle((ControlStyles)139286, true);
             SetStyle(ControlStyles.Selectable, false);
@@ -120,7 +111,8 @@ namespace TFive
             Size = new Size(135, 31);
             ItemHeight = 20;
             DropDownHeight = 100;
-            Font = new Font("Segoe UI", 11, FontStyle.Regular);
+            // Font = CustomFont.GetCustomFont(11);
+            Font = new Font("Kanit", 11, FontStyle.Regular);
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -131,22 +123,21 @@ namespace TFive
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
             // Create a curvy border
-            var GP = RoundRectangle.RoundRect(0, 0, Width - 1, Height - 1, _Value);
+            var gp = RoundRectangle.RoundRect(0, 0, Width - 1, Height - 1, _value);
             // Fills the body of the rectangle with a gradient
-            var LGB = new LinearGradientBrush(
+            var lgb = new LinearGradientBrush(
                 ClientRectangle,
                 BackColor,
                 BackColor,
-                //Color.FromArgb(240, 240, 240),
-                //Color.FromArgb(240, 240, 240),
                 90f);
 
-            e.Graphics.SetClip(GP);
-            e.Graphics.FillRectangle(LGB, ClientRectangle);
+            e.Graphics.SetClip(gp);
+            e.Graphics.FillRectangle(lgb, ClientRectangle);
             e.Graphics.ResetClip();
 
             // Draw rectangle border
-            e.Graphics.DrawPath(new Pen(Color.FromArgb(255, 60, 75)), GP);
+            e.Graphics.DrawPath(new Pen(Color.FromArgb(255, 60, 75)), gp);
+
             // Draw string
             //e.Graphics.DrawString(Text, Font, new SolidBrush(Color.FromArgb(202, 62, 71)), new Rectangle(3, 0, Width - 20, Height), new StringFormat
             e.Graphics.DrawString(Text, Font, new SolidBrush(ForeColor), new Rectangle(10, 0, Width - 20, Height), new StringFormat
@@ -161,8 +152,8 @@ namespace TFive
             e.Graphics.DrawLine(new Pen(Color.FromArgb(202, 62, 71), 2), new Point(Width - 14, 14), new Point(Width - 10, 10));
             e.Graphics.DrawLine(new Pen(Color.FromArgb(202, 62, 71)), new Point(Width - 14, 15), new Point(Width - 14, 14));
 
-            GP.Dispose();
-            LGB.Dispose();
+            gp.Dispose();
+            lgb.Dispose();
         }
     }
 }

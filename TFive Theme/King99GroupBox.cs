@@ -2,23 +2,25 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using King99_Theme;
 
-namespace TFive
+namespace King99
 {
-    public sealed class TFiveGroupBox : ContainerControl
+    public sealed class King99GroupBox : ContainerControl
     {
-        private Color _BGColor = Color.FromArgb(240, 240, 240);
-        public Color BGColor
+        private Color _bgColor = Color.White;
+        public Color BgColor
         {
-            get => _BGColor;
+            get => _bgColor;
             set
             {
-                _BGColor = value;
+                _bgColor = value;
                 Invalidate();
             }
         }
-        int _Value = 1;
-        int _Value2 = 1;
+
+        private int _value = 1;
+        private int _value2 = 1;
 
         protected override void OnTextChanged(EventArgs e)
         {
@@ -30,17 +32,21 @@ namespace TFive
         {
             get
             {
-                if (_Value == 0)
+                if (_value == 0)
                 {
-                    _Value = 1;
+                    _value = 1;
                 }
-                var value = _Value;
-                var Value = value != 0 ? _Value : 0;
+                var value = _value;
+                var Value = value != 0 ? _value : 0;
                 return Value;
             }
             set
             {
-                _Value = value;
+                if (value == 0)
+                {
+                    value = 1;
+                }
+                _value = value;
                 Invalidate();
             }
         }
@@ -48,21 +54,25 @@ namespace TFive
         {
             get
             {
-                if (_Value2 == 0)
+                if (_value2 == 0)
                 {
-                    _Value2 = 1;
+                    _value2 = 1;
                 }
-                var value = _Value2;
-                var Value = value != 0 ? _Value2 : 0;
+                var value = _value2;
+                var Value = value != 0 ? _value2 : 0;
                 return Value;
             }
             set
             {
-                _Value2 = value;
+                if (value == 0)
+                {
+                    value = 1;
+                }
+                _value2 = value;
                 Invalidate();
             }
         }
-        public TFiveGroupBox()
+        public King99GroupBox()
         {
             SetStyle(ControlStyles.UserPaint | ControlStyles.SupportsTransparentBackColor, true);
             BackColor = Color.Transparent;
@@ -70,6 +80,8 @@ namespace TFive
             Size = new Size(212, 104);
             MinimumSize = new Size(136, 50);
             Padding = new Padding(5, 28, 5, 5);
+            //  Font = CustomFont.GetCustomFont(11);
+            Font = new Font("Kanit", 11, FontStyle.Regular);
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -85,16 +97,16 @@ namespace TFive
             G.SmoothingMode = SmoothingMode.HighQuality;
 
             // Draw the body of the GroupBox
-            G.FillPath(new SolidBrush(_BGColor), RoundRectangle.RoundRect(new Rectangle(1, 12, Width - 3, box.Height - 1), _Value));
+            G.FillPath(new SolidBrush(_bgColor), RoundRectangle.RoundRect(new Rectangle(1, 12, Width - 3, box.Height - 1), _value));
             // Draw the border of the GroupBox
-            G.DrawPath(new Pen(Color.FromArgb(202, 62, 71)), RoundRectangle.RoundRect(new Rectangle(1, 12, Width - 3, Height - 13), _Value));
+            G.DrawPath(new Pen(Color.FromArgb(202, 62, 71)), RoundRectangle.RoundRect(new Rectangle(1, 12, Width - 3, Height - 13), _value));
 
             // Draw the background of the title box
-            G.FillPath(new SolidBrush(_BGColor), RoundRectangle.RoundRect(titleBox, 1));
+            G.FillPath(new SolidBrush(_bgColor), RoundRectangle.RoundRect(titleBox, 1));
             // Draw the border of the title box
-            G.DrawPath(new Pen(Color.FromArgb(202, 62, 71)), RoundRectangle.RoundRect(titleBox, _Value2));
+            G.DrawPath(new Pen(Color.FromArgb(202, 62, 71)), RoundRectangle.RoundRect(titleBox, _value2));
             // Draw the specified string from 'Text' property inside the title box
-            G.DrawString(Text, new Font("Segoe UI", 11, FontStyle.Regular), new SolidBrush(Color.FromArgb(255,255,255)), titleBox, new StringFormat
+            G.DrawString(Text, Font, new SolidBrush(Color.FromArgb(255,255,255)), titleBox, new StringFormat
             {
                 Alignment = StringAlignment.Center,
                 LineAlignment = StringAlignment.Center

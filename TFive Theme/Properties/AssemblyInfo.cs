@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("TFive Theme")]
+[assembly: AssemblyTitle("King99 Theme")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("TFive Theme")]
-[assembly: AssemblyCopyright("Copyright © TFive 2019")]
+[assembly: AssemblyProduct("King99 Theme")]
+[assembly: AssemblyCopyright("Copyright © King99 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -7,8 +7,8 @@
     <ProjectGuid>{F61532F4-3B0A-46C9-B618-9DE4F8063E1F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TFive_Theme</RootNamespace>
-    <AssemblyName>TFive Theme</AssemblyName>
+    <RootNamespace>King99_Theme</RootNamespace>
+    <AssemblyName>King99 Theme</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="ColorTable.cs" />
     <Compile Include="ControlRenderer.cs" />
+    <Compile Include="CustomFont.cs" />
     <Compile Include="DefaultCColorTable.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -54,116 +55,60 @@
     <Compile Include="RoundRectangle.cs" />
     <Compile Include="TFive.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TFiveAlertBox.cs">
+    <Compile Include="TFiveAlertBox.cs" />
+    <Compile Include="TFiveBatteryStatus.cs" />
+    <Compile Include="TFiveButton.cs" />
+    <Compile Include="TFiveChatBubble_L.cs" />
+    <Compile Include="TFiveChatBubble_R.cs" />
+    <Compile Include="King99Checkbox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TFiveBatteryStatus.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveChatBubble_L.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveChatBubble_R.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveCheckbox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveCircularPictureBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="TFiveCircularPictureBox.cs" />
     <Compile Include="TFiveColorTable.cs" />
-    <Compile Include="TFiveComboBox.cs">
+    <Compile Include="King99ComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TFiveContextMenuStrip.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveControlBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="TFiveContextMenuStrip.cs" />
+    <Compile Include="TFiveControlBox.cs" />
     <Compile Include="Elipse.cs" />
-    <Compile Include="TFiveEmbossLabel.cs">
+    <Compile Include="TFiveEmbossLabel.cs" />
+    <Compile Include="TFiveGradientPanel.cs" />
+    <Compile Include="King99GroupBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TFiveGradientPanel.cs">
+    <Compile Include="TFiveHeaderLabel.cs" />
+    <Compile Include="TFiveIconInfo.cs" />
+    <Compile Include="TFiveIconTick.cs" />
+    <Compile Include="TFiveLabel.cs" />
+    <Compile Include="TFiveLineNumber.cs" />
+    <Compile Include="TFiveLinkLabel.cs" />
+    <Compile Include="TFiveMarquee.cs" />
+    <Compile Include="TFiveMenuStrip.cs" />
+    <Compile Include="King99NotificationNumber.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TFiveGroupBox.cs">
+    <Compile Include="TFiveNumericUpDown.cs" />
+    <Compile Include="TFiveOnlyCheck.cs" />
+    <Compile Include="TFivePictureBox.cs" />
+    <Compile Include="TFiveProgressBar.cs" />
+    <Compile Include="TFiveProgressIndicator.cs" />
+    <Compile Include="King99RadioButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TFiveHeaderLabel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveIconInfo.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveIconTick.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveLabel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveLineNumber.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveLinkLabel.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveMarquee.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveMenuStrip.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveNotificationNumber.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveNumericUpDown.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveOnlyCheck.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFivePictureBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveProgressBar.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveProgressIndicator.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveRadioButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveRichBoxNumLine.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+    <Compile Include="TFiveRichBoxNumLine.cs" />
     <Compile Include="TFiveRichBoxNumLine.Designer.cs">
       <DependentUpon>TFiveRichBoxNumLine.cs</DependentUpon>
     </Compile>
-    <Compile Include="TFiveSeparator.cs">
+    <Compile Include="King99Separator.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TFiveTabControl.cs">
+    <Compile Include="TFiveTabControl.cs" />
+    <Compile Include="King99TextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="TFiveTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveTheme.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveToggle.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="TFiveTrackBar.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="TFiveTheme.cs" />
+    <Compile Include="TFiveToggle.cs" />
+    <Compile Include="TFiveTrackBar.cs" />
     <Compile Include="ThemeControl.cs">
       <SubType>Component</SubType>
     </Compile>

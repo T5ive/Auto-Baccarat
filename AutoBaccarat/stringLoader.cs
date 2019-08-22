@@ -1,4 +1,8 @@
 ﻿
+using System.Drawing;
+using System.Drawing.Text;
+using System.Windows.Forms;
+
 namespace AutoBaccarat
 {
   public static class stringLoader

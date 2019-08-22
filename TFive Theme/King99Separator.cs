@@ -1,16 +1,15 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 
-namespace TFive
+namespace King99
 {
-    public sealed class TFiveSeparator : Control
+    public sealed class King99Separator : Control
     {
 
-        public TFiveSeparator()
+        public King99Separator()
         {
             SetStyle(ControlStyles.ResizeRedraw, true);
             Size = new Size(120, 10);
-            BackColor = Color.FromArgb(240, 240, 240);
         }
 
         protected override void OnPaint(PaintEventArgs e)

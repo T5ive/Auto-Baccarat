@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace TFive_UI
+namespace King99_UI
 {
-    public class TFiveUI
+    public class King99UI
     {
     }
 }

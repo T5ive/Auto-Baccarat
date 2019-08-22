@@ -16,7 +16,7 @@ namespace AutoBaccarat
         {
             InitializeComponent();
             var cv = new CursorConverter();
-            CurTarget = (Cursor)cv.ConvertFrom(TFive_UI.Properties.Resources.curTarget);
+            CurTarget = (Cursor)cv.ConvertFrom(King99_UI.Properties.Resources.curTarget);
         }
 
         #region FormLoad/Save
@@ -31,11 +31,11 @@ namespace AutoBaccarat
             {
                 Location = Settings.Default.LocationColorInfo;
             }
-            bitmapFind = TFive_UI.Properties.Resources.bmpFind;
-            bitmapFind2 = TFive_UI.Properties.Resources.bmpFinda;
+            bitmapFind = King99_UI.Properties.Resources.bmpFind;
+            bitmapFind2 = King99_UI.Properties.Resources.bmpFinda;
             newCursor = CurTarget;
 
-            tFiveGroupBox1.Text = Mode == 0 ? stringLoader.NormalMode : stringLoader.BackgroundMode;
+            _tKing99GroupBox1.Text = Mode == 0 ? stringLoader.NormalMode : stringLoader.BackgroundMode;
         }
         private void FrmColorInfo_FormClosing(object sender, FormClosingEventArgs e)
         {

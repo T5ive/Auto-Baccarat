@@ -7,8 +7,8 @@
     <ProjectGuid>{B4C543E6-F49D-403D-8275-AB212DF3039D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TFive_UI</RootNamespace>
-    <AssemblyName>TFive UI</AssemblyName>
+    <RootNamespace>King99_UI</RootNamespace>
+    <AssemblyName>King99 UI</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -42,7 +42,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="TFiveUI.cs" />
+    <Compile Include="King99UI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -51,9 +51,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\T5 - Text720.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bmpFind.bmp" />
@@ -66,15 +63,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\curTarget.cur" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\B.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\P.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\T.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

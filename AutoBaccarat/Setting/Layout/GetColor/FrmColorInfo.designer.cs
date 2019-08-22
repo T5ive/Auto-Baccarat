@@ -33,30 +33,30 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tm_mouse = new System.Windows.Forms.Timer(this.components);
-            this.tFive_HeaderLabel1 = new TFive.TFiveHeaderLabel();
+            this.tFive_HeaderLabel1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picTarget = new System.Windows.Forms.PictureBox();
-            this.txt_class = new TFive.TFiveTextBox();
+            this.txt_class = new King99.King99TextBox();
             this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txt_color = new TFive.TFiveTextBox();
-            this.tFive_Label5 = new TFive.TFiveLabel();
-            this.txt_posiY = new TFive.TFiveTextBox();
+            this.txt_color = new King99.King99TextBox();
+            this.tFive_Label5 = new System.Windows.Forms.Label();
+            this.txt_posiY = new King99.King99TextBox();
             this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txt_posiX = new TFive.TFiveTextBox();
-            this.tFive_Label4 = new TFive.TFiveLabel();
-            this.txt_title = new TFive.TFiveTextBox();
-            this.lb_status = new TFive.TFiveLabel();
-            this.tFive_Label3 = new TFive.TFiveLabel();
+            this.txt_posiX = new King99.King99TextBox();
+            this.tFive_Label4 = new System.Windows.Forms.Label();
+            this.txt_title = new King99.King99TextBox();
+            this.lb_status = new System.Windows.Forms.Label();
+            this.tFive_Label3 = new System.Windows.Forms.Label();
             this.panel_color = new System.Windows.Forms.Panel();
-            this.tFive_Separator1 = new TFive.TFiveSeparator();
-            this.tFive_Label2 = new TFive.TFiveLabel();
-            this.tFive_Label9 = new TFive.TFiveLabel();
+            this._tKing99Separator1 = new King99.King99Separator();
+            this.tFive_Label2 = new System.Windows.Forms.Label();
+            this.tFive_Label9 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.tFiveGroupBox1 = new TFive.TFiveGroupBox();
+            this._tKing99GroupBox1 = new King99.King99GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTarget)).BeginInit();
             this.bunifuCards1.SuspendLayout();
-            this.tFiveGroupBox1.SuspendLayout();
+            this._tKing99GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -100,7 +100,7 @@
             this.panel1.Controls.Add(this.lb_status);
             this.panel1.Controls.Add(this.tFive_Label3);
             this.panel1.Controls.Add(this.panel_color);
-            this.panel1.Controls.Add(this.tFive_Separator1);
+            this.panel1.Controls.Add(this._tKing99Separator1);
             this.panel1.Controls.Add(this.tFive_Label2);
             this.panel1.Controls.Add(this.tFive_Label9);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -133,7 +133,7 @@
             this.txt_class.Name = "txt_class";
             this.txt_class.ReadOnly = false;
             this.txt_class.Size = new System.Drawing.Size(189, 31);
-            this.txt_class.Style = TFive.TFiveTextBox._Num.TextNum;
+            this.txt_class.Style = King99.King99TextBox._Num.TextNum;
             this.txt_class.TabIndex = 42;
             this.txt_class.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_class.UseSystemPasswordChar = false;
@@ -187,7 +187,7 @@
             this.txt_color.Name = "txt_color";
             this.txt_color.ReadOnly = true;
             this.txt_color.Size = new System.Drawing.Size(150, 31);
-            this.txt_color.Style = TFive.TFiveTextBox._Num.TextNum;
+            this.txt_color.Style = King99.King99TextBox._Num.TextNum;
             this.txt_color.TabIndex = 4;
             this.txt_color.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_color.UseSystemPasswordChar = false;
@@ -216,7 +216,7 @@
             this.txt_posiY.Name = "txt_posiY";
             this.txt_posiY.ReadOnly = false;
             this.txt_posiY.Size = new System.Drawing.Size(60, 31);
-            this.txt_posiY.Style = TFive.TFiveTextBox._Num.NumberOnly;
+            this.txt_posiY.Style = King99.King99TextBox._Num.NumberOnly;
             this.txt_posiY.TabIndex = 3;
             this.txt_posiY.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_posiY.UseSystemPasswordChar = false;
@@ -270,7 +270,7 @@
             this.txt_posiX.Name = "txt_posiX";
             this.txt_posiX.ReadOnly = false;
             this.txt_posiX.Size = new System.Drawing.Size(60, 31);
-            this.txt_posiX.Style = TFive.TFiveTextBox._Num.NumberOnly;
+            this.txt_posiX.Style = King99.King99TextBox._Num.NumberOnly;
             this.txt_posiX.TabIndex = 2;
             this.txt_posiX.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_posiX.UseSystemPasswordChar = false;
@@ -299,7 +299,7 @@
             this.txt_title.Name = "txt_title";
             this.txt_title.ReadOnly = false;
             this.txt_title.Size = new System.Drawing.Size(189, 31);
-            this.txt_title.Style = TFive.TFiveTextBox._Num.TextNum;
+            this.txt_title.Style = King99.King99TextBox._Num.TextNum;
             this.txt_title.TabIndex = 1;
             this.txt_title.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_title.UseSystemPasswordChar = false;
@@ -338,12 +338,12 @@
             // 
             // tFive_Separator1
             // 
-            this.tFive_Separator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.tFive_Separator1.Location = new System.Drawing.Point(5, 248);
-            this.tFive_Separator1.Name = "tFive_Separator1";
-            this.tFive_Separator1.Size = new System.Drawing.Size(303, 10);
-            this.tFive_Separator1.TabIndex = 20;
-            this.tFive_Separator1.Text = "tFive_Separator1";
+            this._tKing99Separator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this._tKing99Separator1.Location = new System.Drawing.Point(5, 248);
+            this._tKing99Separator1.Name = "_tKing99Separator1";
+            this._tKing99Separator1.Size = new System.Drawing.Size(303, 10);
+            this._tKing99Separator1.TabIndex = 20;
+            this._tKing99Separator1.Text = "tFive_Separator1";
             // 
             // tFive_Label2
             // 
@@ -375,7 +375,7 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            this.bunifuCards1.Controls.Add(this.tFiveGroupBox1);
+            this.bunifuCards1.Controls.Add(this._tKing99GroupBox1);
             this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuCards1.LeftSahddow = false;
             this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
@@ -387,19 +387,19 @@
             // 
             // tFiveGroupBox1
             // 
-            this.tFiveGroupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.tFiveGroupBox1.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.tFiveGroupBox1.Controls.Add(this.panel1);
-            this.tFiveGroupBox1.Curv1 = 1;
-            this.tFiveGroupBox1.Curv2 = 1;
-            this.tFiveGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tFiveGroupBox1.Location = new System.Drawing.Point(0, 5);
-            this.tFiveGroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
-            this.tFiveGroupBox1.Name = "tFiveGroupBox1";
-            this.tFiveGroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.tFiveGroupBox1.Size = new System.Drawing.Size(320, 343);
-            this.tFiveGroupBox1.TabIndex = 51;
-            this.tFiveGroupBox1.Text = "Mode";
+            this._tKing99GroupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this._tKing99GroupBox1.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this._tKing99GroupBox1.Controls.Add(this.panel1);
+            this._tKing99GroupBox1.Curv1 = 1;
+            this._tKing99GroupBox1.Curv2 = 1;
+            this._tKing99GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this._tKing99GroupBox1.Location = new System.Drawing.Point(0, 5);
+            this._tKing99GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
+            this._tKing99GroupBox1.Name = "_tKing99GroupBox1";
+            this._tKing99GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
+            this._tKing99GroupBox1.Size = new System.Drawing.Size(320, 343);
+            this._tKing99GroupBox1.TabIndex = 51;
+            this._tKing99GroupBox1.Text = "Mode";
             // 
             // FrmColorInfo
             // 
@@ -421,34 +421,34 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picTarget)).EndInit();
             this.bunifuCards1.ResumeLayout(false);
-            this.tFiveGroupBox1.ResumeLayout(false);
+            this._tKing99GroupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private TFive.TFiveHeaderLabel tFive_HeaderLabel1;
+        private System.Windows.Forms.Label tFive_HeaderLabel1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer tm_mouse;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox picTarget;
-        private TFive.TFiveTextBox txt_class;
+        private King99.King99TextBox txt_class;
         private Bunifu.Framework.UI.BunifuFlatButton btnSave;
-        private TFive.TFiveTextBox txt_color;
-        private TFive.TFiveLabel tFive_Label5;
-        private TFive.TFiveTextBox txt_posiY;
+        private King99.King99TextBox txt_color;
+        private System.Windows.Forms.Label tFive_Label5;
+        private King99.King99TextBox txt_posiY;
         private Bunifu.Framework.UI.BunifuFlatButton btnClose;
-        private TFive.TFiveTextBox txt_posiX;
-        private TFive.TFiveLabel tFive_Label4;
-        private TFive.TFiveTextBox txt_title;
-        private TFive.TFiveLabel lb_status;
-        private TFive.TFiveLabel tFive_Label3;
+        private King99.King99TextBox txt_posiX;
+        private System.Windows.Forms.Label tFive_Label4;
+        private King99.King99TextBox txt_title;
+        private System.Windows.Forms.Label lb_status;
+        private System.Windows.Forms.Label tFive_Label3;
         private System.Windows.Forms.Panel panel_color;
-        private TFive.TFiveSeparator tFive_Separator1;
-        private TFive.TFiveLabel tFive_Label2;
-        private TFive.TFiveLabel tFive_Label9;
+        private King99.King99Separator _tKing99Separator1;
+        private System.Windows.Forms.Label tFive_Label2;
+        private System.Windows.Forms.Label tFive_Label9;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private TFive.TFiveGroupBox tFiveGroupBox1;
+        private King99.King99GroupBox _tKing99GroupBox1;
     }
 }

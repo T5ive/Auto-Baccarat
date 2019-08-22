@@ -16,6 +16,7 @@ namespace AutoBaccarat
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+           // King99_Theme.CustomFont.LoadCustomFont();
             Application.Run(new FrmBot());
         }
     }

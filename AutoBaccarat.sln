@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoBaccarat", "AutoBaccarat\AutoBaccarat.csproj", "{2A4C5650-C645-48F0-874A-076DE5FB8693}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFive Theme", "TFive Theme\TFive Theme.csproj", "{F61532F4-3B0A-46C9-B618-9DE4F8063E1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "King99 Theme", "TFive Theme\King99 Theme.csproj", "{F61532F4-3B0A-46C9-B618-9DE4F8063E1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFive Class", "TFive Class\TFive Class.csproj", "{64A873CD-AD32-4E99-A9C7-D46D45B56910}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "King99 Class", "TFive Class\King99 Class.csproj", "{64A873CD-AD32-4E99-A9C7-D46D45B56910}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TFive UI", "TFive UI\TFive UI.csproj", "{B4C543E6-F49D-403D-8275-AB212DF3039D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "King99 UI", "TFive UI\King99 UI.csproj", "{B4C543E6-F49D-403D-8275-AB212DF3039D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magnifying Glass", "Magnifying Glass\Magnifying Glass.csproj", "{36CD65CE-3230-4179-AD89-2B820DFD8D5D}"
 EndProject

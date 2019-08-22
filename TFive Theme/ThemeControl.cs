@@ -1,24 +1,26 @@
 ﻿using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Drawing.Text;
 using System.Windows.Forms;
 
-namespace TFive
+namespace King99
 {
     public abstract class ThemeControl : Control
     {
-        public ThemeControl()
+        protected ThemeControl()
         {
             SetStyle(ControlStyles.UserPaint | ControlStyles.Opaque | ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer, true);
             B = new Bitmap(1, 1);
             G = Graphics.FromImage(B);
         }
+        
 
-        public void AllowTransparent()
-        {
-            SetStyle(ControlStyles.Opaque, false);
-            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-        }
+        //public void AllowTransparent()
+        //{
+        //    SetStyle(ControlStyles.Opaque, false);
+        //    SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+        //}
 
         public override string Text
         {
@@ -89,88 +91,88 @@ namespace TFive
 
         public bool NoRounding
         {
-            get => _NoRounding;
+            get => _noRounding;
             set
             {
-                _NoRounding = value;
+                _noRounding = value;
                 Invalidate();
             }
         }
 
         public Image Image
         {
-            get => _Image;
+            get => _image;
             set
             {
-                _Image = value;
+                _image = value;
                 Invalidate();
             }
         }
 
-        public int ImageWidth
-        {
-            get
-            {
-                var flag = _Image == null;
-                int ImageWidth;
-                if (flag)
-                {
-                    ImageWidth = 0;
-                }
-                else
-                {
-                    ImageWidth = _Image.Width;
-                }
-                return ImageWidth;
-            }
-        }
+        //public int ImageWidth
+        //{
+        //    get
+        //    {
+        //        var flag = _Image == null;
+        //        int ImageWidth;
+        //        if (flag)
+        //        {
+        //            ImageWidth = 0;
+        //        }
+        //        else
+        //        {
+        //            ImageWidth = _Image.Width;
+        //        }
+        //        return ImageWidth;
+        //    }
+        //}
 
-        public int ImageTop
-        {
-            get
-            {
-                var flag = _Image == null;
-                int ImageTop;
-                if (flag)
-                {
-                    ImageTop = 0;
-                }
-                else
-                {
-                    ImageTop = checked(Height / 2 - _Image.Height / 2);
-                }
-                return ImageTop;
-            }
-        }
+        //public int ImageTop
+        //{
+        //    get
+        //    {
+        //        var flag = _Image == null;
+        //        int ImageTop;
+        //        if (flag)
+        //        {
+        //            ImageTop = 0;
+        //        }
+        //        else
+        //        {
+        //            ImageTop = checked(Height / 2 - _Image.Height / 2);
+        //        }
+        //        return ImageTop;
+        //    }
+        //}
 
-        protected void DrawCorners(Color c, Rectangle rect)
-        {
-            var noRounding = _NoRounding;
-            checked
-            {
-                if (!noRounding)
-                {
-                    B.SetPixel(rect.X, rect.Y, c);
-                    B.SetPixel(rect.X + (rect.Width - 1), rect.Y, c);
-                    B.SetPixel(rect.X, rect.Y + (rect.Height - 1), c);
-                    B.SetPixel(rect.X + (rect.Width - 1), rect.Y + (rect.Height - 1), c);
-                }
-            }
-        }
+        //protected void DrawCorners(Color c, Rectangle rect)
+        //{
+        //    var noRounding = _NoRounding;
+        //    checked
+        //    {
+        //        if (!noRounding)
+        //        {
+        //            B.SetPixel(rect.X, rect.Y, c);
+        //            B.SetPixel(rect.X + (rect.Width - 1), rect.Y, c);
+        //            B.SetPixel(rect.X, rect.Y + (rect.Height - 1), c);
+        //            B.SetPixel(rect.X + (rect.Width - 1), rect.Y + (rect.Height - 1), c);
+        //        }
+        //    }
+        //}
 
-        protected void DrawBorders(Pen p1, Pen p2, Rectangle rect)
-        {
-            checked
-            {
-                G.DrawRectangle(p1, rect.X, rect.Y, rect.Width - 1, rect.Height - 1);
-                G.DrawRectangle(p2, rect.X + 1, rect.Y + 1, rect.Width - 3, rect.Height - 3);
-            }
-        }
+        //protected void DrawBorders(Pen p1, Pen p2, Rectangle rect)
+        //{
+        //    checked
+        //    {
+        //        G.DrawRectangle(p1, rect.X, rect.Y, rect.Width - 1, rect.Height - 1);
+        //        G.DrawRectangle(p2, rect.X + 1, rect.Y + 1, rect.Width - 3, rect.Height - 3);
+        //    }
+        //}
 
-        protected void DrawText(HorizontalAlignment a, Color c, int x)
-        {
-            DrawText(a, c, x, 0);
-        }
+        //protected void DrawText(HorizontalAlignment a, Color c, int x)
+        //{
+        //    DrawText(a, c, x, 0);
+        //}
 
         protected void DrawText(HorizontalAlignment a, Color c, int x, int y)
         {
@@ -179,57 +181,57 @@ namespace TFive
             {
                 if (!flag)
                 {
-                    _Size = G.MeasureString(Text, Font).ToSize();
-                    _Brush = new SolidBrush(c);
+                    _size = G.MeasureString(Text, Font).ToSize();
+                    _brush = new SolidBrush(c);
                     switch (a)
                     {
                         case HorizontalAlignment.Left:
-                            G.DrawString(Text, Font, _Brush, x, Height / 2 - _Size.Height / 2 + y);
+                            G.DrawString(Text, Font, _brush, x, Height / 2 - _size.Height / 2 + y);
                             break;
                         case HorizontalAlignment.Right:
-                            G.DrawString(Text, Font, _Brush, Width - _Size.Width - x, Height / 2 - _Size.Height / 2 + y);
+                            G.DrawString(Text, Font, _brush, Width - _size.Width - x, Height / 2 - _size.Height / 2 + y);
                             break;
                         case HorizontalAlignment.Center:
-                            G.DrawString(Text, Font, _Brush, Width / 2 - _Size.Width / 2 + x, Height / 2 - _Size.Height / 2 + y);
+                            G.DrawString(Text, Font, _brush, Width / 2 - _size.Width / 2 + x, Height / 2 - _size.Height / 2 + y);
                             break;
                     }
                 }
             }
         }
 
-        protected void DrawIcon(HorizontalAlignment a, int x)
-        {
-            DrawIcon(a, x, 0);
-        }
+        //protected void DrawIcon(HorizontalAlignment a, int x)
+        //{
+        //    DrawIcon(a, x, 0);
+        //}
 
-        protected void DrawIcon(HorizontalAlignment a, int x, int y)
-        {
-            var flag = _Image == null;
-            checked
-            {
-                if (!flag)
-                {
-                    switch (a)
-                    {
-                        case HorizontalAlignment.Left:
-                            G.DrawImage(_Image, x, Height / 2 - _Image.Height / 2 + y);
-                            break;
-                        case HorizontalAlignment.Right:
-                            G.DrawImage(_Image, Width - _Image.Width - x, Height / 2 - _Image.Height / 2 + y);
-                            break;
-                        case HorizontalAlignment.Center:
-                            G.DrawImage(_Image, Width / 2 - _Image.Width / 2, Height / 2 - _Image.Height / 2);
-                            break;
-                    }
-                }
-            }
-        }
+        //protected void DrawIcon(HorizontalAlignment a, int x, int y)
+        //{
+        //    var flag = _Image == null;
+        //    checked
+        //    {
+        //        if (!flag)
+        //        {
+        //            switch (a)
+        //            {
+        //                case HorizontalAlignment.Left:
+        //                    G.DrawImage(_Image, x, Height / 2 - _Image.Height / 2 + y);
+        //                    break;
+        //                case HorizontalAlignment.Right:
+        //                    G.DrawImage(_Image, Width - _Image.Width - x, Height / 2 - _Image.Height / 2 + y);
+        //                    break;
+        //                case HorizontalAlignment.Center:
+        //                    G.DrawImage(_Image, Width / 2 - _Image.Width / 2, Height / 2 - _Image.Height / 2);
+        //                    break;
+        //            }
+        //        }
+        //    }
+        //}
 
         protected void DrawGradient(Color c1, Color c2, int x, int y, int width, int height, float angle)
         {
-            _Rectangle = new Rectangle(x, y, width, height);
-            _Gradient = new LinearGradientBrush(_Rectangle, c1, c2, angle);
-            G.FillRectangle(_Gradient, _Rectangle);
+            _rectangle = new Rectangle(x, y, width, height);
+            _gradient = new LinearGradientBrush(_rectangle, c1, c2, angle);
+            G.FillRectangle(_gradient, _rectangle);
         }
 
         protected Graphics G;
@@ -238,17 +240,17 @@ namespace TFive
 
         protected State MouseState;
 
-        private bool _NoRounding;
+        private bool _noRounding;
 
-        private Image _Image;
+        private Image _image;
 
-        private Size _Size;
+        private Size _size;
 
-        private Rectangle _Rectangle;
+        private Rectangle _rectangle;
 
-        private LinearGradientBrush _Gradient;
+        private LinearGradientBrush _gradient;
 
-        private SolidBrush _Brush;
+        private SolidBrush _brush;
 
         protected enum State : byte
         {

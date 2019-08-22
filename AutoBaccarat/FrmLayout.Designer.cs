@@ -32,13 +32,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.EditTitle = new TFive.TFiveGroupBox();
-            this.PositionBox = new TFive.TFiveGroupBox();
-            this.radBackGround = new TFive.TFiveRadioButton();
-            this.radNormal = new TFive.TFiveRadioButton();
+            this.EditTitle = new King99.King99GroupBox();
+            this.PositionBox = new King99.King99GroupBox();
+            this.radBackGround = new King99.King99RadioButton();
+            this.radNormal = new King99.King99RadioButton();
             this.dgvSetting = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.colSetting = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colButton = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -48,23 +47,23 @@
             this.Process = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Rgb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelName = new System.Windows.Forms.Panel();
-            this.lbName = new TFive.TFiveLabel();
-            this.txtName = new TFive.TFiveTextBox();
-            this.ListFile = new TFive.TFiveGroupBox();
+            this.lbName = new System.Windows.Forms.Label();
+            this.txtName = new King99.King99TextBox();
+            this.ListFile = new King99.King99GroupBox();
             this.listLayout = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAddList = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDelList = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tFiveDragControl1 = new TFive.TFiveDragControl(this.components);
-            this.tFiveDragControl2 = new TFive.TFiveDragControl(this.components);
-            this.tFiveDragControl3 = new TFive.TFiveDragControl(this.components);
-            this.tFiveDragControl4 = new TFive.TFiveDragControl(this.components);
-            this.tFiveDragControl5 = new TFive.TFiveDragControl(this.components);
+            this.tFiveDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl4 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl5 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tFiveDragControl6 = new TFive.TFiveDragControl(this.components);
-            this.tFiveDragControl7 = new TFive.TFiveDragControl(this.components);
+            this.tFiveDragControl6 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl7 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuCards1.SuspendLayout();
             this.EditTitle.SuspendLayout();
             this.PositionBox.SuspendLayout();
@@ -94,13 +93,14 @@
             // EditTitle
             // 
             this.EditTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.EditTitle.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.EditTitle.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.EditTitle.Controls.Add(this.PositionBox);
             this.EditTitle.Controls.Add(this.ListFile);
             this.EditTitle.Controls.Add(this.tableLayoutPanel3);
             this.EditTitle.Curv1 = 1;
             this.EditTitle.Curv2 = 1;
             this.EditTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditTitle.Font = new System.Drawing.Font("Kanit", 11F);
             this.EditTitle.Location = new System.Drawing.Point(0, 0);
             this.EditTitle.MinimumSize = new System.Drawing.Size(136, 50);
             this.EditTitle.Name = "EditTitle";
@@ -112,7 +112,7 @@
             // PositionBox
             // 
             this.PositionBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.PositionBox.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.PositionBox.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.PositionBox.Controls.Add(this.radBackGround);
             this.PositionBox.Controls.Add(this.radNormal);
             this.PositionBox.Controls.Add(this.dgvSetting);
@@ -120,6 +120,7 @@
             this.PositionBox.Curv1 = 1;
             this.PositionBox.Curv2 = 1;
             this.PositionBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PositionBox.Font = new System.Drawing.Font("Kanit", 11F);
             this.PositionBox.Location = new System.Drawing.Point(192, 28);
             this.PositionBox.MinimumSize = new System.Drawing.Size(136, 50);
             this.PositionBox.Name = "PositionBox";
@@ -133,28 +134,28 @@
             this.radBackGround.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.radBackGround.Checked = false;
             this.radBackGround.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radBackGround.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.radBackGround.Font = new System.Drawing.Font("Kanit", 11F);
             this.radBackGround.ForeColor = System.Drawing.Color.White;
             this.radBackGround.Location = new System.Drawing.Point(172, 348);
             this.radBackGround.Name = "radBackGround";
             this.radBackGround.Size = new System.Drawing.Size(146, 19);
             this.radBackGround.TabIndex = 8;
             this.radBackGround.Text = "Background Mode";
-            this.radBackGround.CheckedChanged += new TFive.TFiveRadioButton.CheckedChangedEventHandler(this.SelectMode);
+            this.radBackGround.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.SelectMode);
             // 
             // radNormal
             // 
             this.radNormal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.radNormal.Checked = false;
             this.radNormal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radNormal.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.radNormal.Font = new System.Drawing.Font("Kanit", 11F);
             this.radNormal.ForeColor = System.Drawing.Color.White;
             this.radNormal.Location = new System.Drawing.Point(12, 348);
             this.radNormal.Name = "radNormal";
             this.radNormal.Size = new System.Drawing.Size(120, 19);
             this.radNormal.TabIndex = 9;
             this.radNormal.Text = "Normal Mode";
-            this.radNormal.CheckedChanged += new TFive.TFiveRadioButton.CheckedChangedEventHandler(this.SelectMode);
+            this.radNormal.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.SelectMode);
             // 
             // dgvSetting
             // 
@@ -173,7 +174,7 @@
             this.dgvSetting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Kanit", 11F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -188,14 +189,6 @@
             this.color,
             this.Process,
             this.Rgb});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSetting.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSetting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSetting.DoubleBuffered = true;
             this.dgvSetting.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
@@ -207,11 +200,11 @@
             this.dgvSetting.Name = "dgvSetting";
             this.dgvSetting.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvSetting.RowHeadersVisible = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvSetting.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvSetting.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSetting.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgvSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvSetting.Size = new System.Drawing.Size(348, 308);
@@ -297,11 +290,11 @@
             // 
             this.lbName.AutoSize = true;
             this.lbName.BackColor = System.Drawing.Color.Transparent;
-            this.lbName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lbName.Font = new System.Drawing.Font("Kanit", 11F);
             this.lbName.ForeColor = System.Drawing.Color.White;
             this.lbName.Location = new System.Drawing.Point(3, 9);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(52, 20);
+            this.lbName.Size = new System.Drawing.Size(52, 22);
             this.lbName.TabIndex = 0;
             this.lbName.Text = "Name:";
             // 
@@ -309,15 +302,15 @@
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.txtName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtName.Font = new System.Drawing.Font("Kanit", 11F);
             this.txtName.Location = new System.Drawing.Point(66, 3);
             this.txtName.MaxLength = 32767;
             this.txtName.MinimumSize = new System.Drawing.Size(0, 31);
             this.txtName.Multiline = false;
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = false;
-            this.txtName.Size = new System.Drawing.Size(154, 31);
-            this.txtName.Style = TFive.TFiveTextBox._Num.TextNum;
+            this.txtName.Size = new System.Drawing.Size(154, 33);
+            this.txtName.Style = King99.King99TextBox._Num.TextNum;
             this.txtName.TabIndex = 1;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtName.UseSystemPasswordChar = false;
@@ -325,11 +318,12 @@
             // ListFile
             // 
             this.ListFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.ListFile.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.ListFile.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.ListFile.Controls.Add(this.listLayout);
             this.ListFile.Curv1 = 1;
             this.ListFile.Curv2 = 1;
             this.ListFile.Dock = System.Windows.Forms.DockStyle.Left;
+            this.ListFile.Font = new System.Drawing.Font("Kanit", 11F);
             this.ListFile.Location = new System.Drawing.Point(5, 28);
             this.ListFile.MinimumSize = new System.Drawing.Size(136, 50);
             this.ListFile.Name = "ListFile";
@@ -343,10 +337,10 @@
             this.listLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.listLayout.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listLayout.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.listLayout.Font = new System.Drawing.Font("Kanit", 11F);
             this.listLayout.ForeColor = System.Drawing.Color.White;
             this.listLayout.FormattingEnabled = true;
-            this.listLayout.ItemHeight = 20;
+            this.listLayout.ItemHeight = 22;
             this.listLayout.Location = new System.Drawing.Point(5, 28);
             this.listLayout.Name = "listLayout";
             this.listLayout.Size = new System.Drawing.Size(177, 348);
@@ -406,7 +400,7 @@
             this.btnSave.Text = "Save Layout";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSave.Textcolor = System.Drawing.Color.White;
-            this.btnSave.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnClose
@@ -443,7 +437,7 @@
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnClose.Textcolor = System.Drawing.Color.White;
-            this.btnClose.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // btnAddList
@@ -480,7 +474,7 @@
             this.btnAddList.Text = "Add";
             this.btnAddList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddList.Textcolor = System.Drawing.Color.White;
-            this.btnAddList.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddList.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddList.Click += new System.EventHandler(this.BtnAddList_Click);
             // 
             // btnDelList
@@ -517,7 +511,7 @@
             this.btnDelList.Text = "Delete";
             this.btnDelList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelList.Textcolor = System.Drawing.Color.White;
-            this.btnDelList.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelList.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelList.Click += new System.EventHandler(this.BtnDelList_Click);
             // 
             // tFiveDragControl1
@@ -604,18 +598,18 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private TFive.TFiveDragControl tFiveDragControl1;
-        private TFive.TFiveDragControl tFiveDragControl2;
-        private TFive.TFiveDragControl tFiveDragControl3;
-        private TFive.TFiveDragControl tFiveDragControl4;
-        private TFive.TFiveDragControl tFiveDragControl5;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl1;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl2;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl3;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl4;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private TFive.TFiveDragControl tFiveDragControl6;
-        private TFive.TFiveGroupBox EditTitle;
-        private TFive.TFiveDragControl tFiveDragControl7;
-        private TFive.TFiveGroupBox PositionBox;
-        private TFive.TFiveRadioButton radBackGround;
-        private TFive.TFiveRadioButton radNormal;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl6;
+        private King99.King99GroupBox EditTitle;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl7;
+        private King99.King99GroupBox PositionBox;
+        private King99.King99RadioButton radBackGround;
+        private King99.King99RadioButton radNormal;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvSetting;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSetting;
         private System.Windows.Forms.DataGridViewButtonColumn colButton;
@@ -625,9 +619,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Process;
         private System.Windows.Forms.DataGridViewTextBoxColumn Rgb;
         private System.Windows.Forms.Panel panelName;
-        private TFive.TFiveLabel lbName;
-        private TFive.TFiveTextBox txtName;
-        private TFive.TFiveGroupBox ListFile;
+        private System.Windows.Forms.Label lbName;
+        private King99.King99TextBox txtName;
+        private King99.King99GroupBox ListFile;
         private System.Windows.Forms.ListBox listLayout;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private Bunifu.Framework.UI.BunifuFlatButton btnSave;

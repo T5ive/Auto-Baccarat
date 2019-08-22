@@ -7,8 +7,8 @@
     <ProjectGuid>{64A873CD-AD32-4E99-A9C7-D46D45B56910}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TFive_Class</RootNamespace>
-    <AssemblyName>TFive Class</AssemblyName>
+    <RootNamespace>King99_Class</RootNamespace>
+    <AssemblyName>King99 Class</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -42,24 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TFiveInputBox.cs">
+    <Compile Include="King99InputBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TFiveKeysConverter.cs" />
-    <Compile Include="MessageBoxManager.cs" />
-    <Compile Include="RepeatString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TFiveSecurity.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="TFiveInputBox.resx">
-      <DependentUpon>TFiveInputBox.cs</DependentUpon>
+    <EmbeddedResource Include="King99InputBox.resx">
+      <DependentUpon>King99InputBox.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TFive Theme\TFive Theme.csproj">
+    <ProjectReference Include="..\TFive Theme\King99 Theme.csproj">
       <Project>{f61532f4-3b0a-46c9-b618-9de4f8063e1f}</Project>
-      <Name>TFive Theme</Name>
+      <Name>King99 Theme</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

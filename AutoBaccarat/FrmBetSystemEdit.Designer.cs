@@ -33,25 +33,25 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.EditTitle = new TFive.TFiveGroupBox();
+            this.EditTitle = new King99.King99GroupBox();
             this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Explain = new TFive.TFiveGroupBox();
-            this.lbExplain = new TFive.TFiveLabel();
+            this.Explain = new King99.King99GroupBox();
+            this.lbExplain = new System.Windows.Forms.Label();
             this.btnDefault = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClear = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDel = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAdd = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lbUnit = new TFive.TFiveLabel();
-            this.Betting_txtNumber = new TFive.TFiveTextBox();
+            this.lbUnit = new System.Windows.Forms.Label();
+            this.Betting_txtNumber = new King99.King99TextBox();
             this.dgvBetting = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Step = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tFiveDragControl1 = new TFive.TFiveDragControl(this.components);
-            this.tFiveDragControl2 = new TFive.TFiveDragControl(this.components);
-            this.tFiveDragControl3 = new TFive.TFiveDragControl(this.components);
-            this.tFiveDragControl4 = new TFive.TFiveDragControl(this.components);
-            this.tFiveDragControl5 = new TFive.TFiveDragControl(this.components);
+            this.tFiveDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl4 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl5 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuCards1.SuspendLayout();
             this.EditTitle.SuspendLayout();
             this.Explain.SuspendLayout();
@@ -78,7 +78,7 @@
             // EditTitle
             // 
             this.EditTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.EditTitle.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.EditTitle.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.EditTitle.Controls.Add(this.btnClose);
             this.EditTitle.Controls.Add(this.btnSave);
             this.EditTitle.Controls.Add(this.Explain);
@@ -92,7 +92,7 @@
             this.EditTitle.Curv1 = 1;
             this.EditTitle.Curv2 = 1;
             this.EditTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EditTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.EditTitle.Font = new System.Drawing.Font("Kanit", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.EditTitle.Location = new System.Drawing.Point(1, 1);
             this.EditTitle.MinimumSize = new System.Drawing.Size(136, 50);
             this.EditTitle.Name = "EditTitle";
@@ -135,7 +135,7 @@
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.Textcolor = System.Drawing.Color.White;
-            this.btnClose.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // btnSave
@@ -172,16 +172,17 @@
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Textcolor = System.Drawing.Color.White;
-            this.btnSave.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // Explain
             // 
             this.Explain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.Explain.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.Explain.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.Explain.Controls.Add(this.lbExplain);
             this.Explain.Curv1 = 1;
             this.Explain.Curv2 = 1;
+            this.Explain.Font = new System.Drawing.Font("Kanit", 11F);
             this.Explain.Location = new System.Drawing.Point(299, 34);
             this.Explain.MinimumSize = new System.Drawing.Size(136, 50);
             this.Explain.Name = "Explain";
@@ -194,7 +195,7 @@
             // 
             this.lbExplain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.lbExplain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbExplain.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbExplain.Font = new System.Drawing.Font("Kanit", 9F);
             this.lbExplain.ForeColor = System.Drawing.Color.White;
             this.lbExplain.Location = new System.Drawing.Point(5, 28);
             this.lbExplain.Name = "lbExplain";
@@ -236,7 +237,7 @@
             this.btnDefault.Text = "Default";
             this.btnDefault.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDefault.Textcolor = System.Drawing.Color.White;
-            this.btnDefault.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDefault.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDefault.Click += new System.EventHandler(this.BtnDefault_Click);
             // 
             // btnClear
@@ -273,7 +274,7 @@
             this.btnClear.Text = "Clear";
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClear.Textcolor = System.Drawing.Color.White;
-            this.btnClear.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // btnDel
@@ -310,7 +311,7 @@
             this.btnDel.Text = "Delete";
             this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDel.Textcolor = System.Drawing.Color.White;
-            this.btnDel.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.Click += new System.EventHandler(this.BtnDel_Click);
             // 
             // btnAdd
@@ -347,7 +348,7 @@
             this.btnAdd.Text = "Add";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.Textcolor = System.Drawing.Color.White;
-            this.btnAdd.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // lbUnit
@@ -366,15 +367,15 @@
             // 
             this.Betting_txtNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Betting_txtNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.Betting_txtNumber.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.Betting_txtNumber.Font = new System.Drawing.Font("Kanit", 11F);
             this.Betting_txtNumber.Location = new System.Drawing.Point(69, 34);
             this.Betting_txtNumber.MaxLength = 32767;
             this.Betting_txtNumber.MinimumSize = new System.Drawing.Size(0, 31);
             this.Betting_txtNumber.Multiline = false;
             this.Betting_txtNumber.Name = "Betting_txtNumber";
             this.Betting_txtNumber.ReadOnly = false;
-            this.Betting_txtNumber.Size = new System.Drawing.Size(125, 31);
-            this.Betting_txtNumber.Style = TFive.TFiveTextBox._Num.NumberOnly;
+            this.Betting_txtNumber.Size = new System.Drawing.Size(125, 33);
+            this.Betting_txtNumber.Style = King99.King99TextBox._Num.NumberOnly;
             this.Betting_txtNumber.TabIndex = 9;
             this.Betting_txtNumber.Text = "1";
             this.Betting_txtNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -395,7 +396,7 @@
             this.dgvBetting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Kanit", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -509,24 +510,24 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private TFive.TFiveTextBox Betting_txtNumber;
+        private King99.King99TextBox Betting_txtNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Step;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvBetting;
-        private TFive.TFiveLabel lbUnit;
+        private System.Windows.Forms.Label lbUnit;
         private Bunifu.Framework.UI.BunifuFlatButton btnAdd;
         private Bunifu.Framework.UI.BunifuFlatButton btnDefault;
         private Bunifu.Framework.UI.BunifuFlatButton btnClear;
         private Bunifu.Framework.UI.BunifuFlatButton btnDel;
-        private TFive.TFiveGroupBox Explain;
+        private King99.King99GroupBox Explain;
         private Bunifu.Framework.UI.BunifuFlatButton btnClose;
         private Bunifu.Framework.UI.BunifuFlatButton btnSave;
-        private TFive.TFiveDragControl tFiveDragControl1;
-        private TFive.TFiveDragControl tFiveDragControl2;
-        private TFive.TFiveDragControl tFiveDragControl3;
-        private TFive.TFiveDragControl tFiveDragControl4;
-        private TFive.TFiveDragControl tFiveDragControl5;
-        public TFive.TFiveGroupBox EditTitle;
-        public TFive.TFiveLabel lbExplain;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl1;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl2;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl3;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl4;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl5;
+        public King99.King99GroupBox EditTitle;
+        public System.Windows.Forms.Label lbExplain;
     }
 }

@@ -3,27 +3,18 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
+using King99_Theme;
 
-namespace TFive
+namespace King99
 {
     [DefaultEvent("CheckedChanged")]
-    public sealed class TFiveRadioButton : Control
+    public sealed class King99RadioButton : Control
     {
 
-        #region Enums
 
-        public enum MouseState : byte
-        {
-            None = 0,
-            Over = 1,
-            Down = 2,
-            Block = 3
-        }
-
-        #endregion
         #region Variables
 
-        private bool _Checked;
+        private bool _checked;
         public event CheckedChangedEventHandler CheckedChanged;
         public delegate void CheckedChangedEventHandler(object sender);
 
@@ -32,15 +23,12 @@ namespace TFive
 
         public bool Checked
         {
-            get => _Checked;
+            get => _checked;
             set
             {
-                _Checked = value;
+                _checked = value;
                 InvalidateControls();
-                if (CheckedChanged != null)
-                {
-                    CheckedChanged(this);
-                }
+                CheckedChanged?.Invoke(this);
                 Invalidate();
             }
         }
@@ -56,7 +44,7 @@ namespace TFive
 
         protected override void OnMouseDown(MouseEventArgs e)
         {
-            if (!_Checked)
+            if (!_checked)
                 Checked = true;
             base.OnMouseDown(e);
             Focus();
@@ -70,14 +58,15 @@ namespace TFive
 
         #endregion
 
-        public TFiveRadioButton()
+        public King99RadioButton()
         {
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | 
                      //ControlStyles.ResizeRedraw |
                      ControlStyles.SupportsTransparentBackColor | ControlStyles.UserPaint, true);
            // BackColor = Color.Transparent;
             ForeColor = Color.White;
-            Font = new Font("Segoe UI", 11);
+            // Font = CustomFont.GetCustomFont(11);
+            Font = new Font("Kanit", 11, FontStyle.Regular);
             // Width = 193;
             Cursor = Cursors.Hand;
             AutoSize = true;
@@ -85,14 +74,14 @@ namespace TFive
 
         private void InvalidateControls()
         {
-            if (!IsHandleCreated || !_Checked)
+            if (!IsHandleCreated || !_checked)
                 return;
 
             foreach (Control _Control in Parent.Controls)
             {
-                if (!ReferenceEquals(_Control, this) && _Control is TFiveRadioButton)
+                if (!ReferenceEquals(_Control, this) && _Control is King99RadioButton)
                 {
-                    ((TFiveRadioButton)_Control).Checked = false;
+                    ((King99RadioButton)_Control).Checked = false;
                 }
             }
         }
@@ -100,37 +89,37 @@ namespace TFive
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            var MyDrawer = e.Graphics;
+            var myDrawer = e.Graphics;
 
             //MyDrawer.Clear(Color.FromArgb(240, 240, 240));
-            MyDrawer.Clear(BackColor);
-            MyDrawer.SmoothingMode = SmoothingMode.AntiAlias;
+            myDrawer.Clear(BackColor);
+            myDrawer.SmoothingMode = SmoothingMode.AntiAlias;
 
             // Fill the body of the ellipse with a gradient
-            var LGB = new LinearGradientBrush(new Rectangle(new Point(0, 0),
+            var lgb = new LinearGradientBrush(new Rectangle(new Point(0, 0),
                 new Size(Size.Height-1, Size.Height - 1)),
                 BackColor,
                 BackColor, 90);
             //Color.FromArgb(240, 240, 240),
             //Color.FromArgb(240, 240, 240), 90);
 
-            MyDrawer.FillEllipse(LGB, new Rectangle(new Point(0, 0), new Size(Size.Height - 1, Size.Height - 1)));
+            myDrawer.FillEllipse(lgb, new Rectangle(new Point(0, 0), new Size(Size.Height - 1, Size.Height - 1)));
 
-            var GP = new GraphicsPath();
-            GP.AddEllipse(new Rectangle(0, 0, Size.Height - 1, Size.Height - 1));
-            MyDrawer.SetClip(GP);
-            MyDrawer.ResetClip();
+            var gp = new GraphicsPath();
+            gp.AddEllipse(new Rectangle(0, 0, Size.Height - 1, Size.Height - 1));
+            myDrawer.SetClip(gp);
+            myDrawer.ResetClip();
 
             // Draw ellipse border
-            MyDrawer.DrawEllipse(new Pen(Color.FromArgb(255, 60, 75)), new Rectangle(new Point(0, 0), new Size(Size.Height - 1, Size.Height - 1)));
+            myDrawer.DrawEllipse(new Pen(Color.FromArgb(255, 60, 75)), new Rectangle(new Point(0, 0), new Size(Size.Height - 1, Size.Height - 1)));
 
             // Draw an ellipse inside the body
-            if (_Checked)
+            if (_checked)
             {
-                var EllipseColor = new SolidBrush(Color.FromArgb(202, 62, 71));
-                MyDrawer.FillEllipse(EllipseColor, new Rectangle(new Point(2, 2), new Size(Size.Height-5, Size.Height-5)));
+                var ellipseColor = new SolidBrush(Color.FromArgb(202, 62, 71));
+                myDrawer.FillEllipse(ellipseColor, new Rectangle(new Point(2, 2), new Size(Size.Height-5, Size.Height-5)));
             }
-            MyDrawer.DrawString(Text, Font, new SolidBrush(ForeColor), Size.Height +1, Size.Height/2, new StringFormat { LineAlignment = StringAlignment.Center });
+            myDrawer.DrawString(Text, Font, new SolidBrush(ForeColor), Size.Height +1, Size.Height/2, new StringFormat { LineAlignment = StringAlignment.Center });
             e.Dispose();
         }
     }

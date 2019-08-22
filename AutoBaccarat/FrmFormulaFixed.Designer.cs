@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.tFiveDragControl5 = new TFive.TFiveDragControl(this.components);
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tFiveDragControl5 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dgvBetting = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tFiveDragControl3 = new TFive.TFiveDragControl(this.components);
-            this.lbExplain = new TFive.TFiveLabel();
+            this.tFiveDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.lbExplain = new System.Windows.Forms.Label();
             this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Explain = new TFive.TFiveGroupBox();
-            this.tFiveDragControl2 = new TFive.TFiveDragControl(this.components);
+            this.Explain = new King99.King99GroupBox();
+            this.tFiveDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.btnDefault = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClear = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDel = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tFiveDragControl1 = new TFive.TFiveDragControl(this.components);
-            this.EditTitle = new TFive.TFiveGroupBox();
+            this.tFiveDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.EditTitle = new King99.King99GroupBox();
             this.btnAddSkip = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAddB = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAddP = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tFiveDragControl4 = new TFive.TFiveDragControl(this.components);
+            this.tFiveDragControl4 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBetting)).BeginInit();
             this.Explain.SuspendLayout();
@@ -70,23 +70,23 @@
             this.dgvBetting.AllowUserToDeleteRows = false;
             this.dgvBetting.AllowUserToResizeColumns = false;
             this.dgvBetting.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvBetting.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvBetting.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvBetting.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.dgvBetting.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBetting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvBetting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Kanit", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvBetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Type});
@@ -100,11 +100,11 @@
             this.dgvBetting.Name = "dgvBetting";
             this.dgvBetting.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvBetting.RowHeadersVisible = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvBetting.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvBetting.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvBetting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvBetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBetting.ShowCellErrors = false;
@@ -134,7 +134,7 @@
             // 
             this.lbExplain.BackColor = System.Drawing.Color.Transparent;
             this.lbExplain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbExplain.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lbExplain.Font = new System.Drawing.Font("Kanit", 9F);
             this.lbExplain.ForeColor = System.Drawing.Color.White;
             this.lbExplain.Location = new System.Drawing.Point(5, 28);
             this.lbExplain.Name = "lbExplain";
@@ -162,7 +162,7 @@
             this.btnClose.IconRightVisible = true;
             this.btnClose.IconRightZoom = 0D;
             this.btnClose.IconVisible = true;
-            this.btnClose.IconZoom = 40D;
+            this.btnClose.IconZoom = 50D;
             this.btnClose.IsTab = false;
             this.btnClose.Location = new System.Drawing.Point(343, 472);
             this.btnClose.Margin = new System.Windows.Forms.Padding(21, 28, 21, 28);
@@ -176,7 +176,7 @@
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.Textcolor = System.Drawing.Color.White;
-            this.btnClose.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // btnSave
@@ -199,7 +199,7 @@
             this.btnSave.IconRightVisible = true;
             this.btnSave.IconRightZoom = 0D;
             this.btnSave.IconVisible = true;
-            this.btnSave.IconZoom = 40D;
+            this.btnSave.IconZoom = 50D;
             this.btnSave.IsTab = false;
             this.btnSave.Location = new System.Drawing.Point(212, 472);
             this.btnSave.Margin = new System.Windows.Forms.Padding(14, 18, 14, 18);
@@ -213,16 +213,17 @@
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.Textcolor = System.Drawing.Color.White;
-            this.btnSave.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // Explain
             // 
             this.Explain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.Explain.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.Explain.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.Explain.Controls.Add(this.lbExplain);
             this.Explain.Curv1 = 1;
             this.Explain.Curv2 = 1;
+            this.Explain.Font = new System.Drawing.Font("Kanit", 11F);
             this.Explain.Location = new System.Drawing.Point(212, 34);
             this.Explain.MinimumSize = new System.Drawing.Size(136, 50);
             this.Explain.Name = "Explain";
@@ -258,7 +259,7 @@
             this.btnDefault.IconRightVisible = true;
             this.btnDefault.IconRightZoom = 0D;
             this.btnDefault.IconVisible = true;
-            this.btnDefault.IconZoom = 40D;
+            this.btnDefault.IconZoom = 50D;
             this.btnDefault.IsTab = false;
             this.btnDefault.Location = new System.Drawing.Point(105, 73);
             this.btnDefault.Margin = new System.Windows.Forms.Padding(21, 28, 21, 28);
@@ -272,7 +273,7 @@
             this.btnDefault.Text = "Default";
             this.btnDefault.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDefault.Textcolor = System.Drawing.Color.White;
-            this.btnDefault.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDefault.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDefault.Click += new System.EventHandler(this.BtnDefault_Click);
             // 
             // btnClear
@@ -295,7 +296,7 @@
             this.btnClear.IconRightVisible = true;
             this.btnClear.IconRightZoom = 0D;
             this.btnClear.IconVisible = true;
-            this.btnClear.IconZoom = 40D;
+            this.btnClear.IconZoom = 50D;
             this.btnClear.IsTab = false;
             this.btnClear.Location = new System.Drawing.Point(105, 114);
             this.btnClear.Margin = new System.Windows.Forms.Padding(14, 18, 14, 18);
@@ -309,7 +310,7 @@
             this.btnClear.Text = "Clear";
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClear.Textcolor = System.Drawing.Color.White;
-            this.btnClear.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // btnDel
@@ -332,7 +333,7 @@
             this.btnDel.IconRightVisible = true;
             this.btnDel.IconRightZoom = 0D;
             this.btnDel.IconVisible = true;
-            this.btnDel.IconZoom = 40D;
+            this.btnDel.IconZoom = 50D;
             this.btnDel.IsTab = false;
             this.btnDel.Location = new System.Drawing.Point(8, 114);
             this.btnDel.Margin = new System.Windows.Forms.Padding(9, 12, 9, 12);
@@ -346,7 +347,7 @@
             this.btnDel.Text = "Delete";
             this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDel.Textcolor = System.Drawing.Color.White;
-            this.btnDel.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.Click += new System.EventHandler(this.BtnDel_Click);
             // 
             // tFiveDragControl1
@@ -359,7 +360,7 @@
             // EditTitle
             // 
             this.EditTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.EditTitle.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.EditTitle.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.EditTitle.Controls.Add(this.btnAddSkip);
             this.EditTitle.Controls.Add(this.btnAddB);
             this.EditTitle.Controls.Add(this.btnClose);
@@ -373,7 +374,7 @@
             this.EditTitle.Curv1 = 1;
             this.EditTitle.Curv2 = 1;
             this.EditTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EditTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.EditTitle.Font = new System.Drawing.Font("Kanit", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.EditTitle.Location = new System.Drawing.Point(1, 1);
             this.EditTitle.MinimumSize = new System.Drawing.Size(136, 50);
             this.EditTitle.Name = "EditTitle";
@@ -416,7 +417,7 @@
             this.btnAddSkip.Text = "Add Skip";
             this.btnAddSkip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddSkip.Textcolor = System.Drawing.Color.White;
-            this.btnAddSkip.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSkip.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddSkip.Click += new System.EventHandler(this.BtnAddSkip_Click);
             // 
             // btnAddB
@@ -453,7 +454,7 @@
             this.btnAddB.Text = "Add B";
             this.btnAddB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddB.Textcolor = System.Drawing.Color.White;
-            this.btnAddB.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddB.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddB.Click += new System.EventHandler(this.BtnAddB_Click);
             // 
             // btnAddP
@@ -490,7 +491,7 @@
             this.btnAddP.Text = "Add P";
             this.btnAddP.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddP.Textcolor = System.Drawing.Color.White;
-            this.btnAddP.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddP.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddP.Click += new System.EventHandler(this.BtnAddP_Click);
             // 
             // tFiveDragControl4
@@ -539,23 +540,23 @@
 
         #endregion
 
-        private TFive.TFiveDragControl tFiveDragControl5;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl5;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvBetting;
-        private TFive.TFiveDragControl tFiveDragControl3;
-        public TFive.TFiveLabel lbExplain;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl3;
+        public  System.Windows.Forms.Label lbExplain;
         private Bunifu.Framework.UI.BunifuFlatButton btnClose;
         private Bunifu.Framework.UI.BunifuFlatButton btnSave;
-        private TFive.TFiveGroupBox Explain;
-        private TFive.TFiveDragControl tFiveDragControl2;
+        private King99.King99GroupBox Explain;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl2;
         private Bunifu.Framework.UI.BunifuFlatButton btnDefault;
         private Bunifu.Framework.UI.BunifuFlatButton btnClear;
         private Bunifu.Framework.UI.BunifuFlatButton btnDel;
-        private TFive.TFiveDragControl tFiveDragControl1;
-        public TFive.TFiveGroupBox EditTitle;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl1;
+        public King99.King99GroupBox EditTitle;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddSkip;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddB;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddP;
-        private TFive.TFiveDragControl tFiveDragControl4;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl4;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
     }

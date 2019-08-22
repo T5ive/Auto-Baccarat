@@ -114,12 +114,6 @@
     <Compile Include="FrmLayout.Designer.cs">
       <DependentUpon>FrmLayout.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmMain.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmMain.Designer.cs">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-    </Compile>
     <Compile Include="LocalizationManager\IniReader.cs" />
     <Compile Include="LocalizationManager\langinfo.cs" />
     <Compile Include="LocalizationManager\LocalizationManager.cs" />
@@ -170,10 +164,6 @@
     <EmbeddedResource Include="FrmLayout.resx">
       <DependentUpon>FrmLayout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMain.resx">
-      <DependentUpon>FrmMain.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -209,17 +199,17 @@
       <Project>{36cd65ce-3230-4179-ad89-2b820dfd8d5d}</Project>
       <Name>Magnifying Glass</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TFive Class\TFive Class.csproj">
+    <ProjectReference Include="..\TFive Class\King99 Class.csproj">
       <Project>{64a873cd-ad32-4e99-a9c7-d46d45b56910}</Project>
-      <Name>TFive Class</Name>
+      <Name>King99 Class</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TFive Theme\TFive Theme.csproj">
-      <Project>{F61532F4-3B0A-46C9-B618-9DE4F8063E1F}</Project>
-      <Name>TFive Theme</Name>
+    <ProjectReference Include="..\TFive Theme\King99 Theme.csproj">
+      <Project>{f61532f4-3b0a-46c9-b618-9de4f8063e1f}</Project>
+      <Name>King99 Theme</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TFive UI\TFive UI.csproj">
+    <ProjectReference Include="..\TFive UI\King99 UI.csproj">
       <Project>{b4c543e6-f49d-403d-8275-ab212df3039d}</Project>
-      <Name>TFive UI</Name>
+      <Name>King99 UI</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

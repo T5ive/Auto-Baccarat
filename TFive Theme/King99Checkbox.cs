@@ -1,33 +1,31 @@
-﻿using System;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Windows.Forms;
+using King99_Theme;
 
-namespace TFive
+namespace King99
 {
-    public sealed class TFiveCheckbox : ThemeControl
+    public sealed class King99Checkbox : ThemeControl
     {
         public bool CheckedState
         {
-            get => _CheckedState;
+            get => _checkedState;
             set
             {
-                _CheckedState = value;
+                _checkedState = value;
                 Invalidate();
             }
         }
 
-        public TFiveCheckbox()
+        public King99Checkbox()
         {
             Click += delegate
             {
-                changeCheck();
+                ChangeCheck();
             };
             AutoSize = true;
-           // Size = new Size(90, 16);
-           // MinimumSize = new Size(16, 16);
-           // MaximumSize = new Size(600, 16);
             Anchor = AnchorStyles.Top | AnchorStyles.Left;
-            Font = new Font("Segoe UI", 11);
+            //Font = CustomFont.GetCustomFont(11);
+            Font = new Font("Kanit",11, FontStyle.Regular);
             CheckedState = false;
             Cursor = Cursors.Hand;
         }
@@ -36,7 +34,6 @@ namespace TFive
         {
 
             var border = new Pen(Color.FromArgb(255, 60, 75));
-            //G.Clear(Color.FromArgb(240, 240, 240));
             G.Clear(BackColor);
             if (CheckedState)
             {
@@ -46,8 +43,6 @@ namespace TFive
             else
             {
                 DrawGradient(
-                    //Color.FromArgb(240, 240, 240),
-                    //Color.FromArgb(240, 240, 240),
                     BackColor,
                     BackColor,
                     0, 0, 
@@ -60,12 +55,12 @@ namespace TFive
             DrawText(HorizontalAlignment.Left, Color.White, Size.Height +1, 0);
         }
 
-        public void changeCheck()
+        public void ChangeCheck()
         {
             var checkedState = CheckedState;
             CheckedState = !checkedState;
         }
 
-        private bool _CheckedState;
+        private bool _checkedState;
     }
 }

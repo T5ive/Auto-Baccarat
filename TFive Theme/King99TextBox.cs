@@ -1,37 +1,40 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using King99_Theme;
 
-namespace TFive
+namespace King99
 {
-
     [DefaultEvent("TextChanged")]
-    public sealed class TFiveTextBox : Control
+    public sealed class King99TextBox : Control
     {
-        public TextBox TB
+        [field: CompilerGenerated]
+        [field: AccessedThroughProperty("TxtBox")]
+        public TextBox TxtBox
         {
             [CompilerGenerated]
-            get => _TB;
+            get;
             [CompilerGenerated]
             [MethodImpl(MethodImplOptions.Synchronized)]
-            set => _TB = value;
+            set;
         }
+
+        #region Properties
 
         [Category("Options")]
         public HorizontalAlignment TextAlign
         {
-            get => _TextAlign;
+            get => _textAlign;
             set
             {
-                _TextAlign = value;
-                if (TB != null)
+                _textAlign = value;
+                if (TxtBox != null)
                 {
-                    TB.TextAlign = value;
+                    TxtBox.TextAlign = value;
                 }
             }
         }
@@ -39,13 +42,13 @@ namespace TFive
         [Category("Options")]
         public int MaxLength
         {
-            get => _MaxLength;
+            get => _maxLength;
             set
             {
-                _MaxLength = value;
-                if (TB != null)
+                _maxLength = value;
+                if (TxtBox != null)
                 {
-                    TB.MaxLength = value;
+                    TxtBox.MaxLength = value;
                 }
             }
         }
@@ -53,13 +56,13 @@ namespace TFive
         [Category("Options")]
         public bool ReadOnly
         {
-            get => _ReadOnly;
+            get => _readOnly;
             set
             {
-                _ReadOnly = value;
-                if (TB != null)
+                _readOnly = value;
+                if (TxtBox != null)
                 {
-                    TB.ReadOnly = value;
+                    TxtBox.ReadOnly = value;
                 }
             }
         }
@@ -67,13 +70,13 @@ namespace TFive
         [Category("Options")]
         public bool UseSystemPasswordChar
         {
-            get => _UseSystemPasswordChar;
+            get => _useSystemPasswordChar;
             set
             {
-                _UseSystemPasswordChar = value;
-                if (TB != null)
+                _useSystemPasswordChar = value;
+                if (TxtBox != null)
                 {
-                    TB.UseSystemPasswordChar = value;
+                    TxtBox.UseSystemPasswordChar = value;
                 }
             }
         }
@@ -81,21 +84,21 @@ namespace TFive
         [Category("Options")]
         public bool Multiline
         {
-            get => _Multiline;
+            get => _multiline;
             set
             {
-                _Multiline = value;
+                _multiline = value;
                 checked
                 {
-                    if (TB == null) return;
-                    TB.Multiline = value;
+                    if (TxtBox == null) return;
+                    TxtBox.Multiline = value;
                     if (value)
                     {
-                        TB.Height = Height - 11;
+                        TxtBox.Height = Height - 11;
                     }
                     else
                     {
-                        Height = TB.Height + 11;
+                        Height = TxtBox.Height + 11;
                     }
                 }
             }
@@ -108,9 +111,9 @@ namespace TFive
             set
             {
                 base.Text = value;
-                if (TB != null)
+                if (TxtBox != null)
                 {
-                    TB.Text = value;
+                    TxtBox.Text = value;
                 }
             }
         }
@@ -124,68 +127,72 @@ namespace TFive
                 base.Font = value;
                 checked
                 {
-                    if (TB == null) return;
-                    TB.Font = value;
-                    TB.Location = new Point(3, 5);
-                    TB.Width = Width - 6;
-                    if (!_Multiline)
+                    if (TxtBox == null) return;
+                    TxtBox.Font = value;
+                    TxtBox.Location = new Point(3, 5);
+                    TxtBox.Width = Width - 6;
+                    if (!_multiline)
                     {
-                        Height = TB.Height + 11;
+                        Height = TxtBox.Height + 11;
                     }
                 }
             }
         }
 
+        #endregion Properties
+
+        #region Event
 
         protected override void OnBackColorChanged(EventArgs e)
         {
             base.OnBackColorChanged(e);
-            _BaseColor = BackColor;
+            _baseColor = BackColor;
             Invalidate();
-            
         }
 
         protected override void OnCreateControl()
         {
             base.OnCreateControl();
-            TB.KeyPress += TextBox_KeyPress;
-            if (!Controls.Contains(TB))
+            TxtBox.KeyPress += TextBox_KeyPress;
+            if (!Controls.Contains(TxtBox))
             {
-                Controls.Add(TB);
+                Controls.Add(TxtBox);
             }
         }
 
         private void OnBaseTextChanged(object s, EventArgs e)
         {
-            Text = TB.Text;
+            Text = TxtBox.Text;
         }
-
-     
 
         protected override void OnResize(EventArgs e)
         {
-            TB.Location = new Point(5, 5);
+            TxtBox.Location = new Point(5, 5);
             checked
             {
-                TB.Width = Width - 10;
-                var multiline = _Multiline;
+                TxtBox.Width = Width - 10;
+                var multiline = _multiline;
                 if (multiline)
                 {
-                    TB.Height = Height - 11;
+                    TxtBox.Height = Height - 11;
                 }
                 else
                 {
-                    Height = TB.Height + 11;
+                    Height = TxtBox.Height + 11;
                 }
 
                 base.OnResize(e);
             }
         }
 
+        #endregion Event
+
+        #region Key Press
+
         public override Color ForeColor
         {
-            get => _TextColor;
-            set => _TextColor = value;
+            get => _textColor;
+            set => _textColor = value;
         }
 
         public enum _Num
@@ -208,8 +215,6 @@ namespace TFive
             }
         }
 
-
-
         public void TextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             switch (StyleType)
@@ -219,6 +224,7 @@ namespace TFive
                     e.Handled = false;
 
                     break;
+
                 case _Num.NumberOnly:
                     if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) //&&       (e.KeyChar != '.'))
                     {
@@ -226,12 +232,14 @@ namespace TFive
                     }
 
                     break;
+
                 case _Num.NumberDot:
                     if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != '.')
                     {
                         e.Handled = true;
                     }
                     break;
+
                 case _Num.NumberComma:
                     if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && e.KeyChar != ',')
                     {
@@ -240,18 +248,15 @@ namespace TFive
 
                     break;
             }
-
-
         }
 
-        public TFiveTextBox()
-        {
+        #endregion Key Press
 
-            _TextAlign = HorizontalAlignment.Left;
-            _MaxLength = 32767;
-            //_BaseColor = Color.FromArgb(240, 240, 240);
-        //    _BaseColor = BackColor;
-            _TextColor = Color.White;
+        public King99TextBox()
+        {
+            _textAlign = HorizontalAlignment.Left;
+            _maxLength = 32767;
+            _textColor = Color.White;
 
             SetStyle(
                 ControlStyles.UserPaint | ControlStyles.SupportsTransparentBackColor |
@@ -259,35 +264,36 @@ namespace TFive
             DoubleBuffered = true;
             BackColor = Color.FromArgb(202, 62, 71);
             Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            TB = new TextBox
+            TxtBox = new TextBox
             {
                 Text = Text,
-                BackColor = _BaseColor,
-                ForeColor = _TextColor,
-                MaxLength = _MaxLength,
-                Multiline = _Multiline,
-                ReadOnly = _ReadOnly,
-                UseSystemPasswordChar = _UseSystemPasswordChar,
+                BackColor = _baseColor,
+                ForeColor = _textColor,
+                MaxLength = _maxLength,
+                Multiline = _multiline,
+                ReadOnly = _readOnly,
+                UseSystemPasswordChar = _useSystemPasswordChar,
                 BorderStyle = BorderStyle.None
             };
             MinimumSize = new Size(0, 31);
-            Font = new Font("Segoe UI", 11);
-            TB.Location = new Point(5, 5);
+            // Font = CustomFont.GetCustomFont(11);
+            Font = new Font("Kanit", 11, FontStyle.Regular);
+            TxtBox.Location = new Point(5, 5);
             checked
             {
-                TB.Width = Width - 10;
-                TB.Cursor = Cursors.IBeam;
-                var multiline = _Multiline;
+                TxtBox.Width = Width - 10;
+                TxtBox.Cursor = Cursors.IBeam;
+                var multiline = _multiline;
                 if (multiline)
                 {
-                    TB.Height = Height - 11;
+                    TxtBox.Height = Height - 11;
                 }
                 else
                 {
-                    Height = TB.Height + 11;
+                    Height = TxtBox.Height + 11;
                 }
 
-                TB.TextChanged += OnBaseTextChanged;
+                TxtBox.TextChanged += OnBaseTextChanged;
             }
         }
 
@@ -298,17 +304,17 @@ namespace TFive
 
             checked
             {
-                W = Width - 1;
-                H = Height - 1;
+                _w = Width - 1;
+                _h = Height - 1;
                 var g = G;
                 g.SmoothingMode = SmoothingMode.HighQuality;
                 g.PixelOffsetMode = PixelOffsetMode.HighQuality;
                 g.TextRenderingHint = TextRenderingHint.ClearTypeGridFit;
                 g.Clear(BackColor);
-                TB.BackColor = _BaseColor;
-                TB.ForeColor = _TextColor;
+                TxtBox.BackColor = _baseColor;
+                TxtBox.ForeColor = _textColor;
                 g.FillRectangle(new SolidBrush(Color.FromArgb(255, 60, 75)), 0, 0, Width, Height);
-                g.FillRectangle(new SolidBrush(_BaseColor), 1, 1, W - 1, H - 1);
+                g.FillRectangle(new SolidBrush(_baseColor), 1, 1, _w - 1, _h - 1);
                 base.OnPaint(e);
                 G.Dispose();
                 e.Graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
@@ -317,28 +323,22 @@ namespace TFive
             }
         }
 
-        private int W;
+        private int _w;
 
-        private int H;
+        private int _h;
 
-        [CompilerGenerated]
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        [AccessedThroughProperty("TB")]
-        private TextBox _TB;
+        private HorizontalAlignment _textAlign;
 
-        private HorizontalAlignment _TextAlign;
+        private int _maxLength;
 
-        private int _MaxLength;
+        private bool _readOnly;
 
-        private bool _ReadOnly;
+        private bool _useSystemPasswordChar;
 
-        private bool _UseSystemPasswordChar;
+        private bool _multiline;
 
-        private bool _Multiline;
+        private Color _baseColor;
 
-        private  Color _BaseColor;
-
-        private Color _TextColor;
-
+        private Color _textColor;
     }
 }

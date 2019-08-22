@@ -8,6 +8,7 @@ using System.Windows.Forms;
 using AutoBaccarat.Properties;
 using AutoBaccarat.Setting;
 using Bunifu.Framework.UI;
+using King99_Theme;
 
 namespace AutoBaccarat
 {
@@ -2349,8 +2350,20 @@ namespace AutoBaccarat
                         }
                     }
 
+                    Thread.Sleep(1000);
+                    if (bettingSuggest == 1)
+                    {
+                        Win32Bot.MouseClick(ValueForBot.PositionConfirmPlayer);
+                        Thread.Sleep(100);
+                        Win32Bot.MouseClick(ValueForBot.PositionConfirmPlayer);
+                    }
+                    else if (bettingSuggest == 2)
+                    {
+                        Win32Bot.MouseClick(ValueForBot.PositionConfirmBanker);
+                        Thread.Sleep(100);
+                        Win32Bot.MouseClick(ValueForBot.PositionConfirmBanker);
+                    }
 
-                    //  ClickBetting(bettingSuggest);
                     if (cbConfirmClick.CheckedState)
                     {
                         Thread.Sleep(1000);
@@ -2392,6 +2405,7 @@ namespace AutoBaccarat
                 Win32Bot.MouseClick(ValueForBot.PositionBanker);
             }
         }
+        
         private void CheckColorResultNormal()
         {
             if (!_statusRunBot) return;
@@ -2721,8 +2735,20 @@ namespace AutoBaccarat
                         }
                     }
 
+                    Thread.Sleep(1000);
+                    if (bettingSuggest == 1)
+                    {
+                        Win32Bot.ClickToBG(IHandle, ValueForBot.PositionConfirmPlayer.X, ValueForBot.PositionConfirmPlayer.Y);
+                        Thread.Sleep(100);
+                        Win32Bot.ClickToBG(IHandle, ValueForBot.PositionConfirmPlayer.X, ValueForBot.PositionConfirmPlayer.Y);
+                    }
+                    else if (bettingSuggest == 2)
+                    {
+                        Win32Bot.ClickToBG(IHandle, ValueForBot.PositionConfirmBanker.X, ValueForBot.PositionConfirmBanker.Y);
+                        Thread.Sleep(100);
+                        Win32Bot.ClickToBG(IHandle, ValueForBot.PositionConfirmBanker.X, ValueForBot.PositionConfirmBanker.Y);
+                    }
 
-                    //  ClickBetting(bettingSuggest);
                     if (cbConfirmClick.CheckedState)
                     {
                         Thread.Sleep(1000);
@@ -3021,6 +3047,7 @@ namespace AutoBaccarat
 
         private void Button1_Click(object sender, EventArgs e)
         {
+         
             //LocalizeFormNew(this);
             //LocalizeFormNew(_frmBet);
             //LocalizeFormNew(_frmBetEdit);

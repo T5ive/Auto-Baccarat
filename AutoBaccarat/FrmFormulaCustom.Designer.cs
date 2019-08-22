@@ -30,44 +30,44 @@
         {
             this.components = new System.ComponentModel.Container();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.EditTitle = new TFive.TFiveGroupBox();
-            this.CustomBox = new TFive.TFiveGroupBox();
-            this.CustomSetting = new TFive.TFiveGroupBox();
+            this.EditTitle = new King99.King99GroupBox();
+            this.CustomBox = new King99.King99GroupBox();
+            this.CustomSetting = new King99.King99GroupBox();
             this.btnDefault = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lbValue = new TFive.TFiveLabel();
+            this.lbValue = new System.Windows.Forms.Label();
             this.btnClear = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.CustomConfig = new TFive.TFiveGroupBox();
-            this.radFollow = new TFive.TFiveRadioButton();
-            this.radAdverse = new TFive.TFiveRadioButton();
+            this.CustomConfig = new King99.King99GroupBox();
+            this.radFollow = new King99.King99RadioButton();
+            this.radAdverse = new King99.King99RadioButton();
             this.btnDel = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txtNum = new TFive.TFiveTextBox();
+            this.txtNum = new King99.King99TextBox();
             this.btnAdd = new Bunifu.Framework.UI.BunifuFlatButton();
             this.PanelResultBP = new System.Windows.Forms.Panel();
             this.PanelResultPB = new System.Windows.Forms.Panel();
             this.PanelResult = new System.Windows.Forms.Panel();
-            this.customList = new TFive.TFiveGroupBox();
+            this.customList = new King99.King99GroupBox();
             this.ListBoxValue = new System.Windows.Forms.ListBox();
-            this.lbTotal = new TFive.TFiveLabel();
+            this.lbTotal = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.txtName = new TFive.TFiveTextBox();
-            this.lbName = new TFive.TFiveLabel();
-            this.FileList = new TFive.TFiveGroupBox();
+            this.txtName = new King99.King99TextBox();
+            this.lbName = new System.Windows.Forms.Label();
+            this.FileList = new King99.King99GroupBox();
             this.ListBoxLoad = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAddList = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDelList = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dc1 = new TFive.TFiveDragControl(this.components);
-            this.dc2 = new TFive.TFiveDragControl(this.components);
-            this.dc3 = new TFive.TFiveDragControl(this.components);
-            this.dc4 = new TFive.TFiveDragControl(this.components);
-            this.dc5 = new TFive.TFiveDragControl(this.components);
-            this.dc6 = new TFive.TFiveDragControl(this.components);
-            this.dc7 = new TFive.TFiveDragControl(this.components);
-            this.dc8 = new TFive.TFiveDragControl(this.components);
-            this.dc9 = new TFive.TFiveDragControl(this.components);
-            this.dc10 = new TFive.TFiveDragControl(this.components);
+            this.dc1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.dc2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.dc3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.dc4 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.dc5 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.dc6 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.dc7 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.dc8 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.dc9 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.dc10 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuCards1.SuspendLayout();
             this.EditTitle.SuspendLayout();
             this.CustomBox.SuspendLayout();
@@ -99,14 +99,14 @@
             // EditTitle
             // 
             this.EditTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.EditTitle.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.EditTitle.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.EditTitle.Controls.Add(this.CustomBox);
             this.EditTitle.Controls.Add(this.FileList);
             this.EditTitle.Controls.Add(this.tableLayoutPanel3);
             this.EditTitle.Curv1 = 1;
             this.EditTitle.Curv2 = 1;
             this.EditTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EditTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.EditTitle.Font = new System.Drawing.Font("Kanit", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.EditTitle.Location = new System.Drawing.Point(1, 1);
             this.EditTitle.MinimumSize = new System.Drawing.Size(136, 50);
             this.EditTitle.Name = "EditTitle";
@@ -118,7 +118,7 @@
             // CustomBox
             // 
             this.CustomBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.CustomBox.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.CustomBox.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.CustomBox.Controls.Add(this.CustomSetting);
             this.CustomBox.Controls.Add(this.PanelResultBP);
             this.CustomBox.Controls.Add(this.PanelResultPB);
@@ -128,6 +128,7 @@
             this.CustomBox.Curv1 = 1;
             this.CustomBox.Curv2 = 1;
             this.CustomBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CustomBox.Font = new System.Drawing.Font("Kanit", 11F);
             this.CustomBox.Location = new System.Drawing.Point(205, 28);
             this.CustomBox.MinimumSize = new System.Drawing.Size(136, 50);
             this.CustomBox.Name = "CustomBox";
@@ -139,7 +140,7 @@
             // CustomSetting
             // 
             this.CustomSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.CustomSetting.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.CustomSetting.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.CustomSetting.Controls.Add(this.btnDefault);
             this.CustomSetting.Controls.Add(this.lbValue);
             this.CustomSetting.Controls.Add(this.btnClear);
@@ -150,6 +151,7 @@
             this.CustomSetting.Curv1 = 1;
             this.CustomSetting.Curv2 = 1;
             this.CustomSetting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CustomSetting.Font = new System.Drawing.Font("Kanit", 11F);
             this.CustomSetting.Location = new System.Drawing.Point(570, 68);
             this.CustomSetting.MinimumSize = new System.Drawing.Size(136, 50);
             this.CustomSetting.Name = "CustomSetting";
@@ -192,18 +194,18 @@
             this.btnDefault.Text = "Default";
             this.btnDefault.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDefault.Textcolor = System.Drawing.Color.White;
-            this.btnDefault.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDefault.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDefault.Click += new System.EventHandler(this.BtnDefault_Click);
             // 
             // lbValue
             // 
             this.lbValue.AutoSize = true;
             this.lbValue.BackColor = System.Drawing.Color.Transparent;
-            this.lbValue.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lbValue.Font = new System.Drawing.Font("Kanit", 11F);
             this.lbValue.ForeColor = System.Drawing.Color.White;
             this.lbValue.Location = new System.Drawing.Point(10, 42);
             this.lbValue.Name = "lbValue";
-            this.lbValue.Size = new System.Drawing.Size(48, 20);
+            this.lbValue.Size = new System.Drawing.Size(50, 22);
             this.lbValue.TabIndex = 11;
             this.lbValue.Text = "Value:";
             // 
@@ -241,17 +243,18 @@
             this.btnClear.Text = "Clear";
             this.btnClear.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClear.Textcolor = System.Drawing.Color.White;
-            this.btnClear.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // CustomConfig
             // 
             this.CustomConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.CustomConfig.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.CustomConfig.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.CustomConfig.Controls.Add(this.radFollow);
             this.CustomConfig.Controls.Add(this.radAdverse);
             this.CustomConfig.Curv1 = 1;
             this.CustomConfig.Curv2 = 1;
+            this.CustomConfig.Font = new System.Drawing.Font("Kanit", 11F);
             this.CustomConfig.Location = new System.Drawing.Point(8, 203);
             this.CustomConfig.MinimumSize = new System.Drawing.Size(136, 50);
             this.CustomConfig.Name = "CustomConfig";
@@ -265,28 +268,28 @@
             this.radFollow.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.radFollow.Checked = false;
             this.radFollow.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radFollow.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.radFollow.Font = new System.Drawing.Font("Kanit", 11F);
             this.radFollow.ForeColor = System.Drawing.Color.White;
             this.radFollow.Location = new System.Drawing.Point(8, 40);
             this.radFollow.Name = "radFollow";
             this.radFollow.Size = new System.Drawing.Size(128, 15);
             this.radFollow.TabIndex = 16;
             this.radFollow.Text = "Follow of Last";
-            this.radFollow.CheckedChanged += new TFive.TFiveRadioButton.CheckedChangedEventHandler(this.ConfigChecked);
+            this.radFollow.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.ConfigChecked);
             // 
             // radAdverse
             // 
             this.radAdverse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.radAdverse.Checked = false;
             this.radAdverse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.radAdverse.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.radAdverse.Font = new System.Drawing.Font("Kanit", 11F);
             this.radAdverse.ForeColor = System.Drawing.Color.White;
             this.radAdverse.Location = new System.Drawing.Point(8, 73);
             this.radAdverse.Name = "radAdverse";
             this.radAdverse.Size = new System.Drawing.Size(128, 15);
             this.radAdverse.TabIndex = 15;
             this.radAdverse.Text = "Adverse of Last";
-            this.radAdverse.CheckedChanged += new TFive.TFiveRadioButton.CheckedChangedEventHandler(this.ConfigChecked);
+            this.radAdverse.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.ConfigChecked);
             // 
             // btnDel
             // 
@@ -322,22 +325,22 @@
             this.btnDel.Text = "Delete";
             this.btnDel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDel.Textcolor = System.Drawing.Color.White;
-            this.btnDel.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDel.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.Click += new System.EventHandler(this.BtnDel_Click);
             // 
             // txtNum
             // 
             this.txtNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.txtNum.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.txtNum.Font = new System.Drawing.Font("Kanit", 11F);
             this.txtNum.Location = new System.Drawing.Point(64, 31);
             this.txtNum.MaxLength = 32767;
             this.txtNum.MinimumSize = new System.Drawing.Size(0, 31);
             this.txtNum.Multiline = false;
             this.txtNum.Name = "txtNum";
             this.txtNum.ReadOnly = false;
-            this.txtNum.Size = new System.Drawing.Size(106, 31);
-            this.txtNum.Style = TFive.TFiveTextBox._Num.NumberComma;
+            this.txtNum.Size = new System.Drawing.Size(106, 33);
+            this.txtNum.Style = King99.King99TextBox._Num.NumberComma;
             this.txtNum.TabIndex = 9;
             this.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNum.UseSystemPasswordChar = false;
@@ -377,7 +380,7 @@
             this.btnAdd.Text = "Add";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.Textcolor = System.Drawing.Color.White;
-            this.btnAdd.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // PanelResultBP
@@ -410,12 +413,13 @@
             // customList
             // 
             this.customList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.customList.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.customList.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.customList.Controls.Add(this.ListBoxValue);
             this.customList.Controls.Add(this.lbTotal);
             this.customList.Curv1 = 1;
             this.customList.Curv2 = 1;
             this.customList.Dock = System.Windows.Forms.DockStyle.Left;
+            this.customList.Font = new System.Drawing.Font("Kanit", 11F);
             this.customList.Location = new System.Drawing.Point(5, 68);
             this.customList.MinimumSize = new System.Drawing.Size(136, 50);
             this.customList.Name = "customList";
@@ -429,13 +433,13 @@
             this.ListBoxValue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.ListBoxValue.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListBoxValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListBoxValue.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.ListBoxValue.Font = new System.Drawing.Font("Kanit", 11F);
             this.ListBoxValue.ForeColor = System.Drawing.Color.White;
             this.ListBoxValue.FormattingEnabled = true;
-            this.ListBoxValue.ItemHeight = 20;
+            this.ListBoxValue.ItemHeight = 22;
             this.ListBoxValue.Location = new System.Drawing.Point(5, 28);
             this.ListBoxValue.Name = "ListBoxValue";
-            this.ListBoxValue.Size = new System.Drawing.Size(150, 254);
+            this.ListBoxValue.Size = new System.Drawing.Size(150, 252);
             this.ListBoxValue.TabIndex = 0;
             this.ListBoxValue.SelectedIndexChanged += new System.EventHandler(this.ListBoxValue_SelectedIndexChanged);
             // 
@@ -444,11 +448,11 @@
             this.lbTotal.AutoSize = true;
             this.lbTotal.BackColor = System.Drawing.Color.Transparent;
             this.lbTotal.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.lbTotal.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lbTotal.Font = new System.Drawing.Font("Kanit", 11F);
             this.lbTotal.ForeColor = System.Drawing.Color.White;
-            this.lbTotal.Location = new System.Drawing.Point(5, 282);
+            this.lbTotal.Location = new System.Drawing.Point(5, 280);
             this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(57, 20);
+            this.lbTotal.Size = new System.Drawing.Size(60, 22);
             this.lbTotal.TabIndex = 1;
             this.lbTotal.Text = "Total: 0";
             // 
@@ -474,7 +478,7 @@
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = false;
             this.txtName.Size = new System.Drawing.Size(194, 31);
-            this.txtName.Style = TFive.TFiveTextBox._Num.TextNum;
+            this.txtName.Style = King99.King99TextBox._Num.TextNum;
             this.txtName.TabIndex = 12;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtName.UseSystemPasswordChar = false;
@@ -483,7 +487,7 @@
             // 
             this.lbName.BackColor = System.Drawing.Color.Transparent;
             this.lbName.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lbName.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.lbName.Font = new System.Drawing.Font("Kanit", 11F);
             this.lbName.ForeColor = System.Drawing.Color.White;
             this.lbName.Location = new System.Drawing.Point(0, 0);
             this.lbName.Name = "lbName";
@@ -495,11 +499,12 @@
             // FileList
             // 
             this.FileList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.FileList.BGColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.FileList.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.FileList.Controls.Add(this.ListBoxLoad);
             this.FileList.Curv1 = 1;
             this.FileList.Curv2 = 1;
             this.FileList.Dock = System.Windows.Forms.DockStyle.Left;
+            this.FileList.Font = new System.Drawing.Font("Kanit", 11F);
             this.FileList.Location = new System.Drawing.Point(5, 28);
             this.FileList.MinimumSize = new System.Drawing.Size(136, 50);
             this.FileList.Name = "FileList";
@@ -513,10 +518,10 @@
             this.ListBoxLoad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.ListBoxLoad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ListBoxLoad.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ListBoxLoad.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.ListBoxLoad.Font = new System.Drawing.Font("Kanit", 11F);
             this.ListBoxLoad.ForeColor = System.Drawing.Color.White;
             this.ListBoxLoad.FormattingEnabled = true;
-            this.ListBoxLoad.ItemHeight = 20;
+            this.ListBoxLoad.ItemHeight = 22;
             this.ListBoxLoad.Location = new System.Drawing.Point(5, 28);
             this.ListBoxLoad.Name = "ListBoxLoad";
             this.ListBoxLoad.Size = new System.Drawing.Size(190, 347);
@@ -576,7 +581,7 @@
             this.btnSave.Text = "Save Custom";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSave.Textcolor = System.Drawing.Color.White;
-            this.btnSave.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnClose
@@ -613,7 +618,7 @@
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnClose.Textcolor = System.Drawing.Color.White;
-            this.btnClose.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
             // btnAddList
@@ -650,7 +655,7 @@
             this.btnAddList.Text = "Add";
             this.btnAddList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddList.Textcolor = System.Drawing.Color.White;
-            this.btnAddList.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddList.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddList.Click += new System.EventHandler(this.BtnAddList_Click);
             // 
             // btnDelList
@@ -687,7 +692,7 @@
             this.btnDelList.Text = "Delete";
             this.btnDelList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelList.Textcolor = System.Drawing.Color.White;
-            this.btnDelList.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelList.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelList.Click += new System.EventHandler(this.BtnDelList_Click);
             // 
             // dc1
@@ -793,23 +798,23 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private TFive.TFiveGroupBox EditTitle;
-        private TFive.TFiveGroupBox CustomBox;
-        private TFive.TFiveGroupBox CustomSetting;
-        private TFive.TFiveLabel lbName;
-        private TFive.TFiveTextBox txtName;
-        private TFive.TFiveLabel lbValue;
-        private TFive.TFiveGroupBox CustomConfig;
-        private TFive.TFiveRadioButton radFollow;
-        private TFive.TFiveRadioButton radAdverse;
-        private TFive.TFiveTextBox txtNum;
+        private King99.King99GroupBox EditTitle;
+        private King99.King99GroupBox CustomBox;
+        private King99.King99GroupBox CustomSetting;
+        private System.Windows.Forms.Label lbName;
+        private King99.King99TextBox txtName;
+        private System.Windows.Forms.Label lbValue;
+        private King99.King99GroupBox CustomConfig;
+        private King99.King99RadioButton radFollow;
+        private King99.King99RadioButton radAdverse;
+        private King99.King99TextBox txtNum;
         private System.Windows.Forms.Panel PanelResultBP;
         private System.Windows.Forms.Panel PanelResultPB;
         private System.Windows.Forms.Panel PanelResult;
-        private TFive.TFiveGroupBox customList;
+        private King99.King99GroupBox customList;
         private System.Windows.Forms.ListBox ListBoxValue;
-        private TFive.TFiveLabel lbTotal;
-        private TFive.TFiveGroupBox FileList;
+        private System.Windows.Forms.Label lbTotal;
+        private King99.King99GroupBox FileList;
         private System.Windows.Forms.ListBox ListBoxLoad;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel6;
@@ -821,15 +826,15 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnClose;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddList;
         private Bunifu.Framework.UI.BunifuFlatButton btnDelList;
-        private TFive.TFiveDragControl dc1;
-        private TFive.TFiveDragControl dc2;
-        private TFive.TFiveDragControl dc3;
-        private TFive.TFiveDragControl dc4;
-        private TFive.TFiveDragControl dc5;
-        private TFive.TFiveDragControl dc6;
-        private TFive.TFiveDragControl dc7;
-        private TFive.TFiveDragControl dc8;
-        private TFive.TFiveDragControl dc9;
-        private TFive.TFiveDragControl dc10;
+        private Bunifu.Framework.UI.BunifuDragControl dc1;
+        private Bunifu.Framework.UI.BunifuDragControl dc2;
+        private Bunifu.Framework.UI.BunifuDragControl dc3;
+        private Bunifu.Framework.UI.BunifuDragControl dc4;
+        private Bunifu.Framework.UI.BunifuDragControl dc5;
+        private Bunifu.Framework.UI.BunifuDragControl dc6;
+        private Bunifu.Framework.UI.BunifuDragControl dc7;
+        private Bunifu.Framework.UI.BunifuDragControl dc8;
+        private Bunifu.Framework.UI.BunifuDragControl dc9;
+        private Bunifu.Framework.UI.BunifuDragControl dc10;
     }
 }
