@@ -33,17 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.EditTitle = new King99.King99GroupBox();
+            this.EditTitle = new King99GroupBox();
             this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Explain = new King99.King99GroupBox();
+            this.Explain = new King99GroupBox();
             this.lbExplain = new System.Windows.Forms.Label();
             this.btnDefault = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClear = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDel = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAdd = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lbUnit = new System.Windows.Forms.Label();
-            this.Betting_txtNumber = new King99.King99TextBox();
+            this.Betting_txtNumber = new King99TextBox();
             this.dgvBetting = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Step = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -375,7 +375,7 @@
             this.Betting_txtNumber.Name = "Betting_txtNumber";
             this.Betting_txtNumber.ReadOnly = false;
             this.Betting_txtNumber.Size = new System.Drawing.Size(125, 33);
-            this.Betting_txtNumber.Style = King99.King99TextBox._Num.NumberOnly;
+            this.Betting_txtNumber.Style = King99TextBox._Num.NumberOnly;
             this.Betting_txtNumber.TabIndex = 9;
             this.Betting_txtNumber.Text = "1";
             this.Betting_txtNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -510,7 +510,7 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private King99.King99TextBox Betting_txtNumber;
+        private King99TextBox Betting_txtNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Step;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvBetting;
@@ -519,7 +519,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnDefault;
         private Bunifu.Framework.UI.BunifuFlatButton btnClear;
         private Bunifu.Framework.UI.BunifuFlatButton btnDel;
-        private King99.King99GroupBox Explain;
+        private King99GroupBox Explain;
         private Bunifu.Framework.UI.BunifuFlatButton btnClose;
         private Bunifu.Framework.UI.BunifuFlatButton btnSave;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl1;
@@ -527,7 +527,7 @@
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl3;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl4;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl5;
-        public King99.King99GroupBox EditTitle;
+        public King99GroupBox EditTitle;
         public System.Windows.Forms.Label lbExplain;
     }
 }

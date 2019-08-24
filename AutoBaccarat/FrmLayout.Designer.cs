@@ -34,10 +34,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.EditTitle = new King99.King99GroupBox();
-            this.PositionBox = new King99.King99GroupBox();
-            this.radBackGround = new King99.King99RadioButton();
-            this.radNormal = new King99.King99RadioButton();
+            this.EditTitle = new King99GroupBox();
+            this.PositionBox = new King99GroupBox();
+            this.radBackGround = new King99RadioButton();
+            this.radNormal = new King99RadioButton();
             this.dgvSetting = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.colSetting = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colButton = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -48,8 +48,8 @@
             this.Rgb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelName = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
-            this.txtName = new King99.King99TextBox();
-            this.ListFile = new King99.King99GroupBox();
+            this.txtName = new King99TextBox();
+            this.ListFile = new King99GroupBox();
             this.listLayout = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -141,7 +141,7 @@
             this.radBackGround.Size = new System.Drawing.Size(146, 19);
             this.radBackGround.TabIndex = 8;
             this.radBackGround.Text = "Background Mode";
-            this.radBackGround.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.SelectMode);
+            this.radBackGround.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.SelectMode);
             // 
             // radNormal
             // 
@@ -155,7 +155,7 @@
             this.radNormal.Size = new System.Drawing.Size(120, 19);
             this.radNormal.TabIndex = 9;
             this.radNormal.Text = "Normal Mode";
-            this.radNormal.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.SelectMode);
+            this.radNormal.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.SelectMode);
             // 
             // dgvSetting
             // 
@@ -310,7 +310,7 @@
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = false;
             this.txtName.Size = new System.Drawing.Size(154, 33);
-            this.txtName.Style = King99.King99TextBox._Num.TextNum;
+            this.txtName.Style = King99TextBox._Num.TextNum;
             this.txtName.TabIndex = 1;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtName.UseSystemPasswordChar = false;
@@ -605,11 +605,11 @@
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl6;
-        private King99.King99GroupBox EditTitle;
+        private King99GroupBox EditTitle;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl7;
-        private King99.King99GroupBox PositionBox;
-        private King99.King99RadioButton radBackGround;
-        private King99.King99RadioButton radNormal;
+        private King99GroupBox PositionBox;
+        private King99RadioButton radBackGround;
+        private King99RadioButton radNormal;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvSetting;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSetting;
         private System.Windows.Forms.DataGridViewButtonColumn colButton;
@@ -620,8 +620,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Rgb;
         private System.Windows.Forms.Panel panelName;
         private System.Windows.Forms.Label lbName;
-        private King99.King99TextBox txtName;
-        private King99.King99GroupBox ListFile;
+        private King99TextBox txtName;
+        private King99GroupBox ListFile;
         private System.Windows.Forms.ListBox listLayout;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private Bunifu.Framework.UI.BunifuFlatButton btnSave;

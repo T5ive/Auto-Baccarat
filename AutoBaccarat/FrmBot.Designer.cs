@@ -36,24 +36,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBot));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.panelTop2 = new System.Windows.Forms.Panel();
             this.tFivePictureBox1 = new System.Windows.Forms.PictureBox();
@@ -76,17 +72,39 @@
             this.colUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStep = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BaccaratScore = new King99.King99GroupBox();
+            this.BaccaratScore = new AutoBaccarat.King99GroupBox();
             this.dgvBigRoad = new System.Windows.Forms.DataGridView();
-            this.BotStatus = new King99.King99GroupBox();
-            this.dgvStatus = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BotStatus = new AutoBaccarat.King99GroupBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbValueBetUnit = new System.Windows.Forms.Label();
+            this.lbBetUnit = new System.Windows.Forms.Label();
+            this.lbValueMaxConLose = new System.Windows.Forms.Label();
+            this.lbMaxConLose = new System.Windows.Forms.Label();
+            this.lbValueBetting = new System.Windows.Forms.Label();
+            this.lbBetting = new System.Windows.Forms.Label();
+            this.lbValueWL = new System.Windows.Forms.Label();
+            this.lbWL = new System.Windows.Forms.Label();
+            this.lbValueTime = new System.Windows.Forms.Label();
+            this.lbTime = new System.Windows.Forms.Label();
+            this.lbValueStake = new System.Windows.Forms.Label();
+            this.lbStake = new System.Windows.Forms.Label();
+            this.lbMaxConWin = new System.Windows.Forms.Label();
+            this.lbValueMaxConWin = new System.Windows.Forms.Label();
+            this.lbValueAmount = new System.Windows.Forms.Label();
+            this.lbAmount = new System.Windows.Forms.Label();
+            this.lbLose = new System.Windows.Forms.Label();
+            this.lbValueLose = new System.Windows.Forms.Label();
+            this.lbValueBalance = new System.Windows.Forms.Label();
+            this.lbBalance = new System.Windows.Forms.Label();
+            this.lbWin = new System.Windows.Forms.Label();
+            this.lbValueWin = new System.Windows.Forms.Label();
+            this.lbValueMaxProfit = new System.Windows.Forms.Label();
+            this.lbMaxProfit = new System.Windows.Forms.Label();
+            this.lbRound = new System.Windows.Forms.Label();
+            this.lbValueRound = new System.Windows.Forms.Label();
             this.panelStart = new System.Windows.Forms.Panel();
             this.btnStart = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.numberStatus = new King99.King99NotificationNumber();
+            this.numberStatus = new AutoBaccarat.King99NotificationNumber();
             this.btnClear = new System.Windows.Forms.Button();
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnAddP = new System.Windows.Forms.Button();
@@ -103,15 +121,15 @@
             this.btnBetSystem = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnFormula = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLayout = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.SettingProgram = new King99.King99GroupBox();
-            this.cbConfirmClick = new King99.King99Checkbox();
-            this.cbInvert = new King99.King99Checkbox();
-            this.cbLanguages = new King99.King99ComboBox();
+            this.SettingProgram = new AutoBaccarat.King99GroupBox();
+            this.cbConfirmClick = new AutoBaccarat.King99Checkbox();
+            this.cbInvert = new AutoBaccarat.King99Checkbox();
+            this.cbLanguages = new AutoBaccarat.King99ComboBox();
             this.lbLanguages = new System.Windows.Forms.Label();
-            this.cbTopMost = new King99.King99Checkbox();
-            this.cbMove = new King99.King99Checkbox();
+            this.cbTopMost = new AutoBaccarat.King99Checkbox();
+            this.cbMove = new AutoBaccarat.King99Checkbox();
             this.panelRight = new System.Windows.Forms.Panel();
-            this.GoodLine = new King99.King99GroupBox();
+            this.GoodLine = new AutoBaccarat.King99GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvGoodLine = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -138,7 +156,7 @@
             this.lbline5 = new System.Windows.Forms.Label();
             this.lbline6 = new System.Windows.Forms.Label();
             this.lblineSum = new System.Windows.Forms.Label();
-            this.BotSettings = new King99.King99GroupBox();
+            this.BotSettings = new AutoBaccarat.King99GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbValueMode = new System.Windows.Forms.Label();
             this.lbMode = new System.Windows.Forms.Label();
@@ -173,7 +191,7 @@
             this.BaccaratScore.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBigRoad)).BeginInit();
             this.BotStatus.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStatus)).BeginInit();
+            this.tableLayoutPanel3.SuspendLayout();
             this.panelStart.SuspendLayout();
             this.panelPage.SuspendLayout();
             this.panelSettings.SuspendLayout();
@@ -197,7 +215,7 @@
             this.panelTop2.Location = new System.Drawing.Point(0, 0);
             this.panelTop2.Margin = new System.Windows.Forms.Padding(0);
             this.panelTop2.Name = "panelTop2";
-            this.panelTop2.Size = new System.Drawing.Size(719, 40);
+            this.panelTop2.Size = new System.Drawing.Size(739, 40);
             this.panelTop2.TabIndex = 4;
             // 
             // tFivePictureBox1
@@ -209,7 +227,7 @@
             this.tFivePictureBox1.Image = global::AutoBaccarat.Properties.Resources.logo;
             this.tFivePictureBox1.Location = new System.Drawing.Point(0, 0);
             this.tFivePictureBox1.Name = "tFivePictureBox1";
-            this.tFivePictureBox1.Size = new System.Drawing.Size(719, 40);
+            this.tFivePictureBox1.Size = new System.Drawing.Size(739, 40);
             this.tFivePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.tFivePictureBox1.TabIndex = 5;
             this.tFivePictureBox1.TabStop = false;
@@ -566,7 +584,7 @@
             this.colMode.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colMode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.colMode.Visible = false;
-            this.colMode.Width = 47;
+            this.colMode.Width = 41;
             // 
             // colStep
             // 
@@ -635,7 +653,7 @@
             // 
             this.BotStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.BotStatus.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.BotStatus.Controls.Add(this.dgvStatus);
+            this.BotStatus.Controls.Add(this.tableLayoutPanel3);
             this.BotStatus.Curv1 = 1;
             this.BotStatus.Curv2 = 1;
             this.TransMain.SetDecoration(this.BotStatus, BunifuAnimatorNS.DecorationType.None);
@@ -650,96 +668,445 @@
             this.BotStatus.TabIndex = 1;
             this.BotStatus.Text = "Bot Status";
             // 
-            // dgvStatus
+            // tableLayoutPanel3
             // 
-            this.dgvStatus.AllowUserToAddRows = false;
-            this.dgvStatus.AllowUserToDeleteRows = false;
-            this.dgvStatus.AllowUserToOrderColumns = true;
-            this.dgvStatus.AllowUserToResizeColumns = false;
-            this.dgvStatus.AllowUserToResizeRows = false;
-            this.dgvStatus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.dgvStatus.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvStatus.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvStatus.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Kanit", 11F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvStatus.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            this.dgvStatus.ColumnHeadersVisible = false;
-            this.dgvStatus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4});
-            this.TransMain.SetDecoration(this.dgvStatus, BunifuAnimatorNS.DecorationType.None);
-            this.TransSettings.SetDecoration(this.dgvStatus, BunifuAnimatorNS.DecorationType.None);
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Kanit", 11F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvStatus.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dgvStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvStatus.EnableHeadersVisualStyles = false;
-            this.dgvStatus.Location = new System.Drawing.Point(5, 28);
-            this.dgvStatus.MultiSelect = false;
-            this.dgvStatus.Name = "dgvStatus";
-            this.dgvStatus.ReadOnly = true;
-            this.dgvStatus.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvStatus.RowHeadersVisible = false;
-            this.dgvStatus.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.dgvStatus.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dgvStatus.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvStatus.Size = new System.Drawing.Size(349, 152);
-            this.dgvStatus.TabIndex = 38;
-            this.dgvStatus.SelectionChanged += new System.EventHandler(this.ClearSelected);
+            this.tableLayoutPanel3.ColumnCount = 4;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.Controls.Add(this.lbValueBetUnit, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.lbBetUnit, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.lbValueMaxConLose, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.lbMaxConLose, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.lbValueBetting, 0, 6);
+            this.tableLayoutPanel3.Controls.Add(this.lbBetting, 0, 6);
+            this.tableLayoutPanel3.Controls.Add(this.lbValueWL, 0, 6);
+            this.tableLayoutPanel3.Controls.Add(this.lbWL, 0, 6);
+            this.tableLayoutPanel3.Controls.Add(this.lbValueTime, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbTime, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbValueStake, 3, 4);
+            this.tableLayoutPanel3.Controls.Add(this.lbStake, 2, 4);
+            this.tableLayoutPanel3.Controls.Add(this.lbMaxConWin, 0, 4);
+            this.tableLayoutPanel3.Controls.Add(this.lbValueMaxConWin, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.lbValueAmount, 3, 3);
+            this.tableLayoutPanel3.Controls.Add(this.lbAmount, 2, 3);
+            this.tableLayoutPanel3.Controls.Add(this.lbLose, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.lbValueLose, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.lbValueBalance, 3, 2);
+            this.tableLayoutPanel3.Controls.Add(this.lbBalance, 2, 2);
+            this.tableLayoutPanel3.Controls.Add(this.lbWin, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.lbValueWin, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.lbValueMaxProfit, 3, 1);
+            this.tableLayoutPanel3.Controls.Add(this.lbMaxProfit, 2, 1);
+            this.tableLayoutPanel3.Controls.Add(this.lbRound, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.lbValueRound, 1, 1);
+            this.TransMain.SetDecoration(this.tableLayoutPanel3, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.tableLayoutPanel3, BunifuAnimatorNS.DecorationType.None);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 28);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 7;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(349, 152);
+            this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // Column1
+            // lbValueBetUnit
             // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column1.Width = 160;
+            this.lbValueBetUnit.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbValueBetUnit, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbValueBetUnit, BunifuAnimatorNS.DecorationType.None);
+            this.lbValueBetUnit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbValueBetUnit.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueBetUnit.ForeColor = System.Drawing.Color.White;
+            this.lbValueBetUnit.Location = new System.Drawing.Point(299, 110);
+            this.lbValueBetUnit.Name = "lbValueBetUnit";
+            this.lbValueBetUnit.Size = new System.Drawing.Size(47, 20);
+            this.lbValueBetUnit.TabIndex = 42;
+            this.lbValueBetUnit.Text = "0";
+            this.lbValueBetUnit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Column2
+            // lbBetUnit
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Column2.Width = 30;
+            this.lbBetUnit.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbBetUnit, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbBetUnit, BunifuAnimatorNS.DecorationType.None);
+            this.lbBetUnit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbBetUnit.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBetUnit.ForeColor = System.Drawing.Color.White;
+            this.lbBetUnit.Location = new System.Drawing.Point(212, 110);
+            this.lbBetUnit.Name = "lbBetUnit";
+            this.lbBetUnit.Size = new System.Drawing.Size(81, 20);
+            this.lbBetUnit.TabIndex = 41;
+            this.lbBetUnit.Text = "Bet Unit:";
+            this.lbBetUnit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // Column3
+            // lbValueMaxConLose
             // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.lbValueMaxConLose.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbValueMaxConLose, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbValueMaxConLose, BunifuAnimatorNS.DecorationType.None);
+            this.lbValueMaxConLose.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbValueMaxConLose.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueMaxConLose.ForeColor = System.Drawing.Color.White;
+            this.lbValueMaxConLose.Location = new System.Drawing.Point(160, 110);
+            this.lbValueMaxConLose.Name = "lbValueMaxConLose";
+            this.lbValueMaxConLose.Size = new System.Drawing.Size(46, 20);
+            this.lbValueMaxConLose.TabIndex = 40;
+            this.lbValueMaxConLose.Text = "0";
+            this.lbValueMaxConLose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Column4
+            // lbMaxConLose
             // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle10;
-            this.Column4.HeaderText = "Column4";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Column4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.lbMaxConLose.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbMaxConLose, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbMaxConLose, BunifuAnimatorNS.DecorationType.None);
+            this.lbMaxConLose.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbMaxConLose.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaxConLose.ForeColor = System.Drawing.Color.White;
+            this.lbMaxConLose.Location = new System.Drawing.Point(3, 110);
+            this.lbMaxConLose.Name = "lbMaxConLose";
+            this.lbMaxConLose.Size = new System.Drawing.Size(151, 20);
+            this.lbMaxConLose.TabIndex = 35;
+            this.lbMaxConLose.Text = "Max Continuous Lose:";
+            this.lbMaxConLose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbValueBetting
+            // 
+            this.lbValueBetting.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbValueBetting, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbValueBetting, BunifuAnimatorNS.DecorationType.None);
+            this.lbValueBetting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbValueBetting.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueBetting.ForeColor = System.Drawing.Color.White;
+            this.lbValueBetting.Location = new System.Drawing.Point(299, 130);
+            this.lbValueBetting.Name = "lbValueBetting";
+            this.lbValueBetting.Size = new System.Drawing.Size(47, 22);
+            this.lbValueBetting.TabIndex = 34;
+            this.lbValueBetting.Text = "N";
+            this.lbValueBetting.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbBetting
+            // 
+            this.lbBetting.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbBetting, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbBetting, BunifuAnimatorNS.DecorationType.None);
+            this.lbBetting.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbBetting.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBetting.ForeColor = System.Drawing.Color.White;
+            this.lbBetting.Location = new System.Drawing.Point(212, 130);
+            this.lbBetting.Name = "lbBetting";
+            this.lbBetting.Size = new System.Drawing.Size(81, 22);
+            this.lbBetting.TabIndex = 39;
+            this.lbBetting.Text = "Betting:";
+            this.lbBetting.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbValueWL
+            // 
+            this.lbValueWL.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbValueWL, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbValueWL, BunifuAnimatorNS.DecorationType.None);
+            this.lbValueWL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbValueWL.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueWL.ForeColor = System.Drawing.Color.White;
+            this.lbValueWL.Location = new System.Drawing.Point(160, 130);
+            this.lbValueWL.Name = "lbValueWL";
+            this.lbValueWL.Size = new System.Drawing.Size(46, 22);
+            this.lbValueWL.TabIndex = 38;
+            this.lbValueWL.Text = "0";
+            this.lbValueWL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbWL
+            // 
+            this.lbWL.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbWL, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbWL, BunifuAnimatorNS.DecorationType.None);
+            this.lbWL.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbWL.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWL.ForeColor = System.Drawing.Color.White;
+            this.lbWL.Location = new System.Drawing.Point(3, 130);
+            this.lbWL.Name = "lbWL";
+            this.lbWL.Size = new System.Drawing.Size(151, 22);
+            this.lbWL.TabIndex = 33;
+            this.lbWL.Text = "Win/Lose:";
+            this.lbWL.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbValueTime
+            // 
+            this.lbValueTime.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbValueTime, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbValueTime, BunifuAnimatorNS.DecorationType.None);
+            this.lbValueTime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbValueTime.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueTime.ForeColor = System.Drawing.Color.White;
+            this.lbValueTime.Location = new System.Drawing.Point(212, 0);
+            this.lbValueTime.Name = "lbValueTime";
+            this.lbValueTime.Size = new System.Drawing.Size(81, 22);
+            this.lbValueTime.TabIndex = 29;
+            this.lbValueTime.Text = "0";
+            this.lbValueTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbTime
+            // 
+            this.lbTime.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbTime, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbTime, BunifuAnimatorNS.DecorationType.None);
+            this.lbTime.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbTime.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTime.ForeColor = System.Drawing.Color.White;
+            this.lbTime.Location = new System.Drawing.Point(3, 0);
+            this.lbTime.Name = "lbTime";
+            this.lbTime.Size = new System.Drawing.Size(151, 22);
+            this.lbTime.TabIndex = 19;
+            this.lbTime.Text = "Operating Time:";
+            this.lbTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbValueStake
+            // 
+            this.lbValueStake.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbValueStake, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbValueStake, BunifuAnimatorNS.DecorationType.None);
+            this.lbValueStake.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbValueStake.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueStake.ForeColor = System.Drawing.Color.White;
+            this.lbValueStake.Location = new System.Drawing.Point(299, 88);
+            this.lbValueStake.Name = "lbValueStake";
+            this.lbValueStake.Size = new System.Drawing.Size(47, 22);
+            this.lbValueStake.TabIndex = 28;
+            this.lbValueStake.Text = "0";
+            this.lbValueStake.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbStake
+            // 
+            this.lbStake.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbStake, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbStake, BunifuAnimatorNS.DecorationType.None);
+            this.lbStake.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbStake.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStake.ForeColor = System.Drawing.Color.White;
+            this.lbStake.Location = new System.Drawing.Point(212, 88);
+            this.lbStake.Name = "lbStake";
+            this.lbStake.Size = new System.Drawing.Size(81, 22);
+            this.lbStake.TabIndex = 27;
+            this.lbStake.Text = "Stake/Unit:";
+            this.lbStake.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbMaxConWin
+            // 
+            this.lbMaxConWin.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbMaxConWin, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbMaxConWin, BunifuAnimatorNS.DecorationType.None);
+            this.lbMaxConWin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbMaxConWin.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaxConWin.ForeColor = System.Drawing.Color.White;
+            this.lbMaxConWin.Location = new System.Drawing.Point(3, 88);
+            this.lbMaxConWin.Name = "lbMaxConWin";
+            this.lbMaxConWin.Size = new System.Drawing.Size(151, 22);
+            this.lbMaxConWin.TabIndex = 26;
+            this.lbMaxConWin.Text = "Max Continuous Win:";
+            this.lbMaxConWin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbValueMaxConWin
+            // 
+            this.lbValueMaxConWin.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbValueMaxConWin, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbValueMaxConWin, BunifuAnimatorNS.DecorationType.None);
+            this.lbValueMaxConWin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbValueMaxConWin.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueMaxConWin.ForeColor = System.Drawing.Color.White;
+            this.lbValueMaxConWin.Location = new System.Drawing.Point(160, 88);
+            this.lbValueMaxConWin.Name = "lbValueMaxConWin";
+            this.lbValueMaxConWin.Size = new System.Drawing.Size(46, 22);
+            this.lbValueMaxConWin.TabIndex = 9;
+            this.lbValueMaxConWin.Text = "0";
+            this.lbValueMaxConWin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbValueAmount
+            // 
+            this.lbValueAmount.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbValueAmount, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbValueAmount, BunifuAnimatorNS.DecorationType.None);
+            this.lbValueAmount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbValueAmount.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueAmount.ForeColor = System.Drawing.Color.White;
+            this.lbValueAmount.Location = new System.Drawing.Point(299, 66);
+            this.lbValueAmount.Name = "lbValueAmount";
+            this.lbValueAmount.Size = new System.Drawing.Size(47, 22);
+            this.lbValueAmount.TabIndex = 8;
+            this.lbValueAmount.Text = "0";
+            this.lbValueAmount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbAmount
+            // 
+            this.lbAmount.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbAmount, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbAmount, BunifuAnimatorNS.DecorationType.None);
+            this.lbAmount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbAmount.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbAmount.ForeColor = System.Drawing.Color.White;
+            this.lbAmount.Location = new System.Drawing.Point(212, 66);
+            this.lbAmount.Name = "lbAmount";
+            this.lbAmount.Size = new System.Drawing.Size(81, 22);
+            this.lbAmount.TabIndex = 25;
+            this.lbAmount.Text = "Bet Amount:";
+            this.lbAmount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbLose
+            // 
+            this.lbLose.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbLose, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbLose, BunifuAnimatorNS.DecorationType.None);
+            this.lbLose.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbLose.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLose.ForeColor = System.Drawing.Color.White;
+            this.lbLose.Location = new System.Drawing.Point(3, 66);
+            this.lbLose.Name = "lbLose";
+            this.lbLose.Size = new System.Drawing.Size(151, 22);
+            this.lbLose.TabIndex = 24;
+            this.lbLose.Text = "Lose:";
+            this.lbLose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbValueLose
+            // 
+            this.lbValueLose.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbValueLose, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbValueLose, BunifuAnimatorNS.DecorationType.None);
+            this.lbValueLose.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbValueLose.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueLose.ForeColor = System.Drawing.Color.White;
+            this.lbValueLose.Location = new System.Drawing.Point(160, 66);
+            this.lbValueLose.Name = "lbValueLose";
+            this.lbValueLose.Size = new System.Drawing.Size(46, 22);
+            this.lbValueLose.TabIndex = 7;
+            this.lbValueLose.Text = "0";
+            this.lbValueLose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbValueBalance
+            // 
+            this.lbValueBalance.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbValueBalance, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbValueBalance, BunifuAnimatorNS.DecorationType.None);
+            this.lbValueBalance.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbValueBalance.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueBalance.ForeColor = System.Drawing.Color.White;
+            this.lbValueBalance.Location = new System.Drawing.Point(299, 44);
+            this.lbValueBalance.Name = "lbValueBalance";
+            this.lbValueBalance.Size = new System.Drawing.Size(47, 22);
+            this.lbValueBalance.TabIndex = 6;
+            this.lbValueBalance.Text = "0";
+            this.lbValueBalance.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbBalance
+            // 
+            this.lbBalance.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbBalance, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbBalance, BunifuAnimatorNS.DecorationType.None);
+            this.lbBalance.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbBalance.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBalance.ForeColor = System.Drawing.Color.White;
+            this.lbBalance.Location = new System.Drawing.Point(212, 44);
+            this.lbBalance.Name = "lbBalance";
+            this.lbBalance.Size = new System.Drawing.Size(81, 22);
+            this.lbBalance.TabIndex = 23;
+            this.lbBalance.Text = "Balance:";
+            this.lbBalance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbWin
+            // 
+            this.lbWin.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbWin, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbWin, BunifuAnimatorNS.DecorationType.None);
+            this.lbWin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbWin.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbWin.ForeColor = System.Drawing.Color.White;
+            this.lbWin.Location = new System.Drawing.Point(3, 44);
+            this.lbWin.Name = "lbWin";
+            this.lbWin.Size = new System.Drawing.Size(151, 22);
+            this.lbWin.TabIndex = 22;
+            this.lbWin.Text = "Win:";
+            this.lbWin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbValueWin
+            // 
+            this.lbValueWin.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbValueWin, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbValueWin, BunifuAnimatorNS.DecorationType.None);
+            this.lbValueWin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbValueWin.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueWin.ForeColor = System.Drawing.Color.White;
+            this.lbValueWin.Location = new System.Drawing.Point(160, 44);
+            this.lbValueWin.Name = "lbValueWin";
+            this.lbValueWin.Size = new System.Drawing.Size(46, 22);
+            this.lbValueWin.TabIndex = 5;
+            this.lbValueWin.Text = "0";
+            this.lbValueWin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbValueMaxProfit
+            // 
+            this.lbValueMaxProfit.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbValueMaxProfit, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbValueMaxProfit, BunifuAnimatorNS.DecorationType.None);
+            this.lbValueMaxProfit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbValueMaxProfit.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueMaxProfit.ForeColor = System.Drawing.Color.White;
+            this.lbValueMaxProfit.Location = new System.Drawing.Point(299, 22);
+            this.lbValueMaxProfit.Name = "lbValueMaxProfit";
+            this.lbValueMaxProfit.Size = new System.Drawing.Size(47, 22);
+            this.lbValueMaxProfit.TabIndex = 4;
+            this.lbValueMaxProfit.Text = "0";
+            this.lbValueMaxProfit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbMaxProfit
+            // 
+            this.lbMaxProfit.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbMaxProfit, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbMaxProfit, BunifuAnimatorNS.DecorationType.None);
+            this.lbMaxProfit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbMaxProfit.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaxProfit.ForeColor = System.Drawing.Color.White;
+            this.lbMaxProfit.Location = new System.Drawing.Point(212, 22);
+            this.lbMaxProfit.Name = "lbMaxProfit";
+            this.lbMaxProfit.Size = new System.Drawing.Size(81, 22);
+            this.lbMaxProfit.TabIndex = 21;
+            this.lbMaxProfit.Text = "Max Profit:";
+            this.lbMaxProfit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbRound
+            // 
+            this.lbRound.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbRound, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbRound, BunifuAnimatorNS.DecorationType.None);
+            this.lbRound.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbRound.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRound.ForeColor = System.Drawing.Color.White;
+            this.lbRound.Location = new System.Drawing.Point(3, 22);
+            this.lbRound.Name = "lbRound";
+            this.lbRound.Size = new System.Drawing.Size(151, 22);
+            this.lbRound.TabIndex = 20;
+            this.lbRound.Text = "Round:";
+            this.lbRound.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbValueRound
+            // 
+            this.lbValueRound.AutoSize = true;
+            this.TransMain.SetDecoration(this.lbValueRound, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.lbValueRound, BunifuAnimatorNS.DecorationType.None);
+            this.lbValueRound.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbValueRound.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueRound.ForeColor = System.Drawing.Color.White;
+            this.lbValueRound.Location = new System.Drawing.Point(160, 22);
+            this.lbValueRound.Name = "lbValueRound";
+            this.lbValueRound.Size = new System.Drawing.Size(46, 22);
+            this.lbValueRound.TabIndex = 3;
+            this.lbValueRound.Text = "0";
+            this.lbValueRound.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelStart
             // 
@@ -1321,7 +1688,7 @@
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelRight.Location = new System.Drawing.Point(405, 40);
             this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(314, 646);
+            this.panelRight.Size = new System.Drawing.Size(334, 646);
             this.panelRight.TabIndex = 569;
             // 
             // GoodLine
@@ -1341,7 +1708,7 @@
             this.GoodLine.MinimumSize = new System.Drawing.Size(136, 50);
             this.GoodLine.Name = "GoodLine";
             this.GoodLine.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.GoodLine.Size = new System.Drawing.Size(314, 461);
+            this.GoodLine.Size = new System.Drawing.Size(334, 461);
             this.GoodLine.TabIndex = 567;
             this.GoodLine.Text = "Good Line";
             // 
@@ -1367,23 +1734,23 @@
             this.dgvGoodLine.AllowUserToDeleteRows = false;
             this.dgvGoodLine.AllowUserToResizeColumns = false;
             this.dgvGoodLine.AllowUserToResizeRows = false;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvGoodLine.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvGoodLine.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvGoodLine.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvGoodLine.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.dgvGoodLine.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvGoodLine.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Kanit", 11F);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGoodLine.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Kanit", 11F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGoodLine.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvGoodLine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGoodLine.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DataGridViewTextBoxColumn1,
@@ -1397,14 +1764,14 @@
             this.colPVSum});
             this.TransSettings.SetDecoration(this.dgvGoodLine, BunifuAnimatorNS.DecorationType.None);
             this.TransMain.SetDecoration(this.dgvGoodLine, BunifuAnimatorNS.DecorationType.None);
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Kanit", 11F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvGoodLine.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Kanit", 11F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvGoodLine.DefaultCellStyle = dataGridViewCellStyle17;
             this.dgvGoodLine.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvGoodLine.DoubleBuffered = false;
             this.dgvGoodLine.EnableHeadersVisualStyles = false;
@@ -1416,121 +1783,121 @@
             this.dgvGoodLine.Name = "dgvGoodLine";
             this.dgvGoodLine.ReadOnly = true;
             this.dgvGoodLine.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Kanit", 11F);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvGoodLine.RowHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Kanit", 11F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvGoodLine.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvGoodLine.RowHeadersVisible = false;
             this.dgvGoodLine.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvGoodLine.RowsDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvGoodLine.RowsDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvGoodLine.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvGoodLine.ShowCellErrors = false;
             this.dgvGoodLine.ShowCellToolTips = false;
             this.dgvGoodLine.ShowEditingIcon = false;
             this.dgvGoodLine.ShowRowErrors = false;
-            this.dgvGoodLine.Size = new System.Drawing.Size(304, 389);
+            this.dgvGoodLine.Size = new System.Drawing.Size(324, 389);
             this.dgvGoodLine.TabIndex = 2;
             this.dgvGoodLine.SelectionChanged += new System.EventHandler(this.ClearSelected);
             // 
             // DataGridViewTextBoxColumn1
             // 
-            this.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.DataGridViewTextBoxColumn1.HeaderText = "No. ";
             this.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1";
             this.DataGridViewTextBoxColumn1.ReadOnly = true;
             this.DataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DataGridViewTextBoxColumn1.Width = 42;
+            this.DataGridViewTextBoxColumn1.Width = 30;
             // 
             // DataGridViewTextBoxColumn2
             // 
-            this.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.DataGridViewTextBoxColumn2.HeaderText = "Result";
             this.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2";
             this.DataGridViewTextBoxColumn2.ReadOnly = true;
             this.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DataGridViewTextBoxColumn2.Width = 55;
+            this.DataGridViewTextBoxColumn2.Width = 46;
             // 
             // colPV1
             // 
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            this.colPV1.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            this.colPV1.DefaultCellStyle = dataGridViewCellStyle10;
             this.colPV1.HeaderText = "L1";
             this.colPV1.Name = "colPV1";
             this.colPV1.ReadOnly = true;
             this.colPV1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colPV1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPV1.Width = 30;
+            this.colPV1.Width = 34;
             // 
             // colPV2
             // 
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            this.colPV2.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            this.colPV2.DefaultCellStyle = dataGridViewCellStyle11;
             this.colPV2.HeaderText = "L2";
             this.colPV2.Name = "colPV2";
             this.colPV2.ReadOnly = true;
             this.colPV2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colPV2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPV2.Width = 30;
+            this.colPV2.Width = 34;
             // 
             // colPV3
             // 
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            this.colPV3.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            this.colPV3.DefaultCellStyle = dataGridViewCellStyle12;
             this.colPV3.HeaderText = "L3";
             this.colPV3.Name = "colPV3";
             this.colPV3.ReadOnly = true;
             this.colPV3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colPV3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPV3.Width = 30;
+            this.colPV3.Width = 34;
             // 
             // colPV4
             // 
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            this.colPV4.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            this.colPV4.DefaultCellStyle = dataGridViewCellStyle13;
             this.colPV4.HeaderText = "L4";
             this.colPV4.Name = "colPV4";
             this.colPV4.ReadOnly = true;
             this.colPV4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colPV4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPV4.Width = 30;
+            this.colPV4.Width = 34;
             // 
             // colPV5
             // 
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
-            this.colPV5.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            this.colPV5.DefaultCellStyle = dataGridViewCellStyle14;
             this.colPV5.HeaderText = "L5";
             this.colPV5.Name = "colPV5";
             this.colPV5.ReadOnly = true;
             this.colPV5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colPV5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPV5.Width = 30;
+            this.colPV5.Width = 34;
             // 
             // colPV6
             // 
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.White;
-            this.colPV6.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            this.colPV6.DefaultCellStyle = dataGridViewCellStyle15;
             this.colPV6.HeaderText = "L6";
             this.colPV6.Name = "colPV6";
             this.colPV6.ReadOnly = true;
             this.colPV6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colPV6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPV6.Width = 30;
+            this.colPV6.Width = 34;
             // 
             // colPVSum
             // 
             this.colPVSum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            this.colPVSum.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            this.colPVSum.DefaultCellStyle = dataGridViewCellStyle16;
             this.colPVSum.HeaderText = "GL";
             this.colPVSum.Name = "colPVSum";
             this.colPVSum.ReadOnly = true;
@@ -1540,15 +1907,15 @@
             // tableGoodLine
             // 
             this.tableGoodLine.ColumnCount = 9;
-            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 47F));
             this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 42F));
+            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 46F));
+            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableGoodLine.Controls.Add(this.lbShowLine7, 8, 0);
             this.tableGoodLine.Controls.Add(this.lbShowLine6, 7, 0);
             this.tableGoodLine.Controls.Add(this.lbShowLine5, 6, 0);
@@ -1572,7 +1939,7 @@
             this.tableGoodLine.RowCount = 2;
             this.tableGoodLine.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableGoodLine.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableGoodLine.Size = new System.Drawing.Size(304, 39);
+            this.tableGoodLine.Size = new System.Drawing.Size(324, 39);
             this.tableGoodLine.TabIndex = 3;
             // 
             // lbShowLine7
@@ -1583,9 +1950,9 @@
             this.lbShowLine7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbShowLine7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lbShowLine7.ForeColor = System.Drawing.Color.White;
-            this.lbShowLine7.Location = new System.Drawing.Point(265, 0);
+            this.lbShowLine7.Location = new System.Drawing.Point(283, 0);
             this.lbShowLine7.Name = "lbShowLine7";
-            this.lbShowLine7.Size = new System.Drawing.Size(36, 19);
+            this.lbShowLine7.Size = new System.Drawing.Size(38, 19);
             this.lbShowLine7.TabIndex = 550;
             this.lbShowLine7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1597,9 +1964,9 @@
             this.lbShowLine6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbShowLine6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lbShowLine6.ForeColor = System.Drawing.Color.White;
-            this.lbShowLine6.Location = new System.Drawing.Point(235, 0);
+            this.lbShowLine6.Location = new System.Drawing.Point(249, 0);
             this.lbShowLine6.Name = "lbShowLine6";
-            this.lbShowLine6.Size = new System.Drawing.Size(24, 19);
+            this.lbShowLine6.Size = new System.Drawing.Size(28, 19);
             this.lbShowLine6.TabIndex = 549;
             this.lbShowLine6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1611,9 +1978,9 @@
             this.lbShowLine5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbShowLine5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lbShowLine5.ForeColor = System.Drawing.Color.White;
-            this.lbShowLine5.Location = new System.Drawing.Point(205, 0);
+            this.lbShowLine5.Location = new System.Drawing.Point(215, 0);
             this.lbShowLine5.Name = "lbShowLine5";
-            this.lbShowLine5.Size = new System.Drawing.Size(24, 19);
+            this.lbShowLine5.Size = new System.Drawing.Size(28, 19);
             this.lbShowLine5.TabIndex = 548;
             this.lbShowLine5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1625,9 +1992,9 @@
             this.lbShowLine4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbShowLine4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lbShowLine4.ForeColor = System.Drawing.Color.White;
-            this.lbShowLine4.Location = new System.Drawing.Point(175, 0);
+            this.lbShowLine4.Location = new System.Drawing.Point(181, 0);
             this.lbShowLine4.Name = "lbShowLine4";
-            this.lbShowLine4.Size = new System.Drawing.Size(24, 19);
+            this.lbShowLine4.Size = new System.Drawing.Size(28, 19);
             this.lbShowLine4.TabIndex = 547;
             this.lbShowLine4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1639,9 +2006,9 @@
             this.lbShowLine3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbShowLine3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lbShowLine3.ForeColor = System.Drawing.Color.White;
-            this.lbShowLine3.Location = new System.Drawing.Point(145, 0);
+            this.lbShowLine3.Location = new System.Drawing.Point(147, 0);
             this.lbShowLine3.Name = "lbShowLine3";
-            this.lbShowLine3.Size = new System.Drawing.Size(24, 19);
+            this.lbShowLine3.Size = new System.Drawing.Size(28, 19);
             this.lbShowLine3.TabIndex = 546;
             this.lbShowLine3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1653,9 +2020,9 @@
             this.lbShowLine2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbShowLine2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lbShowLine2.ForeColor = System.Drawing.Color.White;
-            this.lbShowLine2.Location = new System.Drawing.Point(115, 0);
+            this.lbShowLine2.Location = new System.Drawing.Point(113, 0);
             this.lbShowLine2.Name = "lbShowLine2";
-            this.lbShowLine2.Size = new System.Drawing.Size(24, 19);
+            this.lbShowLine2.Size = new System.Drawing.Size(28, 19);
             this.lbShowLine2.TabIndex = 545;
             this.lbShowLine2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1667,9 +2034,9 @@
             this.lbShowLine1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lbShowLine1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.lbShowLine1.ForeColor = System.Drawing.Color.White;
-            this.lbShowLine1.Location = new System.Drawing.Point(85, 0);
+            this.lbShowLine1.Location = new System.Drawing.Point(79, 0);
             this.lbShowLine1.Name = "lbShowLine1";
-            this.lbShowLine1.Size = new System.Drawing.Size(24, 19);
+            this.lbShowLine1.Size = new System.Drawing.Size(28, 19);
             this.lbShowLine1.TabIndex = 544;
             this.lbShowLine1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -1679,11 +2046,11 @@
             this.TransMain.SetDecoration(this.lbline1, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbline1, BunifuAnimatorNS.DecorationType.None);
             this.lbline1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbline1.Font = new System.Drawing.Font("Kanit", 6F);
+            this.lbline1.Font = new System.Drawing.Font("Kanit", 7F);
             this.lbline1.ForeColor = System.Drawing.Color.White;
-            this.lbline1.Location = new System.Drawing.Point(85, 19);
+            this.lbline1.Location = new System.Drawing.Point(79, 19);
             this.lbline1.Name = "lbline1";
-            this.lbline1.Size = new System.Drawing.Size(24, 20);
+            this.lbline1.Size = new System.Drawing.Size(28, 20);
             this.lbline1.TabIndex = 528;
             this.lbline1.Text = "0";
             this.lbline1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1694,11 +2061,11 @@
             this.TransMain.SetDecoration(this.lbline2, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbline2, BunifuAnimatorNS.DecorationType.None);
             this.lbline2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbline2.Font = new System.Drawing.Font("Kanit", 6F);
+            this.lbline2.Font = new System.Drawing.Font("Kanit", 7F);
             this.lbline2.ForeColor = System.Drawing.Color.White;
-            this.lbline2.Location = new System.Drawing.Point(115, 19);
+            this.lbline2.Location = new System.Drawing.Point(113, 19);
             this.lbline2.Name = "lbline2";
-            this.lbline2.Size = new System.Drawing.Size(24, 20);
+            this.lbline2.Size = new System.Drawing.Size(28, 20);
             this.lbline2.TabIndex = 529;
             this.lbline2.Text = "0";
             this.lbline2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1709,11 +2076,11 @@
             this.TransMain.SetDecoration(this.lbline3, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbline3, BunifuAnimatorNS.DecorationType.None);
             this.lbline3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbline3.Font = new System.Drawing.Font("Kanit", 6F);
+            this.lbline3.Font = new System.Drawing.Font("Kanit", 7F);
             this.lbline3.ForeColor = System.Drawing.Color.White;
-            this.lbline3.Location = new System.Drawing.Point(145, 19);
+            this.lbline3.Location = new System.Drawing.Point(147, 19);
             this.lbline3.Name = "lbline3";
-            this.lbline3.Size = new System.Drawing.Size(24, 20);
+            this.lbline3.Size = new System.Drawing.Size(28, 20);
             this.lbline3.TabIndex = 530;
             this.lbline3.Text = "0";
             this.lbline3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1724,11 +2091,11 @@
             this.TransMain.SetDecoration(this.lbline4, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbline4, BunifuAnimatorNS.DecorationType.None);
             this.lbline4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbline4.Font = new System.Drawing.Font("Kanit", 6F);
+            this.lbline4.Font = new System.Drawing.Font("Kanit", 7F);
             this.lbline4.ForeColor = System.Drawing.Color.White;
-            this.lbline4.Location = new System.Drawing.Point(175, 19);
+            this.lbline4.Location = new System.Drawing.Point(181, 19);
             this.lbline4.Name = "lbline4";
-            this.lbline4.Size = new System.Drawing.Size(24, 20);
+            this.lbline4.Size = new System.Drawing.Size(28, 20);
             this.lbline4.TabIndex = 531;
             this.lbline4.Text = "0";
             this.lbline4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1739,11 +2106,11 @@
             this.TransMain.SetDecoration(this.lbline5, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbline5, BunifuAnimatorNS.DecorationType.None);
             this.lbline5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbline5.Font = new System.Drawing.Font("Kanit", 6F);
+            this.lbline5.Font = new System.Drawing.Font("Kanit", 7F);
             this.lbline5.ForeColor = System.Drawing.Color.White;
-            this.lbline5.Location = new System.Drawing.Point(205, 19);
+            this.lbline5.Location = new System.Drawing.Point(215, 19);
             this.lbline5.Name = "lbline5";
-            this.lbline5.Size = new System.Drawing.Size(24, 20);
+            this.lbline5.Size = new System.Drawing.Size(28, 20);
             this.lbline5.TabIndex = 532;
             this.lbline5.Text = "0";
             this.lbline5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1754,11 +2121,11 @@
             this.TransMain.SetDecoration(this.lbline6, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbline6, BunifuAnimatorNS.DecorationType.None);
             this.lbline6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbline6.Font = new System.Drawing.Font("Kanit", 6F);
+            this.lbline6.Font = new System.Drawing.Font("Kanit", 7F);
             this.lbline6.ForeColor = System.Drawing.Color.White;
-            this.lbline6.Location = new System.Drawing.Point(235, 19);
+            this.lbline6.Location = new System.Drawing.Point(249, 19);
             this.lbline6.Name = "lbline6";
-            this.lbline6.Size = new System.Drawing.Size(24, 20);
+            this.lbline6.Size = new System.Drawing.Size(28, 20);
             this.lbline6.TabIndex = 533;
             this.lbline6.Text = "0";
             this.lbline6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1769,11 +2136,11 @@
             this.TransMain.SetDecoration(this.lblineSum, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lblineSum, BunifuAnimatorNS.DecorationType.None);
             this.lblineSum.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblineSum.Font = new System.Drawing.Font("Kanit", 6F);
+            this.lblineSum.Font = new System.Drawing.Font("Kanit", 7F);
             this.lblineSum.ForeColor = System.Drawing.Color.White;
-            this.lblineSum.Location = new System.Drawing.Point(265, 19);
+            this.lblineSum.Location = new System.Drawing.Point(283, 19);
             this.lblineSum.Name = "lblineSum";
-            this.lblineSum.Size = new System.Drawing.Size(36, 20);
+            this.lblineSum.Size = new System.Drawing.Size(38, 20);
             this.lblineSum.TabIndex = 534;
             this.lblineSum.Text = "0";
             this.lblineSum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1793,17 +2160,17 @@
             this.BotSettings.MinimumSize = new System.Drawing.Size(136, 50);
             this.BotSettings.Name = "BotSettings";
             this.BotSettings.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.BotSettings.Size = new System.Drawing.Size(314, 185);
+            this.BotSettings.Size = new System.Drawing.Size(334, 185);
             this.BotSettings.TabIndex = 568;
             this.BotSettings.Text = "Bot Settings";
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
             this.tableLayoutPanel2.Controls.Add(this.lbValueMode, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbMode, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.lbValueLayout, 1, 0);
@@ -1836,7 +2203,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(304, 152);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(324, 152);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // lbValueMode
@@ -1845,11 +2212,11 @@
             this.TransMain.SetDecoration(this.lbValueMode, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbValueMode, BunifuAnimatorNS.DecorationType.None);
             this.lbValueMode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbValueMode.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueMode.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbValueMode.ForeColor = System.Drawing.Color.White;
-            this.lbValueMode.Location = new System.Drawing.Point(260, 0);
+            this.lbValueMode.Location = new System.Drawing.Point(270, 0);
             this.lbValueMode.Name = "lbValueMode";
-            this.lbValueMode.Size = new System.Drawing.Size(41, 30);
+            this.lbValueMode.Size = new System.Drawing.Size(51, 30);
             this.lbValueMode.TabIndex = 30;
             this.lbValueMode.Text = "Value";
             this.lbValueMode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1860,9 +2227,9 @@
             this.TransMain.SetDecoration(this.lbMode, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbMode, BunifuAnimatorNS.DecorationType.None);
             this.lbMode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbMode.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMode.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMode.ForeColor = System.Drawing.Color.White;
-            this.lbMode.Location = new System.Drawing.Point(154, 0);
+            this.lbMode.Location = new System.Drawing.Point(164, 0);
             this.lbMode.Name = "lbMode";
             this.lbMode.Size = new System.Drawing.Size(100, 30);
             this.lbMode.TabIndex = 29;
@@ -1879,7 +2246,7 @@
             this.lbValueLayout.ForeColor = System.Drawing.Color.White;
             this.lbValueLayout.Location = new System.Drawing.Point(109, 0);
             this.lbValueLayout.Name = "lbValueLayout";
-            this.lbValueLayout.Size = new System.Drawing.Size(39, 30);
+            this.lbValueLayout.Size = new System.Drawing.Size(49, 30);
             this.lbValueLayout.TabIndex = 18;
             this.lbValueLayout.Text = "Value";
             this.lbValueLayout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1890,7 +2257,7 @@
             this.TransMain.SetDecoration(this.lbLayout, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbLayout, BunifuAnimatorNS.DecorationType.None);
             this.lbLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbLayout.Font = new System.Drawing.Font("Kanit", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLayout.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLayout.ForeColor = System.Drawing.Color.White;
             this.lbLayout.Location = new System.Drawing.Point(3, 0);
             this.lbLayout.Name = "lbLayout";
@@ -1905,11 +2272,11 @@
             this.TransMain.SetDecoration(this.lbValueStopLess, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbValueStopLess, BunifuAnimatorNS.DecorationType.None);
             this.lbValueStopLess.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbValueStopLess.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueStopLess.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbValueStopLess.ForeColor = System.Drawing.Color.White;
-            this.lbValueStopLess.Location = new System.Drawing.Point(260, 120);
+            this.lbValueStopLess.Location = new System.Drawing.Point(270, 120);
             this.lbValueStopLess.Name = "lbValueStopLess";
-            this.lbValueStopLess.Size = new System.Drawing.Size(41, 32);
+            this.lbValueStopLess.Size = new System.Drawing.Size(51, 32);
             this.lbValueStopLess.TabIndex = 28;
             this.lbValueStopLess.Text = "Value";
             this.lbValueStopLess.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1920,9 +2287,9 @@
             this.TransMain.SetDecoration(this.lbStopLess, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbStopLess, BunifuAnimatorNS.DecorationType.None);
             this.lbStopLess.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbStopLess.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStopLess.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStopLess.ForeColor = System.Drawing.Color.White;
-            this.lbStopLess.Location = new System.Drawing.Point(154, 120);
+            this.lbStopLess.Location = new System.Drawing.Point(164, 120);
             this.lbStopLess.Name = "lbStopLess";
             this.lbStopLess.Size = new System.Drawing.Size(100, 32);
             this.lbStopLess.TabIndex = 27;
@@ -1935,7 +2302,7 @@
             this.TransMain.SetDecoration(this.lbStopMore, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbStopMore, BunifuAnimatorNS.DecorationType.None);
             this.lbStopMore.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbStopMore.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStopMore.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStopMore.ForeColor = System.Drawing.Color.White;
             this.lbStopMore.Location = new System.Drawing.Point(3, 120);
             this.lbStopMore.Name = "lbStopMore";
@@ -1950,11 +2317,11 @@
             this.TransMain.SetDecoration(this.lbValueStopMore, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbValueStopMore, BunifuAnimatorNS.DecorationType.None);
             this.lbValueStopMore.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbValueStopMore.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueStopMore.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbValueStopMore.ForeColor = System.Drawing.Color.White;
             this.lbValueStopMore.Location = new System.Drawing.Point(109, 120);
             this.lbValueStopMore.Name = "lbValueStopMore";
-            this.lbValueStopMore.Size = new System.Drawing.Size(39, 32);
+            this.lbValueStopMore.Size = new System.Drawing.Size(49, 32);
             this.lbValueStopMore.TabIndex = 9;
             this.lbValueStopMore.Text = "Value";
             this.lbValueStopMore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1965,11 +2332,11 @@
             this.TransMain.SetDecoration(this.lbValueStopLose, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbValueStopLose, BunifuAnimatorNS.DecorationType.None);
             this.lbValueStopLose.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbValueStopLose.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueStopLose.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbValueStopLose.ForeColor = System.Drawing.Color.White;
-            this.lbValueStopLose.Location = new System.Drawing.Point(260, 90);
+            this.lbValueStopLose.Location = new System.Drawing.Point(270, 90);
             this.lbValueStopLose.Name = "lbValueStopLose";
-            this.lbValueStopLose.Size = new System.Drawing.Size(41, 30);
+            this.lbValueStopLose.Size = new System.Drawing.Size(51, 30);
             this.lbValueStopLose.TabIndex = 8;
             this.lbValueStopLose.Text = "Value";
             this.lbValueStopLose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1980,9 +2347,9 @@
             this.TransMain.SetDecoration(this.lbStopLose, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbStopLose, BunifuAnimatorNS.DecorationType.None);
             this.lbStopLose.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbStopLose.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStopLose.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStopLose.ForeColor = System.Drawing.Color.White;
-            this.lbStopLose.Location = new System.Drawing.Point(154, 90);
+            this.lbStopLose.Location = new System.Drawing.Point(164, 90);
             this.lbStopLose.Name = "lbStopLose";
             this.lbStopLose.Size = new System.Drawing.Size(100, 30);
             this.lbStopLose.TabIndex = 25;
@@ -1995,7 +2362,7 @@
             this.TransMain.SetDecoration(this.lbStopWin, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbStopWin, BunifuAnimatorNS.DecorationType.None);
             this.lbStopWin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbStopWin.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStopWin.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStopWin.ForeColor = System.Drawing.Color.White;
             this.lbStopWin.Location = new System.Drawing.Point(3, 90);
             this.lbStopWin.Name = "lbStopWin";
@@ -2010,11 +2377,11 @@
             this.TransMain.SetDecoration(this.lbValueStopWin, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbValueStopWin, BunifuAnimatorNS.DecorationType.None);
             this.lbValueStopWin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbValueStopWin.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueStopWin.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbValueStopWin.ForeColor = System.Drawing.Color.White;
             this.lbValueStopWin.Location = new System.Drawing.Point(109, 90);
             this.lbValueStopWin.Name = "lbValueStopWin";
-            this.lbValueStopWin.Size = new System.Drawing.Size(39, 30);
+            this.lbValueStopWin.Size = new System.Drawing.Size(49, 30);
             this.lbValueStopWin.TabIndex = 7;
             this.lbValueStopWin.Text = "Value";
             this.lbValueStopWin.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2025,11 +2392,11 @@
             this.TransMain.SetDecoration(this.lbValueStop, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbValueStop, BunifuAnimatorNS.DecorationType.None);
             this.lbValueStop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbValueStop.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueStop.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbValueStop.ForeColor = System.Drawing.Color.White;
-            this.lbValueStop.Location = new System.Drawing.Point(260, 60);
+            this.lbValueStop.Location = new System.Drawing.Point(270, 60);
             this.lbValueStop.Name = "lbValueStop";
-            this.lbValueStop.Size = new System.Drawing.Size(41, 30);
+            this.lbValueStop.Size = new System.Drawing.Size(51, 30);
             this.lbValueStop.TabIndex = 6;
             this.lbValueStop.Text = "Value";
             this.lbValueStop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2040,9 +2407,9 @@
             this.TransMain.SetDecoration(this.lbStopRound, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbStopRound, BunifuAnimatorNS.DecorationType.None);
             this.lbStopRound.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbStopRound.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStopRound.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStopRound.ForeColor = System.Drawing.Color.White;
-            this.lbStopRound.Location = new System.Drawing.Point(154, 60);
+            this.lbStopRound.Location = new System.Drawing.Point(164, 60);
             this.lbStopRound.Name = "lbStopRound";
             this.lbStopRound.Size = new System.Drawing.Size(100, 30);
             this.lbStopRound.TabIndex = 23;
@@ -2055,7 +2422,7 @@
             this.TransMain.SetDecoration(this.lbChip, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbChip, BunifuAnimatorNS.DecorationType.None);
             this.lbChip.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbChip.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChip.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbChip.ForeColor = System.Drawing.Color.White;
             this.lbChip.Location = new System.Drawing.Point(3, 60);
             this.lbChip.Name = "lbChip";
@@ -2070,11 +2437,11 @@
             this.TransMain.SetDecoration(this.lbValueChip, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbValueChip, BunifuAnimatorNS.DecorationType.None);
             this.lbValueChip.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbValueChip.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueChip.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbValueChip.ForeColor = System.Drawing.Color.White;
             this.lbValueChip.Location = new System.Drawing.Point(109, 60);
             this.lbValueChip.Name = "lbValueChip";
-            this.lbValueChip.Size = new System.Drawing.Size(39, 30);
+            this.lbValueChip.Size = new System.Drawing.Size(49, 30);
             this.lbValueChip.TabIndex = 5;
             this.lbValueChip.Text = "Value";
             this.lbValueChip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2085,11 +2452,11 @@
             this.TransMain.SetDecoration(this.lbValueBet, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbValueBet, BunifuAnimatorNS.DecorationType.None);
             this.lbValueBet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbValueBet.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbValueBet.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbValueBet.ForeColor = System.Drawing.Color.White;
-            this.lbValueBet.Location = new System.Drawing.Point(260, 30);
+            this.lbValueBet.Location = new System.Drawing.Point(270, 30);
             this.lbValueBet.Name = "lbValueBet";
-            this.lbValueBet.Size = new System.Drawing.Size(41, 30);
+            this.lbValueBet.Size = new System.Drawing.Size(51, 30);
             this.lbValueBet.TabIndex = 4;
             this.lbValueBet.Text = "Value";
             this.lbValueBet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2100,9 +2467,9 @@
             this.TransMain.SetDecoration(this.lbBet, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbBet, BunifuAnimatorNS.DecorationType.None);
             this.lbBet.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbBet.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBet.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBet.ForeColor = System.Drawing.Color.White;
-            this.lbBet.Location = new System.Drawing.Point(154, 30);
+            this.lbBet.Location = new System.Drawing.Point(164, 30);
             this.lbBet.Name = "lbBet";
             this.lbBet.Size = new System.Drawing.Size(100, 30);
             this.lbBet.TabIndex = 21;
@@ -2115,7 +2482,7 @@
             this.TransMain.SetDecoration(this.lbFormula, BunifuAnimatorNS.DecorationType.None);
             this.TransSettings.SetDecoration(this.lbFormula, BunifuAnimatorNS.DecorationType.None);
             this.lbFormula.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbFormula.Font = new System.Drawing.Font("Kanit", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbFormula.Font = new System.Drawing.Font("Kanit", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbFormula.ForeColor = System.Drawing.Color.White;
             this.lbFormula.Location = new System.Drawing.Point(3, 30);
             this.lbFormula.Name = "lbFormula";
@@ -2134,7 +2501,7 @@
             this.lbValueFormula.ForeColor = System.Drawing.Color.White;
             this.lbValueFormula.Location = new System.Drawing.Point(109, 30);
             this.lbValueFormula.Name = "lbValueFormula";
-            this.lbValueFormula.Size = new System.Drawing.Size(39, 30);
+            this.lbValueFormula.Size = new System.Drawing.Size(49, 30);
             this.lbValueFormula.TabIndex = 3;
             this.lbValueFormula.Text = "Value";
             this.lbValueFormula.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -2188,7 +2555,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.ClientSize = new System.Drawing.Size(719, 686);
+            this.ClientSize = new System.Drawing.Size(739, 686);
             this.Controls.Add(this.panelPage);
             this.Controls.Add(this.panelLeft);
             this.Controls.Add(this.panelRight);
@@ -2197,7 +2564,7 @@
             this.TransSettings.SetDecoration(this, BunifuAnimatorNS.DecorationType.None);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(735, 835);
+            this.MaximumSize = new System.Drawing.Size(755, 835);
             this.MinimumSize = new System.Drawing.Size(415, 535);
             this.Name = "FrmBot";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -2212,7 +2579,8 @@
             this.BaccaratScore.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBigRoad)).EndInit();
             this.BotStatus.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStatus)).EndInit();
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.panelStart.ResumeLayout(false);
             this.panelStart.PerformLayout();
             this.panelPage.ResumeLayout(false);
@@ -2240,10 +2608,9 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnSettings;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogs;
         private System.Windows.Forms.Panel panelMain;
-        private King99.King99GroupBox BotStatus;
-        private System.Windows.Forms.DataGridView dgvStatus;
+        private King99GroupBox BotStatus;
         private System.Windows.Forms.Label lblStatus;
-        private King99.King99GroupBox BaccaratScore;
+        private King99GroupBox BaccaratScore;
         private System.Windows.Forms.DataGridView dgvBigRoad;
         private System.Windows.Forms.Label lbT;
         private System.Windows.Forms.Label lbB;
@@ -2252,7 +2619,7 @@
         private System.Windows.Forms.Button btnAddT;
         private System.Windows.Forms.Button btnAddB;
         private System.Windows.Forms.Button btnAddP;
-        private King99.King99NotificationNumber numberStatus;
+        private King99NotificationNumber numberStatus;
         private Bunifu.Framework.UI.BunifuFlatButton btnStart;
         private System.Windows.Forms.Panel panelStart;
         private BunifuAnimatorNS.BunifuTransition TransSettings;
@@ -2265,14 +2632,14 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnBetSystem;
         private Bunifu.Framework.UI.BunifuFlatButton btnFormula;
         private Bunifu.Framework.UI.BunifuFlatButton btnLayout;
-        private King99.King99GroupBox SettingProgram;
-        private King99.King99Checkbox cbConfirmClick;
-        private King99.King99Checkbox cbInvert;
-        private King99.King99ComboBox cbLanguages;
+        private King99GroupBox SettingProgram;
+        private King99Checkbox cbConfirmClick;
+        private King99Checkbox cbInvert;
+        private King99ComboBox cbLanguages;
         private System.Windows.Forms.Label lbLanguages;
-        private King99.King99Checkbox cbTopMost;
-        private King99.King99Checkbox cbMove;
-        private King99.King99GroupBox GoodLine;
+        private King99Checkbox cbTopMost;
+        private King99Checkbox cbMove;
+        private King99GroupBox GoodLine;
         private System.Windows.Forms.TableLayoutPanel tableGoodLine;
         private System.Windows.Forms.Label lbline1;
         private System.Windows.Forms.Label lbline2;
@@ -2288,7 +2655,7 @@
         private System.Windows.Forms.Label lbShowLine3;
         private System.Windows.Forms.Label lbShowLine2;
         private System.Windows.Forms.Label lbShowLine1;
-        private King99.King99GroupBox BotSettings;
+        private King99GroupBox BotSettings;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Label lbValueStopMore;
         private System.Windows.Forms.Label lbValueStopLose;
@@ -2298,15 +2665,6 @@
         private System.Windows.Forms.Label lbValueBet;
         private System.Windows.Forms.Label lbValueFormula;
         private System.Windows.Forms.Label lbValueLayout;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPV1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPV2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPV3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPV4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPV5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPV6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colPVSum;
         private System.Windows.Forms.Timer TmDisplay;
         private System.Windows.Forms.Label lbStopLess;
         private System.Windows.Forms.Label lbStopMore;
@@ -2339,9 +2697,41 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMode;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStep;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Label lbValueTime;
+        private System.Windows.Forms.Label lbTime;
+        private System.Windows.Forms.Label lbValueStake;
+        private System.Windows.Forms.Label lbStake;
+        private System.Windows.Forms.Label lbMaxConWin;
+        private System.Windows.Forms.Label lbValueMaxConWin;
+        private System.Windows.Forms.Label lbValueAmount;
+        private System.Windows.Forms.Label lbAmount;
+        private System.Windows.Forms.Label lbLose;
+        private System.Windows.Forms.Label lbValueLose;
+        private System.Windows.Forms.Label lbValueBalance;
+        private System.Windows.Forms.Label lbBalance;
+        private System.Windows.Forms.Label lbWin;
+        private System.Windows.Forms.Label lbValueWin;
+        private System.Windows.Forms.Label lbValueMaxProfit;
+        private System.Windows.Forms.Label lbMaxProfit;
+        private System.Windows.Forms.Label lbRound;
+        private System.Windows.Forms.Label lbValueBetUnit;
+        private System.Windows.Forms.Label lbBetUnit;
+        private System.Windows.Forms.Label lbValueMaxConLose;
+        private System.Windows.Forms.Label lbMaxConLose;
+        private System.Windows.Forms.Label lbValueBetting;
+        private System.Windows.Forms.Label lbBetting;
+        private System.Windows.Forms.Label lbValueWL;
+        private System.Windows.Forms.Label lbWL;
+        private System.Windows.Forms.Label lbValueRound;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPV1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPV2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPV3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPV4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPV5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPV6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPVSum;
     }
 }

@@ -30,28 +30,28 @@
         {
             this.components = new System.ComponentModel.Container();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.EditTitle = new King99.King99GroupBox();
-            this.CustomBox = new King99.King99GroupBox();
-            this.CustomSetting = new King99.King99GroupBox();
+            this.EditTitle = new King99GroupBox();
+            this.CustomBox = new King99GroupBox();
+            this.CustomSetting = new King99GroupBox();
             this.btnDefault = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lbValue = new System.Windows.Forms.Label();
             this.btnClear = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.CustomConfig = new King99.King99GroupBox();
-            this.radFollow = new King99.King99RadioButton();
-            this.radAdverse = new King99.King99RadioButton();
+            this.CustomConfig = new King99GroupBox();
+            this.radFollow = new King99RadioButton();
+            this.radAdverse = new King99RadioButton();
             this.btnDel = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txtNum = new King99.King99TextBox();
+            this.txtNum = new King99TextBox();
             this.btnAdd = new Bunifu.Framework.UI.BunifuFlatButton();
             this.PanelResultBP = new System.Windows.Forms.Panel();
             this.PanelResultPB = new System.Windows.Forms.Panel();
             this.PanelResult = new System.Windows.Forms.Panel();
-            this.customList = new King99.King99GroupBox();
+            this.customList = new King99GroupBox();
             this.ListBoxValue = new System.Windows.Forms.ListBox();
             this.lbTotal = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.txtName = new King99.King99TextBox();
+            this.txtName = new King99TextBox();
             this.lbName = new System.Windows.Forms.Label();
-            this.FileList = new King99.King99GroupBox();
+            this.FileList = new King99GroupBox();
             this.ListBoxLoad = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -275,7 +275,7 @@
             this.radFollow.Size = new System.Drawing.Size(128, 15);
             this.radFollow.TabIndex = 16;
             this.radFollow.Text = "Follow of Last";
-            this.radFollow.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.ConfigChecked);
+            this.radFollow.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.ConfigChecked);
             // 
             // radAdverse
             // 
@@ -289,7 +289,7 @@
             this.radAdverse.Size = new System.Drawing.Size(128, 15);
             this.radAdverse.TabIndex = 15;
             this.radAdverse.Text = "Adverse of Last";
-            this.radAdverse.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.ConfigChecked);
+            this.radAdverse.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.ConfigChecked);
             // 
             // btnDel
             // 
@@ -340,7 +340,7 @@
             this.txtNum.Name = "txtNum";
             this.txtNum.ReadOnly = false;
             this.txtNum.Size = new System.Drawing.Size(106, 33);
-            this.txtNum.Style = King99.King99TextBox._Num.NumberComma;
+            this.txtNum.Style = King99TextBox._Num.NumberComma;
             this.txtNum.TabIndex = 9;
             this.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNum.UseSystemPasswordChar = false;
@@ -478,7 +478,7 @@
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = false;
             this.txtName.Size = new System.Drawing.Size(194, 31);
-            this.txtName.Style = King99.King99TextBox._Num.TextNum;
+            this.txtName.Style = King99TextBox._Num.TextNum;
             this.txtName.TabIndex = 12;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtName.UseSystemPasswordChar = false;
@@ -798,23 +798,23 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private King99.King99GroupBox EditTitle;
-        private King99.King99GroupBox CustomBox;
-        private King99.King99GroupBox CustomSetting;
+        private King99GroupBox EditTitle;
+        private King99GroupBox CustomBox;
+        private King99GroupBox CustomSetting;
         private System.Windows.Forms.Label lbName;
-        private King99.King99TextBox txtName;
+        private King99TextBox txtName;
         private System.Windows.Forms.Label lbValue;
-        private King99.King99GroupBox CustomConfig;
-        private King99.King99RadioButton radFollow;
-        private King99.King99RadioButton radAdverse;
-        private King99.King99TextBox txtNum;
+        private King99GroupBox CustomConfig;
+        private King99RadioButton radFollow;
+        private King99RadioButton radAdverse;
+        private King99TextBox txtNum;
         private System.Windows.Forms.Panel PanelResultBP;
         private System.Windows.Forms.Panel PanelResultPB;
         private System.Windows.Forms.Panel PanelResult;
-        private King99.King99GroupBox customList;
+        private King99GroupBox customList;
         private System.Windows.Forms.ListBox ListBoxValue;
         private System.Windows.Forms.Label lbTotal;
-        private King99.King99GroupBox FileList;
+        private King99GroupBox FileList;
         private System.Windows.Forms.ListBox ListBoxLoad;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel6;

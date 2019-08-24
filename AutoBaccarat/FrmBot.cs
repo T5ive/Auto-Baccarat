@@ -8,7 +8,6 @@ using System.Windows.Forms;
 using AutoBaccarat.Properties;
 using AutoBaccarat.Setting;
 using Bunifu.Framework.UI;
-using King99_Theme;
 
 namespace AutoBaccarat
 {
@@ -125,67 +124,101 @@ namespace AutoBaccarat
         #region Status
         private void StatusLoad()
         {
-            dgvStatus.Rows.Clear();
+            //dgvStatus.Rows.Clear();
 
-            dgvStatus.Rows.Add(stringLoader.RunTime, null, "0", null);
-            dgvStatus.Rows.Add(stringLoader.Round, "0", stringLoader.MaxProfit, "0");
-            dgvStatus.Rows.Add(stringLoader.Win, "0", stringLoader.Balance, "0");
-            dgvStatus.Rows.Add(stringLoader.Lose, "0", stringLoader.Amount, "0");
-            dgvStatus.Rows.Add(stringLoader.MaxConWin, "0", stringLoader.Stake, "0x0");
-            dgvStatus.Rows.Add(stringLoader.MaxConLose, "0", stringLoader.Unit, "0x0");
-            dgvStatus.Rows.Add(stringLoader.WinLose, "0", stringLoader.Bettings, "");
+            //dgvStatus.Rows.Add(stringLoader.RunTime, null, "0", null);
+            //dgvStatus.Rows.Add(stringLoader.Round, "0", stringLoader.MaxProfit, "0");
+            //dgvStatus.Rows.Add(stringLoader.Win, "0", stringLoader.Balance, "0");
+            //dgvStatus.Rows.Add(stringLoader.Lose, "0", stringLoader.Amount, "0");
+            //dgvStatus.Rows.Add(stringLoader.MaxConWin, "0", stringLoader.Stake, "0x0");
+            //dgvStatus.Rows.Add(stringLoader.MaxConLose, "0", stringLoader.Unit, "0x0");
+            //dgvStatus.Rows.Add(stringLoader.WinLose, "0", stringLoader.Bettings, "");
 
-            dgvStatus[3, 3].Style.ForeColor = Color.DarkGoldenrod;
+            //dgvStatus[3, 3].Style.ForeColor = Color.DarkGoldenrod;
 
-            dgvStatus[3, 6].Style.ForeColor = Color.White;
-            dgvStatus[3, 6].Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            //dgvStatus[3, 6].Style.ForeColor = Color.White;
+            //dgvStatus[3, 6].Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            dgvStatus.ClearSelection();
+            //dgvStatus.ClearSelection();
 
             dgvBigRoad.Columns.Add("_colbig0", "_colbig0");
         }
         private void StatusUpdate()
         {
-
-            dgvStatus[1, 1].Value = BotValues.Result.Count.ToString(); // Round
-            dgvStatus[1, 2].Value = BotValues.TotalWin;
-            dgvStatus[1, 3].Value = BotValues.TotalLose;
-            dgvStatus[1, 4].Value = BotValues.MaxContinuousWin;
-            dgvStatus[1, 5].Value = BotValues.MaxContinuousLose;
+            lbValueRound.Text = BotValues.Result.Count.ToString(); // Round
+            lbValueWin.Text = BotValues.TotalWin.ToString();
+            lbValueLose.Text = BotValues.TotalLose.ToString();
+            lbValueMaxConWin.Text = BotValues.MaxContinuousWin.ToString();
+            lbValueMaxConLose.Text = BotValues.MaxContinuousLose.ToString();
 
             var value = BotValues.TotalWin - BotValues.TotalLose;
-            dgvStatus[1, 6].Value = value;
-            dgvStatus[1, 6].Style.ForeColor = DataGridForeColor(value);
+            lbValueWL.Text = value.ToString();
+            lbValueWL.ForeColor = ChangeForeColor(value);
 
-            dgvStatus[3, 1].Value = BotValues.MaxProfit;
-            dgvStatus[3, 2].Value = BotValues.LastMoneyBalance.ToString("#,##0.##");
-            dgvStatus[3, 2].Style.ForeColor = DataGridForeColor((int)BotValues.LastMoneyBalance);
+            lbValueMaxProfit.Text = BotValues.MaxProfit.ToString();
+            lbValueBalance.Text = BotValues.LastMoneyBalance.ToString("#,##0.##");
+            lbValueBalance.ForeColor = ChangeForeColor((int)BotValues.LastMoneyBalance);
 
-            dgvStatus[3, 3].Value = "0";
-            dgvStatus[3, 4].Value = "0x0";
-            dgvStatus[3, 6].Value = "";
+            lbValueAmount.Text = @"0";
+            lbValueStake.Text = @"0x0";
+            lbValueBetting.Text = "";
             if (BotValues.BettingSuggest.Count > 0)
             {
                 var lastBetSuggestValue = BotValues.BettingSuggest[BotValues.BettingSuggest.Count - 1];
                 short lastUnit = 0;
                 if (BotValues.Unit[BotValues.Unit.Count - 1] > 0 & (lastBetSuggestValue == 1 | lastBetSuggestValue == 2))
                 {
-                    dgvStatus[3, 4].Value = ValueForBot.Chip + "x" + (int)BotValues.Unit[BotValues.Unit.Count - 1];
-                    dgvStatus[3, 6].Value = ConvertTypeGame2String(lastBetSuggestValue);
-                    dgvStatus[3, 6].Style.BackColor = ChangeColorByType(lastBetSuggestValue);
+                    lbValueStake.Text = ValueForBot.Chip + "x" + (int)BotValues.Unit[BotValues.Unit.Count - 1];
+                    lbValueBetting.Text = ConvertTypeGame2String(lastBetSuggestValue);
+                    lbValueBetting.BackColor = ChangeColorByType(lastBetSuggestValue);
 
                     lastUnit = BotValues.Unit[BotValues.Unit.Count - 1];
                 }
 
-                dgvStatus[3, 3].Value = (ValueForBot.Chip * (double)lastUnit).ToString("#,##0");
+                lbValueAmount.Text = (ValueForBot.Chip * (double)lastUnit).ToString("#,##0");
             }
 
-            dgvStatus.ClearSelection();
+          
+
+            //dgvStatus[1, 1].Value = BotValues.Result.Count.ToString(); // Round
+            //dgvStatus[1, 2].Value = BotValues.TotalWin;
+            //dgvStatus[1, 3].Value = BotValues.TotalLose;
+            //dgvStatus[1, 4].Value = BotValues.MaxContinuousWin;
+            //dgvStatus[1, 5].Value = BotValues.MaxContinuousLose;
+
+            //var value = BotValues.TotalWin - BotValues.TotalLose;
+            //dgvStatus[1, 6].Value = value;
+            //dgvStatus[1, 6].Style.ForeColor = DataGridForeColor(value);
+
+            //dgvStatus[3, 1].Value = BotValues.MaxProfit;
+            //dgvStatus[3, 2].Value = BotValues.LastMoneyBalance.ToString("#,##0.##");
+            //dgvStatus[3, 2].Style.ForeColor = DataGridForeColor((int)BotValues.LastMoneyBalance);
+
+            //dgvStatus[3, 3].Value = "0";
+            //dgvStatus[3, 4].Value = "0x0";
+            //dgvStatus[3, 6].Value = "";
+            //if (BotValues.BettingSuggest.Count > 0)
+            //{
+            //    var lastBetSuggestValue = BotValues.BettingSuggest[BotValues.BettingSuggest.Count - 1];
+            //    short lastUnit = 0;
+            //    if (BotValues.Unit[BotValues.Unit.Count - 1] > 0 & (lastBetSuggestValue == 1 | lastBetSuggestValue == 2))
+            //    {
+            //        dgvStatus[3, 4].Value = ValueForBot.Chip + "x" + (int)BotValues.Unit[BotValues.Unit.Count - 1];
+            //        dgvStatus[3, 6].Value = ConvertTypeGame2String(lastBetSuggestValue);
+            //        dgvStatus[3, 6].Style.BackColor = ChangeColorByType(lastBetSuggestValue);
+
+            //        lastUnit = BotValues.Unit[BotValues.Unit.Count - 1];
+            //    }
+
+            //    dgvStatus[3, 3].Value = (ValueForBot.Chip * (double)lastUnit).ToString("#,##0");
+            //}
+
+            //dgvStatus.ClearSelection();
 
         }
         private void ClearSelected(object sender, EventArgs e)
         {
-            dgvStatus.ClearSelection();
+            //dgvStatus.ClearSelection();
             dgvGoodLine.ClearSelection();
             dgvBigRoad.ClearSelection();
         }
@@ -282,7 +315,8 @@ namespace AutoBaccarat
             string value;
             try
             {
-                value = dgvStatus[3, 6].Value.ToString();
+                value = lbValueBetting.Text;
+               // value = dgvStatus[3, 6].Value.ToString();
             }
             catch
             {
@@ -290,8 +324,10 @@ namespace AutoBaccarat
             }
             if (value != "")
             {
-                dgvStatus[3, 6].Style.BackColor = EasyChangeColor(_switchColor, value);
-                dgvStatus[3, 6].Style.ForeColor = EasyChangeForeColor(_switchColor, value);
+                lbValueBetting.BackColor = EasyChangeColor(_switchColor, value);
+                lbValueBetting.ForeColor = EasyChangeForeColor(_switchColor, value);
+                //dgvStatus[3, 6].Style.BackColor = EasyChangeColor(_switchColor, value);
+                //dgvStatus[3, 6].Style.ForeColor = EasyChangeForeColor(_switchColor, value);
             }
 
             #endregion
@@ -580,14 +616,15 @@ namespace AutoBaccarat
             lbline5.Text = @"0";
             lbline6.Text = @"0";
             lblineSum.Text = @"0";
-            lbShowLine1.BackColor = Color.White;
-            lbShowLine2.BackColor = Color.White;
-            lbShowLine3.BackColor = Color.White;
-            lbShowLine4.BackColor = Color.White;
-            lbShowLine5.BackColor = Color.White;
-            lbShowLine6.BackColor = Color.White;
-            lbShowLine7.BackColor = Color.White;
-            dgvStatus[3, 6].Style.BackColor = Color.White;
+            lbShowLine1.BackColor = Color.FromArgb(82, 82, 82);
+            lbShowLine2.BackColor = Color.FromArgb(82, 82, 82);
+            lbShowLine3.BackColor = Color.FromArgb(82, 82, 82);
+            lbShowLine4.BackColor = Color.FromArgb(82, 82, 82);
+            lbShowLine5.BackColor = Color.FromArgb(82, 82, 82);
+            lbShowLine6.BackColor = Color.FromArgb(82, 82, 82);
+            lbShowLine7.BackColor = Color.FromArgb(82, 82, 82);
+            //dgvStatus[3, 6].Style.BackColor = Color.White;
+            lbValueBetting.BackColor = Color.FromArgb(82, 82, 82);
         }
         #endregion
 
@@ -986,7 +1023,7 @@ namespace AutoBaccarat
                         dgvLog["colResult", dgvLog.RowCount - 1].Style.ForeColor = ChangeColorByType(resultType);
                         dgvLog["colWL", dgvLog.RowCount - 1].Style.BackColor = ChangeBackColorLineGoodLine(resultType, num23);
                         dgvLog["colCost", dgvLog.RowCount - 1].Style.ForeColor = ChangeBackColorLineGoodLine(resultType, num23);
-                        dgvLog["colBalance", dgvLog.RowCount - 1].Style.ForeColor = DataGridForeColor((int)Math.Round(lastMoneyBalance));
+                        dgvLog["colBalance", dgvLog.RowCount - 1].Style.ForeColor = ChangeForeColor((int)Math.Round(lastMoneyBalance));
                         dgvLog.CurrentCell = dgvLog.Rows[dgvLog.Rows.Count - 1].Cells[0];
                         dgvLog.ClearSelection();
                         TopContinues();
@@ -1928,7 +1965,7 @@ namespace AutoBaccarat
         {
             return newScore == 0 || newScore == oldScore ? Color.LimeGreen : Color.Red;
         }
-        private static Color DataGridForeColor(int value)
+        private static Color ChangeForeColor(int value)
         {
             return value == 0 ? Color.White : value > 0 ? Color.LimeGreen : Color.Red;
         }
@@ -2388,7 +2425,8 @@ namespace AutoBaccarat
                     }
 
                     Thread.Sleep(100);
-                    dgvStatus[3, 5].Value = _amountBetChip;
+                    //dgvStatus[3, 5].Value = _amountBetChip;
+                    lbValueBetUnit.Text = _amountBetChip;
                 }
             }
         }
@@ -2766,7 +2804,8 @@ namespace AutoBaccarat
 
 
                     Thread.Sleep(100);
-                    dgvStatus[3, 5].Value = _amountBetChip;
+                    //  dgvStatus[3, 5].Value = _amountBetChip;
+                    lbValueBetUnit.Text = _amountBetChip;
                 }
             }
         }
@@ -2971,7 +3010,8 @@ namespace AutoBaccarat
         }
         private void TmTimeRunning_Tick(object sender, EventArgs e)
         {
-            dgvStatus[2, 0].Value =  CalculateInt2Time(_timeRunning);
+            lbValueTime.Text = CalculateInt2Time(_timeRunning);
+           // dgvStatus[2, 0].Value =  CalculateInt2Time(_timeRunning);
             ref var ptr = ref _timeStart;
             checked
             {

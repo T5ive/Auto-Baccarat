@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.magnifyingGlass1 = new Magnifying_Glass.MagnifyingGlass();
+            this.magnifyingGlass1 = new MagnifyingGlass();
             this.SuspendLayout();
             // 
             // magnifyingGlass1
@@ -60,6 +60,6 @@
 
         #endregion
 
-        public Magnifying_Glass.MagnifyingGlass magnifyingGlass1;
+        public MagnifyingGlass magnifyingGlass1;
     }
 }

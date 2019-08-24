@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using AutoBaccarat.Class;
 using AutoBaccarat.Properties;
 using AutoBaccarat.Setting;

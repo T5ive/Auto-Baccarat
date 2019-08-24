@@ -72,9 +72,18 @@
     <Compile Include="Class\InputBox.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Class\Magnifying.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ColorController\GetAppName.cs" />
     <Compile Include="ColorController\Getcolor.cs" />
     <Compile Include="ColorController\Win32Bot.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBetSystem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,7 +154,35 @@
     <Compile Include="Setting\Layout\LayoutInfo.cs" />
     <Compile Include="Setting\Layout\LayoutListManager.cs" />
     <Compile Include="stringLoader.cs" />
+    <Compile Include="Theme\King99Checkbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\King99ComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\King99GroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\King99NotificationNumber.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\King99RadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\King99Separator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\King99TextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Theme\RoundRectangle.cs" />
+    <Compile Include="Theme\ThemeControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ValueForBot.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBetSystem.resx">
       <DependentUpon>FrmBetSystem.cs</DependentUpon>
     </EmbeddedResource>
@@ -196,16 +233,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Magnifying Glass\Magnifying Glass.csproj">
-      <Project>{36cd65ce-3230-4179-ad89-2b820dfd8d5d}</Project>
-      <Name>Magnifying Glass</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TFive Theme\King99 Theme.csproj">
-      <Project>{f61532f4-3b0a-46c9-b618-9de4f8063e1f}</Project>
-      <Name>King99 Theme</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit-2-16.png" />

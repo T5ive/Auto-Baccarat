@@ -30,30 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.EditTitle = new King99.King99GroupBox();
-            this.radFixed = new King99.King99RadioButton();
+            this.EditTitle = new King99GroupBox();
+            this.radFixed = new King99RadioButton();
             this.btnFixed = new Bunifu.Framework.UI.BunifuFlatButton();
-            this._tKing99Separator1 = new King99.King99Separator();
-            this.Force = new King99.King99GroupBox();
-            this.radForceFollow = new King99.King99RadioButton();
-            this.radForceAdverse = new King99.King99RadioButton();
-            this.txtForce = new King99.King99TextBox();
+            this._tKing99Separator1 = new King99Separator();
+            this.Force = new King99GroupBox();
+            this.radForceFollow = new King99RadioButton();
+            this.radForceAdverse = new King99RadioButton();
+            this.txtForce = new King99TextBox();
             this.lbForce = new System.Windows.Forms.Label();
             this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCustom = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.cbFollow = new King99.King99ComboBox();
-            this.cbLock = new King99.King99ComboBox();
-            this.cbGoodLineFix = new King99.King99ComboBox();
-            this._tKing99Separator4 = new King99.King99Separator();
-            this._tKing99Separator2 = new King99.King99Separator();
-            this.radFollow = new King99.King99RadioButton();
-            this.radAI = new King99.King99RadioButton();
-            this.radLock = new King99.King99RadioButton();
-            this.radGoodLineFix = new King99.King99RadioButton();
-            this.radGoodLineRandom = new King99.King99RadioButton();
-            this.radGoodLine = new King99.King99RadioButton();
-            this.radCustom = new King99.King99RadioButton();
-            this.radRandom = new King99.King99RadioButton();
+            this.cbFollow = new King99ComboBox();
+            this.cbLock = new King99ComboBox();
+            this.cbGoodLineFix = new King99ComboBox();
+            this._tKing99Separator4 = new King99Separator();
+            this._tKing99Separator2 = new King99Separator();
+            this.radFollow = new King99RadioButton();
+            this.radAI = new King99RadioButton();
+            this.radLock = new King99RadioButton();
+            this.radGoodLineFix = new King99RadioButton();
+            this.radGoodLineRandom = new King99RadioButton();
+            this.radGoodLine = new King99RadioButton();
+            this.radCustom = new King99RadioButton();
+            this.radRandom = new King99RadioButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -205,7 +205,7 @@
             this.radForceFollow.Size = new System.Drawing.Size(204, 19);
             this.radForceFollow.TabIndex = 16;
             this.radForceFollow.Text = "Follow of Last";
-            this.radForceFollow.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.ForceCheck);
+            this.radForceFollow.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.ForceCheck);
             // 
             // radForceAdverse
             // 
@@ -219,7 +219,7 @@
             this.radForceAdverse.Size = new System.Drawing.Size(204, 19);
             this.radForceAdverse.TabIndex = 15;
             this.radForceAdverse.Text = "Adverse of Last";
-            this.radForceAdverse.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.ForceCheck);
+            this.radForceAdverse.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.ForceCheck);
             // 
             // txtForce
             // 
@@ -233,7 +233,7 @@
             this.txtForce.Name = "txtForce";
             this.txtForce.ReadOnly = false;
             this.txtForce.Size = new System.Drawing.Size(42, 33);
-            this.txtForce.Style = King99.King99TextBox._Num.NumberOnly;
+            this.txtForce.Style = King99TextBox._Num.NumberOnly;
             this.txtForce.TabIndex = 11;
             this.txtForce.Text = "1";
             this.txtForce.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -434,7 +434,7 @@
             this.radFollow.Size = new System.Drawing.Size(106, 19);
             this.radFollow.TabIndex = 21;
             this.radFollow.Text = "Follow";
-            this.radFollow.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radFollow.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // radAI
             // 
@@ -448,7 +448,7 @@
             this.radAI.Size = new System.Drawing.Size(106, 19);
             this.radAI.TabIndex = 14;
             this.radAI.Text = "Ai";
-            this.radAI.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radAI.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // radLock
             // 
@@ -462,7 +462,7 @@
             this.radLock.Size = new System.Drawing.Size(106, 19);
             this.radLock.TabIndex = 13;
             this.radLock.Text = "Lock";
-            this.radLock.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radLock.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // radGoodLineFix
             // 
@@ -476,7 +476,7 @@
             this.radGoodLineFix.Size = new System.Drawing.Size(200, 19);
             this.radGoodLineFix.TabIndex = 12;
             this.radGoodLineFix.Text = "Good Line (Fixed)";
-            this.radGoodLineFix.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radGoodLineFix.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // radGoodLineRandom
             // 
@@ -490,7 +490,7 @@
             this.radGoodLineRandom.Size = new System.Drawing.Size(200, 19);
             this.radGoodLineRandom.TabIndex = 8;
             this.radGoodLineRandom.Text = "Good Line (Random)";
-            this.radGoodLineRandom.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radGoodLineRandom.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // radGoodLine
             // 
@@ -504,7 +504,7 @@
             this.radGoodLine.Size = new System.Drawing.Size(156, 19);
             this.radGoodLine.TabIndex = 2;
             this.radGoodLine.Text = "Good Line";
-            this.radGoodLine.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radGoodLine.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // radCustom
             // 
@@ -518,7 +518,7 @@
             this.radCustom.Size = new System.Drawing.Size(106, 19);
             this.radCustom.TabIndex = 1;
             this.radCustom.Text = "Custom";
-            this.radCustom.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radCustom.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // radRandom
             // 
@@ -532,7 +532,7 @@
             this.radRandom.Size = new System.Drawing.Size(106, 19);
             this.radRandom.TabIndex = 0;
             this.radRandom.Text = "Random";
-            this.radRandom.CheckedChanged += new King99.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radRandom.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // bunifuDragControl1
             // 
@@ -587,32 +587,32 @@
         #endregion
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private King99.King99GroupBox EditTitle;
-        private King99.King99ComboBox cbFollow;
-        private King99.King99ComboBox cbLock;
-        private King99.King99ComboBox cbGoodLineFix;
-        private King99.King99Separator _tKing99Separator4;
-        private King99.King99Separator _tKing99Separator2;
-        private King99.King99RadioButton radFollow;
-        private King99.King99RadioButton radAI;
-        private King99.King99RadioButton radLock;
-        private King99.King99RadioButton radGoodLineFix;
-        private King99.King99RadioButton radGoodLineRandom;
-        private King99.King99RadioButton radGoodLine;
-        private King99.King99RadioButton radCustom;
-        private King99.King99RadioButton radRandom;
+        private King99GroupBox EditTitle;
+        private King99ComboBox cbFollow;
+        private King99ComboBox cbLock;
+        private King99ComboBox cbGoodLineFix;
+        private King99Separator _tKing99Separator4;
+        private King99Separator _tKing99Separator2;
+        private King99RadioButton radFollow;
+        private King99RadioButton radAI;
+        private King99RadioButton radLock;
+        private King99RadioButton radGoodLineFix;
+        private King99RadioButton radGoodLineRandom;
+        private King99RadioButton radGoodLine;
+        private King99RadioButton radCustom;
+        private King99RadioButton radRandom;
         private Bunifu.Framework.UI.BunifuFlatButton btnCustom;
         private Bunifu.Framework.UI.BunifuFlatButton btnSave;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl3;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl4;
-        private King99.King99Separator _tKing99Separator1;
-        private King99.King99GroupBox Force;
-        private King99.King99RadioButton radForceFollow;
-        private King99.King99RadioButton radForceAdverse;
-        private King99.King99TextBox txtForce;
+        private King99Separator _tKing99Separator1;
+        private King99GroupBox Force;
+        private King99RadioButton radForceFollow;
+        private King99RadioButton radForceAdverse;
+        private King99TextBox txtForce;
         private System.Windows.Forms.Label lbForce;
-        private King99.King99RadioButton radFixed;
+        private King99RadioButton radFixed;
         private Bunifu.Framework.UI.BunifuFlatButton btnFixed;
     }
 }
