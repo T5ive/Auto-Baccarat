@@ -19,26 +19,27 @@ namespace AutoBaccarat
         }
         public static void LocalizeSpecialCases()
         {
-            stringLoader.RunTime = LclzManager.TranslateMessage("RunTime", "Operating Time:");
-            stringLoader.Round = LclzManager.TranslateMessage("Round", "Round:");
-            stringLoader.Win = LclzManager.TranslateMessage("Win", "Win:");
-            stringLoader.Lose = LclzManager.TranslateMessage("Lose", "Lose:");
-            stringLoader.MaxConWin = LclzManager.TranslateMessage("MaxConWin", "Maximum Continuous Win:");
-            stringLoader.MaxConLose = LclzManager.TranslateMessage("MaxConLose", "Maximum Continuous Lose:");
-            stringLoader.WinLose = LclzManager.TranslateMessage("WinLose", "Win/Lose:");
+            //stringLoader.RunTime = LclzManager.TranslateMessage("RunTime", "Operating Time:");
+            //stringLoader.Round = LclzManager.TranslateMessage("Round", "Round:");
+            //stringLoader.Win = LclzManager.TranslateMessage("Win", "Win:");
+            //stringLoader.Lose = LclzManager.TranslateMessage("Lose", "Lose:");
+            //stringLoader.MaxConWin = LclzManager.TranslateMessage("MaxConWin", "Maximum Continuous Win:");
+            //stringLoader.MaxConLose = LclzManager.TranslateMessage("MaxConLose", "Maximum Continuous Lose:");
+            //stringLoader.WinLose = LclzManager.TranslateMessage("WinLose", "Win/Lose:");
 
-            stringLoader.MaxProfit = LclzManager.TranslateMessage("MaxProfit", "Maximum Profit:");
-            stringLoader.Balance = LclzManager.TranslateMessage("Balance", "Balance:");
-            stringLoader.Amount = LclzManager.TranslateMessage("Amount", "Bet Amount:");
-            stringLoader.Stake = LclzManager.TranslateMessage("Stake", "Stake/Unit:");
-            stringLoader.Unit = LclzManager.TranslateMessage("Unit", "Bet Unit:");
-            stringLoader.Bettings = LclzManager.TranslateMessage("Bettings", "Betting:");
+            //stringLoader.MaxProfit = LclzManager.TranslateMessage("MaxProfit", "Maximum Profit:");
+            //stringLoader.Balance = LclzManager.TranslateMessage("Balance", "Balance:");
+            //stringLoader.Amount = LclzManager.TranslateMessage("Amount", "Bet Amount:");
+            //stringLoader.Stake = LclzManager.TranslateMessage("Stake", "Stake/Unit:");
+            //stringLoader.Unit = LclzManager.TranslateMessage("Unit", "Bet Unit:");
+            //stringLoader.Bettings = LclzManager.TranslateMessage("Bettings", "Betting:");
 
             stringLoader.Warning = LclzManager.TranslateMessage("Warning", "WARNING!");
 
             stringLoader.WantClear = LclzManager.TranslateMessage("WantClear", "Do you want to clear?");
             stringLoader.Line = LclzManager.TranslateMessage("Line", "Line");
             stringLoader.Ready = LclzManager.TranslateMessage("Ready", "Ready");
+            stringLoader.Betting = LclzManager.TranslateMessage("Betting", "Betting");
             stringLoader.Wait = LclzManager.TranslateMessage("Wait", "Wait Result");
             stringLoader.Save = LclzManager.TranslateMessage("Save", "Saving");
 
@@ -69,13 +70,21 @@ namespace AutoBaccarat
             stringLoader.Start = LclzManager.TranslateMessage("Start", "Start");
             stringLoader.Stop = LclzManager.TranslateMessage("Stop", "Stop");
 
-            stringLoader.Fixed = LclzManager.TranslateMessage("Fixed", "Setting Fixed Type!!");
+            stringLoader.FixedError = LclzManager.TranslateMessage("Fixed", "Setting Fixed Type!!");
             stringLoader.DetailFixed = LclzManager.TranslateMessage("DetailFixed", "- Fixed bets and loops");
 
             stringLoader.NormalMode = LclzManager.TranslateMessage("NormalMode", "Normal");
             stringLoader.BackgroundMode = LclzManager.TranslateMessage("BackgroundMode", "Background");
-
+            
+            stringLoader.Follow = LclzManager.TranslateMessage("Follow", "Follow");
+            stringLoader.AI = LclzManager.TranslateMessage("AI", "Ai");
+            stringLoader.Lock = LclzManager.TranslateMessage("Lock", "Lock");
+            stringLoader.GoodLineFix = LclzManager.TranslateMessage("GoodLineFix", "Good Line Fix");
+            stringLoader.GoodLineRandom = LclzManager.TranslateMessage("GoodLineRandom", "Good Line Random");
+            stringLoader.GoodLine = LclzManager.TranslateMessage("GoodLine", "Good Line");
+            stringLoader.Fixed = LclzManager.TranslateMessage("Fixed", "Fixed");
             stringLoader.Custom = LclzManager.TranslateMessage("Custom", "Custom");
+            stringLoader.Random = LclzManager.TranslateMessage("Random", "Random");
         }
 
         

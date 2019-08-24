@@ -29,35 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.EditTitle = new King99GroupBox();
-            this.CustomBox = new King99GroupBox();
-            this.CustomSetting = new King99GroupBox();
-            this.btnDefault = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.lbValue = new System.Windows.Forms.Label();
-            this.btnClear = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.CustomConfig = new King99GroupBox();
-            this.radFollow = new King99RadioButton();
-            this.radAdverse = new King99RadioButton();
-            this.btnDel = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txtNum = new King99TextBox();
-            this.btnAdd = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.PanelResultBP = new System.Windows.Forms.Panel();
-            this.PanelResultPB = new System.Windows.Forms.Panel();
-            this.PanelResult = new System.Windows.Forms.Panel();
-            this.customList = new King99GroupBox();
-            this.ListBoxValue = new System.Windows.Forms.ListBox();
-            this.lbTotal = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.txtName = new King99TextBox();
-            this.lbName = new System.Windows.Forms.Label();
-            this.FileList = new King99GroupBox();
-            this.ListBoxLoad = new System.Windows.Forms.ListBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnAddList = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnDelList = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dc1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dc2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dc3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -68,7 +39,34 @@
             this.dc8 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dc9 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dc10 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuCards1.SuspendLayout();
+            this.EditTitle = new AutoBaccarat.King99GroupBox();
+            this.CustomBox = new AutoBaccarat.King99GroupBox();
+            this.CustomSetting = new AutoBaccarat.King99GroupBox();
+            this.btnDefault = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.lbValue = new System.Windows.Forms.Label();
+            this.btnClear = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.CustomConfig = new AutoBaccarat.King99GroupBox();
+            this.radFollow = new AutoBaccarat.King99RadioButton();
+            this.radAdverse = new AutoBaccarat.King99RadioButton();
+            this.btnDel = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txtNum = new AutoBaccarat.King99TextBox();
+            this.btnAdd = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.PanelResultBP = new System.Windows.Forms.Panel();
+            this.PanelResultPB = new System.Windows.Forms.Panel();
+            this.PanelResult = new System.Windows.Forms.Panel();
+            this.customList = new AutoBaccarat.King99GroupBox();
+            this.ListBoxValue = new System.Windows.Forms.ListBox();
+            this.lbTotal = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txtName = new AutoBaccarat.King99TextBox();
+            this.lbName = new System.Windows.Forms.Label();
+            this.FileList = new AutoBaccarat.King99GroupBox();
+            this.ListBoxLoad = new System.Windows.Forms.ListBox();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnAddList = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnDelList = new Bunifu.Framework.UI.BunifuFlatButton();
             this.EditTitle.SuspendLayout();
             this.CustomBox.SuspendLayout();
             this.CustomSetting.SuspendLayout();
@@ -79,22 +77,75 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuCards1
+            // dc1
             // 
-            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.bunifuCards1.BorderRadius = 0;
-            this.bunifuCards1.BottomSahddow = false;
-            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            this.bunifuCards1.Controls.Add(this.EditTitle);
-            this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCards1.Name = "bunifuCards1";
-            this.bunifuCards1.Padding = new System.Windows.Forms.Padding(1);
-            this.bunifuCards1.RightSahddow = false;
-            this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(965, 450);
-            this.bunifuCards1.TabIndex = 2;
+            this.dc1.Fixed = true;
+            this.dc1.Horizontal = true;
+            this.dc1.TargetControl = null;
+            this.dc1.Vertical = true;
+            // 
+            // dc2
+            // 
+            this.dc2.Fixed = true;
+            this.dc2.Horizontal = true;
+            this.dc2.TargetControl = null;
+            this.dc2.Vertical = true;
+            // 
+            // dc3
+            // 
+            this.dc3.Fixed = true;
+            this.dc3.Horizontal = true;
+            this.dc3.TargetControl = null;
+            this.dc3.Vertical = true;
+            // 
+            // dc4
+            // 
+            this.dc4.Fixed = true;
+            this.dc4.Horizontal = true;
+            this.dc4.TargetControl = null;
+            this.dc4.Vertical = true;
+            // 
+            // dc5
+            // 
+            this.dc5.Fixed = true;
+            this.dc5.Horizontal = true;
+            this.dc5.TargetControl = null;
+            this.dc5.Vertical = true;
+            // 
+            // dc6
+            // 
+            this.dc6.Fixed = true;
+            this.dc6.Horizontal = true;
+            this.dc6.TargetControl = null;
+            this.dc6.Vertical = true;
+            // 
+            // dc7
+            // 
+            this.dc7.Fixed = true;
+            this.dc7.Horizontal = true;
+            this.dc7.TargetControl = null;
+            this.dc7.Vertical = true;
+            // 
+            // dc8
+            // 
+            this.dc8.Fixed = true;
+            this.dc8.Horizontal = true;
+            this.dc8.TargetControl = null;
+            this.dc8.Vertical = true;
+            // 
+            // dc9
+            // 
+            this.dc9.Fixed = true;
+            this.dc9.Horizontal = true;
+            this.dc9.TargetControl = null;
+            this.dc9.Vertical = true;
+            // 
+            // dc10
+            // 
+            this.dc10.Fixed = true;
+            this.dc10.Horizontal = true;
+            this.dc10.TargetControl = null;
+            this.dc10.Vertical = true;
             // 
             // EditTitle
             // 
@@ -107,12 +158,12 @@
             this.EditTitle.Curv2 = 1;
             this.EditTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EditTitle.Font = new System.Drawing.Font("Kanit", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.EditTitle.Location = new System.Drawing.Point(1, 1);
+            this.EditTitle.Location = new System.Drawing.Point(0, 0);
             this.EditTitle.MinimumSize = new System.Drawing.Size(136, 50);
             this.EditTitle.Name = "EditTitle";
             this.EditTitle.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.EditTitle.Size = new System.Drawing.Size(963, 448);
-            this.EditTitle.TabIndex = 1;
+            this.EditTitle.Size = new System.Drawing.Size(965, 450);
+            this.EditTitle.TabIndex = 2;
             this.EditTitle.Text = "KING 99 Config";
             // 
             // CustomBox
@@ -133,7 +184,7 @@
             this.CustomBox.MinimumSize = new System.Drawing.Size(136, 50);
             this.CustomBox.Name = "CustomBox";
             this.CustomBox.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.CustomBox.Size = new System.Drawing.Size(753, 380);
+            this.CustomBox.Size = new System.Drawing.Size(755, 382);
             this.CustomBox.TabIndex = 3;
             this.CustomBox.Text = "Custom Config";
             // 
@@ -156,7 +207,7 @@
             this.CustomSetting.MinimumSize = new System.Drawing.Size(136, 50);
             this.CustomSetting.Name = "CustomSetting";
             this.CustomSetting.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.CustomSetting.Size = new System.Drawing.Size(178, 307);
+            this.CustomSetting.Size = new System.Drawing.Size(180, 309);
             this.CustomSetting.TabIndex = 0;
             this.CustomSetting.Text = "Settings";
             // 
@@ -275,7 +326,7 @@
             this.radFollow.Size = new System.Drawing.Size(128, 15);
             this.radFollow.TabIndex = 16;
             this.radFollow.Text = "Follow of Last";
-            this.radFollow.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.ConfigChecked);
+            this.radFollow.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.ConfigChecked);
             // 
             // radAdverse
             // 
@@ -289,7 +340,7 @@
             this.radAdverse.Size = new System.Drawing.Size(128, 15);
             this.radAdverse.TabIndex = 15;
             this.radAdverse.Text = "Adverse of Last";
-            this.radAdverse.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.ConfigChecked);
+            this.radAdverse.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.ConfigChecked);
             // 
             // btnDel
             // 
@@ -333,14 +384,14 @@
             this.txtNum.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txtNum.Font = new System.Drawing.Font("Kanit", 11F);
-            this.txtNum.Location = new System.Drawing.Point(64, 31);
+            this.txtNum.Location = new System.Drawing.Point(66, 31);
             this.txtNum.MaxLength = 32767;
             this.txtNum.MinimumSize = new System.Drawing.Size(0, 31);
             this.txtNum.Multiline = false;
             this.txtNum.Name = "txtNum";
             this.txtNum.ReadOnly = false;
             this.txtNum.Size = new System.Drawing.Size(106, 33);
-            this.txtNum.Style = King99TextBox._Num.NumberComma;
+            this.txtNum.Style = AutoBaccarat.King99TextBox._Num.NumberComma;
             this.txtNum.TabIndex = 9;
             this.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtNum.UseSystemPasswordChar = false;
@@ -389,7 +440,7 @@
             this.PanelResultBP.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelResultBP.Location = new System.Drawing.Point(435, 68);
             this.PanelResultBP.Name = "PanelResultBP";
-            this.PanelResultBP.Size = new System.Drawing.Size(135, 307);
+            this.PanelResultBP.Size = new System.Drawing.Size(135, 309);
             this.PanelResultBP.TabIndex = 8;
             // 
             // PanelResultPB
@@ -398,7 +449,7 @@
             this.PanelResultPB.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelResultPB.Location = new System.Drawing.Point(300, 68);
             this.PanelResultPB.Name = "PanelResultPB";
-            this.PanelResultPB.Size = new System.Drawing.Size(135, 307);
+            this.PanelResultPB.Size = new System.Drawing.Size(135, 309);
             this.PanelResultPB.TabIndex = 8;
             // 
             // PanelResult
@@ -407,7 +458,7 @@
             this.PanelResult.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelResult.Location = new System.Drawing.Point(165, 68);
             this.PanelResult.Name = "PanelResult";
-            this.PanelResult.Size = new System.Drawing.Size(135, 307);
+            this.PanelResult.Size = new System.Drawing.Size(135, 309);
             this.PanelResult.TabIndex = 7;
             // 
             // customList
@@ -424,7 +475,7 @@
             this.customList.MinimumSize = new System.Drawing.Size(136, 50);
             this.customList.Name = "customList";
             this.customList.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.customList.Size = new System.Drawing.Size(160, 307);
+            this.customList.Size = new System.Drawing.Size(160, 309);
             this.customList.TabIndex = 5;
             this.customList.Text = "List";
             // 
@@ -439,7 +490,7 @@
             this.ListBoxValue.ItemHeight = 22;
             this.ListBoxValue.Location = new System.Drawing.Point(5, 28);
             this.ListBoxValue.Name = "ListBoxValue";
-            this.ListBoxValue.Size = new System.Drawing.Size(150, 252);
+            this.ListBoxValue.Size = new System.Drawing.Size(150, 254);
             this.ListBoxValue.TabIndex = 0;
             this.ListBoxValue.SelectedIndexChanged += new System.EventHandler(this.ListBoxValue_SelectedIndexChanged);
             // 
@@ -450,7 +501,7 @@
             this.lbTotal.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lbTotal.Font = new System.Drawing.Font("Kanit", 11F);
             this.lbTotal.ForeColor = System.Drawing.Color.White;
-            this.lbTotal.Location = new System.Drawing.Point(5, 280);
+            this.lbTotal.Location = new System.Drawing.Point(5, 282);
             this.lbTotal.Name = "lbTotal";
             this.lbTotal.Size = new System.Drawing.Size(60, 22);
             this.lbTotal.TabIndex = 1;
@@ -463,7 +514,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(5, 28);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(743, 40);
+            this.panel6.Size = new System.Drawing.Size(745, 40);
             this.panel6.TabIndex = 9;
             // 
             // txtName
@@ -471,14 +522,14 @@
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txtName.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtName.Location = new System.Drawing.Point(58, 6);
+            this.txtName.Location = new System.Drawing.Point(60, 6);
             this.txtName.MaxLength = 32767;
             this.txtName.MinimumSize = new System.Drawing.Size(0, 31);
             this.txtName.Multiline = false;
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = false;
             this.txtName.Size = new System.Drawing.Size(194, 31);
-            this.txtName.Style = King99TextBox._Num.TextNum;
+            this.txtName.Style = AutoBaccarat.King99TextBox._Num.TextNum;
             this.txtName.TabIndex = 12;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtName.UseSystemPasswordChar = false;
@@ -509,7 +560,7 @@
             this.FileList.MinimumSize = new System.Drawing.Size(136, 50);
             this.FileList.Name = "FileList";
             this.FileList.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.FileList.Size = new System.Drawing.Size(200, 380);
+            this.FileList.Size = new System.Drawing.Size(200, 382);
             this.FileList.TabIndex = 4;
             this.FileList.Text = "Custom List";
             // 
@@ -524,9 +575,9 @@
             this.ListBoxLoad.ItemHeight = 22;
             this.ListBoxLoad.Location = new System.Drawing.Point(5, 28);
             this.ListBoxLoad.Name = "ListBoxLoad";
-            this.ListBoxLoad.Size = new System.Drawing.Size(190, 347);
+            this.ListBoxLoad.Size = new System.Drawing.Size(190, 349);
             this.ListBoxLoad.TabIndex = 1;
-            this.ListBoxLoad.SelectedIndexChanged += new System.EventHandler(this.LoadList_SelectedIndexChanged);
+            this.ListBoxLoad.SelectedIndexChanged += new System.EventHandler(this.ListBoxLoad_SelectedIndexChanged);
             // 
             // tableLayoutPanel3
             // 
@@ -540,11 +591,11 @@
             this.tableLayoutPanel3.Controls.Add(this.btnAddList, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnDelList, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 408);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 410);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(953, 35);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(955, 35);
             this.tableLayoutPanel3.TabIndex = 34;
             // 
             // btnSave
@@ -570,13 +621,13 @@
             this.btnSave.IconVisible = true;
             this.btnSave.IconZoom = 50D;
             this.btnSave.IsTab = false;
-            this.btnSave.Location = new System.Drawing.Point(207, 3);
+            this.btnSave.Location = new System.Drawing.Point(209, 3);
             this.btnSave.Name = "btnSave";
             this.btnSave.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnSave.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnSave.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSave.selected = false;
-            this.btnSave.Size = new System.Drawing.Size(367, 29);
+            this.btnSave.Size = new System.Drawing.Size(368, 29);
             this.btnSave.TabIndex = 38;
             this.btnSave.Text = "Save Custom";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -607,13 +658,13 @@
             this.btnClose.IconVisible = true;
             this.btnClose.IconZoom = 50D;
             this.btnClose.IsTab = false;
-            this.btnClose.Location = new System.Drawing.Point(580, 3);
+            this.btnClose.Location = new System.Drawing.Point(583, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnClose.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnClose.OnHoverTextColor = System.Drawing.Color.White;
             this.btnClose.selected = false;
-            this.btnClose.Size = new System.Drawing.Size(370, 29);
+            this.btnClose.Size = new System.Drawing.Size(369, 29);
             this.btnClose.TabIndex = 39;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -650,7 +701,7 @@
             this.btnAddList.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnAddList.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAddList.selected = false;
-            this.btnAddList.Size = new System.Drawing.Size(96, 29);
+            this.btnAddList.Size = new System.Drawing.Size(97, 29);
             this.btnAddList.TabIndex = 40;
             this.btnAddList.Text = "Add";
             this.btnAddList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -681,13 +732,13 @@
             this.btnDelList.IconVisible = true;
             this.btnDelList.IconZoom = 50D;
             this.btnDelList.IsTab = false;
-            this.btnDelList.Location = new System.Drawing.Point(105, 3);
+            this.btnDelList.Location = new System.Drawing.Point(106, 3);
             this.btnDelList.Name = "btnDelList";
             this.btnDelList.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnDelList.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnDelList.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDelList.selected = false;
-            this.btnDelList.Size = new System.Drawing.Size(96, 29);
+            this.btnDelList.Size = new System.Drawing.Size(97, 29);
             this.btnDelList.TabIndex = 41;
             this.btnDelList.Text = "Delete";
             this.btnDelList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -695,82 +746,12 @@
             this.btnDelList.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelList.Click += new System.EventHandler(this.BtnDelList_Click);
             // 
-            // dc1
-            // 
-            this.dc1.Fixed = true;
-            this.dc1.Horizontal = true;
-            this.dc1.TargetControl = this.bunifuCards1;
-            this.dc1.Vertical = true;
-            // 
-            // dc2
-            // 
-            this.dc2.Fixed = true;
-            this.dc2.Horizontal = true;
-            this.dc2.TargetControl = this.EditTitle;
-            this.dc2.Vertical = true;
-            // 
-            // dc3
-            // 
-            this.dc3.Fixed = true;
-            this.dc3.Horizontal = true;
-            this.dc3.TargetControl = this.FileList;
-            this.dc3.Vertical = true;
-            // 
-            // dc4
-            // 
-            this.dc4.Fixed = true;
-            this.dc4.Horizontal = true;
-            this.dc4.TargetControl = this.CustomBox;
-            this.dc4.Vertical = true;
-            // 
-            // dc5
-            // 
-            this.dc5.Fixed = true;
-            this.dc5.Horizontal = true;
-            this.dc5.TargetControl = this.panel6;
-            this.dc5.Vertical = true;
-            // 
-            // dc6
-            // 
-            this.dc6.Fixed = true;
-            this.dc6.Horizontal = true;
-            this.dc6.TargetControl = this.CustomSetting;
-            this.dc6.Vertical = true;
-            // 
-            // dc7
-            // 
-            this.dc7.Fixed = true;
-            this.dc7.Horizontal = true;
-            this.dc7.TargetControl = this.CustomConfig;
-            this.dc7.Vertical = true;
-            // 
-            // dc8
-            // 
-            this.dc8.Fixed = true;
-            this.dc8.Horizontal = true;
-            this.dc8.TargetControl = this.PanelResult;
-            this.dc8.Vertical = true;
-            // 
-            // dc9
-            // 
-            this.dc9.Fixed = true;
-            this.dc9.Horizontal = true;
-            this.dc9.TargetControl = this.PanelResultBP;
-            this.dc9.Vertical = true;
-            // 
-            // dc10
-            // 
-            this.dc10.Fixed = true;
-            this.dc10.Horizontal = true;
-            this.dc10.TargetControl = this.PanelResultPB;
-            this.dc10.Vertical = true;
-            // 
             // FrmFormulaCustom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(965, 450);
-            this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.EditTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmFormulaCustom";
             this.ShowIcon = false;
@@ -779,7 +760,6 @@
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmFormulaEdit_FormClosing);
             this.Load += new System.EventHandler(this.FrmFormulaEdit_Load);
-            this.bunifuCards1.ResumeLayout(false);
             this.EditTitle.ResumeLayout(false);
             this.CustomBox.ResumeLayout(false);
             this.CustomSetting.ResumeLayout(false);
@@ -796,36 +776,6 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private King99GroupBox EditTitle;
-        private King99GroupBox CustomBox;
-        private King99GroupBox CustomSetting;
-        private System.Windows.Forms.Label lbName;
-        private King99TextBox txtName;
-        private System.Windows.Forms.Label lbValue;
-        private King99GroupBox CustomConfig;
-        private King99RadioButton radFollow;
-        private King99RadioButton radAdverse;
-        private King99TextBox txtNum;
-        private System.Windows.Forms.Panel PanelResultBP;
-        private System.Windows.Forms.Panel PanelResultPB;
-        private System.Windows.Forms.Panel PanelResult;
-        private King99GroupBox customList;
-        private System.Windows.Forms.ListBox ListBoxValue;
-        private System.Windows.Forms.Label lbTotal;
-        private King99GroupBox FileList;
-        private System.Windows.Forms.ListBox ListBoxLoad;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Panel panel6;
-        private Bunifu.Framework.UI.BunifuFlatButton btnDefault;
-        private Bunifu.Framework.UI.BunifuFlatButton btnClear;
-        private Bunifu.Framework.UI.BunifuFlatButton btnDel;
-        private Bunifu.Framework.UI.BunifuFlatButton btnAdd;
-        private Bunifu.Framework.UI.BunifuFlatButton btnSave;
-        private Bunifu.Framework.UI.BunifuFlatButton btnClose;
-        private Bunifu.Framework.UI.BunifuFlatButton btnAddList;
-        private Bunifu.Framework.UI.BunifuFlatButton btnDelList;
         private Bunifu.Framework.UI.BunifuDragControl dc1;
         private Bunifu.Framework.UI.BunifuDragControl dc2;
         private Bunifu.Framework.UI.BunifuDragControl dc3;
@@ -836,5 +786,33 @@
         private Bunifu.Framework.UI.BunifuDragControl dc8;
         private Bunifu.Framework.UI.BunifuDragControl dc9;
         private Bunifu.Framework.UI.BunifuDragControl dc10;
+        private King99GroupBox EditTitle;
+        private King99GroupBox CustomBox;
+        private King99GroupBox CustomSetting;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDefault;
+        private System.Windows.Forms.Label lbValue;
+        private Bunifu.Framework.UI.BunifuFlatButton btnClear;
+        private King99GroupBox CustomConfig;
+        private King99RadioButton radFollow;
+        private King99RadioButton radAdverse;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDel;
+        private King99TextBox txtNum;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAdd;
+        private System.Windows.Forms.Panel PanelResultBP;
+        private System.Windows.Forms.Panel PanelResultPB;
+        private System.Windows.Forms.Panel PanelResult;
+        private King99GroupBox customList;
+        private System.Windows.Forms.ListBox ListBoxValue;
+        private System.Windows.Forms.Label lbTotal;
+        private System.Windows.Forms.Panel panel6;
+        private King99TextBox txtName;
+        private System.Windows.Forms.Label lbName;
+        private King99GroupBox FileList;
+        private System.Windows.Forms.ListBox ListBoxLoad;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSave;
+        private Bunifu.Framework.UI.BunifuFlatButton btnClose;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAddList;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDelList;
     }
 }

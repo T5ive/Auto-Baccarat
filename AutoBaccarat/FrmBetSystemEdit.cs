@@ -170,10 +170,6 @@ namespace AutoBaccarat
 
             TextToDataGridView();
         }
-        private void DgvBetting_SelectionChanged(object sender, EventArgs e)
-        {
-           // dgvBetting.ClearSelection();
-        }
 
 
 

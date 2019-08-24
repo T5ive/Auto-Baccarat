@@ -35,7 +35,7 @@ namespace AutoBaccarat
             _bitmapFind2 = Resources.bmpFinda;
             _newCursor = _curTarget;
 
-            _tKing99GroupBox1.Text = Mode == 0 ? stringLoader.NormalMode : stringLoader.BackgroundMode;
+            EditTitle.Text = Mode == 0 ? stringLoader.NormalMode : stringLoader.BackgroundMode;
         }
         private void FrmColorInfo_FormClosing(object sender, FormClosingEventArgs e)
         {

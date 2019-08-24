@@ -29,51 +29,67 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.EditTitle = new King99GroupBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.tFiveDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl4 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl5 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.EditTitle = new AutoBaccarat.King99GroupBox();
             this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Explain = new King99GroupBox();
+            this.Explain = new AutoBaccarat.King99GroupBox();
             this.lbExplain = new System.Windows.Forms.Label();
             this.btnDefault = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClear = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDel = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAdd = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lbUnit = new System.Windows.Forms.Label();
-            this.Betting_txtNumber = new King99TextBox();
+            this.Betting_txtNumber = new AutoBaccarat.King99TextBox();
             this.dgvBetting = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Step = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tFiveDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.tFiveDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.tFiveDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.tFiveDragControl4 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.tFiveDragControl5 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuCards1.SuspendLayout();
             this.EditTitle.SuspendLayout();
             this.Explain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBetting)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuCards1
+            // tFiveDragControl1
             // 
-            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.bunifuCards1.BorderRadius = 0;
-            this.bunifuCards1.BottomSahddow = false;
-            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            this.bunifuCards1.Controls.Add(this.EditTitle);
-            this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCards1.Name = "bunifuCards1";
-            this.bunifuCards1.Padding = new System.Windows.Forms.Padding(1);
-            this.bunifuCards1.RightSahddow = false;
-            this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(560, 525);
-            this.bunifuCards1.TabIndex = 1;
+            this.tFiveDragControl1.Fixed = true;
+            this.tFiveDragControl1.Horizontal = true;
+            this.tFiveDragControl1.TargetControl = null;
+            this.tFiveDragControl1.Vertical = true;
+            // 
+            // tFiveDragControl2
+            // 
+            this.tFiveDragControl2.Fixed = true;
+            this.tFiveDragControl2.Horizontal = true;
+            this.tFiveDragControl2.TargetControl = null;
+            this.tFiveDragControl2.Vertical = true;
+            // 
+            // tFiveDragControl3
+            // 
+            this.tFiveDragControl3.Fixed = true;
+            this.tFiveDragControl3.Horizontal = true;
+            this.tFiveDragControl3.TargetControl = null;
+            this.tFiveDragControl3.Vertical = true;
+            // 
+            // tFiveDragControl4
+            // 
+            this.tFiveDragControl4.Fixed = true;
+            this.tFiveDragControl4.Horizontal = true;
+            this.tFiveDragControl4.TargetControl = null;
+            this.tFiveDragControl4.Vertical = true;
+            // 
+            // tFiveDragControl5
+            // 
+            this.tFiveDragControl5.Fixed = true;
+            this.tFiveDragControl5.Horizontal = true;
+            this.tFiveDragControl5.TargetControl = null;
+            this.tFiveDragControl5.Vertical = true;
             // 
             // EditTitle
             // 
@@ -93,12 +109,12 @@
             this.EditTitle.Curv2 = 1;
             this.EditTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EditTitle.Font = new System.Drawing.Font("Kanit", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.EditTitle.Location = new System.Drawing.Point(1, 1);
+            this.EditTitle.Location = new System.Drawing.Point(0, 0);
             this.EditTitle.MinimumSize = new System.Drawing.Size(136, 50);
             this.EditTitle.Name = "EditTitle";
             this.EditTitle.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.EditTitle.Size = new System.Drawing.Size(558, 523);
-            this.EditTitle.TabIndex = 1;
+            this.EditTitle.Size = new System.Drawing.Size(560, 525);
+            this.EditTitle.TabIndex = 2;
             this.EditTitle.Text = "KING 99 Config";
             // 
             // btnClose
@@ -368,14 +384,14 @@
             this.Betting_txtNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Betting_txtNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.Betting_txtNumber.Font = new System.Drawing.Font("Kanit", 11F);
-            this.Betting_txtNumber.Location = new System.Drawing.Point(69, 34);
+            this.Betting_txtNumber.Location = new System.Drawing.Point(71, 34);
             this.Betting_txtNumber.MaxLength = 32767;
             this.Betting_txtNumber.MinimumSize = new System.Drawing.Size(0, 31);
             this.Betting_txtNumber.Multiline = false;
             this.Betting_txtNumber.Name = "Betting_txtNumber";
             this.Betting_txtNumber.ReadOnly = false;
             this.Betting_txtNumber.Size = new System.Drawing.Size(125, 33);
-            this.Betting_txtNumber.Style = King99TextBox._Num.NumberOnly;
+            this.Betting_txtNumber.Style = AutoBaccarat.King99TextBox._Num.NumberOnly;
             this.Betting_txtNumber.TabIndex = 9;
             this.Betting_txtNumber.Text = "1";
             this.Betting_txtNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -387,21 +403,21 @@
             this.dgvBetting.AllowUserToDeleteRows = false;
             this.dgvBetting.AllowUserToResizeColumns = false;
             this.dgvBetting.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
-            this.dgvBetting.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            this.dgvBetting.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvBetting.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
             this.dgvBetting.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvBetting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvBetting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Kanit", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Kanit", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvBetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvBetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Step,
@@ -416,11 +432,11 @@
             this.dgvBetting.Name = "dgvBetting";
             this.dgvBetting.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvBetting.RowHeadersVisible = false;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvBetting.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvBetting.RowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvBetting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvBetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBetting.ShowCellErrors = false;
@@ -429,7 +445,6 @@
             this.dgvBetting.ShowRowErrors = false;
             this.dgvBetting.Size = new System.Drawing.Size(285, 400);
             this.dgvBetting.TabIndex = 3;
-            this.dgvBetting.SelectionChanged += new System.EventHandler(this.DgvBetting_SelectionChanged);
             // 
             // Step
             // 
@@ -449,47 +464,12 @@
             this.Unit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Unit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // tFiveDragControl1
-            // 
-            this.tFiveDragControl1.Fixed = true;
-            this.tFiveDragControl1.Horizontal = true;
-            this.tFiveDragControl1.TargetControl = this.EditTitle;
-            this.tFiveDragControl1.Vertical = true;
-            // 
-            // tFiveDragControl2
-            // 
-            this.tFiveDragControl2.Fixed = true;
-            this.tFiveDragControl2.Horizontal = true;
-            this.tFiveDragControl2.TargetControl = this.Explain;
-            this.tFiveDragControl2.Vertical = true;
-            // 
-            // tFiveDragControl3
-            // 
-            this.tFiveDragControl3.Fixed = true;
-            this.tFiveDragControl3.Horizontal = true;
-            this.tFiveDragControl3.TargetControl = this.lbExplain;
-            this.tFiveDragControl3.Vertical = true;
-            // 
-            // tFiveDragControl4
-            // 
-            this.tFiveDragControl4.Fixed = true;
-            this.tFiveDragControl4.Horizontal = true;
-            this.tFiveDragControl4.TargetControl = this.bunifuCards1;
-            this.tFiveDragControl4.Vertical = true;
-            // 
-            // tFiveDragControl5
-            // 
-            this.tFiveDragControl5.Fixed = true;
-            this.tFiveDragControl5.Horizontal = true;
-            this.tFiveDragControl5.TargetControl = this.dgvBetting;
-            this.tFiveDragControl5.Vertical = true;
-            // 
             // FrmBetSystemEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 525);
-            this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.EditTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBetSystemEdit";
             this.ShowIcon = false;
@@ -498,7 +478,6 @@
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmBetSystemEdit_FormClosing);
             this.Load += new System.EventHandler(this.FrmBetSystemEdit_Load);
-            this.bunifuCards1.ResumeLayout(false);
             this.EditTitle.ResumeLayout(false);
             this.EditTitle.PerformLayout();
             this.Explain.ResumeLayout(false);
@@ -508,26 +487,24 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private King99TextBox Betting_txtNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Step;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvBetting;
-        private System.Windows.Forms.Label lbUnit;
-        private Bunifu.Framework.UI.BunifuFlatButton btnAdd;
-        private Bunifu.Framework.UI.BunifuFlatButton btnDefault;
-        private Bunifu.Framework.UI.BunifuFlatButton btnClear;
-        private Bunifu.Framework.UI.BunifuFlatButton btnDel;
-        private King99GroupBox Explain;
-        private Bunifu.Framework.UI.BunifuFlatButton btnClose;
-        private Bunifu.Framework.UI.BunifuFlatButton btnSave;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl1;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl2;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl3;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl4;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl5;
         public King99GroupBox EditTitle;
+        private Bunifu.Framework.UI.BunifuFlatButton btnClose;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSave;
+        private King99GroupBox Explain;
         public System.Windows.Forms.Label lbExplain;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDefault;
+        private Bunifu.Framework.UI.BunifuFlatButton btnClear;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDel;
+        private Bunifu.Framework.UI.BunifuFlatButton btnAdd;
+        private System.Windows.Forms.Label lbUnit;
+        private King99TextBox Betting_txtNumber;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvBetting;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Step;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
     }
 }

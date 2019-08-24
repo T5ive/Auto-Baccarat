@@ -33,11 +33,18 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.EditTitle = new King99GroupBox();
-            this.PositionBox = new King99GroupBox();
-            this.radBackGround = new King99RadioButton();
-            this.radNormal = new King99RadioButton();
+            this.tFiveDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl4 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl5 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tFiveDragControl6 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl7 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.EditTitle = new AutoBaccarat.King99GroupBox();
+            this.PositionBox = new AutoBaccarat.King99GroupBox();
+            this.radBackGround = new AutoBaccarat.King99RadioButton();
+            this.radNormal = new AutoBaccarat.King99RadioButton();
             this.dgvSetting = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.colSetting = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colButton = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -48,23 +55,14 @@
             this.Rgb = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelName = new System.Windows.Forms.Panel();
             this.lbName = new System.Windows.Forms.Label();
-            this.txtName = new King99TextBox();
-            this.ListFile = new King99GroupBox();
+            this.txtName = new AutoBaccarat.King99TextBox();
+            this.ListFile = new AutoBaccarat.King99GroupBox();
             this.listLayout = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAddList = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDelList = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tFiveDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.tFiveDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.tFiveDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.tFiveDragControl4 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.tFiveDragControl5 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tFiveDragControl6 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.tFiveDragControl7 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuCards1.SuspendLayout();
             this.EditTitle.SuspendLayout();
             this.PositionBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSetting)).BeginInit();
@@ -73,22 +71,59 @@
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuCards1
+            // tFiveDragControl1
             // 
-            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.bunifuCards1.BorderRadius = 0;
-            this.bunifuCards1.BottomSahddow = false;
-            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            this.bunifuCards1.Controls.Add(this.EditTitle);
-            this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCards1.Name = "bunifuCards1";
-            this.bunifuCards1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 1);
-            this.bunifuCards1.RightSahddow = false;
-            this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(555, 450);
-            this.bunifuCards1.TabIndex = 0;
+            this.tFiveDragControl1.Fixed = true;
+            this.tFiveDragControl1.Horizontal = true;
+            this.tFiveDragControl1.TargetControl = null;
+            this.tFiveDragControl1.Vertical = true;
+            // 
+            // tFiveDragControl2
+            // 
+            this.tFiveDragControl2.Fixed = true;
+            this.tFiveDragControl2.Horizontal = true;
+            this.tFiveDragControl2.TargetControl = null;
+            this.tFiveDragControl2.Vertical = true;
+            // 
+            // tFiveDragControl3
+            // 
+            this.tFiveDragControl3.Fixed = true;
+            this.tFiveDragControl3.Horizontal = true;
+            this.tFiveDragControl3.TargetControl = null;
+            this.tFiveDragControl3.Vertical = true;
+            // 
+            // tFiveDragControl4
+            // 
+            this.tFiveDragControl4.Fixed = true;
+            this.tFiveDragControl4.Horizontal = true;
+            this.tFiveDragControl4.TargetControl = null;
+            this.tFiveDragControl4.Vertical = true;
+            // 
+            // tFiveDragControl5
+            // 
+            this.tFiveDragControl5.Fixed = true;
+            this.tFiveDragControl5.Horizontal = true;
+            this.tFiveDragControl5.TargetControl = null;
+            this.tFiveDragControl5.Vertical = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            // 
+            // tFiveDragControl6
+            // 
+            this.tFiveDragControl6.Fixed = true;
+            this.tFiveDragControl6.Horizontal = true;
+            this.tFiveDragControl6.TargetControl = null;
+            this.tFiveDragControl6.Vertical = true;
+            // 
+            // tFiveDragControl7
+            // 
+            this.tFiveDragControl7.Fixed = true;
+            this.tFiveDragControl7.Horizontal = true;
+            this.tFiveDragControl7.TargetControl = null;
+            this.tFiveDragControl7.Vertical = true;
             // 
             // EditTitle
             // 
@@ -105,8 +140,8 @@
             this.EditTitle.MinimumSize = new System.Drawing.Size(136, 50);
             this.EditTitle.Name = "EditTitle";
             this.EditTitle.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.EditTitle.Size = new System.Drawing.Size(555, 449);
-            this.EditTitle.TabIndex = 1;
+            this.EditTitle.Size = new System.Drawing.Size(555, 450);
+            this.EditTitle.TabIndex = 2;
             this.EditTitle.Text = "Layout Setting";
             // 
             // PositionBox
@@ -125,7 +160,7 @@
             this.PositionBox.MinimumSize = new System.Drawing.Size(136, 50);
             this.PositionBox.Name = "PositionBox";
             this.PositionBox.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.PositionBox.Size = new System.Drawing.Size(358, 381);
+            this.PositionBox.Size = new System.Drawing.Size(358, 382);
             this.PositionBox.TabIndex = 42;
             this.PositionBox.Text = "Position Settings";
             // 
@@ -141,7 +176,6 @@
             this.radBackGround.Size = new System.Drawing.Size(146, 19);
             this.radBackGround.TabIndex = 8;
             this.radBackGround.Text = "Background Mode";
-            this.radBackGround.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.SelectMode);
             // 
             // radNormal
             // 
@@ -155,7 +189,6 @@
             this.radNormal.Size = new System.Drawing.Size(120, 19);
             this.radNormal.TabIndex = 9;
             this.radNormal.Text = "Normal Mode";
-            this.radNormal.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.SelectMode);
             // 
             // dgvSetting
             // 
@@ -207,7 +240,7 @@
             this.dgvSetting.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSetting.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.dgvSetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvSetting.Size = new System.Drawing.Size(348, 308);
+            this.dgvSetting.Size = new System.Drawing.Size(348, 309);
             this.dgvSetting.TabIndex = 10;
             this.dgvSetting.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvSetting_CellClick);
             // 
@@ -310,7 +343,7 @@
             this.txtName.Name = "txtName";
             this.txtName.ReadOnly = false;
             this.txtName.Size = new System.Drawing.Size(154, 33);
-            this.txtName.Style = King99TextBox._Num.TextNum;
+            this.txtName.Style = AutoBaccarat.King99TextBox._Num.TextNum;
             this.txtName.TabIndex = 1;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtName.UseSystemPasswordChar = false;
@@ -328,7 +361,7 @@
             this.ListFile.MinimumSize = new System.Drawing.Size(136, 50);
             this.ListFile.Name = "ListFile";
             this.ListFile.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.ListFile.Size = new System.Drawing.Size(187, 381);
+            this.ListFile.Size = new System.Drawing.Size(187, 382);
             this.ListFile.TabIndex = 41;
             this.ListFile.Text = "Layout List";
             // 
@@ -343,7 +376,7 @@
             this.listLayout.ItemHeight = 22;
             this.listLayout.Location = new System.Drawing.Point(5, 28);
             this.listLayout.Name = "listLayout";
-            this.listLayout.Size = new System.Drawing.Size(177, 348);
+            this.listLayout.Size = new System.Drawing.Size(177, 349);
             this.listLayout.TabIndex = 0;
             this.listLayout.SelectedIndexChanged += new System.EventHandler(this.ListLayout_SelectedIndexChanged);
             // 
@@ -359,7 +392,7 @@
             this.tableLayoutPanel3.Controls.Add(this.btnAddList, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.btnDelList, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 409);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 410);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -514,66 +547,12 @@
             this.btnDelList.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelList.Click += new System.EventHandler(this.BtnDelList_Click);
             // 
-            // tFiveDragControl1
-            // 
-            this.tFiveDragControl1.Fixed = true;
-            this.tFiveDragControl1.Horizontal = true;
-            this.tFiveDragControl1.TargetControl = this.bunifuCards1;
-            this.tFiveDragControl1.Vertical = true;
-            // 
-            // tFiveDragControl2
-            // 
-            this.tFiveDragControl2.Fixed = true;
-            this.tFiveDragControl2.Horizontal = true;
-            this.tFiveDragControl2.TargetControl = this.ListFile;
-            this.tFiveDragControl2.Vertical = true;
-            // 
-            // tFiveDragControl3
-            // 
-            this.tFiveDragControl3.Fixed = true;
-            this.tFiveDragControl3.Horizontal = true;
-            this.tFiveDragControl3.TargetControl = this.listLayout;
-            this.tFiveDragControl3.Vertical = true;
-            // 
-            // tFiveDragControl4
-            // 
-            this.tFiveDragControl4.Fixed = true;
-            this.tFiveDragControl4.Horizontal = true;
-            this.tFiveDragControl4.TargetControl = this.PositionBox;
-            this.tFiveDragControl4.Vertical = true;
-            // 
-            // tFiveDragControl5
-            // 
-            this.tFiveDragControl5.Fixed = true;
-            this.tFiveDragControl5.Horizontal = true;
-            this.tFiveDragControl5.TargetControl = this.panelName;
-            this.tFiveDragControl5.Vertical = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            // 
-            // tFiveDragControl6
-            // 
-            this.tFiveDragControl6.Fixed = true;
-            this.tFiveDragControl6.Horizontal = true;
-            this.tFiveDragControl6.TargetControl = this.dgvSetting;
-            this.tFiveDragControl6.Vertical = true;
-            // 
-            // tFiveDragControl7
-            // 
-            this.tFiveDragControl7.Fixed = true;
-            this.tFiveDragControl7.Horizontal = true;
-            this.tFiveDragControl7.TargetControl = this.EditTitle;
-            this.tFiveDragControl7.Vertical = true;
-            // 
             // FrmLayout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 450);
-            this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.EditTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmLayout";
             this.ShowIcon = false;
@@ -582,7 +561,6 @@
             this.TopMost = true;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmLayout_FormClosing);
             this.Load += new System.EventHandler(this.FrmLayout_Load);
-            this.bunifuCards1.ResumeLayout(false);
             this.EditTitle.ResumeLayout(false);
             this.PositionBox.ResumeLayout(false);
             this.PositionBox.PerformLayout();
@@ -596,8 +574,6 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl1;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl2;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl3;
@@ -605,8 +581,8 @@
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl6;
-        private King99GroupBox EditTitle;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl7;
+        private King99GroupBox EditTitle;
         private King99GroupBox PositionBox;
         private King99RadioButton radBackGround;
         private King99RadioButton radNormal;

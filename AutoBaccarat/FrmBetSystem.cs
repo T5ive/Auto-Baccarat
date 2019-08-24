@@ -111,7 +111,6 @@ namespace AutoBaccarat
         private void BettingEditMode(BetSystemValues.BettingMode mode)
         {
             var frmBetSystemEdit = new FrmBetSystemEdit();
-            var frmBot = new FrmBot();
             BotValues.LclzManager.LocalizeForm(frmBetSystemEdit);
             BetSystemValues.EditMode = mode;
             switch (mode)
@@ -208,8 +207,7 @@ namespace AutoBaccarat
             cbChip.SelectedIndex = BetSystemValues.ChipSelected;
         }
 
+
         #endregion
-
-
     }
 }

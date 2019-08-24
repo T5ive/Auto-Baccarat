@@ -139,7 +139,7 @@ namespace AutoBaccarat
             {
             }
         }
-        private void LoadList_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListBoxLoad_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
@@ -319,7 +319,7 @@ namespace AutoBaccarat
                                 Font = new Font("Segoe UI", 9),
                                 AutoSize = false,
                                 Size = new Size(16, 16),
-                                BorderStyle = BorderStyle.FixedSingle,
+                                BorderStyle = BorderStyle.None,
                                 Margin = new Padding(0)
                             };
 
@@ -328,7 +328,7 @@ namespace AutoBaccarat
                                 Font = new Font("Segoe UI", 9),
                                 AutoSize = false,
                                 Size = new Size(16, 16),
-                                BorderStyle = BorderStyle.FixedSingle,
+                                BorderStyle = BorderStyle.None,
                                 Margin = new Padding(0),
                                 BackColor = Color.Blue,
                                 ForeColor = Color.White
@@ -339,7 +339,7 @@ namespace AutoBaccarat
                                 Font = new Font("Segoe UI", 9),
                                 AutoSize = false,
                                 Size = new Size(16, 16),
-                                BorderStyle = BorderStyle.FixedSingle,
+                                BorderStyle = BorderStyle.None,
                                 Margin = new Padding(0),
                                 BackColor = Color.Red,
                                 ForeColor = Color.White

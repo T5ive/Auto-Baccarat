@@ -2,26 +2,27 @@
 {
   public static class stringLoader
   {
-        public static string RunTime = "Operating Time:";
-        public static string Round = "Round:";
-        public static string Win = "Win:";
-        public static string Lose = "Lose:";
-        public static string MaxConWin = "Maximum Continuous Win:";
-        public static string MaxConLose = "Maximum Continuous Lose:";
-        public static string WinLose = "Win/Lose:";
+        //public static string RunTime = "Operating Time:";
+        //public static string Round = "Round:";
+        //public static string Win = "Win:";
+        //public static string Lose = "Lose:";
+        //public static string MaxConWin = "Maximum Continuous Win:";
+        //public static string MaxConLose = "Maximum Continuous Lose:";
+        //public static string WinLose = "Win/Lose:";
 
-        public static string MaxProfit = "Maximum Profit:";
-        public static string Balance = "Balance:";
-        public static string Amount = "Bet Amount:";
-        public static string Stake = "Stake/Unit:";
-        public static string Unit = "Bet Unit:";
-        public static string Bettings = "Betting:";
+        //public static string MaxProfit = "Maximum Profit:";
+        //public static string Balance = "Balance:";
+        //public static string Amount = "Bet Amount:";
+        //public static string Stake = "Stake/Unit:";
+        //public static string Unit = "Bet Unit:";
+        //public static string Bettings = "Betting:";
 
         public static string Warning = "WARNING!";
         
         public static string WantClear = "Do you want to clear?";
         public static string Line = "Line";
         public static string Ready = "Ready";
+        public static string Betting = "Betting";
         public static string Wait = "Wait Result";
         public static string Save = "Saving";
 
@@ -53,11 +54,20 @@
         public static string Start = "Start";
         public static string Stop = "Stop";
 
-        public static string Fixed = "Setting Fixed Type!!";
+        public static string FixedError = "Setting Fixed Type!!";
         public static string DetailFixed = "- Fixed bets and loops";
 
         public static string NormalMode = "Normal";
         public static string BackgroundMode = "Background";
+
+        public static string Follow = "Follow";
+        public static string AI = "Ai";
+        public static string Lock = "Lock";
+        public static string GoodLineFix = "GL Fix";
+        public static string GoodLineRandom = "GL Random";
+        public static string GoodLine = "Good Line";
+        public static string Fixed = "Fixed";
         public static string Custom = "Custom";
+        public static string Random = "Random";
     }
 }

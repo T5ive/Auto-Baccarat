@@ -29,118 +29,166 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tFiveDragControl5 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.dgvBetting = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tFiveDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.lbExplain = new System.Windows.Forms.Label();
+            this.tFiveDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.tFiveDragControl4 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.EditTitle = new AutoBaccarat.King99GroupBox();
+            this.btnAddSkip = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnAddB = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClose = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.Explain = new King99GroupBox();
-            this.tFiveDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.Explain = new AutoBaccarat.King99GroupBox();
+            this.lbExplain = new System.Windows.Forms.Label();
             this.btnDefault = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnClear = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDel = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tFiveDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.EditTitle = new King99GroupBox();
-            this.btnAddSkip = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnAddB = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAddP = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.tFiveDragControl4 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBetting)).BeginInit();
-            this.Explain.SuspendLayout();
+            this.dgvBetting = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EditTitle.SuspendLayout();
-            this.bunifuCards1.SuspendLayout();
+            this.Explain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBetting)).BeginInit();
             this.SuspendLayout();
             // 
             // tFiveDragControl5
             // 
             this.tFiveDragControl5.Fixed = true;
             this.tFiveDragControl5.Horizontal = true;
-            this.tFiveDragControl5.TargetControl = this.dgvBetting;
+            this.tFiveDragControl5.TargetControl = null;
             this.tFiveDragControl5.Vertical = true;
-            // 
-            // dgvBetting
-            // 
-            this.dgvBetting.AllowUserToAddRows = false;
-            this.dgvBetting.AllowUserToDeleteRows = false;
-            this.dgvBetting.AllowUserToResizeColumns = false;
-            this.dgvBetting.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvBetting.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvBetting.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.dgvBetting.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvBetting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvBetting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Kanit", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvBetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Type});
-            this.dgvBetting.DoubleBuffered = true;
-            this.dgvBetting.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.dgvBetting.EnableHeadersVisualStyles = false;
-            this.dgvBetting.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            this.dgvBetting.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvBetting.Location = new System.Drawing.Point(8, 159);
-            this.dgvBetting.MultiSelect = false;
-            this.dgvBetting.Name = "dgvBetting";
-            this.dgvBetting.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvBetting.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvBetting.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvBetting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvBetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBetting.ShowCellErrors = false;
-            this.dgvBetting.ShowCellToolTips = false;
-            this.dgvBetting.ShowEditingIcon = false;
-            this.dgvBetting.ShowRowErrors = false;
-            this.dgvBetting.Size = new System.Drawing.Size(187, 353);
-            this.dgvBetting.TabIndex = 3;
-            // 
-            // Type
-            // 
-            this.Type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Type.HeaderText = "Type";
-            this.Type.Name = "Type";
-            this.Type.ReadOnly = true;
-            this.Type.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Type.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // tFiveDragControl3
             // 
             this.tFiveDragControl3.Fixed = true;
             this.tFiveDragControl3.Horizontal = true;
-            this.tFiveDragControl3.TargetControl = this.lbExplain;
+            this.tFiveDragControl3.TargetControl = null;
             this.tFiveDragControl3.Vertical = true;
             // 
-            // lbExplain
+            // tFiveDragControl2
             // 
-            this.lbExplain.BackColor = System.Drawing.Color.Transparent;
-            this.lbExplain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lbExplain.Font = new System.Drawing.Font("Kanit", 9F);
-            this.lbExplain.ForeColor = System.Drawing.Color.White;
-            this.lbExplain.Location = new System.Drawing.Point(5, 28);
-            this.lbExplain.Name = "lbExplain";
-            this.lbExplain.Size = new System.Drawing.Size(241, 190);
-            this.lbExplain.TabIndex = 8;
-            this.lbExplain.Text = "- Fixed bets and loops";
+            this.tFiveDragControl2.Fixed = true;
+            this.tFiveDragControl2.Horizontal = true;
+            this.tFiveDragControl2.TargetControl = null;
+            this.tFiveDragControl2.Vertical = true;
+            // 
+            // tFiveDragControl1
+            // 
+            this.tFiveDragControl1.Fixed = true;
+            this.tFiveDragControl1.Horizontal = true;
+            this.tFiveDragControl1.TargetControl = null;
+            this.tFiveDragControl1.Vertical = true;
+            // 
+            // tFiveDragControl4
+            // 
+            this.tFiveDragControl4.Fixed = true;
+            this.tFiveDragControl4.Horizontal = true;
+            this.tFiveDragControl4.TargetControl = null;
+            this.tFiveDragControl4.Vertical = true;
+            // 
+            // EditTitle
+            // 
+            this.EditTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.EditTitle.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
+            this.EditTitle.Controls.Add(this.btnAddSkip);
+            this.EditTitle.Controls.Add(this.btnAddB);
+            this.EditTitle.Controls.Add(this.btnClose);
+            this.EditTitle.Controls.Add(this.btnSave);
+            this.EditTitle.Controls.Add(this.Explain);
+            this.EditTitle.Controls.Add(this.btnDefault);
+            this.EditTitle.Controls.Add(this.btnClear);
+            this.EditTitle.Controls.Add(this.btnDel);
+            this.EditTitle.Controls.Add(this.btnAddP);
+            this.EditTitle.Controls.Add(this.dgvBetting);
+            this.EditTitle.Curv1 = 1;
+            this.EditTitle.Curv2 = 1;
+            this.EditTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.EditTitle.Font = new System.Drawing.Font("Kanit", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.EditTitle.Location = new System.Drawing.Point(0, 0);
+            this.EditTitle.MinimumSize = new System.Drawing.Size(136, 50);
+            this.EditTitle.Name = "EditTitle";
+            this.EditTitle.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
+            this.EditTitle.Size = new System.Drawing.Size(482, 525);
+            this.EditTitle.TabIndex = 2;
+            this.EditTitle.Text = "Fixed Setting";
+            // 
+            // btnAddSkip
+            // 
+            this.btnAddSkip.Active = false;
+            this.btnAddSkip.Activecolor = System.Drawing.Color.Silver;
+            this.btnAddSkip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAddSkip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddSkip.BorderRadius = 0;
+            this.btnAddSkip.ButtonText = "Add Skip";
+            this.btnAddSkip.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddSkip.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAddSkip.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAddSkip.Iconimage = null;
+            this.btnAddSkip.Iconimage_right = null;
+            this.btnAddSkip.Iconimage_right_Selected = null;
+            this.btnAddSkip.Iconimage_Selected = null;
+            this.btnAddSkip.IconMarginLeft = 0;
+            this.btnAddSkip.IconMarginRight = 0;
+            this.btnAddSkip.IconRightVisible = true;
+            this.btnAddSkip.IconRightZoom = 0D;
+            this.btnAddSkip.IconVisible = true;
+            this.btnAddSkip.IconZoom = 50D;
+            this.btnAddSkip.IsTab = false;
+            this.btnAddSkip.Location = new System.Drawing.Point(8, 73);
+            this.btnAddSkip.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnAddSkip.Name = "btnAddSkip";
+            this.btnAddSkip.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAddSkip.OnHovercolor = System.Drawing.Color.Black;
+            this.btnAddSkip.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAddSkip.selected = false;
+            this.btnAddSkip.Size = new System.Drawing.Size(90, 31);
+            this.btnAddSkip.TabIndex = 44;
+            this.btnAddSkip.Text = "Add Skip";
+            this.btnAddSkip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddSkip.Textcolor = System.Drawing.Color.White;
+            this.btnAddSkip.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSkip.Click += new System.EventHandler(this.BtnAddSkip_Click);
+            // 
+            // btnAddB
+            // 
+            this.btnAddB.Active = false;
+            this.btnAddB.Activecolor = System.Drawing.Color.OrangeRed;
+            this.btnAddB.BackColor = System.Drawing.Color.Red;
+            this.btnAddB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAddB.BorderRadius = 0;
+            this.btnAddB.ButtonText = "Add B";
+            this.btnAddB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddB.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAddB.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAddB.Iconimage = null;
+            this.btnAddB.Iconimage_right = null;
+            this.btnAddB.Iconimage_right_Selected = null;
+            this.btnAddB.Iconimage_Selected = null;
+            this.btnAddB.IconMarginLeft = 0;
+            this.btnAddB.IconMarginRight = 0;
+            this.btnAddB.IconRightVisible = true;
+            this.btnAddB.IconRightZoom = 0D;
+            this.btnAddB.IconVisible = true;
+            this.btnAddB.IconZoom = 50D;
+            this.btnAddB.IsTab = false;
+            this.btnAddB.Location = new System.Drawing.Point(105, 34);
+            this.btnAddB.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.btnAddB.Name = "btnAddB";
+            this.btnAddB.Normalcolor = System.Drawing.Color.Red;
+            this.btnAddB.OnHovercolor = System.Drawing.Color.Brown;
+            this.btnAddB.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAddB.selected = false;
+            this.btnAddB.Size = new System.Drawing.Size(90, 31);
+            this.btnAddB.TabIndex = 43;
+            this.btnAddB.Text = "Add B";
+            this.btnAddB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddB.Textcolor = System.Drawing.Color.White;
+            this.btnAddB.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddB.Click += new System.EventHandler(this.BtnAddB_Click);
             // 
             // btnClose
             // 
@@ -232,12 +280,17 @@
             this.Explain.TabIndex = 40;
             this.Explain.Text = "Explain";
             // 
-            // tFiveDragControl2
+            // lbExplain
             // 
-            this.tFiveDragControl2.Fixed = true;
-            this.tFiveDragControl2.Horizontal = true;
-            this.tFiveDragControl2.TargetControl = this.Explain;
-            this.tFiveDragControl2.Vertical = true;
+            this.lbExplain.BackColor = System.Drawing.Color.Transparent;
+            this.lbExplain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lbExplain.Font = new System.Drawing.Font("Kanit", 9F);
+            this.lbExplain.ForeColor = System.Drawing.Color.White;
+            this.lbExplain.Location = new System.Drawing.Point(5, 28);
+            this.lbExplain.Name = "lbExplain";
+            this.lbExplain.Size = new System.Drawing.Size(241, 190);
+            this.lbExplain.TabIndex = 8;
+            this.lbExplain.Text = "- Fixed bets and loops";
             // 
             // btnDefault
             // 
@@ -350,113 +403,6 @@
             this.btnDel.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDel.Click += new System.EventHandler(this.BtnDel_Click);
             // 
-            // tFiveDragControl1
-            // 
-            this.tFiveDragControl1.Fixed = true;
-            this.tFiveDragControl1.Horizontal = true;
-            this.tFiveDragControl1.TargetControl = this.EditTitle;
-            this.tFiveDragControl1.Vertical = true;
-            // 
-            // EditTitle
-            // 
-            this.EditTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.EditTitle.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.EditTitle.Controls.Add(this.btnAddSkip);
-            this.EditTitle.Controls.Add(this.btnAddB);
-            this.EditTitle.Controls.Add(this.btnClose);
-            this.EditTitle.Controls.Add(this.btnSave);
-            this.EditTitle.Controls.Add(this.Explain);
-            this.EditTitle.Controls.Add(this.btnDefault);
-            this.EditTitle.Controls.Add(this.btnClear);
-            this.EditTitle.Controls.Add(this.btnDel);
-            this.EditTitle.Controls.Add(this.btnAddP);
-            this.EditTitle.Controls.Add(this.dgvBetting);
-            this.EditTitle.Curv1 = 1;
-            this.EditTitle.Curv2 = 1;
-            this.EditTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.EditTitle.Font = new System.Drawing.Font("Kanit", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.EditTitle.Location = new System.Drawing.Point(1, 1);
-            this.EditTitle.MinimumSize = new System.Drawing.Size(136, 50);
-            this.EditTitle.Name = "EditTitle";
-            this.EditTitle.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.EditTitle.Size = new System.Drawing.Size(480, 523);
-            this.EditTitle.TabIndex = 1;
-            this.EditTitle.Text = "Fixed Setting";
-            // 
-            // btnAddSkip
-            // 
-            this.btnAddSkip.Active = false;
-            this.btnAddSkip.Activecolor = System.Drawing.Color.Silver;
-            this.btnAddSkip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAddSkip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddSkip.BorderRadius = 0;
-            this.btnAddSkip.ButtonText = "Add Skip";
-            this.btnAddSkip.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddSkip.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAddSkip.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAddSkip.Iconimage = null;
-            this.btnAddSkip.Iconimage_right = null;
-            this.btnAddSkip.Iconimage_right_Selected = null;
-            this.btnAddSkip.Iconimage_Selected = null;
-            this.btnAddSkip.IconMarginLeft = 0;
-            this.btnAddSkip.IconMarginRight = 0;
-            this.btnAddSkip.IconRightVisible = true;
-            this.btnAddSkip.IconRightZoom = 0D;
-            this.btnAddSkip.IconVisible = true;
-            this.btnAddSkip.IconZoom = 50D;
-            this.btnAddSkip.IsTab = false;
-            this.btnAddSkip.Location = new System.Drawing.Point(8, 73);
-            this.btnAddSkip.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.btnAddSkip.Name = "btnAddSkip";
-            this.btnAddSkip.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnAddSkip.OnHovercolor = System.Drawing.Color.Black;
-            this.btnAddSkip.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAddSkip.selected = false;
-            this.btnAddSkip.Size = new System.Drawing.Size(90, 31);
-            this.btnAddSkip.TabIndex = 44;
-            this.btnAddSkip.Text = "Add Skip";
-            this.btnAddSkip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddSkip.Textcolor = System.Drawing.Color.White;
-            this.btnAddSkip.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddSkip.Click += new System.EventHandler(this.BtnAddSkip_Click);
-            // 
-            // btnAddB
-            // 
-            this.btnAddB.Active = false;
-            this.btnAddB.Activecolor = System.Drawing.Color.OrangeRed;
-            this.btnAddB.BackColor = System.Drawing.Color.Red;
-            this.btnAddB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddB.BorderRadius = 0;
-            this.btnAddB.ButtonText = "Add B";
-            this.btnAddB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddB.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAddB.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAddB.Iconimage = null;
-            this.btnAddB.Iconimage_right = null;
-            this.btnAddB.Iconimage_right_Selected = null;
-            this.btnAddB.Iconimage_Selected = null;
-            this.btnAddB.IconMarginLeft = 0;
-            this.btnAddB.IconMarginRight = 0;
-            this.btnAddB.IconRightVisible = true;
-            this.btnAddB.IconRightZoom = 0D;
-            this.btnAddB.IconVisible = true;
-            this.btnAddB.IconZoom = 50D;
-            this.btnAddB.IsTab = false;
-            this.btnAddB.Location = new System.Drawing.Point(105, 34);
-            this.btnAddB.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.btnAddB.Name = "btnAddB";
-            this.btnAddB.Normalcolor = System.Drawing.Color.Red;
-            this.btnAddB.OnHovercolor = System.Drawing.Color.Brown;
-            this.btnAddB.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAddB.selected = false;
-            this.btnAddB.Size = new System.Drawing.Size(90, 31);
-            this.btnAddB.TabIndex = 43;
-            this.btnAddB.Text = "Add B";
-            this.btnAddB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddB.Textcolor = System.Drawing.Color.White;
-            this.btnAddB.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddB.Click += new System.EventHandler(this.BtnAddB_Click);
-            // 
             // btnAddP
             // 
             this.btnAddP.Active = false;
@@ -494,46 +440,80 @@
             this.btnAddP.TextFont = new System.Drawing.Font("Kanit", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddP.Click += new System.EventHandler(this.BtnAddP_Click);
             // 
-            // tFiveDragControl4
+            // dgvBetting
             // 
-            this.tFiveDragControl4.Fixed = true;
-            this.tFiveDragControl4.Horizontal = true;
-            this.tFiveDragControl4.TargetControl = this.bunifuCards1;
-            this.tFiveDragControl4.Vertical = true;
+            this.dgvBetting.AllowUserToAddRows = false;
+            this.dgvBetting.AllowUserToDeleteRows = false;
+            this.dgvBetting.AllowUserToResizeColumns = false;
+            this.dgvBetting.AllowUserToResizeRows = false;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle22.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvBetting.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            this.dgvBetting.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            this.dgvBetting.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvBetting.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvBetting.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Kanit", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBetting.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            this.dgvBetting.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBetting.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Type});
+            this.dgvBetting.DoubleBuffered = true;
+            this.dgvBetting.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.dgvBetting.EnableHeadersVisualStyles = false;
+            this.dgvBetting.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
+            this.dgvBetting.HeaderForeColor = System.Drawing.Color.White;
+            this.dgvBetting.Location = new System.Drawing.Point(8, 159);
+            this.dgvBetting.MultiSelect = false;
+            this.dgvBetting.Name = "dgvBetting";
+            this.dgvBetting.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvBetting.RowHeadersVisible = false;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
+            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvBetting.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            this.dgvBetting.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvBetting.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBetting.ShowCellErrors = false;
+            this.dgvBetting.ShowCellToolTips = false;
+            this.dgvBetting.ShowEditingIcon = false;
+            this.dgvBetting.ShowRowErrors = false;
+            this.dgvBetting.Size = new System.Drawing.Size(187, 353);
+            this.dgvBetting.TabIndex = 3;
             // 
-            // bunifuCards1
+            // Type
             // 
-            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.bunifuCards1.BorderRadius = 0;
-            this.bunifuCards1.BottomSahddow = false;
-            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            this.bunifuCards1.Controls.Add(this.EditTitle);
-            this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCards1.Name = "bunifuCards1";
-            this.bunifuCards1.Padding = new System.Windows.Forms.Padding(1);
-            this.bunifuCards1.RightSahddow = false;
-            this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(482, 525);
-            this.bunifuCards1.TabIndex = 2;
+            this.Type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Type.HeaderText = "Type";
+            this.Type.Name = "Type";
+            this.Type.ReadOnly = true;
+            this.Type.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Type.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // FrmFormulaFixed
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(482, 525);
-            this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.EditTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmFormulaFixed";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FrmFormulaFixed";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmFormulaFixed_FormClosing);
             this.Load += new System.EventHandler(this.FrmFormulaFixed_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBetting)).EndInit();
-            this.Explain.ResumeLayout(false);
             this.EditTitle.ResumeLayout(false);
-            this.bunifuCards1.ResumeLayout(false);
+            this.Explain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBetting)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -541,23 +521,22 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl5;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvBetting;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl3;
-        public  System.Windows.Forms.Label lbExplain;
-        private Bunifu.Framework.UI.BunifuFlatButton btnClose;
-        private Bunifu.Framework.UI.BunifuFlatButton btnSave;
-        private King99GroupBox Explain;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl2;
-        private Bunifu.Framework.UI.BunifuFlatButton btnDefault;
-        private Bunifu.Framework.UI.BunifuFlatButton btnClear;
-        private Bunifu.Framework.UI.BunifuFlatButton btnDel;
         private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl1;
+        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl4;
         public King99GroupBox EditTitle;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddSkip;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddB;
+        private Bunifu.Framework.UI.BunifuFlatButton btnClose;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSave;
+        private King99GroupBox Explain;
+        public System.Windows.Forms.Label lbExplain;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDefault;
+        private Bunifu.Framework.UI.BunifuFlatButton btnClear;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDel;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddP;
-        private Bunifu.Framework.UI.BunifuDragControl tFiveDragControl4;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvBetting;
         private System.Windows.Forms.DataGridViewTextBoxColumn Type;
     }
 }

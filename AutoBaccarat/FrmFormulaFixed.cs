@@ -43,7 +43,7 @@ namespace AutoBaccarat
         {
             if (dgvBetting.RowCount == 0)
             {
-                MessageBox.Show(stringLoader.Fixed, stringLoader.Error + @"04x1", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(stringLoader.FixedError, stringLoader.Error + @"04x1", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -146,6 +146,11 @@ namespace AutoBaccarat
             dgvBetting.Rows.Add("N");
             DataGridToText();
         }
+        private void BtnDefault_Click(object sender, EventArgs e)
+        {
+            FormulaValues.Fixed = "1-2";
+            TextToDataGridView();
+        }
 
         private void BtnDel_Click(object sender, EventArgs e)
         {
@@ -165,15 +170,6 @@ namespace AutoBaccarat
                 DataGridToText();
             }
         }
-
-        private void BtnDefault_Click(object sender, EventArgs e)
-        {
-            FormulaValues.Fixed = "1-2";
-            TextToDataGridView();
-        }
-
-
-
         #endregion
 
       

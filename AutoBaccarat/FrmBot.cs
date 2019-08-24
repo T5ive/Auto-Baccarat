@@ -56,7 +56,7 @@ namespace AutoBaccarat
             cbTopMost.CheckedState = Settings.Default.SetTopMost;
             cbMove.CheckedState = Settings.Default.MoveCur;
             cbInvert.CheckedState = Settings.Default.BetInvert;
-            cbConfirmClick.CheckedState = Settings.Default.ConfirmClick;
+            cbDoubleConfirmClick.CheckedState = Settings.Default.ConfirmClick;
 
             SetTopMost();
         }
@@ -65,7 +65,7 @@ namespace AutoBaccarat
             Settings.Default.SetTopMost = cbTopMost.CheckedState;
             Settings.Default.MoveCur = cbMove.CheckedState;
             Settings.Default.BetInvert = cbInvert.CheckedState;
-            Settings.Default.ConfirmClick = cbConfirmClick.CheckedState;
+            Settings.Default.ConfirmClick = cbDoubleConfirmClick.CheckedState;
             Settings.Default.Lang = cbLanguages.SelectedIndex;
 
             Settings.Default.Location = Location;
@@ -161,7 +161,7 @@ namespace AutoBaccarat
 
             lbValueAmount.Text = @"0";
             lbValueStake.Text = @"0x0";
-            lbValueBetting.Text = "";
+            lbValueBettings.Text = "";
             if (BotValues.BettingSuggest.Count > 0)
             {
                 var lastBetSuggestValue = BotValues.BettingSuggest[BotValues.BettingSuggest.Count - 1];
@@ -169,8 +169,8 @@ namespace AutoBaccarat
                 if (BotValues.Unit[BotValues.Unit.Count - 1] > 0 & (lastBetSuggestValue == 1 | lastBetSuggestValue == 2))
                 {
                     lbValueStake.Text = ValueForBot.Chip + "x" + (int)BotValues.Unit[BotValues.Unit.Count - 1];
-                    lbValueBetting.Text = ConvertTypeGame2String(lastBetSuggestValue);
-                    lbValueBetting.BackColor = ChangeColorByType(lastBetSuggestValue);
+                    lbValueBettings.Text = ConvertTypeGame2String(lastBetSuggestValue);
+                    lbValueBettings.BackColor = ChangeColorByType(lastBetSuggestValue);
 
                     lastUnit = BotValues.Unit[BotValues.Unit.Count - 1];
                 }
@@ -227,9 +227,47 @@ namespace AutoBaccarat
 
             lbValueLayout.Text = LayoutValues.ListName;
 
-            lbValueFormula.Text = ValueForBot.Formula == stringLoader.Custom
-                ? ValueForBot.Formula + $@" ({FormulaValues.ListName})"
-                : ValueForBot.Formula;
+            //lbValueFormula.Text = ValueForBot.Formula == stringLoader.Custom
+            //    ? ValueForBot.Formula + $@" ({FormulaValues.ListName})"
+            //    : ValueForBot.Formula;
+           
+            if (ValueForBot.Formula == "Follow")
+            {
+                lbValueFormula.Text = stringLoader.Follow;
+            }
+            else if (ValueForBot.Formula == "AI")
+            {
+                lbValueFormula.Text = stringLoader.AI;
+            }
+            else if (ValueForBot.Formula == "Lock")
+            {
+                lbValueFormula.Text = stringLoader.Lock;
+            }
+            else if (ValueForBot.Formula == "GoodLineFix")
+            {
+                lbValueFormula.Text = stringLoader.GoodLineFix;
+            }
+            else if (ValueForBot.Formula == "GoodLineRandom")
+            {
+                lbValueFormula.Text = stringLoader.GoodLineRandom;
+            }
+            else if (ValueForBot.Formula == "GoodLine")
+            {
+                lbValueFormula.Text = stringLoader.GoodLine;
+            }
+            else if (ValueForBot.Formula == "Fixed")
+            {
+                lbValueFormula.Text = stringLoader.Fixed;
+            }
+            else if (ValueForBot.Formula == "Custom")
+            {
+                lbValueFormula.Text = stringLoader.Custom;
+            }
+            else if (ValueForBot.Formula == "Random")
+            {
+                lbValueFormula.Text = stringLoader.Random;
+            }
+
 
             lbValueBet.Text = ValueForBot.Betting;
             lbValueChip.Text = ValueForBot.Chip.ToString();
@@ -276,7 +314,7 @@ namespace AutoBaccarat
                         numberStatus.Value = 1;
                         break;
                     case 1:
-                        lblStatus.Text = stringLoader.Bettings;
+                        lblStatus.Text = stringLoader.Betting;
                         numberStatus.Value = 2;
                         break;
                     case 2:
@@ -296,7 +334,7 @@ namespace AutoBaccarat
                         }
                         else
                         {
-                            lblStatus.Text = stringLoader.Bettings;
+                            lblStatus.Text = stringLoader.Betting;
                             numberStatus.Value = 2;
                         }
                         break;
@@ -315,7 +353,7 @@ namespace AutoBaccarat
             string value;
             try
             {
-                value = lbValueBetting.Text;
+                value = lbValueBettings.Text;
                // value = dgvStatus[3, 6].Value.ToString();
             }
             catch
@@ -324,8 +362,8 @@ namespace AutoBaccarat
             }
             if (value != "")
             {
-                lbValueBetting.BackColor = EasyChangeColor(_switchColor, value);
-                lbValueBetting.ForeColor = EasyChangeForeColor(_switchColor, value);
+                lbValueBettings.BackColor = EasyChangeColor(_switchColor, value);
+                lbValueBettings.ForeColor = EasyChangeForeColor(_switchColor, value);
                 //dgvStatus[3, 6].Style.BackColor = EasyChangeColor(_switchColor, value);
                 //dgvStatus[3, 6].Style.ForeColor = EasyChangeForeColor(_switchColor, value);
             }
@@ -624,7 +662,7 @@ namespace AutoBaccarat
             lbShowLine6.BackColor = Color.FromArgb(82, 82, 82);
             lbShowLine7.BackColor = Color.FromArgb(82, 82, 82);
             //dgvStatus[3, 6].Style.BackColor = Color.White;
-            lbValueBetting.BackColor = Color.FromArgb(82, 82, 82);
+            lbValueBettings.BackColor = Color.FromArgb(82, 82, 82);
         }
         #endregion
 
@@ -2399,7 +2437,7 @@ namespace AutoBaccarat
                         Win32Bot.MouseClick(ValueForBot.PositionConfirmBanker);
                     }
 
-                    if (cbConfirmClick.CheckedState)
+                    if (cbDoubleConfirmClick.CheckedState)
                     {
                         Thread.Sleep(1000);
                         if (bettingSuggest == 1)
@@ -2426,7 +2464,7 @@ namespace AutoBaccarat
 
                     Thread.Sleep(100);
                     //dgvStatus[3, 5].Value = _amountBetChip;
-                    lbValueBetUnit.Text = _amountBetChip;
+                    lbValueUnit.Text = _amountBetChip;
                 }
             }
         }
@@ -2785,7 +2823,7 @@ namespace AutoBaccarat
                         Win32Bot.ClickToBG(IHandle, ValueForBot.PositionConfirmBanker.X, ValueForBot.PositionConfirmBanker.Y);
                     }
 
-                    if (cbConfirmClick.CheckedState)
+                    if (cbDoubleConfirmClick.CheckedState)
                     {
                         Thread.Sleep(1000);
                         if (bettingSuggest == 1)
@@ -2805,7 +2843,7 @@ namespace AutoBaccarat
 
                     Thread.Sleep(100);
                     //  dgvStatus[3, 5].Value = _amountBetChip;
-                    lbValueBetUnit.Text = _amountBetChip;
+                    lbValueUnit.Text = _amountBetChip;
                 }
             }
         }
@@ -3010,7 +3048,7 @@ namespace AutoBaccarat
         }
         private void TmTimeRunning_Tick(object sender, EventArgs e)
         {
-            lbValueTime.Text = CalculateInt2Time(_timeRunning);
+            lbValueRunTime.Text = CalculateInt2Time(_timeRunning);
            // dgvStatus[2, 0].Value =  CalculateInt2Time(_timeRunning);
             ref var ptr = ref _timeStart;
             checked
@@ -3069,6 +3107,7 @@ namespace AutoBaccarat
             BotValues.LoadLanguage(this);
             BotValues.LocalizeSpecialCases();
             StatusLoad();
+            UpdateBotSettings();
         }
         private void LoadSelectedLanguage()
         {
@@ -3110,20 +3149,20 @@ namespace AutoBaccarat
         //            case "linklabel":
         //            case "button":
         //            case "bunifuflatbutton":
-        //            case "tfivelabel":
-        //            case "tfivetextbox":
-        //            case "tfiveradiobutton":
-        //            case "tfivebutton":
-        //            case "tfivecheckbox":
-        //            case "tfiveheaderlabel":
+        //            case "king99label":
+        //            case "king99textbox":
+        //            case "king99radiobutton":
+        //            case "king99button":
+        //            case "king99checkbox":
+        //            case "king99headerlabel":
         //                ini.WriteString(name, control.Name, "");
         //                break;
 
         //            case "tablelayoutpanel":
         //            case "panel":
         //            case "tabcontrol":
-        //            case "tfivetabcontrol":
-        //            case "tfivetheme":
+        //            case "king99tabcontrol":
+        //            case "king99theme":
         //            case "bunifucards":
         //                LocalizeChildControlsNew(control, name);
         //                break;
@@ -3132,7 +3171,7 @@ namespace AutoBaccarat
         //                LocalizeChildControlsNew(control, name);
         //                break;
         //            case "groupbox":
-        //            case "tfivegroupbox":
+        //            case "king99groupbox":
         //                ini.WriteString(name, control.Name, "");
         //                LocalizeChildControlsNew(control, name);
         //                break;
@@ -3153,18 +3192,18 @@ namespace AutoBaccarat
         //            case "linklabel":
         //            case "button":
         //            case "bunifuflatbutton":
-        //            case "tfivelabel":
-        //            case "tfivetextbox":
-        //            case "tfiveradiobutton":
-        //            case "tfivebutton":
-        //            case "tfivecheckbox":
-        //            case "tfiveheaderlabel":
+        //            case "king99label":
+        //            case "king99textbox":
+        //            case "king99radiobutton":
+        //            case "king99button":
+        //            case "king99checkbox":
+        //            case "king99headerlabel":
         //                ini.WriteString(section, control2.Name, "");
         //                break;
         //            case "tablelayoutpanel":
         //            case "panel":
         //            case "tabcontrol":
-        //            case "tfivetabcontrol":
+        //            case "king99tabcontrol":
         //            case "bunifucards":
         //                LocalizeChildControlsNew(control2, section);
         //                break;
@@ -3173,7 +3212,7 @@ namespace AutoBaccarat
         //                LocalizeChildControlsNew(control2, section);
         //                break;
         //            case "groupbox":
-        //            case "tfivegroupbox":
+        //            case "king99groupbox":
         //                ini.WriteString(section, control2.Name, "");
         //                LocalizeChildControlsNew(control2, section);
         //                break;

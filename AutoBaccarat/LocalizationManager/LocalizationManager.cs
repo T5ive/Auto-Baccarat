@@ -49,7 +49,7 @@ namespace AutoBaccarat
             foreach (var obj in form.Controls)
             {
                 var control = (Control)obj;
-                //if (control.GetType().Name == "TFiveTheme")
+                //if (control.GetType().Name == "King99Theme")
                 //{
                 //    TranslateControlText(control, name);
                     LocalizeChildControls(control, name);
@@ -72,12 +72,12 @@ namespace AutoBaccarat
                     case "CheckBox":
                     case "LinkLabel":
                     case "Button":
-                    case "TFiveLabel":
-                    case "TFiveTextBox":
-                    case "TFiveRadioButton":
-                    case "TFiveButton":
-                    case "TFiveCheckbox":
-                    case "TFiveHeaderLabel":
+                    case "King99Label":
+                    case "King99TextBox":
+                    case "King99RadioButton":
+                    case "King99Button":
+                    case "King99Checkbox":
+                    case "King99HeaderLabel":
                     case "BunifuFlatButton":
                         TranslateControlText(control2, section);
                         break;
@@ -85,8 +85,8 @@ namespace AutoBaccarat
                     case "TableLayoutPanel":
                     case "Panel":
                     case "Tabcontrol":
-                    case "TFiveTabControl":
-                    case "TFiveGroupBox":
+                    case "King99TabControl":
+                    case "King99GroupBox":
                     case "TabPage":
                     case "GroupBox":
                         TranslateControlText(control2, section);
@@ -108,20 +108,20 @@ namespace AutoBaccarat
         //            case "linklabel":
         //            case "button":
 
-        //            case "tfivelabel":
-        //            case "tfivetextbox":
-        //            case "tfiveradiobutton":
-        //            case "tfivebutton":
-        //            case "tfivecheckbox":
-        //            case "tfiveheaderlabel":
+        //            case "King99label":
+        //            case "King99textbox":
+        //            case "King99radiobutton":
+        //            case "King99button":
+        //            case "King99checkbox":
+        //            case "King99headerlabel":
         //                TranslateControlText(control, name);
         //                break;
 
         //            case "tablelayoutpanel":
         //            case "panel":
         //            case "tabcontrol":
-        //            case "tfivetabcontrol":
-        //            case "tfivetheme":
+        //            case "King99tabcontrol":
+        //            case "King99theme":
         //                LocalizeChildControls(control, name);
         //                break;
         //            case "tabpage":
@@ -129,7 +129,7 @@ namespace AutoBaccarat
         //                LocalizeChildControls(control, name);
         //                break;
         //            case "groupbox":
-        //            case "tfivegroupbox":
+        //            case "King99groupbox":
         //                TranslateControlText(control, name);
         //                LocalizeChildControls(control, name);
         //                break;
@@ -153,19 +153,19 @@ namespace AutoBaccarat
         //            case "linklabel":
         //            case "button":
 
-        //            case "tfivelabel":
-        //            case "tfivetextbox":
-        //            case "tfiveradiobutton":
-        //            case "tfivebutton":
-        //            case "tfivecheckbox":
-        //            case "tfiveheaderlabel":
+        //            case "King99label":
+        //            case "King99textbox":
+        //            case "King99radiobutton":
+        //            case "King99button":
+        //            case "King99checkbox":
+        //            case "King99headerlabel":
         //                TranslateControlText(control2, section);
         //                break;
         //            case "tablelayoutpanel":
         //            case "panel":
         //            case "tabcontrol":
-        //            case "tfivetabcontrol":
-        //            case "tfivetheme":
+        //            case "King99tabcontrol":
+        //            case "King99theme":
         //                LocalizeChildControls(control2, section);
         //                break;
         //            case "tabpage":
@@ -173,7 +173,7 @@ namespace AutoBaccarat
         //                LocalizeChildControls(control2, section);
         //                break;
         //            case "groupbox":
-        //            case "tfivegroupbox":
+        //            case "King99groupbox":
         //                TranslateControlText(control2, section);
         //                LocalizeChildControls(control2, section);
         //                break;

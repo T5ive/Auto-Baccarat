@@ -615,5 +615,6 @@ namespace AutoBaccarat
 
         #endregion
 
+       
     }
 }

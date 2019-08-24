@@ -29,58 +29,46 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.BetSysTitle = new King99GroupBox();
-            this.Main_BetSettings = new King99GroupBox();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.BetSysTitle = new AutoBaccarat.King99GroupBox();
+            this.Main_BetSettings = new AutoBaccarat.King99GroupBox();
             this.SetZero = new System.Windows.Forms.Label();
-            this.txtStopMore = new King99TextBox();
-            this.txtStopLess = new King99TextBox();
-            this.txtStopLose = new King99TextBox();
-            this.txtStopWin = new King99TextBox();
-            this.txtStopRound = new King99TextBox();
+            this.txtStopMore = new AutoBaccarat.King99TextBox();
+            this.txtStopLess = new AutoBaccarat.King99TextBox();
+            this.txtStopLose = new AutoBaccarat.King99TextBox();
+            this.txtStopWin = new AutoBaccarat.King99TextBox();
+            this.txtStopRound = new AutoBaccarat.King99TextBox();
             this.lbStopMore = new System.Windows.Forms.Label();
             this.lbStopLess = new System.Windows.Forms.Label();
             this.lbStopLose = new System.Windows.Forms.Label();
             this.lbStopWin = new System.Windows.Forms.Label();
             this.lbStopRound = new System.Windows.Forms.Label();
-            this.cbChip = new King99ComboBox();
+            this.cbChip = new AutoBaccarat.King99ComboBox();
             this.lbBetAmount = new System.Windows.Forms.Label();
-            this._tKing99Separator2 = new King99Separator();
+            this._tKing99Separator2 = new AutoBaccarat.King99Separator();
             this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEditFib = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEditNP = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnEditPP = new Bunifu.Framework.UI.BunifuFlatButton();
-            this._tKing99Separator3 = new King99Separator();
-            this._tKing99Separator1 = new King99Separator();
-            this.radX2 = new King99RadioButton();
-            this.radONE = new King99RadioButton();
-            this.radFib = new King99RadioButton();
-            this.radAI = new King99RadioButton();
-            this.radPPNP = new King99RadioButton();
-            this.radNP = new King99RadioButton();
-            this.radPP = new King99RadioButton();
-            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuCards1.SuspendLayout();
+            this._tKing99Separator3 = new AutoBaccarat.King99Separator();
+            this._tKing99Separator1 = new AutoBaccarat.King99Separator();
+            this.radX2 = new AutoBaccarat.King99RadioButton();
+            this.radONE = new AutoBaccarat.King99RadioButton();
+            this.radFib = new AutoBaccarat.King99RadioButton();
+            this.radAI = new AutoBaccarat.King99RadioButton();
+            this.radPPNP = new AutoBaccarat.King99RadioButton();
+            this.radNP = new AutoBaccarat.King99RadioButton();
+            this.radPP = new AutoBaccarat.King99RadioButton();
             this.BetSysTitle.SuspendLayout();
             this.Main_BetSettings.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuCards1
+            // bunifuDragControl1
             // 
-            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.bunifuCards1.BorderRadius = 0;
-            this.bunifuCards1.BottomSahddow = false;
-            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            this.bunifuCards1.Controls.Add(this.BetSysTitle);
-            this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCards1.Name = "bunifuCards1";
-            this.bunifuCards1.Padding = new System.Windows.Forms.Padding(1);
-            this.bunifuCards1.RightSahddow = false;
-            this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(300, 599);
-            this.bunifuCards1.TabIndex = 0;
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = null;
+            this.bunifuDragControl1.Vertical = true;
             // 
             // BetSysTitle
             // 
@@ -105,12 +93,12 @@
             this.BetSysTitle.Curv2 = 1;
             this.BetSysTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.BetSysTitle.Font = new System.Drawing.Font("Kanit", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.BetSysTitle.Location = new System.Drawing.Point(1, 1);
+            this.BetSysTitle.Location = new System.Drawing.Point(0, 0);
             this.BetSysTitle.MinimumSize = new System.Drawing.Size(136, 50);
             this.BetSysTitle.Name = "BetSysTitle";
             this.BetSysTitle.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.BetSysTitle.Size = new System.Drawing.Size(298, 597);
-            this.BetSysTitle.TabIndex = 1;
+            this.BetSysTitle.Size = new System.Drawing.Size(300, 599);
+            this.BetSysTitle.TabIndex = 2;
             this.BetSysTitle.Text = "Bet System";
             // 
             // Main_BetSettings
@@ -165,7 +153,7 @@
             this.txtStopMore.Name = "txtStopMore";
             this.txtStopMore.ReadOnly = false;
             this.txtStopMore.Size = new System.Drawing.Size(99, 33);
-            this.txtStopMore.Style = King99TextBox._Num.NumberOnly;
+            this.txtStopMore.Style = AutoBaccarat.King99TextBox._Num.NumberOnly;
             this.txtStopMore.TabIndex = 11;
             this.txtStopMore.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtStopMore.UseSystemPasswordChar = false;
@@ -182,7 +170,7 @@
             this.txtStopLess.Name = "txtStopLess";
             this.txtStopLess.ReadOnly = false;
             this.txtStopLess.Size = new System.Drawing.Size(99, 33);
-            this.txtStopLess.Style = King99TextBox._Num.NumberOnly;
+            this.txtStopLess.Style = AutoBaccarat.King99TextBox._Num.NumberOnly;
             this.txtStopLess.TabIndex = 10;
             this.txtStopLess.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtStopLess.UseSystemPasswordChar = false;
@@ -199,7 +187,7 @@
             this.txtStopLose.Name = "txtStopLose";
             this.txtStopLose.ReadOnly = false;
             this.txtStopLose.Size = new System.Drawing.Size(99, 33);
-            this.txtStopLose.Style = King99TextBox._Num.NumberOnly;
+            this.txtStopLose.Style = AutoBaccarat.King99TextBox._Num.NumberOnly;
             this.txtStopLose.TabIndex = 9;
             this.txtStopLose.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtStopLose.UseSystemPasswordChar = false;
@@ -216,7 +204,7 @@
             this.txtStopWin.Name = "txtStopWin";
             this.txtStopWin.ReadOnly = false;
             this.txtStopWin.Size = new System.Drawing.Size(99, 33);
-            this.txtStopWin.Style = King99TextBox._Num.NumberOnly;
+            this.txtStopWin.Style = AutoBaccarat.King99TextBox._Num.NumberOnly;
             this.txtStopWin.TabIndex = 8;
             this.txtStopWin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtStopWin.UseSystemPasswordChar = false;
@@ -233,7 +221,7 @@
             this.txtStopRound.Name = "txtStopRound";
             this.txtStopRound.ReadOnly = false;
             this.txtStopRound.Size = new System.Drawing.Size(99, 33);
-            this.txtStopRound.Style = King99TextBox._Num.NumberOnly;
+            this.txtStopRound.Style = AutoBaccarat.King99TextBox._Num.NumberOnly;
             this.txtStopRound.TabIndex = 7;
             this.txtStopRound.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtStopRound.UseSystemPasswordChar = false;
@@ -363,14 +351,14 @@
             this.btnSave.IconVisible = false;
             this.btnSave.IconZoom = 50D;
             this.btnSave.IsTab = false;
-            this.btnSave.Location = new System.Drawing.Point(5, 562);
+            this.btnSave.Location = new System.Drawing.Point(5, 564);
             this.btnSave.Margin = new System.Windows.Forms.Padding(21, 28, 21, 28);
             this.btnSave.Name = "btnSave";
             this.btnSave.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnSave.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnSave.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSave.selected = false;
-            this.btnSave.Size = new System.Drawing.Size(288, 30);
+            this.btnSave.Size = new System.Drawing.Size(290, 30);
             this.btnSave.TabIndex = 39;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -519,7 +507,7 @@
             this.radX2.Size = new System.Drawing.Size(92, 19);
             this.radX2.TabIndex = 29;
             this.radX2.Text = "X2";
-            this.radX2.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.CheckBoxAll);
+            this.radX2.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.CheckBoxAll);
             // 
             // radONE
             // 
@@ -533,7 +521,7 @@
             this.radONE.Size = new System.Drawing.Size(92, 19);
             this.radONE.TabIndex = 28;
             this.radONE.Text = "One-Shot";
-            this.radONE.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.CheckBoxAll);
+            this.radONE.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.CheckBoxAll);
             // 
             // radFib
             // 
@@ -547,7 +535,7 @@
             this.radFib.Size = new System.Drawing.Size(142, 19);
             this.radFib.TabIndex = 27;
             this.radFib.Text = "Fibonacci";
-            this.radFib.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.CheckBoxAll);
+            this.radFib.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.CheckBoxAll);
             // 
             // radAI
             // 
@@ -561,7 +549,7 @@
             this.radAI.Size = new System.Drawing.Size(92, 19);
             this.radAI.TabIndex = 26;
             this.radAI.Text = "Ai";
-            this.radAI.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.CheckBoxAll);
+            this.radAI.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.CheckBoxAll);
             // 
             // radPPNP
             // 
@@ -575,7 +563,7 @@
             this.radPPNP.Size = new System.Drawing.Size(142, 19);
             this.radPPNP.TabIndex = 25;
             this.radPPNP.Text = "PP+NP";
-            this.radPPNP.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.CheckBoxAll);
+            this.radPPNP.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.CheckBoxAll);
             // 
             // radNP
             // 
@@ -589,7 +577,7 @@
             this.radNP.Size = new System.Drawing.Size(200, 19);
             this.radNP.TabIndex = 24;
             this.radNP.Text = "NP: Negative Progression";
-            this.radNP.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.CheckBoxAll);
+            this.radNP.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.CheckBoxAll);
             // 
             // radPP
             // 
@@ -603,21 +591,15 @@
             this.radPP.Size = new System.Drawing.Size(200, 19);
             this.radPP.TabIndex = 23;
             this.radPP.Text = "PP: Positive Progression";
-            this.radPP.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.CheckBoxAll);
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.BetSysTitle;
-            this.bunifuDragControl1.Vertical = true;
+            this.radPP.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.CheckBoxAll);
             // 
             // FrmBetSystem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(300, 599);
-            this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.BetSysTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBetSystem";
             this.ShowIcon = false;
@@ -625,7 +607,6 @@
             this.Text = "Bet System";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmBetSystem_Load);
-            this.bunifuCards1.ResumeLayout(false);
             this.BetSysTitle.ResumeLayout(false);
             this.BetSysTitle.PerformLayout();
             this.Main_BetSettings.ResumeLayout(false);
@@ -635,24 +616,8 @@
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private King99GroupBox BetSysTitle;
-        private King99Separator _tKing99Separator3;
-        private King99Separator _tKing99Separator1;
-        private King99RadioButton radX2;
-        private King99RadioButton radONE;
-        private King99RadioButton radFib;
-        private King99RadioButton radAI;
-        private King99RadioButton radPPNP;
-        private King99RadioButton radNP;
-        private King99RadioButton radPP;
-        private Bunifu.Framework.UI.BunifuFlatButton btnEditPP;
-        private Bunifu.Framework.UI.BunifuFlatButton btnEditNP;
-        private Bunifu.Framework.UI.BunifuFlatButton btnEditFib;
-        private Bunifu.Framework.UI.BunifuFlatButton btnSave;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
-        private King99Separator _tKing99Separator2;
+        private King99GroupBox BetSysTitle;
         private King99GroupBox Main_BetSettings;
         private System.Windows.Forms.Label SetZero;
         private King99TextBox txtStopMore;
@@ -667,5 +632,19 @@
         private System.Windows.Forms.Label lbStopRound;
         private King99ComboBox cbChip;
         private System.Windows.Forms.Label lbBetAmount;
+        private King99Separator _tKing99Separator2;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSave;
+        private Bunifu.Framework.UI.BunifuFlatButton btnEditFib;
+        private Bunifu.Framework.UI.BunifuFlatButton btnEditNP;
+        private Bunifu.Framework.UI.BunifuFlatButton btnEditPP;
+        private King99Separator _tKing99Separator3;
+        private King99Separator _tKing99Separator1;
+        private King99RadioButton radX2;
+        private King99RadioButton radONE;
+        private King99RadioButton radFib;
+        private King99RadioButton radAI;
+        private King99RadioButton radPPNP;
+        private King99RadioButton radNP;
+        private King99RadioButton radPP;
     }
 }

@@ -29,56 +29,65 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.EditTitle = new King99GroupBox();
-            this.radFixed = new King99RadioButton();
-            this.btnFixed = new Bunifu.Framework.UI.BunifuFlatButton();
-            this._tKing99Separator1 = new King99Separator();
-            this.Force = new King99GroupBox();
-            this.radForceFollow = new King99RadioButton();
-            this.radForceAdverse = new King99RadioButton();
-            this.txtForce = new King99TextBox();
-            this.lbForce = new System.Windows.Forms.Label();
-            this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnCustom = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.cbFollow = new King99ComboBox();
-            this.cbLock = new King99ComboBox();
-            this.cbGoodLineFix = new King99ComboBox();
-            this._tKing99Separator4 = new King99Separator();
-            this._tKing99Separator2 = new King99Separator();
-            this.radFollow = new King99RadioButton();
-            this.radAI = new King99RadioButton();
-            this.radLock = new King99RadioButton();
-            this.radGoodLineFix = new King99RadioButton();
-            this.radGoodLineRandom = new King99RadioButton();
-            this.radGoodLine = new King99RadioButton();
-            this.radCustom = new King99RadioButton();
-            this.radRandom = new King99RadioButton();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl4 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuCards1.SuspendLayout();
+            this.EditTitle = new AutoBaccarat.King99GroupBox();
+            this.radFixed = new AutoBaccarat.King99RadioButton();
+            this.btnFixed = new Bunifu.Framework.UI.BunifuFlatButton();
+            this._tKing99Separator1 = new AutoBaccarat.King99Separator();
+            this.Force = new AutoBaccarat.King99GroupBox();
+            this.radForceFollow = new AutoBaccarat.King99RadioButton();
+            this.radForceAdverse = new AutoBaccarat.King99RadioButton();
+            this.txtForce = new AutoBaccarat.King99TextBox();
+            this.lbForce = new System.Windows.Forms.Label();
+            this.btnSave = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCustom = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.cbFollow = new AutoBaccarat.King99ComboBox();
+            this.cbLock = new AutoBaccarat.King99ComboBox();
+            this.cbGoodLineFix = new AutoBaccarat.King99ComboBox();
+            this._tKing99Separator4 = new AutoBaccarat.King99Separator();
+            this._tKing99Separator2 = new AutoBaccarat.King99Separator();
+            this.radFollow = new AutoBaccarat.King99RadioButton();
+            this.radAI = new AutoBaccarat.King99RadioButton();
+            this.radLock = new AutoBaccarat.King99RadioButton();
+            this.radGoodLineFix = new AutoBaccarat.King99RadioButton();
+            this.radGoodLineRandom = new AutoBaccarat.King99RadioButton();
+            this.radGoodLine = new AutoBaccarat.King99RadioButton();
+            this.radCustom = new AutoBaccarat.King99RadioButton();
+            this.radRandom = new AutoBaccarat.King99RadioButton();
             this.EditTitle.SuspendLayout();
             this.Force.SuspendLayout();
             this.SuspendLayout();
             // 
-            // bunifuCards1
+            // bunifuDragControl1
             // 
-            this.bunifuCards1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.bunifuCards1.BorderRadius = 0;
-            this.bunifuCards1.BottomSahddow = false;
-            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
-            this.bunifuCards1.Controls.Add(this.EditTitle);
-            this.bunifuCards1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuCards1.Name = "bunifuCards1";
-            this.bunifuCards1.Padding = new System.Windows.Forms.Padding(1);
-            this.bunifuCards1.RightSahddow = false;
-            this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(300, 515);
-            this.bunifuCards1.TabIndex = 1;
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = null;
+            this.bunifuDragControl1.Vertical = true;
+            // 
+            // bunifuDragControl2
+            // 
+            this.bunifuDragControl2.Fixed = true;
+            this.bunifuDragControl2.Horizontal = true;
+            this.bunifuDragControl2.TargetControl = null;
+            this.bunifuDragControl2.Vertical = true;
+            // 
+            // bunifuDragControl3
+            // 
+            this.bunifuDragControl3.Fixed = true;
+            this.bunifuDragControl3.Horizontal = true;
+            this.bunifuDragControl3.TargetControl = null;
+            this.bunifuDragControl3.Vertical = true;
+            // 
+            // bunifuDragControl4
+            // 
+            this.bunifuDragControl4.Fixed = true;
+            this.bunifuDragControl4.Horizontal = true;
+            this.bunifuDragControl4.TargetControl = null;
+            this.bunifuDragControl4.Vertical = true;
             // 
             // EditTitle
             // 
@@ -107,12 +116,12 @@
             this.EditTitle.Curv2 = 1;
             this.EditTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EditTitle.Font = new System.Drawing.Font("Kanit", 11F);
-            this.EditTitle.Location = new System.Drawing.Point(1, 1);
+            this.EditTitle.Location = new System.Drawing.Point(0, 0);
             this.EditTitle.MinimumSize = new System.Drawing.Size(136, 50);
             this.EditTitle.Name = "EditTitle";
             this.EditTitle.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.EditTitle.Size = new System.Drawing.Size(298, 513);
-            this.EditTitle.TabIndex = 1;
+            this.EditTitle.Size = new System.Drawing.Size(300, 515);
+            this.EditTitle.TabIndex = 2;
             this.EditTitle.Text = "Formula Selection";
             // 
             // radFixed
@@ -127,6 +136,7 @@
             this.radFixed.Size = new System.Drawing.Size(106, 19);
             this.radFixed.TabIndex = 44;
             this.radFixed.Text = "Fixed";
+            this.radFixed.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // btnFixed
             // 
@@ -205,7 +215,7 @@
             this.radForceFollow.Size = new System.Drawing.Size(204, 19);
             this.radForceFollow.TabIndex = 16;
             this.radForceFollow.Text = "Follow of Last";
-            this.radForceFollow.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.ForceCheck);
+            this.radForceFollow.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.ForceCheck);
             // 
             // radForceAdverse
             // 
@@ -219,7 +229,7 @@
             this.radForceAdverse.Size = new System.Drawing.Size(204, 19);
             this.radForceAdverse.TabIndex = 15;
             this.radForceAdverse.Text = "Adverse of Last";
-            this.radForceAdverse.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.ForceCheck);
+            this.radForceAdverse.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.ForceCheck);
             // 
             // txtForce
             // 
@@ -233,7 +243,7 @@
             this.txtForce.Name = "txtForce";
             this.txtForce.ReadOnly = false;
             this.txtForce.Size = new System.Drawing.Size(42, 33);
-            this.txtForce.Style = King99TextBox._Num.NumberOnly;
+            this.txtForce.Style = AutoBaccarat.King99TextBox._Num.NumberOnly;
             this.txtForce.TabIndex = 11;
             this.txtForce.Text = "1";
             this.txtForce.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -274,14 +284,14 @@
             this.btnSave.IconVisible = false;
             this.btnSave.IconZoom = 50D;
             this.btnSave.IsTab = false;
-            this.btnSave.Location = new System.Drawing.Point(5, 478);
+            this.btnSave.Location = new System.Drawing.Point(5, 480);
             this.btnSave.Margin = new System.Windows.Forms.Padding(21, 28, 21, 28);
             this.btnSave.Name = "btnSave";
             this.btnSave.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(62)))), ((int)(((byte)(71)))));
             this.btnSave.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(60)))), ((int)(((byte)(75)))));
             this.btnSave.OnHoverTextColor = System.Drawing.Color.White;
             this.btnSave.selected = false;
-            this.btnSave.Size = new System.Drawing.Size(288, 30);
+            this.btnSave.Size = new System.Drawing.Size(290, 30);
             this.btnSave.TabIndex = 40;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -434,7 +444,7 @@
             this.radFollow.Size = new System.Drawing.Size(106, 19);
             this.radFollow.TabIndex = 21;
             this.radFollow.Text = "Follow";
-            this.radFollow.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radFollow.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // radAI
             // 
@@ -448,7 +458,7 @@
             this.radAI.Size = new System.Drawing.Size(106, 19);
             this.radAI.TabIndex = 14;
             this.radAI.Text = "Ai";
-            this.radAI.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radAI.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // radLock
             // 
@@ -462,7 +472,7 @@
             this.radLock.Size = new System.Drawing.Size(106, 19);
             this.radLock.TabIndex = 13;
             this.radLock.Text = "Lock";
-            this.radLock.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radLock.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // radGoodLineFix
             // 
@@ -476,7 +486,7 @@
             this.radGoodLineFix.Size = new System.Drawing.Size(200, 19);
             this.radGoodLineFix.TabIndex = 12;
             this.radGoodLineFix.Text = "Good Line (Fixed)";
-            this.radGoodLineFix.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radGoodLineFix.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // radGoodLineRandom
             // 
@@ -490,7 +500,7 @@
             this.radGoodLineRandom.Size = new System.Drawing.Size(200, 19);
             this.radGoodLineRandom.TabIndex = 8;
             this.radGoodLineRandom.Text = "Good Line (Random)";
-            this.radGoodLineRandom.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radGoodLineRandom.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // radGoodLine
             // 
@@ -504,7 +514,7 @@
             this.radGoodLine.Size = new System.Drawing.Size(156, 19);
             this.radGoodLine.TabIndex = 2;
             this.radGoodLine.Text = "Good Line";
-            this.radGoodLine.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radGoodLine.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // radCustom
             // 
@@ -518,7 +528,7 @@
             this.radCustom.Size = new System.Drawing.Size(106, 19);
             this.radCustom.TabIndex = 1;
             this.radCustom.Text = "Custom";
-            this.radCustom.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
+            this.radCustom.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // radRandom
             // 
@@ -532,42 +542,14 @@
             this.radRandom.Size = new System.Drawing.Size(106, 19);
             this.radRandom.TabIndex = 0;
             this.radRandom.Text = "Random";
-            this.radRandom.CheckedChanged += new King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
-            // 
-            // bunifuDragControl1
-            // 
-            this.bunifuDragControl1.Fixed = true;
-            this.bunifuDragControl1.Horizontal = true;
-            this.bunifuDragControl1.TargetControl = this.bunifuCards1;
-            this.bunifuDragControl1.Vertical = true;
-            // 
-            // bunifuDragControl2
-            // 
-            this.bunifuDragControl2.Fixed = true;
-            this.bunifuDragControl2.Horizontal = true;
-            this.bunifuDragControl2.TargetControl = this.EditTitle;
-            this.bunifuDragControl2.Vertical = true;
-            // 
-            // bunifuDragControl3
-            // 
-            this.bunifuDragControl3.Fixed = true;
-            this.bunifuDragControl3.Horizontal = true;
-            this.bunifuDragControl3.TargetControl = this._tKing99Separator2;
-            this.bunifuDragControl3.Vertical = true;
-            // 
-            // bunifuDragControl4
-            // 
-            this.bunifuDragControl4.Fixed = true;
-            this.bunifuDragControl4.Horizontal = true;
-            this.bunifuDragControl4.TargetControl = this._tKing99Separator4;
-            this.bunifuDragControl4.Vertical = true;
+            this.radRandom.CheckedChanged += new AutoBaccarat.King99RadioButton.CheckedChangedEventHandler(this.RadioCheckAll);
             // 
             // FrmFormula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(300, 515);
-            this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.EditTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmFormula";
             this.ShowIcon = false;
@@ -575,7 +557,6 @@
             this.Text = "FrmFormula";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.FrmFormula_Load);
-            this.bunifuCards1.ResumeLayout(false);
             this.EditTitle.ResumeLayout(false);
             this.EditTitle.PerformLayout();
             this.Force.ResumeLayout(false);
@@ -585,9 +566,21 @@
         }
 
         #endregion
-        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl3;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl4;
         private King99GroupBox EditTitle;
+        private King99RadioButton radFixed;
+        private Bunifu.Framework.UI.BunifuFlatButton btnFixed;
+        private King99Separator _tKing99Separator1;
+        private King99GroupBox Force;
+        private King99RadioButton radForceFollow;
+        private King99RadioButton radForceAdverse;
+        private King99TextBox txtForce;
+        private System.Windows.Forms.Label lbForce;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSave;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCustom;
         private King99ComboBox cbFollow;
         private King99ComboBox cbLock;
         private King99ComboBox cbGoodLineFix;
@@ -601,18 +594,5 @@
         private King99RadioButton radGoodLine;
         private King99RadioButton radCustom;
         private King99RadioButton radRandom;
-        private Bunifu.Framework.UI.BunifuFlatButton btnCustom;
-        private Bunifu.Framework.UI.BunifuFlatButton btnSave;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl2;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl3;
-        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl4;
-        private King99Separator _tKing99Separator1;
-        private King99GroupBox Force;
-        private King99RadioButton radForceFollow;
-        private King99RadioButton radForceAdverse;
-        private King99TextBox txtForce;
-        private System.Windows.Forms.Label lbForce;
-        private King99RadioButton radFixed;
-        private Bunifu.Framework.UI.BunifuFlatButton btnFixed;
     }
 }
