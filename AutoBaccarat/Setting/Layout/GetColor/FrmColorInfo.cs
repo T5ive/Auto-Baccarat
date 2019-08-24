@@ -16,7 +16,7 @@ namespace AutoBaccarat
         {
             InitializeComponent();
             var cv = new CursorConverter();
-            CurTarget = (Cursor)cv.ConvertFrom(King99_UI.Properties.Resources.curTarget);
+            _curTarget = (Cursor)cv.ConvertFrom(Resources.curTarget);
         }
 
         #region FormLoad/Save
@@ -31,9 +31,9 @@ namespace AutoBaccarat
             {
                 Location = Settings.Default.LocationColorInfo;
             }
-            bitmapFind = King99_UI.Properties.Resources.bmpFind;
-            bitmapFind2 = King99_UI.Properties.Resources.bmpFinda;
-            newCursor = CurTarget;
+            _bitmapFind = Resources.bmpFind;
+            _bitmapFind2 = Resources.bmpFinda;
+            _newCursor = _curTarget;
 
             _tKing99GroupBox1.Text = Mode == 0 ? stringLoader.NormalMode : stringLoader.BackgroundMode;
         }
@@ -49,10 +49,10 @@ namespace AutoBaccarat
 
         #region Cusor
 
-        private readonly Cursor CurTarget;
-        private Bitmap bitmapFind;
-        private Bitmap bitmapFind2;
-        private Cursor newCursor;
+        private readonly Cursor _curTarget;
+        private Bitmap _bitmapFind;
+        private Bitmap _bitmapFind2;
+        private Cursor _newCursor;
         #endregion
 
         #region Var
@@ -119,8 +119,8 @@ namespace AutoBaccarat
         #region Get Posision Color
         private void picTarget_MouseDown(object sender, MouseEventArgs e)
         {
-            picTarget.Image = bitmapFind2;
-            picTarget.Cursor = newCursor;
+            picTarget.Image = _bitmapFind2;
+            picTarget.Cursor = _newCursor;
             _frmMagnify.Show();
             timer1.Start();
             tm_mouse.Start();
@@ -129,7 +129,7 @@ namespace AutoBaccarat
         private void picTarget_MouseUp(object sender, MouseEventArgs e)
         {
             picTarget.Cursor = Cursors.Default;
-            picTarget.Image = bitmapFind;
+            picTarget.Image = _bitmapFind;
             _frmMagnify.Hide();
             timer1.Stop();
             tm_mouse.Stop();

@@ -73,10 +73,40 @@ namespace AutoBaccarat.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bmpFind {
+            get {
+                object obj = ResourceManager.GetObject("bmpFind", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap bmpFinda {
+            get {
+                object obj = ResourceManager.GetObject("bmpFinda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close_window_64 {
             get {
                 object obj = ResourceManager.GetObject("close-window-64", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] curTarget {
+            get {
+                object obj = ResourceManager.GetObject("curTarget", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

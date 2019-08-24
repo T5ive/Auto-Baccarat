@@ -1419,92 +1419,90 @@ namespace AutoBaccarat
 
                             return result;
                         }
-                        else
+
+                        if (bigRoad.Count < 6)
                         {
-                            if (bigRoad.Count < 6)
-                            {
-                                return result;
-                            }
-
-                            if (bigRoad[bigRoad.Count - 6].Count == bigRoad[bigRoad.Count - 3].Count &
-                                bigRoad[bigRoad.Count - 5].Count == bigRoad[bigRoad.Count - 2].Count &
-                                bigRoad[bigRoad.Count - 4].Count == bigRoad[bigRoad.Count - 1].Count)
-                            {
-                                return BetInvert(result2);
-                            }
-
-                            if (bigRoad[bigRoad.Count - 6].Count == bigRoad[bigRoad.Count - 3].Count &
-                                bigRoad[bigRoad.Count - 5].Count == bigRoad[bigRoad.Count - 2].Count &
-                                bigRoad[bigRoad.Count - 4].Count > bigRoad[bigRoad.Count - 1].Count)
-                            {
-                                return result2;
-                            }
-
-                            if (bigRoad[bigRoad.Count - 4].Count == bigRoad[bigRoad.Count - 3].Count &
-                                bigRoad[bigRoad.Count - 3].Count == bigRoad[bigRoad.Count - 2].Count &
-                                bigRoad[bigRoad.Count - 2].Count == bigRoad[bigRoad.Count - 1].Count)
-                            {
-                                return BetInvert(result2);
-                            }
-
-                            if (bigRoad[bigRoad.Count - 4].Count > bigRoad[bigRoad.Count - 3].Count &
-                                bigRoad[bigRoad.Count - 4].Count == bigRoad[bigRoad.Count - 2].Count &
-                                bigRoad[bigRoad.Count - 3].Count == bigRoad[bigRoad.Count - 1].Count)
-                            {
-                                return BetInvert(result2);
-                            }
-
-                            if (bigRoad[bigRoad.Count - 4].Count < bigRoad[bigRoad.Count - 3].Count &
-                                bigRoad[bigRoad.Count - 4].Count == bigRoad[bigRoad.Count - 2].Count &
-                                bigRoad[bigRoad.Count - 3].Count == bigRoad[bigRoad.Count - 1].Count)
-                            {
-                                return BetInvert(result2);
-                            }
-
-                            if (bigRoad[bigRoad.Count - 3].Count == 1 & bigRoad[bigRoad.Count - 2].Count == 2 &
-                                bigRoad[bigRoad.Count - 1].Count == 3)
-                            {
-                                return BetInvert(result2);
-                            }
-
-                            if (bigRoad[bigRoad.Count - 4].Count == 1 & bigRoad[bigRoad.Count - 3].Count == 2 &
-                                bigRoad[bigRoad.Count - 2].Count == 3 & bigRoad[bigRoad.Count - 1].Count <
-                                bigRoad[bigRoad.Count - 2].Count)
-                            {
-                                return result2;
-                            }
-
-                            if (bigRoad[bigRoad.Count - 4].Count == 3 & bigRoad[bigRoad.Count - 3].Count == 4 &
-                                bigRoad[bigRoad.Count - 2].Count == 3 & bigRoad[bigRoad.Count - 1].Count == 2)
-                            {
-                                return BetInvert(result2);
-                            }
-
-                            if (bigRoad[bigRoad.Count - 4].Count == 5 & bigRoad[bigRoad.Count - 3].Count == 4 &
-                                bigRoad[bigRoad.Count - 2].Count == 3 & bigRoad[bigRoad.Count - 1].Count == 2)
-                            {
-                                return BetInvert(result2);
-                            }
-
-                            if (bigRoad[bigRoad.Count - 3].Count == 5 & bigRoad[bigRoad.Count - 2].Count == 4 &
-                                bigRoad[bigRoad.Count - 1].Count == 3)
-                            {
-                                return BetInvert(result2);
-                            }
-
-                            if (bigRoad[bigRoad.Count - 3].Count == 4 & bigRoad[bigRoad.Count - 2].Count == 3 &
-                                bigRoad[bigRoad.Count - 1].Count == 2)
-                            {
-                                return BetInvert(result2);
-                            }
-
-                            if (bigRoad[bigRoad.Count - 1].Count >= 4)
-                            {
-                                return result2;
-                            }
-
                             return result;
                         }
+
+                        if (bigRoad[bigRoad.Count - 6].Count == bigRoad[bigRoad.Count - 3].Count &
+                            bigRoad[bigRoad.Count - 5].Count == bigRoad[bigRoad.Count - 2].Count &
+                            bigRoad[bigRoad.Count - 4].Count == bigRoad[bigRoad.Count - 1].Count)
+                        {
+                            return BetInvert(result2);
+                        }
+
+                        if (bigRoad[bigRoad.Count - 6].Count == bigRoad[bigRoad.Count - 3].Count &
+                            bigRoad[bigRoad.Count - 5].Count == bigRoad[bigRoad.Count - 2].Count &
+                            bigRoad[bigRoad.Count - 4].Count > bigRoad[bigRoad.Count - 1].Count)
+                        {
+                            return result2;
+                        }
+
+                        if (bigRoad[bigRoad.Count - 4].Count == bigRoad[bigRoad.Count - 3].Count &
+                            bigRoad[bigRoad.Count - 3].Count == bigRoad[bigRoad.Count - 2].Count &
+                            bigRoad[bigRoad.Count - 2].Count == bigRoad[bigRoad.Count - 1].Count)
+                        {
+                            return BetInvert(result2);
+                        }
+
+                        if (bigRoad[bigRoad.Count - 4].Count > bigRoad[bigRoad.Count - 3].Count &
+                            bigRoad[bigRoad.Count - 4].Count == bigRoad[bigRoad.Count - 2].Count &
+                            bigRoad[bigRoad.Count - 3].Count == bigRoad[bigRoad.Count - 1].Count)
+                        {
+                            return BetInvert(result2);
+                        }
+
+                        if (bigRoad[bigRoad.Count - 4].Count < bigRoad[bigRoad.Count - 3].Count &
+                            bigRoad[bigRoad.Count - 4].Count == bigRoad[bigRoad.Count - 2].Count &
+                            bigRoad[bigRoad.Count - 3].Count == bigRoad[bigRoad.Count - 1].Count)
+                        {
+                            return BetInvert(result2);
+                        }
+
+                        if (bigRoad[bigRoad.Count - 3].Count == 1 & bigRoad[bigRoad.Count - 2].Count == 2 &
+                            bigRoad[bigRoad.Count - 1].Count == 3)
+                        {
+                            return BetInvert(result2);
+                        }
+
+                        if (bigRoad[bigRoad.Count - 4].Count == 1 & bigRoad[bigRoad.Count - 3].Count == 2 &
+                            bigRoad[bigRoad.Count - 2].Count == 3 & bigRoad[bigRoad.Count - 1].Count <
+                            bigRoad[bigRoad.Count - 2].Count)
+                        {
+                            return result2;
+                        }
+
+                        if (bigRoad[bigRoad.Count - 4].Count == 3 & bigRoad[bigRoad.Count - 3].Count == 4 &
+                            bigRoad[bigRoad.Count - 2].Count == 3 & bigRoad[bigRoad.Count - 1].Count == 2)
+                        {
+                            return BetInvert(result2);
+                        }
+
+                        if (bigRoad[bigRoad.Count - 4].Count == 5 & bigRoad[bigRoad.Count - 3].Count == 4 &
+                            bigRoad[bigRoad.Count - 2].Count == 3 & bigRoad[bigRoad.Count - 1].Count == 2)
+                        {
+                            return BetInvert(result2);
+                        }
+
+                        if (bigRoad[bigRoad.Count - 3].Count == 5 & bigRoad[bigRoad.Count - 2].Count == 4 &
+                            bigRoad[bigRoad.Count - 1].Count == 3)
+                        {
+                            return BetInvert(result2);
+                        }
+
+                        if (bigRoad[bigRoad.Count - 3].Count == 4 & bigRoad[bigRoad.Count - 2].Count == 3 &
+                            bigRoad[bigRoad.Count - 1].Count == 2)
+                        {
+                            return BetInvert(result2);
+                        }
+
+                        if (bigRoad[bigRoad.Count - 1].Count >= 4)
+                        {
+                            return result2;
+                        }
+
+                        return result;
                     }
 
                     if (formulaType == "Follow")

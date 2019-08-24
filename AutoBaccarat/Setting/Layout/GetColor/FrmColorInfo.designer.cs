@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmColorInfo));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.tm_mouse = new System.Windows.Forms.Timer(this.components);
@@ -106,13 +105,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(5, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(310, 310);
+            this.panel1.Size = new System.Drawing.Size(312, 318);
             this.panel1.TabIndex = 50;
             // 
             // picTarget
             // 
             this.picTarget.BackColor = System.Drawing.Color.White;
-            this.picTarget.Image = ((System.Drawing.Image)(resources.GetObject("picTarget.Image")));
+            this.picTarget.Image = global::AutoBaccarat.Properties.Resources.bmpFind;
             this.picTarget.Location = new System.Drawing.Point(276, 115);
             this.picTarget.Name = "picTarget";
             this.picTarget.Size = new System.Drawing.Size(31, 28);
@@ -126,7 +125,7 @@
             this.txt_class.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_class.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txt_class.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txt_class.Location = new System.Drawing.Point(118, 40);
+            this.txt_class.Location = new System.Drawing.Point(120, 40);
             this.txt_class.MaxLength = 32767;
             this.txt_class.MinimumSize = new System.Drawing.Size(0, 31);
             this.txt_class.Multiline = false;
@@ -180,7 +179,7 @@
             this.txt_color.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_color.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txt_color.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txt_color.Location = new System.Drawing.Point(118, 114);
+            this.txt_color.Location = new System.Drawing.Point(120, 114);
             this.txt_color.MaxLength = 32767;
             this.txt_color.MinimumSize = new System.Drawing.Size(0, 31);
             this.txt_color.Multiline = false;
@@ -209,7 +208,7 @@
             this.txt_posiY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_posiY.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txt_posiY.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txt_posiY.Location = new System.Drawing.Point(247, 77);
+            this.txt_posiY.Location = new System.Drawing.Point(249, 77);
             this.txt_posiY.MaxLength = 32767;
             this.txt_posiY.MinimumSize = new System.Drawing.Size(0, 31);
             this.txt_posiY.Multiline = false;
@@ -263,7 +262,7 @@
             this.txt_posiX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_posiX.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txt_posiX.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txt_posiX.Location = new System.Drawing.Point(118, 77);
+            this.txt_posiX.Location = new System.Drawing.Point(120, 77);
             this.txt_posiX.MaxLength = 32767;
             this.txt_posiX.MinimumSize = new System.Drawing.Size(0, 31);
             this.txt_posiX.Multiline = false;
@@ -292,7 +291,7 @@
             this.txt_title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_title.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.txt_title.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txt_title.Location = new System.Drawing.Point(118, 3);
+            this.txt_title.Location = new System.Drawing.Point(120, 3);
             this.txt_title.MaxLength = 32767;
             this.txt_title.MinimumSize = new System.Drawing.Size(0, 31);
             this.txt_title.Multiline = false;
@@ -336,7 +335,7 @@
             this.panel_color.Size = new System.Drawing.Size(303, 89);
             this.panel_color.TabIndex = 44;
             // 
-            // tFive_Separator1
+            // _tKing99Separator1
             // 
             this._tKing99Separator1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this._tKing99Separator1.Location = new System.Drawing.Point(5, 248);
@@ -385,7 +384,7 @@
             this.bunifuCards1.Size = new System.Drawing.Size(322, 351);
             this.bunifuCards1.TabIndex = 51;
             // 
-            // tFiveGroupBox1
+            // _tKing99GroupBox1
             // 
             this._tKing99GroupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this._tKing99GroupBox1.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
@@ -393,11 +392,12 @@
             this._tKing99GroupBox1.Curv1 = 1;
             this._tKing99GroupBox1.Curv2 = 1;
             this._tKing99GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this._tKing99GroupBox1.Location = new System.Drawing.Point(0, 5);
+            this._tKing99GroupBox1.Font = new System.Drawing.Font("Kanit", 11F);
+            this._tKing99GroupBox1.Location = new System.Drawing.Point(0, 0);
             this._tKing99GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this._tKing99GroupBox1.Name = "_tKing99GroupBox1";
             this._tKing99GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this._tKing99GroupBox1.Size = new System.Drawing.Size(320, 343);
+            this._tKing99GroupBox1.Size = new System.Drawing.Size(322, 351);
             this._tKing99GroupBox1.TabIndex = 51;
             this._tKing99GroupBox1.Text = "Mode";
             // 

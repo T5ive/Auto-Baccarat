@@ -126,19 +126,4 @@
   <metadata name="tm_mouse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>191, 17</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="picTarget.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        Qk02AgAAAAAAAHYAAAAoAAAAHwAAABwAAAABAAQAAAAAAAAAAAAAAAAAAAAAABAAAAAQAAAAAAAA/wAA
-        gP8AgAD/AICA/4AAAP+AAID/gIAA/8DAwP+AgID/AAD//wD/AP8A/////wAA//8A/////wD//////wAA
-        AAAAAAAAAAAAAAAAAAAP//////////////////8AD///////////////////AA////////AAAP//////
-        /wAP//////AP8P8A//////8AD/////8P8AAA/w//////AA/////w///w///w/////wAP////D//wAAD/
-        /w////8AD////w////D///8P////AA////Dw8P8AD/Dw8P///wAP///w8PDw//Dw8PD///8AD///8AAA
-        APDwAAAA////AA////Dw8PD/8PDw8P///wAP///w8PD/AA/w8PD///8AD////w////D///8P////AA//
-        //8P//AAAP//D////wAP////8P//8P//8P////8AD/////8P8AAA/w//////AA//////8A/w/wD/////
-        /wAP///////wAAD///////8AD///////////////////AA///////////////////wAP////////////
-        //////8AAAAAAAAAAAAAAAAAAAAAAAd3DMzMzMzMzMzMzMwHdwAHBwzMzMzMzMzMzMzMBwcAB3cMzMzM
-        zMzMzMzMzAd3AAAAAAAAAAAAAAAAAAAAAAA=
-</value>
-  </data>
 </root>

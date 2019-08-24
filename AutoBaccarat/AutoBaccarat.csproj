@@ -69,6 +69,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ColorController\GetAppName.cs" />
     <Compile Include="ColorController\Getcolor.cs" />
     <Compile Include="ColorController\Win32Bot.cs" />
@@ -199,17 +202,9 @@
       <Project>{36cd65ce-3230-4179-ad89-2b820dfd8d5d}</Project>
       <Name>Magnifying Glass</Name>
     </ProjectReference>
-    <ProjectReference Include="..\TFive Class\King99 Class.csproj">
-      <Project>{64a873cd-ad32-4e99-a9c7-d46d45b56910}</Project>
-      <Name>King99 Class</Name>
-    </ProjectReference>
     <ProjectReference Include="..\TFive Theme\King99 Theme.csproj">
       <Project>{f61532f4-3b0a-46c9-b618-9de4f8063e1f}</Project>
       <Name>King99 Theme</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TFive UI\King99 UI.csproj">
-      <Project>{b4c543e6-f49d-403d-8275-ab212df3039d}</Project>
-      <Name>King99 UI</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -256,12 +251,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="king99.ico" />
+    <None Include="Resources\bmpFinda.bmp" />
+    <None Include="Resources\bmpFind.bmp" />
+    <None Include="Resources\curTarget.cur" />
     <None Include="Resources\line-icon-png-transparent-3-1-.png" />
     <None Include="Resources\settings-24-64.png" />
     <None Include="Resources\settings-17-64.png" />
     <None Include="Resources\note-2-64.png" />
     <None Include="Resources\start-64.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>if /I "$(ConfigurationName)" == "Release" Eazfuscator.NET.exe "$(TargetPath)" --msbuild-project-path "$(ProjectPath)" --msbuild-project-configuration "$(ConfigurationName)" --msbuild-project-platform "$(PlatformName)" --msbuild-solution-path "$(SolutionPath)" -n --newline-flush -v 2019.1</PostBuildEvent>
