@@ -23,6 +23,8 @@ namespace AutoBaccarat
             LoadListCount = Settings.Default.LoadCustomListCount;
             LoadFixed();
             LoadCustom();
+            ForceValue = Settings.Default.ForceValue;
+            ForceSelected = (ForceType) Settings.Default.ForceSelected;
         }
 
         public static CustomListManager ListMng = new CustomListManager();

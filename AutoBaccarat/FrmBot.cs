@@ -157,6 +157,7 @@ namespace AutoBaccarat
             lbValueAmount.Text = @"0";
             lbValueStake.Text = @"0x0";
             lbValueBettings.Text = "";
+            lbValueBettings.BackColor = Color.FromArgb(82, 82, 82);
             if (BotValues.BettingSuggest.Count > 0)
             {
                 var lastBetSuggestValue = BotValues.BettingSuggest[BotValues.BettingSuggest.Count - 1];
@@ -415,6 +416,9 @@ namespace AutoBaccarat
             ValueForBot.CustomValueNumber = FormulaValues.ValueNumber;
             ValueForBot.CustomValueType = FormulaValues.ValueType;
             ValueForBot.Fixed = FormulaValues.Fixed;
+
+            ValueForBot.ForceValue = FormulaValues.ForceValue;
+            ValueForBot.ForceType = FormulaValues.ForceSelected == FormulaValues.ForceType.Follow ? (short) 1 : (short) 2;
 
             ValueForBot.Mode = (byte) LayoutValues.ModeSelected;
 

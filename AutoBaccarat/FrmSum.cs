@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AutoBaccarat
 {
-    public partial class Form1 : Form
+    public partial class FrmSum : Form
     {
-        public Form1()
+        public FrmSum()
         {
             InitializeComponent();
         }
