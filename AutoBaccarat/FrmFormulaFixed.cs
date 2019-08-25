@@ -43,7 +43,7 @@ namespace AutoBaccarat
         {
             if (dgvBetting.RowCount == 0)
             {
-                MessageBox.Show(stringLoader.FixedError, stringLoader.Error + @"04x1", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(StringLoader.FixedError, StringLoader.Error + @"04x1", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 

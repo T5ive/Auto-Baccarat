@@ -34,57 +34,57 @@ namespace AutoBaccarat
             //stringLoader.Unit = LclzManager.TranslateMessage("Unit", "Bet Unit:");
             //stringLoader.Bettings = LclzManager.TranslateMessage("Bettings", "Betting:");
 
-            stringLoader.Warning = LclzManager.TranslateMessage("Warning", "WARNING!");
+            StringLoader.Warning = LclzManager.TranslateMessage("Warning", "WARNING!");
 
-            stringLoader.WantClear = LclzManager.TranslateMessage("WantClear", "Do you want to clear?");
-            stringLoader.Line = LclzManager.TranslateMessage("Line", "Line");
-            stringLoader.Ready = LclzManager.TranslateMessage("Ready", "Ready");
-            stringLoader.Betting = LclzManager.TranslateMessage("Betting", "Betting");
-            stringLoader.Wait = LclzManager.TranslateMessage("Wait", "Wait Result");
-            stringLoader.Save = LclzManager.TranslateMessage("Save", "Saving");
+            StringLoader.WantClear = LclzManager.TranslateMessage("WantClear", "Do you want to clear?");
+            StringLoader.Line = LclzManager.TranslateMessage("Line", "Line");
+            StringLoader.Ready = LclzManager.TranslateMessage("Ready", "Ready");
+            StringLoader.Betting = LclzManager.TranslateMessage("Betting", "Betting");
+            StringLoader.Wait = LclzManager.TranslateMessage("Wait", "Wait Result");
+            StringLoader.Save = LclzManager.TranslateMessage("Save", "Saving");
 
-            stringLoader.Confirmation = LclzManager.TranslateMessage("Confirmation", "Confirmation");
-            stringLoader.Modified = LclzManager.TranslateMessage("Modified", "was modified, do you want to save it now?");
-            stringLoader.Error = LclzManager.TranslateMessage("Error", "Error!");
-            stringLoader.NotFound = LclzManager.TranslateMessage("NotFound", "not found!");
-            stringLoader.Delete = LclzManager.TranslateMessage("Delete", "Confirm to delete");
-            stringLoader.InputChip = LclzManager.TranslateMessage("InputChip", "Please Input A Chip Value");
-            stringLoader.InputChipNull = LclzManager.TranslateMessage("InputChipNull", "Value is Null, Empty or White space");
+            StringLoader.Confirmation = LclzManager.TranslateMessage("Confirmation", "Confirmation");
+            StringLoader.Modified = LclzManager.TranslateMessage("Modified", "was modified, do you want to save it now?");
+            StringLoader.Error = LclzManager.TranslateMessage("Error", "Error!");
+            StringLoader.NotFound = LclzManager.TranslateMessage("NotFound", "not found!");
+            StringLoader.Delete = LclzManager.TranslateMessage("Delete", "Confirm to delete");
+            StringLoader.InputChip = LclzManager.TranslateMessage("InputChip", "Please Input A Chip Value");
+            StringLoader.InputChipNull = LclzManager.TranslateMessage("InputChipNull", "Value is Null, Empty or White space");
 
-            stringLoader.SetBetUnit = LclzManager.TranslateMessage("SetBetUnit", "Setting Betting Unit!!");
-            stringLoader.Total = LclzManager.TranslateMessage("Total", "Total");
-            stringLoader.TryAgain = LclzManager.TranslateMessage("TryAgain", "Try Again");
+            StringLoader.SetBetUnit = LclzManager.TranslateMessage("SetBetUnit", "Setting Betting Unit!!");
+            StringLoader.Total = LclzManager.TranslateMessage("Total", "Total");
+            StringLoader.TryAgain = LclzManager.TranslateMessage("TryAgain", "Try Again");
 
-            stringLoader.PP = LclzManager.TranslateMessage("PP", "Positive Progression");
-            stringLoader.NP = LclzManager.TranslateMessage("NP", "Negative Progression");
-            stringLoader.Fib = LclzManager.TranslateMessage("Fib", "Fibonacci");
-            stringLoader.DetailPp1 = LclzManager.TranslateMessage("DetailPp1", "- Increase stakes next step when you win");
-            stringLoader.DetailPp2 = LclzManager.TranslateMessage("DetailPp2", "- Return to first stakes when you lose");
+            StringLoader.PP = LclzManager.TranslateMessage("PP", "Positive Progression");
+            StringLoader.NP = LclzManager.TranslateMessage("NP", "Negative Progression");
+            StringLoader.Fib = LclzManager.TranslateMessage("Fib", "Fibonacci");
+            StringLoader.DetailPp1 = LclzManager.TranslateMessage("DetailPp1", "- Increase stakes next step when you win");
+            StringLoader.DetailPp2 = LclzManager.TranslateMessage("DetailPp2", "- Return to first stakes when you lose");
 
-            stringLoader.DetailNp1 = LclzManager.TranslateMessage("DetailNp1", "- Increase stakes next step when you lose");
-            stringLoader.DetailNp2 = LclzManager.TranslateMessage("DetailNp2", "- Return to first stakes when you win");
+            StringLoader.DetailNp1 = LclzManager.TranslateMessage("DetailNp1", "- Increase stakes next step when you lose");
+            StringLoader.DetailNp2 = LclzManager.TranslateMessage("DetailNp2", "- Return to first stakes when you win");
 
-            stringLoader.DetailFib1 = LclzManager.TranslateMessage("DetailFib1", "- Increase stakes next step when you lose");
-            stringLoader.DetailFib2 = LclzManager.TranslateMessage("DetailFib2", "- Decrease 2 step for stakes when you win");
+            StringLoader.DetailFib1 = LclzManager.TranslateMessage("DetailFib1", "- Increase stakes next step when you lose");
+            StringLoader.DetailFib2 = LclzManager.TranslateMessage("DetailFib2", "- Decrease 2 step for stakes when you win");
 
-            stringLoader.Start = LclzManager.TranslateMessage("Start", "Start");
-            stringLoader.Stop = LclzManager.TranslateMessage("Stop", "Stop");
+            StringLoader.Start = LclzManager.TranslateMessage("Start", "Start");
+            StringLoader.Stop = LclzManager.TranslateMessage("Stop", "Stop");
 
-            stringLoader.FixedError = LclzManager.TranslateMessage("Fixed", "Setting Fixed Type!!");
-            stringLoader.DetailFixed = LclzManager.TranslateMessage("DetailFixed", "- Fixed bets and loops");
+            StringLoader.FixedError = LclzManager.TranslateMessage("Fixed", "Setting Fixed Type!!");
+            StringLoader.DetailFixed = LclzManager.TranslateMessage("DetailFixed", "- Fixed bets and loops");
 
-            stringLoader.NormalMode = LclzManager.TranslateMessage("NormalMode", "Normal");
-            stringLoader.BackgroundMode = LclzManager.TranslateMessage("BackgroundMode", "Background");
+            StringLoader.NormalMode = LclzManager.TranslateMessage("NormalMode", "Normal");
+            StringLoader.BackgroundMode = LclzManager.TranslateMessage("BackgroundMode", "Background");
             
-            stringLoader.Follow = LclzManager.TranslateMessage("Follow", "Follow");
-            stringLoader.AI = LclzManager.TranslateMessage("AI", "Ai");
-            stringLoader.Lock = LclzManager.TranslateMessage("Lock", "Lock");
-            stringLoader.GoodLineFix = LclzManager.TranslateMessage("GoodLineFix", "Good Line Fix");
-            stringLoader.GoodLineRandom = LclzManager.TranslateMessage("GoodLineRandom", "Good Line Random");
-            stringLoader.GoodLine = LclzManager.TranslateMessage("GoodLine", "Good Line");
-            stringLoader.Fixed = LclzManager.TranslateMessage("Fixed", "Fixed");
-            stringLoader.Custom = LclzManager.TranslateMessage("Custom", "Custom");
-            stringLoader.Random = LclzManager.TranslateMessage("Random", "Random");
+            StringLoader.Follow = LclzManager.TranslateMessage("Follow", "Follow");
+            StringLoader.AI = LclzManager.TranslateMessage("AI", "Ai");
+            StringLoader.Lock = LclzManager.TranslateMessage("Lock", "Lock");
+            StringLoader.GoodLineFix = LclzManager.TranslateMessage("GoodLineFix", "Good Line Fix");
+            StringLoader.GoodLineRandom = LclzManager.TranslateMessage("GoodLineRandom", "Good Line Random");
+            StringLoader.GoodLine = LclzManager.TranslateMessage("GoodLine", "Good Line");
+            StringLoader.Fixed = LclzManager.TranslateMessage("Fixed", "Fixed");
+            StringLoader.Custom = LclzManager.TranslateMessage("Custom", "Custom");
+            StringLoader.Random = LclzManager.TranslateMessage("Random", "Random");
         }
 
         

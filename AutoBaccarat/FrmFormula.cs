@@ -118,7 +118,7 @@ namespace AutoBaccarat
             Hide();
             var fix = new FrmFormulaFixed();
             BotValues.LclzManager.LocalizeForm(fix);
-            fix.lbExplain.Text = stringLoader.DetailFixed;
+            fix.lbExplain.Text = StringLoader.DetailFixed;
             fix.ShowDialog();
             fix.Dispose();
             Show();

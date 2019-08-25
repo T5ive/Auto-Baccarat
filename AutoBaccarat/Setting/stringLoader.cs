@@ -1,6 +1,6 @@
 ﻿namespace AutoBaccarat
 {
-  public static class stringLoader
+  public static class StringLoader
   {
         //public static string RunTime = "Operating Time:";
         //public static string Round = "Round:";

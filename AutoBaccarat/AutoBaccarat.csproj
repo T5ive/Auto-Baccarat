@@ -153,7 +153,7 @@
     <Compile Include="Setting\Layout\GetColor\Win32.cs" />
     <Compile Include="Setting\Layout\LayoutInfo.cs" />
     <Compile Include="Setting\Layout\LayoutListManager.cs" />
-    <Compile Include="stringLoader.cs" />
+    <Compile Include="Setting\stringLoader.cs" />
     <Compile Include="Theme\King99Checkbox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -179,7 +179,7 @@
     <Compile Include="Theme\ThemeControl.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ValueForBot.cs" />
+    <Compile Include="Setting\ValueForBot.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

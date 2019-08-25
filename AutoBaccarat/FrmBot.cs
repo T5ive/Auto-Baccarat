@@ -16,11 +16,6 @@ namespace AutoBaccarat
     {
         public FrmBot()
         {
-            _cancel = new CancellationTokenSource();
-            _run = new CancellationTokenSource();
-            _resultType = 3;
-            _bigRoadNewLine = -1;
-            GetApp = new GetAppName();
             InitializeComponent();
         }
 
@@ -233,39 +228,39 @@ namespace AutoBaccarat
            
             if (ValueForBot.Formula == "Follow")
             {
-                lbValueFormula.Text = stringLoader.Follow;
+                lbValueFormula.Text = StringLoader.Follow;
             }
             else if (ValueForBot.Formula == "AI")
             {
-                lbValueFormula.Text = stringLoader.AI;
+                lbValueFormula.Text = StringLoader.AI;
             }
             else if (ValueForBot.Formula == "Lock")
             {
-                lbValueFormula.Text = stringLoader.Lock;
+                lbValueFormula.Text = StringLoader.Lock;
             }
             else if (ValueForBot.Formula == "GoodLineFix")
             {
-                lbValueFormula.Text = stringLoader.GoodLineFix;
+                lbValueFormula.Text = StringLoader.GoodLineFix;
             }
             else if (ValueForBot.Formula == "GoodLineRandom")
             {
-                lbValueFormula.Text = stringLoader.GoodLineRandom;
+                lbValueFormula.Text = StringLoader.GoodLineRandom;
             }
             else if (ValueForBot.Formula == "GoodLine")
             {
-                lbValueFormula.Text = stringLoader.GoodLine;
+                lbValueFormula.Text = StringLoader.GoodLine;
             }
             else if (ValueForBot.Formula == "Fixed")
             {
-                lbValueFormula.Text = stringLoader.Fixed;
+                lbValueFormula.Text = StringLoader.Fixed;
             }
             else if (ValueForBot.Formula == "Custom")
             {
-                lbValueFormula.Text = stringLoader.Custom;
+                lbValueFormula.Text = StringLoader.Custom;
             }
             else if (ValueForBot.Formula == "Random")
             {
-                lbValueFormula.Text = stringLoader.Random;
+                lbValueFormula.Text = StringLoader.Random;
             }
 
 
@@ -278,8 +273,8 @@ namespace AutoBaccarat
             lbValueStopLess.Text = ValueForBot.StopLess;
 
             lbValueMode.Text = ValueForBot.Mode == 0
-                ? stringLoader.NormalMode
-                : stringLoader.BackgroundMode;
+                ? StringLoader.NormalMode
+                : StringLoader.BackgroundMode;
 
         }
         #endregion
@@ -310,15 +305,15 @@ namespace AutoBaccarat
                 switch (statusRunningBot)
                 {
                     case 0:
-                        lblStatus.Text = stringLoader.Ready;
+                        lblStatus.Text = StringLoader.Ready;
                         numberStatus.Value = 1;
                         break;
                     case 1:
-                        lblStatus.Text = stringLoader.Betting;
+                        lblStatus.Text = StringLoader.Betting;
                         numberStatus.Value = 2;
                         break;
                     case 2:
-                        lblStatus.Text = stringLoader.Wait;
+                        lblStatus.Text = StringLoader.Wait;
                         numberStatus.Value = 3;
                         break;
                     case 3:
@@ -328,13 +323,13 @@ namespace AutoBaccarat
                         {
                             if (statusRunningBot == 200)
                             {
-                                lblStatus.Text = stringLoader.Save;
+                                lblStatus.Text = StringLoader.Save;
                                 numberStatus.Value = 4;
                             }
                         }
                         else
                         {
-                            lblStatus.Text = stringLoader.Betting;
+                            lblStatus.Text = StringLoader.Betting;
                             numberStatus.Value = 2;
                         }
                         break;
@@ -376,7 +371,7 @@ namespace AutoBaccarat
         #endregion
 
         #region Values For Bot
-        private readonly GetAppName GetApp;
+        private readonly GetAppName _getApp = new GetAppName();
         private void LoadValues()
         {
             ValueForBot.Formula = FormulaValues.FormulaSelected.ToString();
@@ -476,7 +471,7 @@ namespace AutoBaccarat
         }
         private void GetIHandle()
         {
-            GetApp.AppName();
+            _getApp.AppName();
             IHandle = GetAppName.appName;
         }
 
@@ -485,7 +480,7 @@ namespace AutoBaccarat
         #region Big Road Control
 
         private bool _backUpBigRoad;
-        private int _bigRoadLastValue, _bigRoadNewColumn, _bigRoadNewLine;
+        private int _bigRoadLastValue, _bigRoadNewColumn, _bigRoadNewLine =-1;
         private void ButtonAddValue2BigRoad(object sender, EventArgs e)
         {
             var value = ((Button)sender).Text;
@@ -592,7 +587,7 @@ namespace AutoBaccarat
         }
         private void BtnClear_Click(object sender, EventArgs e)
         {
-            if (BotValues.Result.Count != 0 && MessageBox.Show(stringLoader.WantClear, stringLoader.Warning, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (BotValues.Result.Count != 0 && MessageBox.Show(StringLoader.WantClear, StringLoader.Warning, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 BotValues.BigRoad.Clear();
                 dgvBigRoad.Rows.Clear();
@@ -668,7 +663,7 @@ namespace AutoBaccarat
 
         #region Display Update
 
-        private short _resultType;
+        private short _resultType = 3;
         private short _goodLineResult;
         private int _valueP, _valueB, _valueT, _fibonacci;
         private void AddScore(short resultType, string timeValue)
@@ -2132,8 +2127,8 @@ namespace AutoBaccarat
 
         public string Title => "Auto Baccarat" + (_statusRunBot ? " - Running" : "");
 
-        readonly CancellationTokenSource _run;
-        private readonly CancellationTokenSource _cancel;
+        private readonly CancellationTokenSource _run = new CancellationTokenSource();
+        private readonly CancellationTokenSource _cancel = new CancellationTokenSource();
         private CancellationToken _cToken;
         private void BtnStart_Click(object sender, EventArgs e)
         {
@@ -2141,12 +2136,12 @@ namespace AutoBaccarat
         }
         private async void ClickStart()
         {
-            btnStart.Text = btnStart.Text.EndsWith(stringLoader.Stop) ? stringLoader.Start : stringLoader.Stop;
+            btnStart.Text = btnStart.Text.EndsWith(StringLoader.Stop) ? StringLoader.Start : StringLoader.Stop;
             try
             {
                 _cancel.Cancel();
 
-                if (btnStart.Text == stringLoader.Stop)
+                if (btnStart.Text == StringLoader.Stop)
                 {
                     _cToken = _run.Token;
                     panelLeft.Enabled = false;
@@ -2164,9 +2159,9 @@ namespace AutoBaccarat
                     {
                         await Task.Factory.StartNew(BotsBackground, _cToken);
                     }
-
+                   
                 }
-                else if (btnStart.Text == stringLoader.Start)
+                else if (btnStart.Text == StringLoader.Start)
                 {
                     _cToken = _cancel.Token;
                     panelLeft.Enabled = true;
@@ -2283,7 +2278,7 @@ namespace AutoBaccarat
                 if (_statusRunBot)
                 {
 
-                    lastUnit = lastUnit * ValueForBot.Chip;
+                    lastUnit *= ValueForBot.Chip;
 
                     var chip1 = int.Parse(LayoutValues.Chip1);
                     var chip2 = int.Parse(LayoutValues.Chip2);
@@ -2670,7 +2665,7 @@ namespace AutoBaccarat
                 if (_statusRunBot)
                 {
 
-                    lastUnit = lastUnit * ValueForBot.Chip;
+                    lastUnit *= ValueForBot.Chip;
 
                     var chip1 = int.Parse(LayoutValues.Chip1);
                     var chip2 = int.Parse(LayoutValues.Chip2);

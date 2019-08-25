@@ -42,7 +42,7 @@ namespace AutoBaccarat
         {
             if (dgvBetting.RowCount == 0)
             {
-                MessageBox.Show(stringLoader.SetBetUnit, stringLoader.Error+ @"02x1", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(StringLoader.SetBetUnit, StringLoader.Error+ @"02x1", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             Settings.Default.ValuePP = BetSystemValues.ValuePP;

@@ -35,7 +35,7 @@ namespace AutoBaccarat
             _bitmapFind2 = Resources.bmpFinda;
             _newCursor = _curTarget;
 
-            EditTitle.Text = Mode == 0 ? stringLoader.NormalMode : stringLoader.BackgroundMode;
+            EditTitle.Text = Mode == 0 ? StringLoader.NormalMode : StringLoader.BackgroundMode;
         }
         private void FrmColorInfo_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -112,9 +112,9 @@ namespace AutoBaccarat
         #endregion
 
         #region Windows Info
-        
-        readonly FrmMagnify _frmMagnify = new FrmMagnify();
-        readonly GetAppName _getApp = new GetAppName();
+
+        private readonly FrmMagnify _frmMagnify = new FrmMagnify();
+        private readonly GetAppName _getApp = new GetAppName();
 
         #region Get Posision Color
         private void picTarget_MouseDown(object sender, MouseEventArgs e)
@@ -249,12 +249,14 @@ namespace AutoBaccarat
             Values.Color = txt_color.Text;
             Values.TitleName = txt_title.Text + " % " + txt_class.Text;
             Values.CloseFrom = true;
+            _frmMagnify.Dispose();
             Close();
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
             Values.CloseFrom = false;
+            _frmMagnify.Dispose();
             Close();
         }
 

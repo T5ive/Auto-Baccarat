@@ -116,18 +116,18 @@ namespace AutoBaccarat
             switch (mode)
             {
                 case BetSystemValues.BettingMode.PP:
-                    frmBetSystemEdit.EditTitle.Text = stringLoader.PP;
-                    frmBetSystemEdit.lbExplain.Text = $@"{stringLoader.DetailPp1}" + Environment.NewLine + $@"{stringLoader.DetailPp2}";
+                    frmBetSystemEdit.EditTitle.Text = StringLoader.PP;
+                    frmBetSystemEdit.lbExplain.Text = $@"{StringLoader.DetailPp1}" + Environment.NewLine + $@"{StringLoader.DetailPp2}";
                     break;
 
                 case BetSystemValues.BettingMode.NP:
-                    frmBetSystemEdit.EditTitle.Text = stringLoader.NP;
-                    frmBetSystemEdit.lbExplain.Text = $@"{stringLoader.DetailNp1}" + Environment.NewLine + $@"{stringLoader.DetailNp2}";
+                    frmBetSystemEdit.EditTitle.Text = StringLoader.NP;
+                    frmBetSystemEdit.lbExplain.Text = $@"{StringLoader.DetailNp1}" + Environment.NewLine + $@"{StringLoader.DetailNp2}";
                     break;
 
                 case BetSystemValues.BettingMode.Fibonacci:
-                    frmBetSystemEdit.EditTitle.Text = stringLoader.Fib;
-                    frmBetSystemEdit.lbExplain.Text = $@"{stringLoader.DetailFib1}" + Environment.NewLine + $@"{stringLoader.DetailFib2}";
+                    frmBetSystemEdit.EditTitle.Text = StringLoader.Fib;
+                    frmBetSystemEdit.lbExplain.Text = $@"{StringLoader.DetailFib1}" + Environment.NewLine + $@"{StringLoader.DetailFib2}";
                     break;
             }
             frmBetSystemEdit.ShowDialog();

@@ -77,8 +77,8 @@ namespace AutoBaccarat
         {
             if (CheckEdit())
             {
-                var msgResult = MessageBox.Show($@"[{LayoutValues.ListName}] {stringLoader.Modified}",
-                    stringLoader.Confirmation, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                var msgResult = MessageBox.Show($@"[{LayoutValues.ListName}] {StringLoader.Modified}",
+                    StringLoader.Confirmation, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
                 if (msgResult == DialogResult.Yes)
                 {
                     SaveValue();
@@ -103,7 +103,7 @@ namespace AutoBaccarat
         {
             if (listLayout.Items.Count == 0)
             {
-                MessageBox.Show(stringLoader.SetBetUnit, stringLoader.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(StringLoader.SetBetUnit, StringLoader.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -188,8 +188,8 @@ namespace AutoBaccarat
                 }
                 if (CheckEdit())
                 {
-                    var msgResult = MessageBox.Show($@"[{LayoutValues.ListName}] {stringLoader.Modified}",
-                        stringLoader.Confirmation, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    var msgResult = MessageBox.Show($@"[{LayoutValues.ListName}] {StringLoader.Modified}",
+                        StringLoader.Confirmation, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
                     if (msgResult == DialogResult.Yes)
                     {
                         SaveValue();
@@ -216,7 +216,7 @@ namespace AutoBaccarat
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, stringLoader.Error + @"01x1", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, StringLoader.Error + @"01x1", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void UpdateValues()
@@ -352,7 +352,7 @@ namespace AutoBaccarat
                 {
                     var itemList = listLayout.SelectedItem;
 
-                    if (MessageBox.Show($@"{stringLoader.Delete} {itemList} ?", stringLoader.Confirmation,
+                    if (MessageBox.Show($@"{StringLoader.Delete} {itemList} ?", StringLoader.Confirmation,
                             MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                         DialogResult.Yes)
                     {
@@ -379,7 +379,7 @@ namespace AutoBaccarat
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, stringLoader.Error + @"01x2", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, StringLoader.Error + @"01x2", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -537,7 +537,7 @@ namespace AutoBaccarat
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, stringLoader.Error + @"01x3", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, StringLoader.Error + @"01x3", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             try
@@ -547,7 +547,7 @@ namespace AutoBaccarat
                     var column = e.ColumnIndex;
                     var row = e.RowIndex;
                     var oldValue = dgvSetting[column, row].Value.ToString();
-                    var input = InputBox.Show(stringLoader.InputChip, oldValue, true);
+                    var input = InputBox.Show(StringLoader.InputChip, oldValue, true);
 
                     if (!string.IsNullOrEmpty(input) && !string.IsNullOrWhiteSpace(input))
                     {
@@ -579,34 +579,34 @@ namespace AutoBaccarat
                     }
                     else
                     {
-                        MessageBox.Show(stringLoader.InputChipNull, stringLoader.Error + @"01x4", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(StringLoader.InputChipNull, StringLoader.Error + @"01x4", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, stringLoader.Error + @"01x5", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, StringLoader.Error + @"01x5", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         
         #region Mode
 
-        private void SelectMode(object sender)
-        {
-            // ChangeMode();
-        }
-        private void ChangeMode()
-        {
-            if (radNormal.Checked)
-            {
-                LayoutValues.ModeSelected = LayoutValues.Mode.Normal;
-            }
+        //private void SelectMode(object sender)
+        //{
+        //    // ChangeMode();
+        //}
+        //private void ChangeMode()
+        //{
+        //    if (radNormal.Checked)
+        //    {
+        //        LayoutValues.ModeSelected = LayoutValues.Mode.Normal;
+        //    }
 
-            if (radBackGround.Checked)
-            {
-                LayoutValues.ModeSelected = LayoutValues.Mode.Background;
-            }
-        }
+        //    if (radBackGround.Checked)
+        //    {
+        //        LayoutValues.ModeSelected = LayoutValues.Mode.Background;
+        //    }
+        //}
 
 
 

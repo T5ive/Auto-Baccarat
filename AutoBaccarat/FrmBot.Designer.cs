@@ -43,7 +43,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -51,6 +50,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.panelTop2 = new System.Windows.Forms.Panel();
             this.tFivePictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelLeft = new System.Windows.Forms.Panel();
@@ -75,7 +75,7 @@
             this.BaccaratScore = new AutoBaccarat.King99GroupBox();
             this.dgvBigRoad = new System.Windows.Forms.DataGridView();
             this.BotStatus = new AutoBaccarat.King99GroupBox();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableStatus = new System.Windows.Forms.TableLayoutPanel();
             this.lbValueUnit = new System.Windows.Forms.Label();
             this.lbUnit = new System.Windows.Forms.Label();
             this.lbValueMaxConLose = new System.Windows.Forms.Label();
@@ -132,6 +132,15 @@
             this.GoodLine = new AutoBaccarat.King99GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvGoodLine = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPV1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPV2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPV3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPV4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPV5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPV6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPVSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableGoodLine = new System.Windows.Forms.TableLayoutPanel();
             this.lbShowLine7 = new System.Windows.Forms.Label();
             this.lbShowLine6 = new System.Windows.Forms.Label();
@@ -148,7 +157,7 @@
             this.lbline6 = new System.Windows.Forms.Label();
             this.lblineSum = new System.Windows.Forms.Label();
             this.BotSettings = new AutoBaccarat.King99GroupBox();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableSettings = new System.Windows.Forms.TableLayoutPanel();
             this.lbValueMode = new System.Windows.Forms.Label();
             this.lbMode = new System.Windows.Forms.Label();
             this.lbValueLayout = new System.Windows.Forms.Label();
@@ -174,15 +183,6 @@
             this.Bots_Normal = new System.ComponentModel.BackgroundWorker();
             this.tmTimeRunning = new System.Windows.Forms.Timer(this.components);
             this.Bots_BackGround = new System.ComponentModel.BackgroundWorker();
-            this.DataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPV1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPV2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPV3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPV4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPV5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPV6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPVSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelTop2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tFivePictureBox1)).BeginInit();
             this.panelLeft.SuspendLayout();
@@ -191,7 +191,7 @@
             this.BaccaratScore.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBigRoad)).BeginInit();
             this.BotStatus.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            this.tableStatus.SuspendLayout();
             this.panelStart.SuspendLayout();
             this.panelPage.SuspendLayout();
             this.panelSettings.SuspendLayout();
@@ -202,7 +202,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvGoodLine)).BeginInit();
             this.tableGoodLine.SuspendLayout();
             this.BotSettings.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.tableSettings.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTop2
@@ -653,7 +653,7 @@
             // 
             this.BotStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.BotStatus.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.BotStatus.Controls.Add(this.tableLayoutPanel3);
+            this.BotStatus.Controls.Add(this.tableStatus);
             this.BotStatus.Curv1 = 1;
             this.BotStatus.Curv2 = 1;
             this.TransMain.SetDecoration(this.BotStatus, BunifuAnimatorNS.DecorationType.None);
@@ -668,55 +668,55 @@
             this.BotStatus.TabIndex = 1;
             this.BotStatus.Text = "Bot Status";
             // 
-            // tableLayoutPanel3
+            // tableStatus
             // 
-            this.tableLayoutPanel3.ColumnCount = 4;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.lbValueUnit, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.lbUnit, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.lbValueMaxConLose, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.lbMaxConLose, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.lbValueBettings, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.lbBettings, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.lbValueWL, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.lbWL, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.lbValueRunTime, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lbRunTime, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lbValueStake, 3, 4);
-            this.tableLayoutPanel3.Controls.Add(this.lbStake, 2, 4);
-            this.tableLayoutPanel3.Controls.Add(this.lbMaxConWin, 0, 4);
-            this.tableLayoutPanel3.Controls.Add(this.lbValueMaxConWin, 1, 4);
-            this.tableLayoutPanel3.Controls.Add(this.lbValueAmount, 3, 3);
-            this.tableLayoutPanel3.Controls.Add(this.lbAmount, 2, 3);
-            this.tableLayoutPanel3.Controls.Add(this.lbLose, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.lbValueLose, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.lbValueBalance, 3, 2);
-            this.tableLayoutPanel3.Controls.Add(this.lbBalance, 2, 2);
-            this.tableLayoutPanel3.Controls.Add(this.lbWin, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.lbValueWin, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.lbValueMaxProfit, 3, 1);
-            this.tableLayoutPanel3.Controls.Add(this.lbMaxProfit, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.lbRound, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.lbValueRound, 1, 1);
-            this.TransMain.SetDecoration(this.tableLayoutPanel3, BunifuAnimatorNS.DecorationType.None);
-            this.TransSettings.SetDecoration(this.tableLayoutPanel3, BunifuAnimatorNS.DecorationType.None);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(5, 28);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 7;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(349, 152);
-            this.tableLayoutPanel3.TabIndex = 1;
+            this.tableStatus.ColumnCount = 4;
+            this.tableStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.tableStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableStatus.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableStatus.Controls.Add(this.lbValueUnit, 0, 5);
+            this.tableStatus.Controls.Add(this.lbUnit, 0, 5);
+            this.tableStatus.Controls.Add(this.lbValueMaxConLose, 0, 5);
+            this.tableStatus.Controls.Add(this.lbMaxConLose, 0, 5);
+            this.tableStatus.Controls.Add(this.lbValueBettings, 0, 6);
+            this.tableStatus.Controls.Add(this.lbBettings, 0, 6);
+            this.tableStatus.Controls.Add(this.lbValueWL, 0, 6);
+            this.tableStatus.Controls.Add(this.lbWL, 0, 6);
+            this.tableStatus.Controls.Add(this.lbValueRunTime, 2, 0);
+            this.tableStatus.Controls.Add(this.lbRunTime, 0, 0);
+            this.tableStatus.Controls.Add(this.lbValueStake, 3, 4);
+            this.tableStatus.Controls.Add(this.lbStake, 2, 4);
+            this.tableStatus.Controls.Add(this.lbMaxConWin, 0, 4);
+            this.tableStatus.Controls.Add(this.lbValueMaxConWin, 1, 4);
+            this.tableStatus.Controls.Add(this.lbValueAmount, 3, 3);
+            this.tableStatus.Controls.Add(this.lbAmount, 2, 3);
+            this.tableStatus.Controls.Add(this.lbLose, 0, 3);
+            this.tableStatus.Controls.Add(this.lbValueLose, 1, 3);
+            this.tableStatus.Controls.Add(this.lbValueBalance, 3, 2);
+            this.tableStatus.Controls.Add(this.lbBalance, 2, 2);
+            this.tableStatus.Controls.Add(this.lbWin, 0, 2);
+            this.tableStatus.Controls.Add(this.lbValueWin, 1, 2);
+            this.tableStatus.Controls.Add(this.lbValueMaxProfit, 3, 1);
+            this.tableStatus.Controls.Add(this.lbMaxProfit, 2, 1);
+            this.tableStatus.Controls.Add(this.lbRound, 0, 1);
+            this.tableStatus.Controls.Add(this.lbValueRound, 1, 1);
+            this.TransMain.SetDecoration(this.tableStatus, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.tableStatus, BunifuAnimatorNS.DecorationType.None);
+            this.tableStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableStatus.Location = new System.Drawing.Point(5, 28);
+            this.tableStatus.Name = "tableStatus";
+            this.tableStatus.RowCount = 7;
+            this.tableStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableStatus.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableStatus.Size = new System.Drawing.Size(349, 152);
+            this.tableStatus.TabIndex = 1;
             // 
             // lbValueUnit
             // 
@@ -1807,6 +1807,103 @@
             this.dgvGoodLine.TabIndex = 2;
             this.dgvGoodLine.SelectionChanged += new System.EventHandler(this.ClearSelected);
             // 
+            // DataGridViewTextBoxColumn1
+            // 
+            this.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.DataGridViewTextBoxColumn1.HeaderText = "No. ";
+            this.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1";
+            this.DataGridViewTextBoxColumn1.ReadOnly = true;
+            this.DataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DataGridViewTextBoxColumn1.Width = 30;
+            // 
+            // DataGridViewTextBoxColumn2
+            // 
+            this.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.DataGridViewTextBoxColumn2.HeaderText = "Result";
+            this.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2";
+            this.DataGridViewTextBoxColumn2.ReadOnly = true;
+            this.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.DataGridViewTextBoxColumn2.Width = 46;
+            // 
+            // colPV1
+            // 
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            this.colPV1.DefaultCellStyle = dataGridViewCellStyle10;
+            this.colPV1.HeaderText = "L1";
+            this.colPV1.Name = "colPV1";
+            this.colPV1.ReadOnly = true;
+            this.colPV1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colPV1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colPV1.Width = 38;
+            // 
+            // colPV2
+            // 
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            this.colPV2.DefaultCellStyle = dataGridViewCellStyle11;
+            this.colPV2.HeaderText = "L2";
+            this.colPV2.Name = "colPV2";
+            this.colPV2.ReadOnly = true;
+            this.colPV2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colPV2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colPV2.Width = 38;
+            // 
+            // colPV3
+            // 
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            this.colPV3.DefaultCellStyle = dataGridViewCellStyle12;
+            this.colPV3.HeaderText = "L3";
+            this.colPV3.Name = "colPV3";
+            this.colPV3.ReadOnly = true;
+            this.colPV3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colPV3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colPV3.Width = 38;
+            // 
+            // colPV4
+            // 
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            this.colPV4.DefaultCellStyle = dataGridViewCellStyle13;
+            this.colPV4.HeaderText = "L4";
+            this.colPV4.Name = "colPV4";
+            this.colPV4.ReadOnly = true;
+            this.colPV4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colPV4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colPV4.Width = 38;
+            // 
+            // colPV5
+            // 
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            this.colPV5.DefaultCellStyle = dataGridViewCellStyle14;
+            this.colPV5.HeaderText = "L5";
+            this.colPV5.Name = "colPV5";
+            this.colPV5.ReadOnly = true;
+            this.colPV5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colPV5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colPV5.Width = 38;
+            // 
+            // colPV6
+            // 
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
+            this.colPV6.DefaultCellStyle = dataGridViewCellStyle15;
+            this.colPV6.HeaderText = "L6";
+            this.colPV6.Name = "colPV6";
+            this.colPV6.ReadOnly = true;
+            this.colPV6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colPV6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colPV6.Width = 38;
+            // 
+            // colPVSum
+            // 
+            this.colPVSum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            this.colPVSum.DefaultCellStyle = dataGridViewCellStyle16;
+            this.colPVSum.HeaderText = "GL";
+            this.colPVSum.Name = "colPVSum";
+            this.colPVSum.ReadOnly = true;
+            this.colPVSum.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colPVSum.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // tableGoodLine
             // 
             this.tableGoodLine.ColumnCount = 9;
@@ -2052,7 +2149,7 @@
             // 
             this.BotSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.BotSettings.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
-            this.BotSettings.Controls.Add(this.tableLayoutPanel2);
+            this.BotSettings.Controls.Add(this.tableSettings);
             this.BotSettings.Curv1 = 1;
             this.BotSettings.Curv2 = 1;
             this.TransMain.SetDecoration(this.BotSettings, BunifuAnimatorNS.DecorationType.None);
@@ -2067,47 +2164,47 @@
             this.BotSettings.TabIndex = 568;
             this.BotSettings.Text = "Bot Settings";
             // 
-            // tableLayoutPanel2
+            // tableSettings
             // 
-            this.tableLayoutPanel2.ColumnCount = 4;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
-            this.tableLayoutPanel2.Controls.Add(this.lbValueMode, 3, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lbMode, 2, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lbValueLayout, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lbLayout, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lbValueStopLess, 3, 4);
-            this.tableLayoutPanel2.Controls.Add(this.lbStopLess, 2, 4);
-            this.tableLayoutPanel2.Controls.Add(this.lbStopMore, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.lbValueStopMore, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.lbValueStopLose, 3, 3);
-            this.tableLayoutPanel2.Controls.Add(this.lbStopLose, 2, 3);
-            this.tableLayoutPanel2.Controls.Add(this.lbStopWin, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.lbValueStopWin, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.lbValueStop, 3, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lbStopRound, 2, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lbChip, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lbValueChip, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lbValueBet, 3, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lbBet, 2, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lbFormula, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lbValueFormula, 1, 1);
-            this.TransMain.SetDecoration(this.tableLayoutPanel2, BunifuAnimatorNS.DecorationType.None);
-            this.TransSettings.SetDecoration(this.tableLayoutPanel2, BunifuAnimatorNS.DecorationType.None);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(5, 28);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 5;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(352, 152);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.tableSettings.ColumnCount = 4;
+            this.tableSettings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
+            this.tableSettings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableSettings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33F));
+            this.tableSettings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17F));
+            this.tableSettings.Controls.Add(this.lbValueMode, 3, 0);
+            this.tableSettings.Controls.Add(this.lbMode, 2, 0);
+            this.tableSettings.Controls.Add(this.lbValueLayout, 1, 0);
+            this.tableSettings.Controls.Add(this.lbLayout, 0, 0);
+            this.tableSettings.Controls.Add(this.lbValueStopLess, 3, 4);
+            this.tableSettings.Controls.Add(this.lbStopLess, 2, 4);
+            this.tableSettings.Controls.Add(this.lbStopMore, 0, 4);
+            this.tableSettings.Controls.Add(this.lbValueStopMore, 1, 4);
+            this.tableSettings.Controls.Add(this.lbValueStopLose, 3, 3);
+            this.tableSettings.Controls.Add(this.lbStopLose, 2, 3);
+            this.tableSettings.Controls.Add(this.lbStopWin, 0, 3);
+            this.tableSettings.Controls.Add(this.lbValueStopWin, 1, 3);
+            this.tableSettings.Controls.Add(this.lbValueStop, 3, 2);
+            this.tableSettings.Controls.Add(this.lbStopRound, 2, 2);
+            this.tableSettings.Controls.Add(this.lbChip, 0, 2);
+            this.tableSettings.Controls.Add(this.lbValueChip, 1, 2);
+            this.tableSettings.Controls.Add(this.lbValueBet, 3, 1);
+            this.tableSettings.Controls.Add(this.lbBet, 2, 1);
+            this.tableSettings.Controls.Add(this.lbFormula, 0, 1);
+            this.tableSettings.Controls.Add(this.lbValueFormula, 1, 1);
+            this.TransMain.SetDecoration(this.tableSettings, BunifuAnimatorNS.DecorationType.None);
+            this.TransSettings.SetDecoration(this.tableSettings, BunifuAnimatorNS.DecorationType.None);
+            this.tableSettings.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tableSettings.Location = new System.Drawing.Point(5, 28);
+            this.tableSettings.Name = "tableSettings";
+            this.tableSettings.RowCount = 5;
+            this.tableSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableSettings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableSettings.Size = new System.Drawing.Size(352, 152);
+            this.tableSettings.TabIndex = 0;
             // 
             // lbValueMode
             // 
@@ -2453,103 +2550,6 @@
             this.Bots_BackGround.WorkerSupportsCancellation = true;
             this.Bots_BackGround.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Bots_BackGround_DoWork);
             // 
-            // DataGridViewTextBoxColumn1
-            // 
-            this.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.DataGridViewTextBoxColumn1.HeaderText = "No. ";
-            this.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1";
-            this.DataGridViewTextBoxColumn1.ReadOnly = true;
-            this.DataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DataGridViewTextBoxColumn1.Width = 30;
-            // 
-            // DataGridViewTextBoxColumn2
-            // 
-            this.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.DataGridViewTextBoxColumn2.HeaderText = "Result";
-            this.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2";
-            this.DataGridViewTextBoxColumn2.ReadOnly = true;
-            this.DataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.DataGridViewTextBoxColumn2.Width = 46;
-            // 
-            // colPV1
-            // 
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
-            this.colPV1.DefaultCellStyle = dataGridViewCellStyle10;
-            this.colPV1.HeaderText = "L1";
-            this.colPV1.Name = "colPV1";
-            this.colPV1.ReadOnly = true;
-            this.colPV1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colPV1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPV1.Width = 38;
-            // 
-            // colPV2
-            // 
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            this.colPV2.DefaultCellStyle = dataGridViewCellStyle11;
-            this.colPV2.HeaderText = "L2";
-            this.colPV2.Name = "colPV2";
-            this.colPV2.ReadOnly = true;
-            this.colPV2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colPV2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPV2.Width = 38;
-            // 
-            // colPV3
-            // 
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            this.colPV3.DefaultCellStyle = dataGridViewCellStyle12;
-            this.colPV3.HeaderText = "L3";
-            this.colPV3.Name = "colPV3";
-            this.colPV3.ReadOnly = true;
-            this.colPV3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colPV3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPV3.Width = 38;
-            // 
-            // colPV4
-            // 
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
-            this.colPV4.DefaultCellStyle = dataGridViewCellStyle13;
-            this.colPV4.HeaderText = "L4";
-            this.colPV4.Name = "colPV4";
-            this.colPV4.ReadOnly = true;
-            this.colPV4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colPV4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPV4.Width = 38;
-            // 
-            // colPV5
-            // 
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            this.colPV5.DefaultCellStyle = dataGridViewCellStyle14;
-            this.colPV5.HeaderText = "L5";
-            this.colPV5.Name = "colPV5";
-            this.colPV5.ReadOnly = true;
-            this.colPV5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colPV5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPV5.Width = 38;
-            // 
-            // colPV6
-            // 
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.White;
-            this.colPV6.DefaultCellStyle = dataGridViewCellStyle15;
-            this.colPV6.HeaderText = "L6";
-            this.colPV6.Name = "colPV6";
-            this.colPV6.ReadOnly = true;
-            this.colPV6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colPV6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPV6.Width = 38;
-            // 
-            // colPVSum
-            // 
-            this.colPVSum.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
-            this.colPVSum.DefaultCellStyle = dataGridViewCellStyle16;
-            this.colPVSum.HeaderText = "GL";
-            this.colPVSum.Name = "colPVSum";
-            this.colPVSum.ReadOnly = true;
-            this.colPVSum.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colPVSum.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // FrmBot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2579,8 +2579,8 @@
             this.BaccaratScore.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBigRoad)).EndInit();
             this.BotStatus.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
+            this.tableStatus.ResumeLayout(false);
+            this.tableStatus.PerformLayout();
             this.panelStart.ResumeLayout(false);
             this.panelStart.PerformLayout();
             this.panelPage.ResumeLayout(false);
@@ -2594,8 +2594,8 @@
             this.tableGoodLine.ResumeLayout(false);
             this.tableGoodLine.PerformLayout();
             this.BotSettings.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel2.PerformLayout();
+            this.tableSettings.ResumeLayout(false);
+            this.tableSettings.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2656,7 +2656,7 @@
         private System.Windows.Forms.Label lbShowLine2;
         private System.Windows.Forms.Label lbShowLine1;
         private King99GroupBox BotSettings;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.TableLayoutPanel tableSettings;
         private System.Windows.Forms.Label lbValueStopMore;
         private System.Windows.Forms.Label lbValueStopLose;
         private System.Windows.Forms.Label lbValueStopWin;
@@ -2697,7 +2697,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colUnit;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMode;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStep;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.TableLayoutPanel tableStatus;
         private System.Windows.Forms.Label lbValueRunTime;
         private System.Windows.Forms.Label lbRunTime;
         private System.Windows.Forms.Label lbValueStake;

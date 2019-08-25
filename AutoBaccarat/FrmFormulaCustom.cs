@@ -48,8 +48,8 @@ namespace AutoBaccarat
         {
             if (CheckEdit())
             {
-                var msgResult = MessageBox.Show($@"[{FormulaValues.ListName}] {stringLoader.Modified}",
-                    stringLoader.Confirmation, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                var msgResult = MessageBox.Show($@"[{FormulaValues.ListName}] {StringLoader.Modified}",
+                    StringLoader.Confirmation, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
                 if (msgResult == DialogResult.Yes)
                 {
                     SaveValue();
@@ -75,7 +75,7 @@ namespace AutoBaccarat
         {
             if (ListBoxValue.Items.Count == 0)
             {
-                MessageBox.Show(stringLoader.SetBetUnit, stringLoader.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(StringLoader.SetBetUnit, StringLoader.Warning, MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             _valueNumber.Clear();
@@ -155,8 +155,8 @@ namespace AutoBaccarat
                 }
                 if (CheckEdit())
                 {
-                    var msgResult = MessageBox.Show($@"[{FormulaValues.ListName}] {stringLoader.Modified}",
-                        stringLoader.Confirmation, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                    var msgResult = MessageBox.Show($@"[{FormulaValues.ListName}] {StringLoader.Modified}",
+                        StringLoader.Confirmation, MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
                     if (msgResult == DialogResult.Yes)
                     {
                         SaveValue();
@@ -184,7 +184,7 @@ namespace AutoBaccarat
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, stringLoader.Error + @"03x1", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, StringLoader.Error + @"03x1", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void Array2ListBox()
@@ -226,7 +226,7 @@ namespace AutoBaccarat
                 {
                     var itemList = ListBoxLoad.SelectedItem;
 
-                    if (MessageBox.Show($@"{stringLoader.Delete} {itemList} ?", stringLoader.Confirmation,
+                    if (MessageBox.Show($@"{StringLoader.Delete} {itemList} ?", StringLoader.Confirmation,
                             MessageBoxButtons.YesNo, MessageBoxIcon.Question) ==
                         DialogResult.Yes)
                     {
@@ -253,7 +253,7 @@ namespace AutoBaccarat
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, stringLoader.Error + @"03x2", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, StringLoader.Error + @"03x2", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -397,13 +397,13 @@ namespace AutoBaccarat
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message + $"\n {stringLoader.TryAgain}", stringLoader.Error + @"03x3", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(e.Message + $"\n {StringLoader.TryAgain}", StringLoader.Error + @"03x3", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void List2Label()
         {
-            lbTotal.Text = $@"{stringLoader.Total}: {ListBoxValue.Items.Count}";
+            lbTotal.Text = $@"{StringLoader.Total}: {ListBoxValue.Items.Count}";
         }
         private bool CheckEdit()
         {
