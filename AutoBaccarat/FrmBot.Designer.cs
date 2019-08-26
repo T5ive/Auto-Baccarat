@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBot));
@@ -50,7 +51,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelTop2 = new System.Windows.Forms.Panel();
             this.tFivePictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelLeft = new System.Windows.Forms.Panel();
@@ -59,6 +59,19 @@
             this.btnMain = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panelMain = new System.Windows.Forms.Panel();
             this.dgvLog = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.colNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colWL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPatt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colBetSys = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colChip = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BaccaratScore = new AutoBaccarat.King99GroupBox();
             this.dgvBigRoad = new System.Windows.Forms.DataGridView();
             this.BotStatus = new AutoBaccarat.King99GroupBox();
@@ -130,7 +143,6 @@
             this.colPVSum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableGoodLine = new System.Windows.Forms.TableLayoutPanel();
             this.lbShowLine7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.lbShowLine6 = new System.Windows.Forms.Label();
             this.lbShowLine5 = new System.Windows.Forms.Label();
             this.lbShowLine4 = new System.Windows.Forms.Label();
@@ -171,19 +183,6 @@
             this.Bots_Normal = new System.ComponentModel.BackgroundWorker();
             this.tmTimeRunning = new System.Windows.Forms.Timer(this.components);
             this.Bots_BackGround = new System.ComponentModel.BackgroundWorker();
-            this.colNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colWL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colPatt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colBetSys = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colChip = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelTop2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tFivePictureBox1)).BeginInit();
             this.panelLeft.SuspendLayout();
@@ -301,7 +300,6 @@
             this.TransMain.SetDecoration(this.btnLogs, BunifuAnimatorNS.DecorationType.None);
             this.btnLogs.DisabledColor = System.Drawing.Color.Gray;
             this.btnLogs.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogs.Enabled = false;
             this.btnLogs.Iconcolor = System.Drawing.Color.Transparent;
             this.btnLogs.Iconimage = global::AutoBaccarat.Properties.Resources.note_2_64;
             this.btnLogs.Iconimage_right = null;
@@ -325,7 +323,6 @@
             this.btnLogs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogs.Textcolor = System.Drawing.Color.White;
             this.btnLogs.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogs.Visible = false;
             this.btnLogs.Click += new System.EventHandler(this.BtnLogs_Click);
             // 
             // btnMain
@@ -463,6 +460,138 @@
             this.dgvLog.ShowRowErrors = false;
             this.dgvLog.Size = new System.Drawing.Size(359, 190);
             this.dgvLog.TabIndex = 564;
+            // 
+            // colNo
+            // 
+            this.colNo.HeaderText = "No";
+            this.colNo.Name = "colNo";
+            this.colNo.ReadOnly = true;
+            this.colNo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colNo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colNo.Width = 27;
+            // 
+            // colTime
+            // 
+            this.colTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colTime.HeaderText = "Time";
+            this.colTime.Name = "colTime";
+            this.colTime.ReadOnly = true;
+            this.colTime.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colTime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colTime.Width = 38;
+            // 
+            // colBet
+            // 
+            this.colBet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colBet.HeaderText = "Bet";
+            this.colBet.Name = "colBet";
+            this.colBet.ReadOnly = true;
+            this.colBet.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colBet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colBet.Width = 30;
+            // 
+            // colResult
+            // 
+            this.colResult.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colResult.HeaderText = "Result";
+            this.colResult.Name = "colResult";
+            this.colResult.ReadOnly = true;
+            this.colResult.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colResult.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colResult.Width = 44;
+            // 
+            // colWL
+            // 
+            this.colWL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.colWL.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colWL.HeaderText = "WL";
+            this.colWL.Name = "colWL";
+            this.colWL.ReadOnly = true;
+            this.colWL.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colWL.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colWL.Width = 28;
+            // 
+            // colCost
+            // 
+            this.colCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colCost.HeaderText = "Cost";
+            this.colCost.Name = "colCost";
+            this.colCost.ReadOnly = true;
+            this.colCost.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colCost.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colCost.Width = 35;
+            // 
+            // colBalance
+            // 
+            this.colBalance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colBalance.HeaderText = "Balance";
+            this.colBalance.Name = "colBalance";
+            this.colBalance.ReadOnly = true;
+            this.colBalance.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colBalance.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colBalance.Width = 55;
+            // 
+            // colPatt
+            // 
+            this.colPatt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colPatt.HeaderText = "Patt";
+            this.colPatt.Name = "colPatt";
+            this.colPatt.ReadOnly = true;
+            this.colPatt.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colPatt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colPatt.Visible = false;
+            // 
+            // colBetSys
+            // 
+            this.colBetSys.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colBetSys.HeaderText = "BetSys";
+            this.colBetSys.Name = "colBetSys";
+            this.colBetSys.ReadOnly = true;
+            this.colBetSys.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colBetSys.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colBetSys.Visible = false;
+            // 
+            // colChip
+            // 
+            this.colChip.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colChip.HeaderText = "Chip";
+            this.colChip.Name = "colChip";
+            this.colChip.ReadOnly = true;
+            this.colChip.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colChip.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colChip.Width = 37;
+            // 
+            // colUnit
+            // 
+            this.colUnit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.colUnit.HeaderText = "x Chip";
+            this.colUnit.Name = "colUnit";
+            this.colUnit.ReadOnly = true;
+            this.colUnit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colUnit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colUnit.Width = 48;
+            // 
+            // colMode
+            // 
+            this.colMode.HeaderText = "Mode";
+            this.colMode.Name = "colMode";
+            this.colMode.ReadOnly = true;
+            this.colMode.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colMode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colMode.Visible = false;
+            this.colMode.Width = 41;
+            // 
+            // colStep
+            // 
+            this.colStep.HeaderText = "Step";
+            this.colStep.Name = "colStep";
+            this.colStep.ReadOnly = true;
+            this.colStep.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colStep.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colStep.Width = 36;
             // 
             // BaccaratScore
             // 
@@ -1786,7 +1915,6 @@
             this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 38F));
             this.tableGoodLine.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableGoodLine.Controls.Add(this.lbShowLine7, 8, 0);
-            this.tableGoodLine.Controls.Add(this.label1, 1, 0);
             this.tableGoodLine.Controls.Add(this.lbShowLine6, 7, 0);
             this.tableGoodLine.Controls.Add(this.lbShowLine5, 6, 0);
             this.tableGoodLine.Controls.Add(this.lbShowLine4, 5, 0);
@@ -1825,18 +1953,6 @@
             this.lbShowLine7.Size = new System.Drawing.Size(42, 19);
             this.lbShowLine7.TabIndex = 550;
             this.lbShowLine7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.TransMain.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.TransSettings.SetDecoration(this.label1, BunifuAnimatorNS.DecorationType.None);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(33, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 551;
-            this.label1.Text = "label1";
             // 
             // lbShowLine6
             // 
@@ -2432,140 +2548,6 @@
             this.Bots_BackGround.WorkerSupportsCancellation = true;
             this.Bots_BackGround.DoWork += new System.ComponentModel.DoWorkEventHandler(this.Bots_BackGround_DoWork);
             // 
-            // colNo
-            // 
-            this.colNo.HeaderText = "No";
-            this.colNo.Name = "colNo";
-            this.colNo.ReadOnly = true;
-            this.colNo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colNo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colNo.Width = 27;
-            // 
-            // colTime
-            // 
-            this.colTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colTime.HeaderText = "Time";
-            this.colTime.Name = "colTime";
-            this.colTime.ReadOnly = true;
-            this.colTime.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colTime.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colTime.Width = 38;
-            // 
-            // colBet
-            // 
-            this.colBet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colBet.HeaderText = "Bet";
-            this.colBet.Name = "colBet";
-            this.colBet.ReadOnly = true;
-            this.colBet.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colBet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colBet.Width = 30;
-            // 
-            // colResult
-            // 
-            this.colResult.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colResult.HeaderText = "Result";
-            this.colResult.Name = "colResult";
-            this.colResult.ReadOnly = true;
-            this.colResult.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colResult.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colResult.Width = 44;
-            // 
-            // colWL
-            // 
-            this.colWL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.colWL.DefaultCellStyle = dataGridViewCellStyle3;
-            this.colWL.HeaderText = "WL";
-            this.colWL.Name = "colWL";
-            this.colWL.ReadOnly = true;
-            this.colWL.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colWL.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colWL.Width = 28;
-            // 
-            // colCost
-            // 
-            this.colCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colCost.HeaderText = "Cost";
-            this.colCost.Name = "colCost";
-            this.colCost.ReadOnly = true;
-            this.colCost.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colCost.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colCost.Width = 35;
-            // 
-            // colBalance
-            // 
-            this.colBalance.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colBalance.HeaderText = "Balance";
-            this.colBalance.Name = "colBalance";
-            this.colBalance.ReadOnly = true;
-            this.colBalance.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colBalance.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colBalance.Width = 55;
-            // 
-            // colPatt
-            // 
-            this.colPatt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colPatt.HeaderText = "Patt";
-            this.colPatt.Name = "colPatt";
-            this.colPatt.ReadOnly = true;
-            this.colPatt.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colPatt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colPatt.Visible = false;
-            this.colPatt.Width = 32;
-            // 
-            // colBetSys
-            // 
-            this.colBetSys.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colBetSys.HeaderText = "BetSys";
-            this.colBetSys.Name = "colBetSys";
-            this.colBetSys.ReadOnly = true;
-            this.colBetSys.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colBetSys.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colBetSys.Visible = false;
-            this.colBetSys.Width = 48;
-            // 
-            // colChip
-            // 
-            this.colChip.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colChip.HeaderText = "Chip";
-            this.colChip.Name = "colChip";
-            this.colChip.ReadOnly = true;
-            this.colChip.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colChip.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colChip.Width = 37;
-            // 
-            // colUnit
-            // 
-            this.colUnit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.colUnit.HeaderText = "x Chip";
-            this.colUnit.Name = "colUnit";
-            this.colUnit.ReadOnly = true;
-            this.colUnit.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colUnit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colUnit.Width = 48;
-            // 
-            // colMode
-            // 
-            this.colMode.HeaderText = "Mode";
-            this.colMode.Name = "colMode";
-            this.colMode.ReadOnly = true;
-            this.colMode.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colMode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colMode.Visible = false;
-            this.colMode.Width = 41;
-            // 
-            // colStep
-            // 
-            this.colStep.HeaderText = "Step";
-            this.colStep.Name = "colStep";
-            this.colStep.ReadOnly = true;
-            this.colStep.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colStep.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colStep.Width = 36;
-            // 
             // FrmBot
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2736,7 +2718,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colPV5;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPV6;
         private System.Windows.Forms.DataGridViewTextBoxColumn colPVSum;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn colTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn colBet;

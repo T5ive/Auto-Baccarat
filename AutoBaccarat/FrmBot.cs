@@ -78,7 +78,7 @@ namespace AutoBaccarat
         }
         private void BtnLogs_Click(object sender, EventArgs e)
         {
-            //MenuControl(btnLogs);
+            MenuControl(btnLogs);
         }
         private void BtnSettings_Click(object sender, EventArgs e)
         {
@@ -87,13 +87,14 @@ namespace AutoBaccarat
 
         private void MenuControl(BunifuFlatButton button)
         {
-            //if (button == btnLogs)
-            //{
-            //    var frmSum = new FrmSummary();
-            //    frmSum.ShowDialog();
-            //    frmSum.Dispose();
-            //    return;
-            //}
+            if (button == btnLogs)
+            {
+                var frmSum = new FrmSum();
+                frmSum.Balance = BotValues.LastMoneyBalance;
+                frmSum.Show();
+
+                return;
+            }
 
             btnMain.Normalcolor = Color.FromArgb(65, 65, 65);
            // btnLogs.Normalcolor = Color.CornflowerBlue;
@@ -555,7 +556,7 @@ namespace AutoBaccarat
 
                         try
                         {
-                            if (_bigRoadNewLine <= dgvBigRoad.RowCount)
+                            if (_bigRoadNewLine == dgvBigRoad.RowCount)
                             {
                                 dgvBigRoad.Rows.Add("");
                             }
@@ -582,7 +583,7 @@ namespace AutoBaccarat
                         }
                         catch
                         {
-
+                            dgvBigRoad.Rows.Add("");
                         }
                         _bigRoadLastValue = list[listCount];
                     }
@@ -637,9 +638,10 @@ namespace AutoBaccarat
             BotValues.Step.Clear();
             BotValues.Balance.Clear();
             BotValues.LastHighResult.Clear();
+            BotValues.MoneyCost.Clear();
 
             #endregion
-            
+
             _bigRoadNewLine = -1;
             _bigRoadNewColumn = 0;
             _bigRoadLastValue = 0;
@@ -1084,7 +1086,7 @@ namespace AutoBaccarat
                 BotValues.BettingSuggest.Add(bettingSuggest);
                 BotValues.WinLose.Add(winOrLose);
 
-                //BotValues.MoneyCost.Add(moneyCost);
+                BotValues.MoneyCost.Add(moneyCost);
                 //BotValues.BetSystem.Add(betSystem);
                 //BotValues.Formula.Add(formula);
 

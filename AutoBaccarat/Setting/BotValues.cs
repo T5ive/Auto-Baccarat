@@ -89,7 +89,7 @@ namespace AutoBaccarat
 
         
         public static List<double> Balance = new List<double>();
-        //public static List<double> MoneyCost = new List<double>();
+        public static List<double> MoneyCost = new List<double>();
 
         public static List<int> ChipLast = new List<int>();
 

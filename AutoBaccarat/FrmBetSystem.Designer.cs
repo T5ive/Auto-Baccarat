@@ -72,7 +72,7 @@
             // 
             // BetSysTitle
             // 
-            this.BetSysTitle.BackColor = System.Drawing.Color.Transparent;
+            this.BetSysTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.BetSysTitle.BgColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(82)))), ((int)(((byte)(82)))));
             this.BetSysTitle.Controls.Add(this.Main_BetSettings);
             this.BetSysTitle.Controls.Add(this._tKing99Separator2);

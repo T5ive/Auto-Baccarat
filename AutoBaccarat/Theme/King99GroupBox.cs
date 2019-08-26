@@ -21,6 +21,12 @@ namespace AutoBaccarat
         private int _value = 1;
         private int _value2 = 1;
 
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+            Invalidate();
+        }
+
         protected override void OnTextChanged(EventArgs e)
         {
             Invalidate();
@@ -85,7 +91,6 @@ namespace AutoBaccarat
 
         protected override void OnPaint(PaintEventArgs e)
         {
-          
             base.OnPaint(e);
             var B = new Bitmap(Width, Height);
             var G = Graphics.FromImage(B);
